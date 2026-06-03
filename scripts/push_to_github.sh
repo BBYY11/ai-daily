@@ -45,9 +45,14 @@ echo "[push] 3. 收集文件" >> "$LOG"
 FILES=()
 while IFS= read -r -d '' file; do
   rel="${file#./}"
-  # 排除 .git 目录里的任何东西
+  # 排除 .git 目录
   case "$rel" in
     .git/*) continue ;;
+  esac
+  # 排除 assets/ 和 snap.js(以 .gitignore 为准,这里手动起一份防快选)
+  case "$rel" in
+    assets/*) continue ;;
+    snap.js) continue ;;
   esac
   FILES+=("$rel")
 done < <(find . -type f -not -path './.git/*' -print0 | sort -z)
@@ -65,9 +70,11 @@ for f in "${FILES[@]}"; do
     echo "[push] WARN: 跳过空文件 $f" >> "$LOG"
     continue
   fi
+  # 把 payload 写到临时文件,避免命令行超长
+  python3 -c "import json,sys; print(json.dumps({'content': open(sys.argv[1],'rb').read().decode('utf-8','replace'), 'encoding': 'utf-8'}))" "$f" > /tmp/blob-payload.json
   BLOB_RESP=$(curl -fsS -X POST \
-    -H "$AUTH" -H "$ACCEPT" \
-    -d "$(python3 -c "import json,sys; print(json.dumps({'content': open(sys.argv[1],'rb').read().decode('utf-8','replace'), 'encoding': 'utf-8'}))" "$f")" \
+    -H "$AUTH" -H "$ACCEPT" -H "Content-Type: application/json" \
+    -d @/tmp/blob-payload.json \
     "$API/repos/$REPO/git/blobs" 2>>"$LOG")
   if [ -z "$BLOB_RESP" ]; then
     echo "[push] ERROR: blob 创建失败 $f" >> "$LOG"
