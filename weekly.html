@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily · 本周脉络</title>
+<style>
+  :root {
+    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
+    --line: #1f1f24; --line-2: #2a2a31;
+    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
+    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
+    --cyan: #4adfd1; --cyan-soft: rgba(74, 223, 209, 0.12);
+    --magenta: #d65cd1;
+    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
+    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
+  .bg-fx { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .bg-fx::before { content: ""; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255, 106, 26, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 106, 26, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at top, black 0%, transparent 70%);
+  }
+  .bg-fx::after { content: ""; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1200px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 106, 26, 0.18), transparent 60%); filter: blur(80px); }
+  .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
+  .nav-links { display: flex; gap: 6px; }
+  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
+  .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
+  .nav-links a.active { color: var(--bg); background: var(--orange); border-color: var(--orange); }
+
+  .hero { margin: 32px 0 24px; padding: 48px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--orange), transparent); background-size: 200% 100%; animation: scan 3s linear infinite; }
+  @keyframes scan { 0% { background-position: 200% 0;} 100% { background-position: -200% 0;} }
+  .hero-meta { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
+  .hero h1 { font-size: 42px; margin: 12px 0 8px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero h1 .hl { background: linear-gradient(90deg, var(--orange), var(--orange), var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p { font-size: 15px; color: var(--text-dim); line-height: 1.6; max-width: 760px; }
+
+  /* ==== timeline ==== */
+  .timeline-section { margin: 32px 0 24px; }
+  .timeline-wrap { position: relative; padding: 40px 0; }
+  .timeline-rail { position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--line-2); }
+  .timeline-rail::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, var(--orange), transparent); background-size: 200% 100%; animation: scan 5s linear infinite; height: 1px; }
+  .timeline-items { display: flex; gap: 0; justify-content: space-between; position: relative; }
+  .tl-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 14px; cursor: pointer; padding: 0 8px; transition: 0.2s; }
+  .tl-item:hover { transform: translateY(-4px); }
+  .tl-item:nth-child(odd) { flex-direction: column-reverse; }
+  .tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--bg-3); border: 2px solid var(--text-mute); position: relative; z-index: 2; transition: 0.2s; }
+  .tl-item:hover .tl-dot, .tl-item.today .tl-dot { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 20px var(--orange); }
+  .tl-item.today .tl-dot { animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1);} 50% { opacity: 0.5; transform: scale(0.85);} }
+  .tl-card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; max-width: 220px; text-align: center; transition: 0.2s; }
+  .tl-item:hover .tl-card { border-color: var(--orange); }
+  .tl-date { font-family: var(--mono); font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.1em; }
+  .tl-title { font-size: 13px; color: var(--text); line-height: 1.5; margin-top: 4px; }
+  .tl-item.today .tl-card { border-color: var(--orange); background: var(--orange-soft); }
+  .tl-item.today .tl-title { color: var(--orange); font-weight: 600; }
+
+  /* ==== 主题解读 ==== */
+  .interpret { margin: 48px 0 24px; padding: 32px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px; }
+  .interpret h3 { font-size: 20px; margin-bottom: 16px; color: var(--orange); display: flex; align-items: center; gap: 10px; }
+  .interpret h3::before { content: "▎"; color: var(--orange); }
+  .interpret p { font-size: 14px; color: var(--text-dim); line-height: 1.8; margin-bottom: 12px; }
+  .interpret p strong { color: var(--text); }
+
+  .empty { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
+  footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
+</style>
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="wrap">
+  <header>
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · WEEKLY</a>
+    <div class="nav-links">
+      <a href="index.html">今日</a>
+      <a href="weekly.html" class="active">本周</a>
+      <a href="monthly.html">本月</a>
+      <a href="archive.html">归档</a>
+    </div>
+  </header>
+
+  <div id="content" class="empty">加载中...</div>
+  <footer>© 2026 AI Daily · 本周脉络 · 数据源:每天归档快照</footer>
+</div>
+
+<script>
+fetch("data/news.json")
+  .then(r => r.ok ? r.json() : { weekly_arc: { weeks: [] } })
+  .then(d => {
+    const weeks = (d.weekly_arc && d.weekly_arc.weeks) || [];
+    const today = d.date;
+    const label = (d.weekly_arc && d.weekly_arc.label) || "本周脉络";
+    const sub = d.weekly_arc && d.weekly_arc.sub ? d.weekly_arc.sub : `W22 · 当前焦点周`;
+
+    if (!weeks.length) {
+      document.getElementById("content").innerHTML = '<div class="empty">本周脉络还没生成。等待明天 8 点的 cron 任务跑完后会显示。</div>';
+      return;
+    }
+
+    // 生成每日 summary 联动
+    const datePromises = weeks.map(w =>
+      fetch(`data/archive/${w.date}.json`)
+        .then(r => r.ok ? r.json() : null)
+        .catch(() => null)
+    );
+    return Promise.all(datePromises).then(days => {
+      const dayMap = {};
+      days.forEach(d => { if (d) dayMap[d.date] = d; });
+
+      // 计算本周关键数据
+      const totalItems = days.reduce((s, d) => s + (d ? d.items.length : 0), 0);
+      const totalRising = days.reduce((s, d) => s + (d ? d.items.filter(i => i.category === "rising").length : 0), 0);
+      const totalHeadline = days.reduce((s, d) => s + (d ? d.items.filter(i => i.category === "headline").length : 0), 0);
+
+      const html = `
+        <section class="hero">
+          <div class="hero-meta">WEEKLY ARC · W22</div>
+          <h1>本周脉络<span class="hl">· ${weeks[weeks.length-1].date} → ${weeks[0].date}</span></h1>
+          <p>${escapeHTML(label)} · 共 ${weeks.length} 天 · ${totalItems} 条新闻 · ${totalHeadline} 头条 · ${totalRising} 新兴项目</p>
+        </section>
+
+        <section class="timeline-section">
+          <div class="timeline-wrap">
+            <div class="timeline-rail"></div>
+            <div class="timeline-items">
+              ${weeks.map(w => {
+                const isToday = w.date === today;
+                return `
+                  <a class="tl-item ${isToday ? "today" : ""}" href="archive-view.html?date=${w.date}" style="text-decoration:none;color:inherit;">
+                    <div class="tl-card">
+                      <div class="tl-date">${w.date}</div>
+                      <div class="tl-title">${escapeHTML(w.title)}</div>
+                    </div>
+                    <div class="tl-dot"></div>
+                  </a>
+                `;
+              }).reverse().join("")}
+            </div>
+          </div>
+        </section>
+
+        <section class="interpret">
+          <h3>本周 3 大主题</h3>
+          ${extractThemes(weeks, dayMap).map(t => `<p><strong>${escapeHTML(t.title)}</strong> — ${escapeHTML(t.body)}</p>`).join("")}
+        </section>
+
+        <section class="interpret">
+          <h3>本周新兴势力</h3>
+          ${extractRising(days).map(r => `<p><strong>${escapeHTML(r.name)}</strong>(${r.date}) — ${escapeHTML(r.body)}</p>`).join("")}
+        </section>
+
+        <section class="interpret">
+          <h3>本周数据</h3>
+          <p><strong>新闻总数</strong>: ${totalItems} 条 · 头条 ${totalHeadline} · 公司 ${days.reduce((s,d)=>s+(d?d.items.filter(i=>i.category==='company').length:0),0)} · 论文 ${days.reduce((s,d)=>s+(d?d.items.filter(i=>i.category==='paper').length:0),0)} · 行业 ${days.reduce((s,d)=>s+(d?d.items.filter(i=>i.category==='industry').length:0),0)} · 声音 ${days.reduce((s,d)=>s+(d?d.items.filter(i=>i.category==='social').length:0),0)} · 新兴 ${totalRising}</p>
+          <p><strong>建议关注</strong>:点击上方时间轴任一节点进入该日完整快照,或前往 <a href="monthly.html" style="color:var(--orange);">本月脉络</a> 看跨周长线主题。</p>
+        </section>
+      `;
+      document.getElementById("content").innerHTML = html;
+    });
+  })
+  .catch(err => {
+    document.getElementById("content").innerHTML = '<div class="empty">加载失败:' + err.message + '</div>';
+  });
+
+function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+
+function extractThemes(weeks, dayMap) {
+  // 从每周日的 title 提炼主题
+  const themes = [];
+  const allTitles = weeks.map(w => w.title).join(" / ");
+  if (allTitles.match(/Vera Rubin|RTX|GTC|算力|NVIDIA/i)) themes.push({ title: "算力新纪元", body: "英伟达 Vera Rubin 架构、RTX Spark 杀入 PC 端,COMPUTEX 2026 把 AI 算力边界推到新高度。" });
+  if (allTitles.match(/Anthropic|OpenAI|Claude|GPT|IPO|融资|估值/i)) themes.push({ title: "资本与 IPO 周期", body: "Anthropic 估值近万亿 + 秘密递交 IPO,OpenAI 转向软硬一体,头部 AI 公司集体进入'估值兑现期'。" });
+  if (allTitles.match(/宇树|机器人|GR00T|具身|Figure|Figure/i)) themes.push({ title: "具身智能量产化", body: "宇树 11000 台量产、英伟达 × 宇树 H2+ 发布,具身智能从 demo 走向工厂可用。" });
+  if (allTitles.match(/中国|MiniMax|DeepSeek|Qwen|国产|昇腾|智谱/i)) themes.push({ title: "国产算力+模型双线", body: "MiniMax M3 编程超 GPT-5.5、DeepSeek-V4 降价 97.5%、昇腾 910C 训练 1.6 万亿参数,国产大模型+算力生态进入国际第一梯队。" });
+  if (allTitles.match(/监管|行政令|起诉|伦理|政策|合规/i)) themes.push({ title: "AI 监管加码", body: "特朗普 30 天通报行政令、佛州起诉 OpenAI,中美监管框架同时加速成型。" });
+  return themes.length ? themes : [{ title: "本周重点", body: allTitles }];
+}
+
+function extractRising(days) {
+  const rising = [];
+  days.forEach(d => {
+    if (!d) return;
+    d.items.filter(i => i.category === "rising").slice(0, 2).forEach(it => {
+      rising.push({ name: it.title, date: d.date, body: it.summary.slice(0, 80) + "..." });
+    });
+  });
+  return rising.slice(0, 6);
+}
+</script>
+</body>
+</html>

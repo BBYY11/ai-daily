@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily · 本月脉络</title>
+<style>
+  :root {
+    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
+    --line: #1f1f24; --line-2: #2a2a31;
+    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
+    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
+    --cyan: #4adfd1; --cyan-soft: rgba(74, 223, 209, 0.12);
+    --magenta: #d65cd1;
+    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
+    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
+  .bg-fx { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .bg-fx::before { content: ""; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255, 106, 26, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 106, 26, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at top, black 0%, transparent 70%);
+  }
+  .bg-fx::after { content: ""; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1200px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 106, 26, 0.18), transparent 60%); filter: blur(80px); }
+  .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
+  .nav-links { display: flex; gap: 6px; }
+  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
+  .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
+  .nav-links a.active { color: var(--bg); background: var(--orange); border-color: var(--orange); }
+
+  .hero { margin: 32px 0 24px; padding: 48px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--orange), transparent); background-size: 200% 100%; animation: scan 3s linear infinite; }
+  @keyframes scan { 0% { background-position: 200% 0;} 100% { background-position: -200% 0;} }
+  .hero-meta { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
+  .hero h1 { font-size: 42px; margin: 12px 0 8px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero h1 .hl { color: var(--orange); }
+  .hero p { font-size: 15px; color: var(--text-dim); line-height: 1.6; max-width: 760px; }
+
+  /* ==== month grid ==== */
+  .month-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+  .month-card { border: 1px solid var(--line); border-radius: 12px; padding: 24px; background: var(--bg-2); transition: 0.2s; position: relative; overflow: hidden; }
+  .month-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--line-2); }
+  .month-card:hover { border-color: var(--orange); transform: translateY(-2px); box-shadow: 0 20px 40px -20px var(--orange-soft); }
+  .month-card .date { font-family: var(--mono); font-size: 12px; color: var(--cyan); letter-spacing: 0.1em; }
+  .month-card .theme { font-size: 22px; font-weight: 700; margin: 8px 0 16px; }
+  .month-card .ev { font-size: 13px; color: var(--text-dim); line-height: 1.6; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+  .month-card .ev:last-child { border-bottom: none; }
+  .month-card .ev::before { content: "▸ "; color: var(--orange); }
+
+  /* ==== 趋势解读 ==== */
+  .interpret { margin: 48px 0 24px; padding: 32px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px; }
+  .interpret h3 { font-size: 20px; margin-bottom: 16px; color: var(--orange); display: flex; align-items: center; gap: 10px; }
+  .interpret h3::before { content: "▎"; color: var(--orange); }
+  .interpret p { font-size: 14px; color: var(--text-dim); line-height: 1.8; margin-bottom: 12px; }
+  .interpret p strong { color: var(--text); }
+
+  .empty { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
+  footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
+</style>
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="wrap">
+  <header>
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · MONTHLY</a>
+    <div class="nav-links">
+      <a href="index.html">今日</a>
+      <a href="weekly.html">本周</a>
+      <a href="monthly.html" class="active">本月</a>
+      <a href="archive.html">归档</a>
+    </div>
+  </header>
+
+  <div id="content" class="empty">加载中...</div>
+  <footer>© 2026 AI Daily · 本月脉络 · 跨周长线主题观察</footer>
+</div>
+
+<script>
+fetch("data/news.json")
+  .then(r => r.ok ? r.json() : { monthly_arc: { months: [] } })
+  .then(d => {
+    const months = (d.monthly_arc && d.monthly_arc.months) || [];
+    if (!months.length) {
+      document.getElementById("content").innerHTML = '<div class="empty">本月脉络还没生成。等待明天 8 点的 cron 任务跑完后会显示。</div>';
+      return;
+    }
+    const allEvents = months.flatMap(m => m.events.map(e => ({ event: e, month: m.date, theme: m.theme })));
+
+    const html = `
+      <section class="hero">
+        <div class="hero-meta">MONTHLY ARC · ${months[months.length-1].date} → ${months[0].date}</div>
+        <h1>本月脉络<span class="hl">· 跨周长线主题</span></h1>
+        <p>AI 行业 30 天主题切片 · 共 ${months.length} 个月份 · ${allEvents.length} 个关键事件</p>
+      </section>
+
+      <div class="month-grid">
+        ${months.map(m => `
+          <div class="month-card">
+            <div class="date">${m.date}</div>
+            <div class="theme">${escapeHTML(m.theme)}</div>
+            ${m.events.map(e => `<div class="ev">${escapeHTML(e)}</div>`).join("")}
+          </div>
+        `).join("")}
+      </div>
+
+      <section class="interpret">
+        <h3>本月 3 大主旋律</h3>
+        <p><strong>资本兑现期</strong> — Anthropic 14 个月估值涨 15 倍达 9650 亿,5 月完成 650 亿 H 轮;SpaceX 启动万亿级 IPO;Anthropic、OpenAI、SpaceX 三家头部集中冲刺上市,AI 公司从"融资烧钱"阶段进入"估值兑现"阶段。</p>
+        <p><strong>算力新纪元</strong> — Vera Rubin 架构发布、RTX Spark 杀入 PC 端、COMPUTEX 2026 主题"AI Together",英伟达从"卖铲子"延伸到"定义端侧 + AI 工厂",算力供应链权力结构重塑。</p>
+        <p><strong>中美双线并进</strong> — 国产侧 MiniMax M3 编程超 GPT-5.5、阿里 Qwen3.7-Plus、腾讯云 DeepSeek-V4 降价 97.5%;美国侧微软自研 MAI-Code、Anthropic 估值反超 OpenAI、Meta 因内部反弹缩减鼠标追踪。中美 AI 生态各自加速 + 互相镜像。</p>
+      </section>
+
+      <section class="interpret">
+        <h3>长线观察</h3>
+        <p><strong>算力 vs 模型</strong>:模型层差距在缩小(SWE-Bench 上 M3 接近 Opus 4.7),算力层差距在拉大(国产 910C 支撑 1.6 万亿参数,但 5nm 以下仍受制于出口管制)。</p>
+        <p><strong>开源 vs 闭源</strong>:开源 SOTA(MiniCPM-5、Qwen 系列、MiniMax M3)持续逼近闭源,但企业付费意愿依然倾向 Claude / GPT 系列。开源抓住"开发者 + 本地部署",闭源抓住"企业大客户"。</p>
+        <p><strong>Agent 是新战场</strong>:从 GitHub Trending 看,Agent 工具链(MCP / Claude Code 生态 / InsForge)是当前最热的开源赛道,远超大模型本身的热度。"能不能稳定干活"比"参数大不大"更重要。</p>
+        <p><strong>监管进入实操</strong>:美国行政令 + 州政府诉讼、欧盟 AI Act、Anthropic Mythos 受信任访问框架——高风险 AI 商业化路径从"无限制开放"全面转向"准入控制 + 场景约束"。</p>
+      </section>
+    `;
+    document.getElementById("content").innerHTML = html;
+  })
+  .catch(err => {
+    document.getElementById("content").innerHTML = '<div class="empty">加载失败:' + err.message + '</div>';
+  });
+
+function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+</script>
+</body>
+</html>

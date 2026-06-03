@@ -430,10 +430,59 @@
   ],
   "weekly_arc": {
     "label": "本周脉络",
-    "weeks": []
+    "sub": "W22",
+    "weeks": [
+      {
+        "date": "2026-06-01",
+        "title": "Anthropic 递交 IPO + MiniMax M3 发布 + 软银法国 750 亿欧"
+      },
+      {
+        "date": "2026-05-31",
+        "title": "(周末) Anthropic Claude for Enterprise v2 + Vox-Coder Show HN 走红"
+      },
+      {
+        "date": "2026-05-30",
+        "title": "(周末) 智博会天津 40+ 大模型 + ArXiv 多模态论文"
+      },
+      {
+        "date": "2026-05-29",
+        "title": "OpenAI 推 Rosalind Biodefense + Anthropic 估值近万亿"
+      }
+    ]
   },
   "monthly_arc": {
     "label": "本月脉络",
-    "months": []
+    "sub": "2026-05 → 2026-06",
+    "months": [
+      {
+        "date": "2026-06",
+        "theme": "算力新纪元 + IPO 兑现期",
+        "events": [
+          "Vera Rubin 架构 + RTX Spark 入 PC",
+          "Anthropic 秘密递交 IPO + 估值近万亿",
+          "SpaceX 启动万亿级 IPO",
+          "MiniMax M3 编程超 GPT-5.5"
+        ]
+      },
+      {
+        "date": "2026-05",
+        "theme": "产品 + 治理双重落地",
+        "events": [
+          "Anthropic 9650 亿估值 + H 轮 650 亿",
+          "OpenAI 推 Rosalind Biodefense",
+          "GitHub Copilot 升自主 Agent",
+          "戴尔 AI 服务器 757% 增长"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "theme": "资本高峰",
+        "events": [
+          "Google 400 亿加注 Anthropic",
+          "Cohere 收购 Aleph Alpha",
+          "OpenAI 与软银年 30 亿合作"
+        ]
+      }
+    ]
   }
 }
