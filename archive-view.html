@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily · 快照</title>
+<style>
+  :root {
+    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
+    --line: #1f1f24; --line-2: #2a2a31;
+    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
+    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
+    --magenta: #d65cd1; --magenta-soft: rgba(214, 92, 209, 0.12);
+    --cyan: #4adfd1; --hot: #ffb800;
+    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
+    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
+  .nav-links { display: flex; gap: 6px; }
+  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
+  .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
+
+  .hero { margin: 32px 0 24px; padding: 40px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--orange), transparent); }
+  .hero-meta { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
+  .hero h1 { font-size: 32px; margin: 12px 0 8px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero h1 .hl { color: var(--orange); }
+  .hero p { font-size: 15px; color: var(--text-dim); line-height: 1.6; max-width: 760px; }
+  .badge { display: inline-block; font-family: var(--mono); font-size: 11px; padding: 3px 8px; background: var(--magenta-soft); color: var(--magenta); border: 1px solid var(--magenta); border-radius: 4px; margin-left: 8px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  .news-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+  .news-item { display: grid; grid-template-columns: 60px 1fr 140px; gap: 16px; padding: 20px 16px; border-bottom: 1px solid var(--line); align-items: start; position: relative; }
+  .news-item.is-rising { background: linear-gradient(90deg, var(--magenta-soft), transparent 30%); }
+  .news-item.is-rising::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--magenta); }
+  .rank { font-family: var(--mono); font-size: 18px; color: var(--text-mute); text-align: right; padding-top: 2px; }
+  .news-item:nth-child(1) .rank, .news-item:nth-child(2) .rank, .news-item:nth-child(3) .rank { color: var(--orange); }
+  .news-item.is-rising .rank { color: var(--magenta); }
+  .meta-cell { font-family: var(--mono); font-size: 10px; color: var(--text-mute); display: none; }
+  .body { display: flex; flex-direction: column; gap: 6px; }
+  .body .title { font-size: 16px; font-weight: 600; line-height: 1.4; }
+  .body .summary { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+  .body .tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+  .body .tag { font-family: var(--mono); font-size: 9px; padding: 2px 6px; background: var(--bg-3); color: var(--text-mute); border-radius: 3px; text-transform: uppercase; }
+  .heat { text-align: right; font-family: var(--mono); }
+  .heat .h { font-size: 14px; color: var(--hot); }
+  .heat .lvl { font-size: 9px; padding: 1px 5px; border-radius: 3px; display: inline-block; margin-top: 2px; }
+  .heat .lvl.爆 { color: var(--orange); border: 1px solid var(--orange); }
+  .heat .lvl.热 { color: var(--hot); border: 1px solid var(--hot); }
+  .heat .lvl.中 { color: var(--cyan); border: 1px solid var(--cyan); }
+  .heat .lvl.新星 { color: var(--magenta); border: 1px solid var(--magenta); }
+  .heat .c { font-size: 10px; color: var(--text-mute); margin-top: 2px; }
+
+  .empty, .loading { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
+  footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · ARCHIVE</a>
+    <div class="nav-links">
+      <a href="archive.html">← 全部归档</a>
+      <a href="index.html">今日 →</a>
+    </div>
+  </header>
+
+  <div id="content" class="loading">加载中...</div>
+  <footer>© 2026 AI Daily · 归档快照</footer>
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const date = params.get("date");
+const content = document.getElementById("content");
+
+if (!date) {
+  content.innerHTML = '<div class="empty">缺少 date 参数。例:archive-view.html?date=2026-06-02</div>';
+} else {
+  fetch(`data/archive/${date}.json`)
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then(data => render(data))
+    .catch(err => {
+      content.innerHTML = `<div class="empty">未找到 ${date} 的归档(可能还没生成):${err.message}</div>`;
+    });
+}
+
+function render(data) {
+  const items = data.items || [];
+  const html = `
+    <div class="hero">
+      <div class="hero-meta">SNAPSHOT · ${data.date} · ${data.weekday || ''} · ${data.generated_at || ''}</div>
+      <h1>${data.date} <span class="hl">${data.weekday || ''}</span><span class="badge">HISTORICAL</span></h1>
+      <p>${escapeHTML(data.summary || "(无摘要)")}</p>
+    </div>
+    <div class="news-list">
+      ${items.map(it => {
+        const isRising = it.category === "rising";
+        const heat = it.heat || {};
+        return `
+          <div class="news-item ${isRising ? 'is-rising' : ''}">
+            <div class="rank">${(it.rank || 0).toString().padStart(2, '0')}</div>
+            <div class="body">
+              <div class="title">${escapeHTML(it.title)}</div>
+              <div class="summary">${escapeHTML(it.summary)}</div>
+              <div class="tags">${(it.tags || []).slice(0, 3).map(t => `<span class="tag">${escapeHTML(t)}</span>`).join('')}</div>
+            </div>
+            <div class="heat">
+              <div class="h">▲ ${heat.score || 0}</div>
+              <span class="lvl ${heat.level || '中'}">${heat.level || '中'}</span>
+              <div class="c">💬 ${it.comments || 0}</div>
+            </div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+  content.innerHTML = html;
+}
+
+function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+</script>
+</body>
+</html>

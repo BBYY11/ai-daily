@@ -1,0 +1,36 @@
+{
+  "days": [
+    {
+      "date": "2026-06-02",
+      "weekday": "周二",
+      "summary": "今天 AI 圈的核心叙事:算力层的边界被英伟达重新定义,OpenAI 用模型推翻了一个 80 年的数学猜想,Anthropic 以近万亿估值登顶,Anthropic 与 OpenAI 的差距正在资本与产品两端同时拉大。开源圈也冒出一批值得关注的新工具。",
+      "total": 18,
+      "rising": 4,
+      "headline": 3
+    },
+    {
+      "date": "2026-05-31",
+      "weekday": "周日",
+      "summary": "周末的 AI 圈静悄悄:Anthropic 推出企业级安全套件,DeepMind 发布 Gemini 2.5 论文,arXiv 上一批 Agent 论文集中更新,Reddit r/LocalLLaMA 上对开源 SOTA 模型的讨论持续火爆。",
+      "total": 8,
+      "rising": 1,
+      "headline": 4
+    },
+    {
+      "date": "2026-05-30",
+      "weekday": "周六",
+      "summary": "周五的 AI 圈,GitHub Universe 预热开始,ArXiv 上一批视频生成与多模态论文集中放出,中文圈世界智能产业博览会天津站开幕,40+ 大模型集中亮相。",
+      "total": 8,
+      "rising": 0,
+      "headline": 3
+    },
+    {
+      "date": "2026-05-29",
+      "weekday": "周五",
+      "summary": "OpenAI 启动 Rosalind Biodefense 项目,生命科学 AI 进入受信任访问阶段;与此同时,Google 内部孵化新的 AI 编程工具 Maker;X 上一批 agent 演示视频病毒传播。",
+      "total": 7,
+      "rising": 0,
+      "headline": 4
+    }
+  ]
+}

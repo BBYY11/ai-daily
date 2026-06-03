@@ -1,0 +1,427 @@
+{
+  "Context-ReAct": {
+    "name": "Context-ReAct",
+    "category": "Agent / 学术",
+    "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
+    "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
+    "links": [
+      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
+    ]
+  },
+  "Qwen": {
+    "name": "Qwen (通义千问)",
+    "category": "基础模型",
+    "summary": "阿里开源大模型系列,涵盖稠密/MoE/多模态多种规格,Agent 工具调用和中文能力是其强项。",
+    "detail": "Hugging Face 上累计下载量靠前,常被用作研究/Agent 蒸馏的基座。",
+    "links": []
+  },
+  "MiniCPM": {
+    "name": "MiniCPM (面壁)",
+    "category": "基础模型",
+    "summary": "面壁智能开源的端侧小模型系列,主打低显存 + 长上下文,代表开源本地化 SOTA。",
+    "detail": "MiniCPM-5 (8B) 单卡 128k 上下文,RAG 评测超同尺寸商用模型。",
+    "links": []
+  },
+  "128k 上下文": {
+    "name": "128k token 上下文窗口",
+    "category": "基础模型",
+    "summary": "模型单次推理能处理的最大 token 数。128k 约等于一本 250 页书的文字量。",
+    "detail": "上下文越长推理越贵、越容易'中间遗忘',是当前模型能力核心指标。",
+    "links": []
+  },
+  "AI gateway": {
+    "name": "AI Gateway",
+    "category": "Agent / 基础设施",
+    "summary": "为 AI Agent / 应用统一暴露的 LLM API 网关,负责鉴权、路由、配额、缓存、计费。",
+    "detail": "类似传统 API 网关,只是流量是 token 而不是 HTTP 请求。",
+    "links": []
+  },
+  "工具调用": {
+    "name": "工具调用 (Tool Calling)",
+    "category": "Agent",
+    "summary": "模型按 schema 输出结构化指令,外部运行时把它翻译成对真实 API / 数据库 / 函数的调用。",
+    "detail": "MCP (Model Context Protocol) 是 Antrhopic 提出的工具调用标准协议。",
+    "links": []
+  },
+  "Show HN": {
+    "name": "Show HN",
+    "category": "社区 / Hacker News",
+    "summary": "Hacker News 的产品发布板块,创作者亲手发帖,社区以项目质量投票。",
+    "detail": "Show HN 上 1k+ points 的项目常预示未来 6 个月的趋势。",
+    "links": [
+      {"label": "Hacker News Show", "url": "https://news.ycombinator.com/show"}
+    ]
+  },
+  "Product Hunt": {
+    "name": "Product Hunt",
+    "category": "社区 / 产品发布",
+    "summary": "全球每日新产品发现平台,AI 工具日榜是行业内最具风向标意义的产品榜单。",
+    "detail": "PH 上 #1 的 AI 工具,几乎都会在 2 周内获得大量媒体报道。",
+    "links": [
+      {"label": "Product Hunt AI", "url": "https://www.producthunt.com/topics/artificial-intelligence"}
+    ]
+  },
+  "GitHub Trending": {
+    "name": "GitHub Trending",
+    "category": "社区 / 开发者",
+    "summary": "GitHub 官方每日榜单,按仓库 24h 涨星排序,被视作开源世界最有用的'早期信号'。",
+    "detail": "Trending 出现的新面孔(陌生名字)往往比'老牌项目'更有信息量。",
+    "links": [
+      {"label": "GitHub Trending", "url": "https://github.com/trending"}
+    ]
+  },
+  "Reddit r/LocalLLaMA": {
+    "name": "r/LocalLLaMA",
+    "category": "社区 / 开源",
+    "summary": "Reddit 上聚焦'本地运行大模型'的子版,日活数万的工程师社区,信号密度极高。",
+    "detail": "该子版对新开源 SOTA 模型的反应常早于主流媒体 1-2 天。",
+    "links": []
+  },
+  "Hacker News": {
+    "name": "Hacker News",
+    "category": "社区 / 开发者",
+    "summary": "Y Combinator 旗下的技术新闻聚合社区,首页点数的'含金量'在技术圈公认最高。",
+    "detail": "首页出现 30+ 分钟且点数 > 500 的几乎都是值得关注的趋势事件。",
+    "links": [
+      {"label": "Hacker News", "url": "https://news.ycombinator.com/"}
+    ]
+  },
+  "HN points": {
+    "name": "HN Points",
+    "category": "社区 / 指标",
+    "summary": "Hacker News 帖子的社区投票净分(点赞 - 点踩),通常用于衡量'技术圈真实热度'。",
+    "detail": "500+ points 算'上首页大热门',1000+ 算'破圈',2000+ 算'现象级'。",
+    "links": []
+  },
+  "X trending": {
+    "name": "X (Twitter) 趋势",
+    "category": "社区 / 社交",
+    "summary": "X 平台的话题热度榜,AI 圈深度讨论首发地之一。",
+    "detail": "X 上的 AI demo 视频常在 24 小时内获得数百万播放,信号价值高。",
+    "links": []
+  },
+  "面壁智能": {
+    "name": "面壁智能 (ModelBest)",
+    "category": "公司 / 中国",
+    "summary": "清华系 AI 公司,主打端侧 / 本地化大模型(MiniCPM 系列),是国内开源代表之一。",
+    "detail": "MiniCPM 系列在 GitHub + Hugging Face 双榜长期有位置。",
+    "links": []
+  },
+  "VS Code": {
+    "name": "VS Code",
+    "category": "开发工具",
+    "summary": "微软主导的代码编辑器,AI Coding 插件的主战场。",
+    "detail": "VS Code 插件市场的 AI Coding 工具月活在 2026 年已破千万。",
+    "links": []
+  },
+  "diff": {
+    "name": "diff",
+    "category": "开发工具",
+    "summary": "代码变更的差异表达,patch / unified diff 是最常见格式。",
+    "detail": "AI Coding 工具常以生成 diff 的方式改代码,而不是直接改文件。",
+    "links": []
+  },
+  "UI 识别": {
+    "name": "UI 视觉识别",
+    "category": "多模态",
+    "summary": "让模型从截图/渲染图直接理解 UI 元素、布局和样式,免去写选择器或描述。",
+    "detail": "搭配 Agent 工具调用,可以直接生成对应代码 diff。",
+    "links": []
+  },
+  "Postgres": {
+    "name": "PostgreSQL",
+    "category": "数据库",
+    "summary": "最强扩展性的开源关系数据库,AI 时代依然在 RAG / 向量检索 / 后端三栖使用。",
+    "detail": "pgvector 扩展让 Postgres 原生支持向量检索,很多 AI 后端直接用之。",
+    "links": []
+  },
+  "Reddit r/MachineLearning": {
+    "name": "r/MachineLearning",
+    "category": "社区 / 学术",
+    "summary": "Reddit 上最大的 ML 研究子版,讨论密度高、噪声相对低,是看论文/资源的好地方。",
+    "detail": "[R] 标签的帖子一般是新论文首发地,[P] 是项目/代码。",
+    "links": []
+  },
+  "Reddit": {
+    "name": "Reddit",
+    "category": "社区 / 社交",
+    "summary": "美国主流论坛聚合站,各子版(subreddit)是细分子社区,讨论深度高于 X。",
+    "detail": "AI 相关高信号子版: r/MachineLearning / r/LocalLLaMA / r/singularity / r/OpenAI。",
+    "links": []
+  },
+  "Vera Rubin": {
+    "name": "Vera Rubin 架构",
+    "category": "硬件 / 芯片",
+    "summary": "英伟达下一代 GPU 架构,接替 Blackwell,主打推理与能效。命名取自确认暗物质存在证据的天文学家 Vera Rubin。",
+    "detail": "Vera Rubin 平台整合新一代 GPU + CPU Vera,设计目标是让 AI 工厂在每兆瓦 token 性能上做到极致,继续巩固英伟达在算力层的霸主地位。",
+    "links": [
+      {"label": "NVIDIA 官方", "url": "https://nvidianews.nvidia.com/"},
+      {"label": "The Verge 报道", "url": "https://www.theverge.com/"}
+    ]
+  },
+  "RTX Spark": {
+    "name": "RTX Spark (N1X)",
+    "category": "硬件 / 端侧 AI",
+    "summary": "英伟达首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + 神经处理单元,主打本地大模型推理。",
+    "detail": "戴尔、惠普、联想、微软首批支持。它的意义在于把 AI Agent 从云端拽到本地,降低延迟、隐私和推理成本。",
+    "links": [
+      {"label": "Wikipedia: AI PC", "url": "https://en.wikipedia.org/wiki/AI_PC"}
+    ]
+  },
+  "Nemotron": {
+    "name": "Nemotron 3 Ultra",
+    "category": "基础模型",
+    "summary": "英伟达自研大语言模型系列,主打多模态、Agent 能力与企业级部署。",
+    "detail": "Nemotron 与 NIM 微服务配套发布,常被用于与开源模型做蒸馏比较,也是英伟达从'卖铲子'到'也下场挖金子'的标志。",
+    "links": [
+      {"label": "NVIDIA NIM", "url": "https://www.nvidia.com/en-us/ai-software/"}
+    ]
+  },
+  "DSX": {
+    "name": "NVIDIA DSX 平台",
+    "category": "基础设施",
+    "summary": "面向 AI 工厂全生命周期的参考设计与操作系统平台,DSX MaxLPS 支持 45°C 液冷,在固定电力预算内多跑 40% GPU。",
+    "detail": "把建 AI 数据中心从'工程难题'变成'参考蓝图',客户可直接复用。",
+    "links": [
+      {"label": "NVIDIA 数据中心", "url": "https://www.nvidia.com/en-us/data-center/"}
+    ]
+  },
+  "Isaac GR00T": {
+    "name": "Isaac GR00T",
+    "category": "机器人 / 具身智能",
+    "summary": "英伟达推出的通用人形机器人基础模型与参考设计,目标是让机器人能听懂自然语言并执行复杂操作任务。",
+    "detail": "GR00T 走'基础模型 + 仿真训练 + 硬件参考'三位一体路线,合作方包括宇树、Figure 等。",
+    "links": [
+      {"label": "Isaac GR00T 官方", "url": "https://developer.nvidia.com/isaac/gr00t"}
+    ]
+  },
+  "HBM": {
+    "name": "HBM (High Bandwidth Memory)",
+    "category": "硬件 / 存储",
+    "summary": "高带宽内存,3D 堆叠的 DRAM,专为大模型训练推理设计。",
+    "detail": "HBM3e、HBM4 是当前最紧俏的 AI 供应链环节,SK 海力士、三星、美光三足鼎立。这次三家联合投资 Anthropic,本质是'锁需求'。",
+    "links": [
+      {"label": "SK hynix HBM", "url": "https://www.skhynix.com/eng/solutions.do"}
+    ]
+  },
+  "Series H": {
+    "name": "H 轮融资",
+    "category": "投融资",
+    "summary": "私募融资轮次,从 A 到 Z 排列,H 轮通常意味着公司已极度成熟、接近 IPO 阶段。",
+    "detail": "Anthropic 一口气融到 H 轮,反映资本对'企业级安全 AI'叙事的强烈押注,通常下一站就是上市。",
+    "links": []
+  },
+  "ARR": {
+    "name": "ARR (Annual Recurring Revenue)",
+    "category": "商业指标",
+    "summary": "年度经常性收入,SaaS / 订阅型业务最看重的指标。",
+    "detail": "DeepSeek 2 个月 ARR 翻倍,Anthropic 把 Claude 嵌入 KPMG 27.6 万员工场景,都在拼 ARR 的可持续性而非单次收入。",
+    "links": []
+  },
+  "Erdős": {
+    "name": "Erdős (保罗·埃尔德什)",
+    "category": "数学 / 人物",
+    "summary": "20 世纪最多产、游走于全世界的匈牙利数学家,以组合学、概率论贡献著称,留下了大量'Erdős 猜想'。",
+    "detail": "OpenAI 推翻的是他 1946 年提出的'单位距离问题上界'猜想——这是 AI 首次在主流数学猜想上给出反例级突破。",
+    "links": [
+      {"label": "Erdős Wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"}
+    ]
+  },
+  "单位距离问题": {
+    "name": "单位距离问题 (Unit Distance Problem)",
+    "category": "数学",
+    "summary": "平面上 N 个点最多能产生多少对距离恰为 1 的点对。Erdős 给出的上界猜想被默认正确数十年。",
+    "detail": "OpenAI 模型通过反直觉的排列给出更优上界,推翻了猜想——意味着 N 个点中单位距离对数的密度可以比 Erdős 预测的更高。",
+    "links": []
+  },
+  "反直觉": {
+    "name": "反直觉 (Counterintuitive)",
+    "category": "方法论",
+    "summary": "违反人类直觉、但被严格证明为正确的结果。",
+    "detail": "OpenAI 这次的关键叙事:AI 没有'数学共同体的认知偏误',会试'看起来荒谬'的方向,反而发现了数学家忽略的路径。",
+    "links": []
+  },
+  "V4-Pro": {
+    "name": "DeepSeek V4-Pro",
+    "category": "基础模型",
+    "summary": "DeepSeek 2026 年主力模型,主打代码与 Agent 任务,API 定价一次性下调 75%。",
+    "detail": "DeepSeek 用'开源 + 极致降价 + 架构创新'重画硬件生态成本曲线,被视作'东半球 AI 价格战'的标杆事件。",
+    "links": [
+      {"label": "DeepSeek 官方", "url": "https://www.deepseek.com/"}
+    ]
+  },
+  "token 经济": {
+    "name": "Token 经济",
+    "category": "商业模式",
+    "summary": "以模型调用 token 数为计费/结算单位的商业体系。",
+    "detail": "呼和浩特绿色算力平台把'Token 交易结算'列入核心功能,意味着 token 已经从'技术单位'变成'流通商品'。",
+    "links": []
+  },
+  "GW": {
+    "name": "GW (吉瓦, 10 亿瓦)",
+    "category": "能源 / 算力",
+    "summary": "衡量大型数据中心规模的常用单位。一个 GW 级数据中心相当于一座核电站的输出。",
+    "detail": "软银法国 3.1 GW 起步、规划 5.1 GW——这是欧洲规模最大的 AI 算力集群,直接把法国推上欧洲 AI 主权国地位。",
+    "links": []
+  },
+  "数据中心": {
+    "name": "AI 数据中心 / AI 工厂",
+    "category": "基础设施",
+    "summary": "专为 AI 训练/推理设计的新型数据中心,密度更高、液冷更普及、与电网耦合更深。",
+    "detail": "黄仁勋反复用'AI 工厂'而不是'数据中心'来称呼它们,意在强调它们是'token 制造厂'而非传统 IDC。",
+    "links": []
+  },
+  "Biodefense": {
+    "name": "Biodefense (生物防御)",
+    "category": "AI 治理",
+    "summary": "用 AI 应对生物威胁(疫情、合成生物学滥用)的研究与产品方向。",
+    "detail": "Rosalind Biodefense 是 OpenAI 在该方向的首个正式项目,采用'受信任访问'框架,被视为高风险 AI 商业化路径的范本。",
+    "links": []
+  },
+  "受信任访问": {
+    "name": "受信任访问 (Trusted Access)",
+    "category": "AI 治理",
+    "summary": "对高能力 AI 模型的访问进行机构筛选 + 场景约束 + 审计追溯的分级授权机制。",
+    "detail": "对应的是过去'开放即普惠'的旧范式,Anthropic、Google 在敏感行业都已采用类似策略。",
+    "links": []
+  },
+  "红队": {
+    "name": "红队 (Red Team)",
+    "category": "AI 安全",
+    "summary": "专门尝试攻破 AI 系统以发现安全漏洞的团队或活动。",
+    "detail": "Anthropic 早期凭'悬赏红队'出圈,如今红队测试已成为高能力模型发布前的标配流程。",
+    "links": []
+  },
+  "自由度 DoF": {
+    "name": "自由度 (Degrees of Freedom, DoF)",
+    "category": "机器人",
+    "summary": "机器人能独立运动的关节数量,直接决定其动作灵活度。",
+    "detail": "宇树 H2+ 全身 31 自由度 + 每手 25 自由度,合计 81 自由度,在同类人形机器人中属顶级。",
+    "links": []
+  },
+  "Context-ReAct": {
+    "name": "Context-ReAct",
+    "category": "Agent / 学术",
+    "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
+    "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
+    "links": [
+      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
+    ]
+  },
+  "BrowseComp": {
+    "name": "BrowseComp",
+    "category": "评测基准",
+    "summary": "OpenAI 提出的长程网络搜索能力评测基准,考察 Agent 能否通过多次浏览找到隐蔽信息。",
+    "detail": "LongSeeker 61.5% vs 通义 DeepResearch 43.2%——是当前 Agent 搜索能力的代表性成绩。",
+    "links": []
+  },
+  "AUROC": {
+    "name": "AUROC",
+    "category": "评测指标",
+    "summary": "ROC 曲线下面积,衡量二分类器在不同阈值下整体表现的指标,1.0 为完美,0.5 等于随机。",
+    "detail": "phi_first 用 AUROC 0.820 证明单 Token 置信度即可做幻觉检测,成本是传统方法的 1/N。",
+    "links": []
+  },
+  "归一化熵": {
+    "name": "归一化熵 (Normalized Entropy)",
+    "category": "概率 / 评估",
+    "summary": "对概率分布的不确定性度量,归一化后取值 0-1,可直接比较不同模型。",
+    "detail": "phi_first 用首 Token 分布的归一化熵作为'模型对自身回答的自信度',低熵→高自信→少幻觉。",
+    "links": []
+  },
+  "语义自洽": {
+    "name": "语义自洽 (Semantic Consistency)",
+    "category": "AI 评估",
+    "summary": "通过多次采样比较答案语义是否一致来识别幻觉。",
+    "detail": "传统方法多次采样成本高,phi_first 证明单次首 Token 即可逼近其效果,是一次显著的推理成本优化。",
+    "links": []
+  },
+  "FPGA": {
+    "name": "FPGA",
+    "category": "硬件",
+    "summary": "现场可编程门阵列,可被配置为任意逻辑电路,介于通用 CPU 与专用 ASIC 之间。",
+    "detail": "Design Conductor 2.0 让 Agent 从论文到 FPGA 映射全自主完成,展示了 AI 在'芯片前端设计'上的能力。",
+    "links": []
+  },
+  "FP16": {
+    "name": "FP16",
+    "category": "数值精度",
+    "summary": "16 位浮点数,深度学习推理/训练最常用精度,显存占用比 FP32 减半。",
+    "detail": "VerTQ 加速器 5129 个 FP16/32 单元是衡量其算力规模的关键指标。",
+    "links": []
+  },
+  "RTL": {
+    "name": "RTL (Register Transfer Level)",
+    "category": "硬件设计",
+    "summary": "寄存器传输级,硬件描述的标准抽象层,RTL 设计完成后才能进入 FPGA/ASIC 实现。",
+    "detail": "AI Agent 自主写 RTL 是硬件自动化的关键里程碑。",
+    "links": []
+  },
+  "BIS": {
+    "name": "BIS (美国工业与安全局)",
+    "category": "监管 / 政策",
+    "summary": "美国商务部下属、负责出口管制的核心机构。",
+    "detail": "BIS 的对华 AI 芯片禁令持续升级,从最初的 H100 名单一路扩展到 Blackwell、MI350x 和海外子公司路径。",
+    "links": []
+  },
+  "实体清单": {
+    "name": "实体清单 (Entity List)",
+    "category": "监管",
+    "summary": "BIS 维护的、限制美国技术出口的企业/机构名单。",
+    "detail": "上清单意味着未经许可不得获取受控技术,是中美科技博弈的核心工具。",
+    "links": []
+  },
+  "MI350x": {
+    "name": "AMD MI350x",
+    "category": "硬件 / GPU",
+    "summary": "AMD 旗舰 AI 加速卡,定位对标英伟达 H 系列。",
+    "detail": "与 Blackwell 一起被纳入新一轮对华禁令,反映 AMD 在 AI 算力市场已具备战略意义。",
+    "links": []
+  },
+  "Token 交易": {
+    "name": "Token 交易",
+    "category": "商业模式",
+    "summary": "把大模型调用按 token 数为单位进行买卖结算的交易模式。",
+    "detail": "呼和浩特平台是首个国家级'Token 综合服务交易'基础设施。",
+    "links": []
+  },
+  "通算/智算/超算": {
+    "name": "通算 / 智算 / 超算",
+    "category": "算力分类",
+    "summary": "通用计算、智能计算(AI 训练推理为主)、超级计算三类算力的统称。",
+    "detail": "全国一体化算力网建设的核心是对这三类算力做统一调度。",
+    "links": []
+  },
+  "Polymarket": {
+    "name": "Polymarket",
+    "category": "预测市场",
+    "summary": "基于区块链的事件预测市场,用户用真金白银押注未来事件结果。",
+    "detail": "Polymarket 上 Anthropic 83.2% 概率被市场视为 6 月底最佳 AI 模型,反映资本与社区的共识方向。",
+    "links": [
+      {"label": "Polymarket", "url": "https://polymarket.com/"}
+    ]
+  },
+  "流动性池": {
+    "name": "流动性池 (Liquidity Pool)",
+    "category": "金融 / 预测市场",
+    "summary": "为交易提供深度的资金池,池子越大价格发现越稳定。",
+    "detail": "270 万美元流动性池意味着即使大单进出,Anthropic 胜率预测也不会被轻易操纵。",
+    "links": []
+  },
+  "Figure 03": {
+    "name": "Figure 03",
+    "category": "机器人 / 具身智能",
+    "summary": "Figure AI 第三代人形机器人,主打工业自动化分拣与物流作业。",
+    "detail": "200 小时直播 + 25 万包裹零故障,是当前人形机器人'工厂可用性'的最强公开证据之一。",
+    "links": [
+      {"label": "Figure AI", "url": "https://www.figure.ai/"}
+    ]
+  },
+  "耐力测试": {
+    "name": "耐力测试 (Endurance Test)",
+    "category": "机器人 / 评测",
+    "summary": "让机器人在真实生产环境中长时间不间断运行的测试,衡量稳定性与维护成本。",
+    "detail": "从 8 小时到 24 小时再到 200 小时,Figure 03 完成了量级跨越,机器人'能用'的下限被显著抬高。",
+    "links": []
+  }
+}

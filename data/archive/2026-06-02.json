@@ -1,0 +1,645 @@
+{
+  "date": "2026-06-02",
+  "weekday": "周二",
+  "generated_at": "2026-06-02 08:00 (Asia/Shanghai)",
+  "summary": "今天 AI 圈的核心叙事:算力层的边界被英伟达重新定义,OpenAI 用模型推翻了一个 80 年的数学猜想,Anthropic 以近万亿估值登顶,Anthropic 与 OpenAI 的差距正在资本与产品两端同时拉大。开源圈也冒出一批值得关注的新工具。",
+  "stats": {
+    "total_items": 18,
+    "by_category": {
+      "headline": 3,
+      "rising": 4,
+      "company": 4,
+      "paper": 3,
+      "industry": 2,
+      "social": 2
+    }
+  },
+  "items": [
+    {
+      "id": "n01",
+      "rank": 1,
+      "category": "headline",
+      "title": "英伟达 GTC Taipei 2026:发布 Vera Rubin 架构,RTX Spark 杀入 PC",
+      "source": "英伟达官方 / The Verge / 新浪科技",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 9800,
+        "level": "爆",
+        "sources": [
+          "media",
+          "hn",
+          "x"
+        ],
+        "breakdown": "~2.4k HN points · ~12k X mentions · 6+ 头部媒体报道"
+      },
+      "comments": 412,
+      "summary": "黄仁勋在台北音乐厅主题演讲,一口气发布 Vera Rubin 架构、面向 AI Agent 的 CPU Vera、Nemotron 3 Ultra 模型、AI 工厂平台 DSX,以及专为个人 AI Agent 设计的 PC 芯片 RTX Spark(N1X)。戴尔、惠普、联想、微软首批响应。",
+      "tags": [
+        "NVIDIA",
+        "Vera Rubin",
+        "RTX Spark",
+        "AI Agent",
+        "PC"
+      ],
+      "terms": [
+        "Vera Rubin",
+        "RTX Spark",
+        "Nemotron",
+        "DSX",
+        "Isaac GR00T"
+      ]
+    },
+    {
+      "id": "n02",
+      "rank": 2,
+      "category": "headline",
+      "title": "Anthropic 完成 650 亿美元 H 轮融资,估值 9650 亿首超 OpenAI",
+      "source": "WSJ / 雷峰网",
+      "time": "2026-05-28 宣布 / 06-01 媒体跟进",
+      "heat": {
+        "score": 8800,
+        "level": "爆",
+        "sources": [
+          "media",
+          "hn",
+          "x"
+        ],
+        "breakdown": "~1.8k HN points · ~9k X mentions"
+      },
+      "comments": 567,
+      "summary": "美光、三星、SK 海力士联合下注,投后估值 9650 亿美元,首次超越 OpenAI 的 8520 亿。资金将用于算力锁定与企业级 Claude 深化。",
+      "tags": [
+        "Anthropic",
+        "融资",
+        "HBM",
+        "算力"
+      ],
+      "terms": [
+        "HBM",
+        "Series H",
+        "ARR"
+      ]
+    },
+    {
+      "id": "n03",
+      "rank": 3,
+      "category": "headline",
+      "title": "OpenAI 声称 AI 攻克 80 年数学难题,推翻 Erdős 1946 猜想",
+      "source": "OpenAI 官方 / 澎湃新闻",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 7400,
+        "level": "热",
+        "sources": [
+          "media",
+          "hn",
+          "x",
+          "paper"
+        ],
+        "breakdown": "~3.1k HN points · ~6k X mentions · 多家数学媒体跟进"
+      },
+      "comments": 893,
+      "summary": "OpenAI 模型给出反直觉的排列方式,推翻了 Erdős 关于平面单位距离问题上界数十年的主流猜想。AI 没有'猜想定式',在大规模试错中发现了数学家被认知偏误遮蔽的方向。",
+      "tags": [
+        "OpenAI",
+        "数学",
+        "AGI",
+        "推理"
+      ],
+      "terms": [
+        "Erdős",
+        "单位距离问题",
+        "反直觉"
+      ]
+    },
+    {
+      "id": "n04",
+      "rank": 4,
+      "category": "company",
+      "title": "DeepSeek 推进 700 亿融资,V4-Pro API 永久降价 75%",
+      "source": "彭博社 / 新智元",
+      "time": "2026-05-22",
+      "heat": {
+        "score": 5200,
+        "level": "热",
+        "sources": [
+          "media",
+          "x"
+        ],
+        "breakdown": "~5k X mentions(中文圈为主) · 多家中文媒体跟进"
+      },
+      "comments": 234,
+      "summary": "投前估值 450 亿美元,同日官宣 V4-Pro API 降价 75%,促销价直接焊死成正价。一手向资本拿钱,一手向开发者让利,目标指向十万亿美元产业与 AGI。",
+      "tags": [
+        "DeepSeek",
+        "融资",
+        "降价",
+        "AGI"
+      ],
+      "terms": [
+        "V4-Pro",
+        "ARR",
+        "token 经济"
+      ]
+    },
+    {
+      "id": "n05",
+      "rank": 5,
+      "category": "company",
+      "title": "软银承诺 750 亿欧元在法国建最大欧洲 AI 基础设施",
+      "source": "CNBC / 新浪财经",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 4400,
+        "level": "热",
+        "sources": [
+          "media",
+          "x"
+        ],
+        "breakdown": "~3.5k X mentions · 多家财经媒体跟进"
+      },
+      "comments": 178,
+      "summary": "孙正义称本轮 AI 革命体量是 2000 年互联网热潮的 50 倍。软银首期 450 亿欧元,2031 年前在法国建成 3.1 GW 算力。",
+      "tags": [
+        "软银",
+        "欧洲",
+        "数据中心",
+        "算力"
+      ],
+      "terms": [
+        "GW",
+        "数据中心",
+        "AI 工厂"
+      ]
+    },
+    {
+      "id": "n06",
+      "rank": 6,
+      "category": "company",
+      "title": "OpenAI 启动 Rosalind Biodefense 项目,生命科学 AI 进入受信任访问",
+      "source": "OpenAI 官方",
+      "time": "2026-05-29",
+      "heat": {
+        "score": 3800,
+        "level": "热",
+        "sources": [
+          "media",
+          "hn"
+        ],
+        "breakdown": "~1.2k HN points · 多家头部媒体"
+      },
+      "comments": 256,
+      "summary": "向受信任开发者及美/盟友公共卫生机构开放 GPT-Rosalind 模型,服务疫情预警、筛查、诊断。高风险领域 AI 不再无限制开放,而以准入控制+场景约束+合作网络交付。",
+      "tags": [
+        "OpenAI",
+        "生物 AI",
+        "AI 治理",
+        "GPT-Rosalind"
+      ],
+      "terms": [
+        "Biodefense",
+        "受信任访问",
+        "红队"
+      ]
+    },
+    {
+      "id": "n07",
+      "rank": 7,
+      "category": "company",
+      "title": "黄仁勋宣布与宇树合作,推出 H2+ 人形机器人参考设计",
+      "source": "GTC Taipei / 科创板日报",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 3500,
+        "level": "热",
+        "sources": [
+          "media",
+          "x"
+        ],
+        "breakdown": "~4k X mentions · 宇树股票涨停 · 多家财经媒体"
+      },
+      "comments": 198,
+      "summary": "Isaac GR00T 系统中,宇树 H2+ 整机身高 1.8 米、体重 68 公斤,31 自由度+每只机械手 25 自由度。黄仁勋笑称'这身高体重和我差不多'。",
+      "tags": [
+        "NVIDIA",
+        "宇树",
+        "人形机器人",
+        "Isaac GR00T"
+      ],
+      "terms": [
+        "自由度 DoF",
+        "GR00T"
+      ]
+    },
+    {
+      "id": "r08",
+      "rank": 8,
+      "category": "rising",
+      "title": "新开源模型:LongSeeker-Agent 框架,长程搜索正确率突破 61%",
+      "source": "GitHub Trending · arXiv 2605.05191",
+      "time": "2026-06-01 上线",
+      "heat": {
+        "score": 3200,
+        "level": "新星",
+        "sources": [
+          "github",
+          "hn",
+          "paper"
+        ],
+        "breakdown": "GitHub 24h +1.2k stars · HN ~580 points · arXiv 1 天内高赞"
+      },
+      "comments": 87,
+      "summary": "LongSeeker 提出的 Context-ReAct 范式让 Agent 能主动 Skip/Compress/Rollback 自己的上下文,基于 Qwen3-30B-A3B 微调后,在 BrowseComp 评测上把 Agent 长程搜索正确率从 43% 拉到 61%。GitHub 仓库 24h 涨 1.2k 星,正在成为 Agent 记忆层的新参考实现。",
+      "tags": [
+        "新模型",
+        "Agent",
+        "开源",
+        "GitHub Trending"
+      ],
+      "terms": [
+        "Context-ReAct",
+        "BrowseComp",
+        "Qwen"
+      ],
+      "rising_metrics": {
+        "github_stars_24h": "+1.2k",
+        "hn_points": 580,
+        "repo_url": "https://github.com/example/longseeker"
+      }
+    },
+    {
+      "id": "r09",
+      "rank": 9,
+      "category": "rising",
+      "title": "Show HN:Visual-Code-Agent — 截图直接改代码的 IDE 插件",
+      "source": "Hacker News · Product Hunt #1 AI",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 2800,
+        "level": "新星",
+        "sources": [
+          "hn",
+          "ph",
+          "github"
+        ],
+        "breakdown": "HN Show 1.4k points · PH #1 AI 工具 · 24h 安装 8k+"
+      },
+      "comments": 234,
+      "summary": "独立开发者做的 IDE 插件,核心创新:开发者对 UI 截图,模型识别截图中的样式/布局问题,直接生成 diff 改本地代码,不需要描述。VS Code 插件 24h 装 8k+。",
+      "tags": [
+        "新应用",
+        "Show HN",
+        "开发工具",
+        "Product Hunt"
+      ],
+      "terms": [
+        "VS Code",
+        "diff",
+        "UI 识别"
+      ],
+      "rising_metrics": {
+        "hn_show_points": 1400,
+        "ph_rank": 1,
+        "installs_24h": "8k+"
+      }
+    },
+    {
+      "id": "r10",
+      "rank": 10,
+      "category": "rising",
+      "title": "Reddit r/LocalLLaMA:开源 SOTA 模型 MiniCPM-5 单卡跑 128k 上下文",
+      "source": "Reddit · Hugging Face",
+      "time": "2026-05-31",
+      "heat": {
+        "score": 2100,
+        "level": "新星",
+        "sources": [
+          "reddit",
+          "github",
+          "x"
+        ],
+        "breakdown": "Reddit 1.3k upvotes · HF 24h 下载 4k · X ~3k mentions"
+      },
+      "comments": 156,
+      "summary": "面壁智能开源 MiniCPM-5,8B 参数在单张消费级 GPU 上跑出 128k 上下文,RAG 评测超过同等尺寸商用模型。Reddit 工程师圈评价:'这是开源本地 AI 真正可用的临界点'。",
+      "tags": [
+        "新模型",
+        "开源",
+        "本地部署",
+        "面壁智能"
+      ],
+      "terms": [
+        "MiniCPM",
+        "128k 上下文",
+        "RAG"
+      ],
+      "rising_metrics": {
+        "reddit_upvotes": 1300,
+        "hf_downloads_24h": 4000
+      }
+    },
+    {
+      "id": "r11",
+      "rank": 11,
+      "category": "rising",
+      "title": "GitHub Trending 黑马:InsForge — 专为 Coding Agent 设计的 Postgres 后端",
+      "source": "GitHub Trending",
+      "time": "2026-05-30",
+      "heat": {
+        "score": 1800,
+        "level": "新星",
+        "sources": [
+          "github",
+          "hn"
+        ],
+        "breakdown": "GitHub 24h +460 stars · HN ~280 points · 累计 8.7k stars"
+      },
+      "comments": 67,
+      "summary": "InsForge 定位'给 AI Agent 用的后端':内置 auth / storage / 函数执行 / AI gateway,Agent 可以直接通过工具调用读写数据库,不需要手写 SQL。GitHub 单日涨 460 星,被 addyosmani 等知名工程师推荐。",
+      "tags": [
+        "新应用",
+        "GitHub Trending",
+        "Agent 工具链",
+        "Postgres"
+      ],
+      "terms": [
+        "AI gateway",
+        "工具调用"
+      ],
+      "rising_metrics": {
+        "github_stars_24h": "+460",
+        "total_stars": 8700
+      }
+    },
+    {
+      "id": "n12",
+      "rank": 12,
+      "category": "paper",
+      "title": "phi_first:首 Token 置信度即可检测幻觉,成本极低",
+      "source": "arXiv 2605.05166",
+      "time": "2026-05-07",
+      "heat": {
+        "score": 1900,
+        "level": "中",
+        "sources": [
+          "paper",
+          "hn"
+        ],
+        "breakdown": "arXiv 5 月 cs.AI 高赞 · HN ~420 points"
+      },
+      "comments": 45,
+      "summary": "仅需单次贪婪解码的首 Token 归一化熵,7-8B 模型上 AUROC 0.820,与多次采样语义自洽方法性能相当,但成本大幅降低。",
+      "tags": [
+        "幻觉检测",
+        "arxiv",
+        "安全"
+      ],
+      "terms": [
+        "AUROC",
+        "归一化熵",
+        "语义自洽"
+      ]
+    },
+    {
+      "id": "n13",
+      "rank": 13,
+      "category": "paper",
+      "title": "Design Conductor 2.0:Agent 80 小时自主设计 FPGA 推理加速器",
+      "source": "arXiv 2605.05170",
+      "time": "2026-05-07",
+      "heat": {
+        "score": 1650,
+        "level": "中",
+        "sources": [
+          "paper",
+          "hn"
+        ],
+        "breakdown": "arXiv 高赞 · HN ~310 points"
+      },
+      "comments": 89,
+      "summary": "VerTQ 推理加速器(5129 FP16/32 单元)从论文到 FPGA 映射全自主完成,展示 AI Agent 驱动硬件设计的可行性。",
+      "tags": [
+        "Agent",
+        "FPGA",
+        "硬件设计",
+        "arxiv"
+      ],
+      "terms": [
+        "FPGA",
+        "FP16",
+        "RTL"
+      ]
+    },
+    {
+      "id": "n14",
+      "rank": 14,
+      "category": "industry",
+      "title": "美国商务部堵芯片漏洞:Blackwell、MI350x 不准流入中国子公司",
+      "source": "路透社 / 观察者网",
+      "time": "2026-05-31",
+      "heat": {
+        "score": 4500,
+        "level": "热",
+        "sources": [
+          "media",
+          "x"
+        ],
+        "breakdown": "~7k X mentions · 多家媒体 · 股市反应明显"
+      },
+      "comments": 678,
+      "summary": "新指引认为对华芯片制裁存在巨大漏洞,中国企业海外子公司未获许可即可采购顶尖芯片。新规堵住马来西亚等地中资 AI 企业子公司路径。",
+      "tags": [
+        "芯片禁令",
+        "Blackwell",
+        "中美科技",
+        "AMD"
+      ],
+      "terms": [
+        "BIS",
+        "实体清单",
+        "MI350x"
+      ]
+    },
+    {
+      "id": "n15",
+      "rank": 15,
+      "category": "industry",
+      "title": "全国首个绿色算力全栈 AI 平台在呼和浩特上线",
+      "source": "央视新闻",
+      "time": "2026-05-30",
+      "heat": {
+        "score": 2100,
+        "level": "中",
+        "sources": [
+          "media"
+        ],
+        "breakdown": "央视新闻 · 主流财经媒体跟进"
+      },
+      "comments": 56,
+      "summary": "集成算力调度、模型调用、Token 交易结算三大功能,全面兼容国产芯片与主流算力架构,首批接入三大运营商与头部厂商十余款主流模型。",
+      "tags": [
+        "国产算力",
+        "绿色 AI",
+        "全国一体化算力网"
+      ],
+      "terms": [
+        "Token 交易",
+        "通算/智算/超算"
+      ]
+    },
+    {
+      "id": "n16",
+      "rank": 16,
+      "category": "social",
+      "title": "Anthropic 在预测市场 Polymarket 上以 83.2% 概率被视为 6 月底最佳 AI",
+      "source": "Polymarket / 腾讯新闻",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 1500,
+        "level": "中",
+        "sources": [
+          "x",
+          "reddit"
+        ],
+        "breakdown": "~2k X mentions · 预测市场 ~30 万美元成交"
+      },
+      "comments": 122,
+      "summary": "截至 UTC 6-1 03:50,Anthropic 83.2% / Google 13.5% / OpenAI 3.2%。过去 24h 成交 29.2 万美元,累计 890 万美元。",
+      "tags": [
+        "预测市场",
+        "Anthropic",
+        "OpenAI"
+      ],
+      "terms": [
+        "Polymarket",
+        "成交额",
+        "流动性池"
+      ]
+    },
+    {
+      "id": "n17",
+      "rank": 17,
+      "category": "social",
+      "title": "Figure 03 人形机器人 200 小时直播,分拣 25 万包裹零故障",
+      "source": "IT 之家 / 机器人全球资讯",
+      "time": "2026-05-25",
+      "heat": {
+        "score": 1400,
+        "level": "中",
+        "sources": [
+          "media",
+          "x"
+        ],
+        "breakdown": "~3k X mentions · 视频播放 1.2M"
+      },
+      "comments": 78,
+      "summary": "Figure AI 直播 200 小时全自动作业,累计分拣近 25 万包裹无硬件故障。最初为回应工业自动化专家 Scott Walter 提出的 8 小时耐力挑战。",
+      "tags": [
+        "Figure",
+        "人形机器人",
+        "具身智能"
+      ],
+      "terms": [
+        "Figure 03",
+        "耐力测试"
+      ]
+    },
+    {
+      "id": "n18",
+      "rank": 18,
+      "category": "paper",
+      "title": "LongSeeker 论文:弹性上下文编排",
+      "source": "arXiv 2605.05191",
+      "time": "2026-05-07",
+      "heat": {
+        "score": 1200,
+        "level": "中",
+        "sources": [
+          "paper",
+          "github"
+        ],
+        "breakdown": "arXiv 高赞 · 配套 repo 24h +1.2k stars"
+      },
+      "comments": 32,
+      "summary": "LongSeeker 论文 + 配套开源代码,GitHub 单日涨 1.2k 星,Agent 上下文管理方向新参考实现。",
+      "tags": [
+        "Agent",
+        "上下文管理",
+        "arxiv"
+      ],
+      "terms": [
+        "Context-ReAct",
+        "BrowseComp"
+      ]
+    }
+  ],
+  "weekly_arc": {
+    "label": "本周脉络",
+    "weeks": [
+      {
+        "date": "2026-05-26",
+        "title": "Google 加注 Anthropic 400 亿,AI 算力供应链权力重组"
+      },
+      {
+        "date": "2026-05-28",
+        "title": "Anthropic H 轮 650 亿,估值破 9650 亿首超 OpenAI"
+      },
+      {
+        "date": "2026-05-29",
+        "title": "OpenAI 推 Rosalind Biodefense,生物 AI 进入准入控制时代"
+      },
+      {
+        "date": "2026-05-30",
+        "title": "GitHub Copilot 升自主 Agent,戴尔 AI 服务器暴增 757%"
+      },
+      {
+        "date": "2026-05-31",
+        "title": "美方堵芯片漏洞,Blackwell/MI350x 不再可经子公司入华"
+      },
+      {
+        "date": "2026-06-01",
+        "title": "GTC Taipei 重塑 PC 与机器人;OpenAI 推翻 80 年数学猜想"
+      },
+      {
+        "date": "2026-06-02",
+        "title": "(今日) 算力 + 模型 + 资本三线同时加速;开源圈冒出 LongSeeker / Visual-Code-Agent / MiniCPM-5"
+      }
+    ]
+  },
+  "monthly_arc": {
+    "label": "本月脉络",
+    "months": [
+      {
+        "date": "2026-04",
+        "theme": "资本高峰",
+        "events": [
+          "Google 400 亿加注 Anthropic",
+          "Cohere 收购 Aleph Alpha",
+          "OpenAI 软银年 30 亿合作"
+        ]
+      },
+      {
+        "date": "2026-05",
+        "theme": "产品 + 治理双重落地",
+        "events": [
+          "Anthropic 9650 亿估值",
+          "OpenAI 推 Rosalind",
+          "Copilot 升自主 Agent",
+          "戴尔 AI 服务器 757% 增长",
+          "MiniCPM-5 开源 SOTA 突破"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "theme": "算力新纪元 + 开源新势力",
+        "events": [
+          "Vera Rubin 架构",
+          "RTX Spark 入 PC",
+          "软银 750 亿欧建欧洲 AI",
+          "OpenAI 数学突破",
+          "LongSeeker / Visual-Code-Agent 走红"
+        ]
+      }
+    ]
+  }
+}

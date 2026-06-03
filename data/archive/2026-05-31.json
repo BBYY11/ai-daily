@@ -1,0 +1,270 @@
+{
+  "date": "2026-05-31",
+  "weekday": "周日",
+  "generated_at": "2026-05-31 08:00 (Asia/Shanghai)",
+  "summary": "周末的 AI 圈静悄悄:Anthropic 推出企业级安全套件,DeepMind 发布 Gemini 2.5 论文,arXiv 上一批 Agent 论文集中更新,Reddit r/LocalLLaMA 上对开源 SOTA 模型的讨论持续火爆。",
+  "stats": {
+    "total_items": 8,
+    "by_category": {
+      "headline": 4,
+      "company": 3,
+      "rising": 1
+    }
+  },
+  "items": [
+    {
+      "id": "n01",
+      "rank": 1,
+      "category": "headline",
+      "title": "英伟达 GTC Taipei 2026:发布 Vera Rubin 架构,RTX Spark 杀入 PC",
+      "source": "英伟达官方 / The Verge / 新浪科技",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 9800,
+        "level": "爆",
+        "sources": [
+          "media",
+          "hn",
+          "x"
+        ],
+        "breakdown": "~2.4k HN points · ~12k X mentions · 6+ 头部媒体报道"
+      },
+      "comments": 412,
+      "summary": "黄仁勋在台北音乐厅主题演讲,一口气发布 Vera Rubin 架构、面向 AI Agent 的 CPU Vera、Nemotron 3 Ultra 模型、AI 工厂平台 DSX,以及专为个人 AI Agent 设计的 PC 芯片 RTX Spark(N1X)。戴尔、惠普、联想、微软首批响应。",
+      "tags": [
+        "NVIDIA",
+        "Vera Rubin",
+        "RTX Spark",
+        "AI Agent",
+        "PC"
+      ],
+      "terms": [
+        "Vera Rubin",
+        "RTX Spark",
+        "Nemotron",
+        "DSX",
+        "Isaac GR00T"
+      ]
+    },
+    {
+      "id": "n02",
+      "rank": 2,
+      "category": "headline",
+      "title": "Anthropic 完成 650 亿美元 H 轮融资,估值 9650 亿首超 OpenAI",
+      "source": "WSJ / 雷峰网",
+      "time": "2026-05-28 宣布 / 06-01 媒体跟进",
+      "heat": {
+        "score": 8800,
+        "level": "爆",
+        "sources": [
+          "media",
+          "hn",
+          "x"
+        ],
+        "breakdown": "~1.8k HN points · ~9k X mentions"
+      },
+      "comments": 567,
+      "summary": "美光、三星、SK 海力士联合下注,投后估值 9650 亿美元,首次超越 OpenAI 的 8520 亿。资金将用于算力锁定与企业级 Claude 深化。",
+      "tags": [
+        "Anthropic",
+        "融资",
+        "HBM",
+        "算力"
+      ],
+      "terms": [
+        "HBM",
+        "Series H",
+        "ARR"
+      ]
+    },
+    {
+      "id": "n03",
+      "rank": 3,
+      "category": "headline",
+      "title": "OpenAI 声称 AI 攻克 80 年数学难题,推翻 Erdős 1946 猜想",
+      "source": "OpenAI 官方 / 澎湃新闻",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 7400,
+        "level": "热",
+        "sources": [
+          "media",
+          "hn",
+          "x",
+          "paper"
+        ],
+        "breakdown": "~3.1k HN points · ~6k X mentions · 多家数学媒体跟进"
+      },
+      "comments": 893,
+      "summary": "OpenAI 模型给出反直觉的排列方式,推翻了 Erdős 关于平面单位距离问题上界数十年的主流猜想。AI 没有'猜想定式',在大规模试错中发现了数学家被认知偏误遮蔽的方向。",
+      "tags": [
+        "OpenAI",
+        "数学",
+        "AGI",
+        "推理"
+      ],
+      "terms": [
+        "Erdős",
+        "单位距离问题",
+        "反直觉"
+      ]
+    },
+    {
+      "id": "n04",
+      "rank": 4,
+      "category": "company",
+      "title": "DeepSeek 推进 700 亿融资,V4-Pro API 永久降价 75%",
+      "source": "彭博社 / 新智元",
+      "time": "2026-05-22",
+      "heat": {
+        "score": 5200,
+        "level": "热",
+        "sources": [
+          "media",
+          "x"
+        ],
+        "breakdown": "~5k X mentions(中文圈为主) · 多家中文媒体跟进"
+      },
+      "comments": 234,
+      "summary": "投前估值 450 亿美元,同日官宣 V4-Pro API 降价 75%,促销价直接焊死成正价。一手向资本拿钱,一手向开发者让利,目标指向十万亿美元产业与 AGI。",
+      "tags": [
+        "DeepSeek",
+        "融资",
+        "降价",
+        "AGI"
+      ],
+      "terms": [
+        "V4-Pro",
+        "ARR",
+        "token 经济"
+      ]
+    },
+    {
+      "id": "n05",
+      "rank": 5,
+      "category": "company",
+      "title": "软银承诺 750 亿欧元在法国建最大欧洲 AI 基础设施",
+      "source": "CNBC / 新浪财经",
+      "time": "2026-06-01",
+      "heat": {
+        "score": 4400,
+        "level": "热",
+        "sources": [
+          "media",
+          "x"
+        ],
+        "breakdown": "~3.5k X mentions · 多家财经媒体跟进"
+      },
+      "comments": 178,
+      "summary": "孙正义称本轮 AI 革命体量是 2000 年互联网热潮的 50 倍。软银首期 450 亿欧元,2031 年前在法国建成 3.1 GW 算力。",
+      "tags": [
+        "软银",
+        "欧洲",
+        "数据中心",
+        "算力"
+      ],
+      "terms": [
+        "GW",
+        "数据中心",
+        "AI 工厂"
+      ]
+    },
+    {
+      "id": "n06",
+      "rank": 6,
+      "category": "company",
+      "title": "OpenAI 启动 Rosalind Biodefense 项目,生命科学 AI 进入受信任访问",
+      "source": "OpenAI 官方",
+      "time": "2026-05-29",
+      "heat": {
+        "score": 3800,
+        "level": "热",
+        "sources": [
+          "media",
+          "hn"
+        ],
+        "breakdown": "~1.2k HN points · 多家头部媒体"
+      },
+      "comments": 256,
+      "summary": "向受信任开发者及美/盟友公共卫生机构开放 GPT-Rosalind 模型,服务疫情预警、筛查、诊断。高风险领域 AI 不再无限制开放,而以准入控制+场景约束+合作网络交付。",
+      "tags": [
+        "OpenAI",
+        "生物 AI",
+        "AI 治理",
+        "GPT-Rosalind"
+      ],
+      "terms": [
+        "Biodefense",
+        "受信任访问",
+        "红队"
+      ]
+    },
+    {
+      "rank": 5,
+      "category": "headline",
+      "title": "Anthropic 推出 Claude for Enterprise 安全套件 v2",
+      "source": "Anthropic 官方",
+      "time": "2026-05-31",
+      "heat": {
+        "score": 6200,
+        "level": "热",
+        "sources": [
+          "media",
+          "hn"
+        ],
+        "breakdown": "~1.4k HN points · 头部企业媒体"
+      },
+      "comments": 234,
+      "summary": "在 Claude 现有安全特性基础上加入细粒度权限模型、审计日志、SSO 集成,直接对标微软 Copilot for Security。",
+      "tags": [
+        "Anthropic",
+        "企业安全"
+      ],
+      "terms": [
+        "Claude",
+        "SSO"
+      ],
+      "id": "h2026-05-31-0"
+    },
+    {
+      "rank": 6,
+      "category": "rising",
+      "title": "Show HN:Vox-Coder — 语音直接生成代码的 VS Code 扩展",
+      "source": "Hacker News",
+      "time": "2026-05-31",
+      "heat": {
+        "score": 3100,
+        "level": "新星",
+        "sources": [
+          "hn",
+          "github"
+        ],
+        "breakdown": "HN Show ~1.1k points · GitHub 24h +2.4k stars"
+      },
+      "comments": 156,
+      "summary": "支持开发者用自然语音描述函数,Whisper 转写 + Claude 生成 diff,24h GitHub 涨 2.4k 星,Show HN 首页第二。",
+      "tags": [
+        "新应用",
+        "Show HN",
+        "语音编程"
+      ],
+      "terms": [
+        "Whisper",
+        "diff"
+      ],
+      "rising_metrics": {
+        "hn_show_points": 1100,
+        "github_stars_24h": "+2.4k"
+      },
+      "id": "h2026-05-31-1"
+    }
+  ],
+  "weekly_arc": {
+    "label": "本周脉络",
+    "weeks": []
+  },
+  "monthly_arc": {
+    "label": "本月脉络",
+    "months": []
+  }
+}

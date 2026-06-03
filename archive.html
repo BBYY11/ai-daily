@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily · 归档 · 全部历史</title>
+<style>
+  :root {
+    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
+    --line: #1f1f24; --line-2: #2a2a31;
+    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
+    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
+    --magenta: #d65cd1; --magenta-soft: rgba(214, 92, 209, 0.12);
+    --cyan: #4adfd1;
+    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
+    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
+  .back { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
+  .back:hover { color: var(--orange); border-color: var(--orange); }
+
+  h1 { font-size: 36px; margin: 32px 0 8px; font-weight: 800; letter-spacing: -0.01em; }
+  .sub { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
+
+  .stats { display: flex; gap: 24px; margin: 24px 0; padding: 16px 0; border-top: 1px dashed var(--line-2); border-bottom: 1px dashed var(--line-2); }
+  .stat .v { font-family: var(--mono); font-size: 20px; color: var(--orange); font-weight: 600; }
+  .stat .l { font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 2px; }
+
+  .day-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); margin-top: 8px; }
+  .day-row { display: grid; grid-template-columns: 120px 1fr 80px 80px 80px; gap: 16px; padding: 20px 16px; border-bottom: 1px solid var(--line); align-items: center; text-decoration: none; color: var(--text); transition: 0.2s; position: relative; }
+  .day-row:hover { background: var(--bg-2); }
+  .day-row:hover .d-title { color: var(--orange); }
+  .day-row::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: transparent; transition: 0.2s; }
+  .day-row:hover::before { background: var(--orange); box-shadow: 0 0 12px var(--orange); }
+
+  .d-date { font-family: var(--mono); font-size: 14px; color: var(--orange); font-weight: 600; }
+  .d-weekday { font-family: var(--mono); font-size: 10px; color: var(--text-mute); margin-top: 2px; }
+  .d-title { font-size: 15px; line-height: 1.5; color: var(--text-dim); }
+  .d-num { font-family: var(--mono); font-size: 14px; color: var(--text-mute); text-align: right; }
+  .d-num strong { color: var(--orange); font-size: 18px; font-weight: 600; }
+  .d-num .rising { color: var(--magenta); }
+
+  .empty { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
+  footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · ARCHIVE</a>
+    <a href="index.html" class="back">← 回到今日</a>
+  </header>
+
+  <h1>归档</h1>
+  <div class="sub">HISTORY · 每天 08:00 CST 存档 · 共 <span id="total-days">—</span> 天</div>
+
+  <div class="stats">
+    <div class="stat"><div class="v" id="s-days">—</div><div class="l">已存天数</div></div>
+    <div class="stat"><div class="v" id="s-items">—</div><div class="l">累计新闻</div></div>
+    <div class="stat"><div class="v" id="s-rising">—</div><div class="l">累计新兴</div></div>
+    <div class="stat"><div class="v" id="s-first">—</div><div class="l">起始日期</div></div>
+  </div>
+
+  <div class="day-list" id="day-list"></div>
+
+  <footer>© 2026 AI Daily · Generative Brief · 归档数据由 cron 任务每日 08:00 Asia/Shanghai 写入</footer>
+</div>
+
+<script>
+fetch("data/archive/index.json")
+  .then(r => r.ok ? r.json() : { days: [] })
+  .then(idx => {
+    const days = idx.days || [];
+    document.getElementById("total-days").textContent = days.length;
+    document.getElementById("s-days").textContent = days.length;
+    document.getElementById("s-items").textContent = days.reduce((s, d) => s + (d.total || 0), 0);
+    document.getElementById("s-rising").textContent = days.reduce((s, d) => s + (d.rising || 0), 0);
+    document.getElementById("s-first").textContent = days.length ? days[days.length - 1].date : "—";
+
+    if (!days.length) {
+      document.getElementById("day-list").innerHTML = '<div class="empty">还没有归档。归档每天 08:00 CST 自动生成(等部署恢复后开始)。</div>';
+      return;
+    }
+
+    document.getElementById("day-list").innerHTML = days.map(d => `
+      <a class="day-row" href="archive-view.html?date=${d.date}">
+        <div>
+          <div class="d-date">${d.date}</div>
+          <div class="d-weekday">${d.weekday || ""}</div>
+        </div>
+        <div class="d-title">${escapeHTML(d.summary || "(无摘要)")}</div>
+        <div class="d-num"><strong>${d.total || 0}</strong><br><span style="font-size:10px">条</span></div>
+        <div class="d-num"><span class="rising">${d.rising || 0}</span><br><span style="font-size:10px">新兴</span></div>
+        <div class="d-num">${d.headline || 0}<br><span style="font-size:10px">头条</span></div>
+      </a>
+    `).join("");
+  })
+  .catch(err => {
+    document.getElementById("day-list").innerHTML = '<div class="empty">加载归档失败:' + err.message + '</div>';
+  });
+
+function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+</script>
+</body>
+</html>
