@@ -116,7 +116,7 @@
   </header>
 
   <div id="content" class="empty">加载中...</div>
-  <footer>© 2026 AI Daily · 本月脉络 · 上周摘要(每周一更新)+ 已过完月份总结(每月最后一天更新)</footer>
+  <footer>© 2026 AI Daily · 本月脉络 · 上周摘要(每周一更新)+ 已过完月份总结(每月最后一天更新) · <a href="weekly_archive.html" style="color:var(--orange);text-decoration:none;">查看所有历史周报 →</a></footer>
 </div>
 
 <script>
@@ -225,12 +225,6 @@ function render({ news, week, monthly }) {
   `;
 
   const html = `
-    <section class="hero">
-      <div class="hero-meta">MONTHLY · 截至 ${todayDate} (${todayWeekday}) · 块 1 每周一更新 · 块 2 每月最后一天更新</div>
-      <h1>本月脉络 <span class="hl">· 上周摘要 + 已过完月份总结</span></h1>
-      <p>${monthly ? escapeHTML(monthly.period_summary || "") : "加载中..."}</p>
-    </section>
-
     ${weekBlock}
 
     ${monthBlock}
