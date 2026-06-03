@@ -16,12 +16,13 @@
 | **单周详情** | https://bbyy11.github.io/ai-daily/weekly_view.html?week=2026-W22 | 单周周报,可下载 3 种格式 |
 | **每日归档** | https://bbyy11.github.io/ai-daily/archive.html | 所有历史日期(2026-05-29 起) |
 | **单日快照** | https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03 | 单日早报只读视图 |
+| **RSS Feed** | https://bbyy11.github.io/ai-daily/feed.xml | RSS 2.0 订阅源(阅读器 + AI Agent 通用) |
 
 ## 3. 自动化流水线(4 个 cron 任务)
 
 | 任务 ID | 名称 | 触发 | 功能 |
 |---|---|---|---|
-| `404860864389898` | ai-daily-0800 | 每天 8:00 | 抓 55 个信源 + 整理 15-20 条新闻 + 写 news.json + 归档昨日 + 推 GitHub |
+| `404860864389898` | ai-daily-0800 | 每天 8:00 | 抓 55 个信源 + 整理 15-20 条新闻 + 写 news.json + 归档昨日 + 生成 RSS + 推 GitHub |
 | `405116951241538` | ai-daily-weekly-summary | 每周一 8:00 | 生成上周摘要 + 永久归档周报 + 推 GitHub |
 | `405117857231745` | ai-daily-monthly-summary | 每月 28-31 8:00 | 当月最后一天才真正生成 + 追加到 monthly_archive + 推 GitHub |
 | `404859549492193` | ai-daily-healthcheck | 每 6 小时 | 验证主页/news.json/归档/刷新节奏是否正常,异常时主动通知 |

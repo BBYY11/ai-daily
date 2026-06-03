@@ -15,6 +15,7 @@
 | [单周详情](https://bbyy11.github.io/ai-daily/weekly_view.html?week=2026-W22) | 单周报内容 + Markdown / JSON / 打印 3 种下载 |
 | [每日归档](https://bbyy11.github.io/ai-daily/archive.html) | 所有历史日期(2026-05-29 起) |
 | [单日快照](https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03) | 单日早报只读视图 |
+| [⚡ RSS Feed](https://bbyy11.github.io/ai-daily/feed.xml) | RSS 2.0 订阅源,给阅读器 + AI Agent 用 |
 
 ## 功能
 
