@@ -1,11 +1,27 @@
 {
   "days": [
     {
+      "date": "2026-06-03",
+      "weekday": "周三",
+      "summary": "今天 AI 圈的核心叙事:微软 Build 重磅发布自研编程模型 MAI-Code-1-Flash,正式摆脱对 OpenAI 单一依赖;特朗普签署 AI 行政令,强能力模型公开发布前 30 天须通报;SpaceX 启动万亿级 IPO 进程。国产侧阿里 Qwen3.7-Plus 多模态、腾讯云 DeepSeek-V4 降价 97.5%、越疆 DobotWAM 具身大模型 99.25%——中美双线 + 资本 + 监管同步进入新阶段。",
+      "total": 14,
+      "rising": 2,
+      "headline": 3
+    },
+    {
       "date": "2026-06-02",
       "weekday": "周二",
       "summary": "今天 AI 圈的核心叙事:算力层的边界被英伟达重新定义,OpenAI 用模型推翻了一个 80 年的数学猜想,Anthropic 以近万亿估值登顶,Anthropic 与 OpenAI 的差距正在资本与产品两端同时拉大。开源圈也冒出一批值得关注的新工具。",
       "total": 18,
       "rising": 4,
+      "headline": 3
+    },
+    {
+      "date": "2026-06-01",
+      "weekday": "周一",
+      "summary": "今天 AI 圈的核心叙事:GTC Taipei 重新定义 AI PC 算力边界,Anthropic 估值近万亿且首次领先 OpenAI 启动 IPO,国产 MiniMax M3 编程能力 SOTA,中国算力 + 模型双线齐发;OpenAI 转向软硬一体,行业进入\"算力 + 资本 + 应用\"三线加速的新阶段。",
+      "total": 14,
+      "rising": 2,
       "headline": 3
     },
     {
