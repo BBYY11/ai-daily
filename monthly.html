@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Daily · 本月脉络 · 2026 月度趋势</title>
+<title>AI Daily · 本月脉络</title>
 <style>
   :root {
     --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
@@ -12,7 +12,6 @@
     --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
     --cyan: #4adfd1; --cyan-soft: rgba(74, 223, 209, 0.12);
     --magenta: #d65cd1; --magenta-soft: rgba(214, 92, 209, 0.12);
-    --green: #6dd47e;
     --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
     --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   }
@@ -35,37 +34,55 @@
   .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
   .nav-links a.active { color: var(--bg); background: var(--orange); border-color: var(--orange); }
 
-  /* ==== 上半年主线导读 ==== */
-  .annual-hero { margin: 32px 0 24px; padding: 48px; border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(180deg, var(--orange-soft), transparent 60%); position: relative; overflow: hidden; }
-  .annual-hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--orange), transparent); background-size: 200% 100%; animation: scan 3s linear infinite; }
+  .hero { margin: 32px 0 24px; padding: 48px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--orange), transparent); background-size: 200% 100%; animation: scan 3s linear infinite; }
   @keyframes scan { 0% { background-position: 200% 0;} 100% { background-position: -200% 0;} }
-  .annual-meta { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
-  .annual-hero h1 { font-size: 38px; margin: 12px 0 16px; font-weight: 800; letter-spacing: -0.01em; }
-  .annual-hero h1 .hl { background: linear-gradient(90deg, var(--orange), var(--orange-glow, var(--orange))); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .annual-hero p { font-size: 15px; color: var(--text); line-height: 1.8; max-width: 920px; }
-  .annual-stats { display: flex; gap: 32px; margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--line-2); flex-wrap: wrap; }
-  .annual-stat .v { font-family: var(--mono); font-size: 22px; color: var(--orange); font-weight: 600; }
-  .annual-stat .l { font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 2px; }
+  .hero-meta { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
+  .hero h1 { font-size: 42px; margin: 12px 0 8px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero h1 .hl { color: var(--orange); }
+  .hero p { font-size: 15px; color: var(--text-dim); line-height: 1.6; max-width: 760px; }
 
-  /* ==== 月度卡 ==== */
-  .months { display: flex; flex-direction: column; gap: 24px; margin: 32px 0; }
-  .month-card { border: 1px solid var(--line); border-radius: 12px; padding: 32px; background: var(--bg-2); position: relative; overflow: hidden; transition: 0.2s; }
+  /* ==== 块 1:上周摘要 ==== */
+  .weekly-block { margin: 32px 0; }
+  .block-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--orange); }
+  .block-header .num { font-family: var(--mono); font-size: 13px; color: var(--orange); letter-spacing: 0.15em; padding: 4px 10px; border: 1px solid var(--orange); border-radius: 4px; }
+  .block-header h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
+  .block-header .sub { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
+  .block-header .refresh-tag { font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: var(--orange-soft); color: var(--orange); border: 1px solid var(--orange); border-radius: 4px; letter-spacing: 0.1em; }
+
+  .weekly-summary-card { background: var(--bg-2); border: 1px solid var(--orange); border-radius: 12px; padding: 24px 28px; margin-bottom: 20px; }
+  .weekly-summary-card .summary { font-size: 15px; color: var(--text); line-height: 1.85; }
+
+  .weekly-themes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .theme-card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; transition: 0.2s; }
+  .theme-card:hover { border-color: var(--orange); }
+  .theme-card h4 { font-size: 14px; color: var(--orange); margin-bottom: 8px; font-weight: 600; }
+  .theme-card p { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+
+  .day-links { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .day-link { background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; text-decoration: none; color: var(--text); transition: 0.2s; display: block; }
+  .day-link:hover { border-color: var(--orange); background: var(--bg-3); transform: translateY(-2px); }
+  .day-link .d-date { font-family: var(--mono); font-size: 11px; color: var(--orange); }
+  .day-link .d-weekday { font-family: var(--mono); font-size: 9px; color: var(--text-mute); margin-left: 6px; }
+  .day-link .d-summary { font-size: 11px; color: var(--text-dim); line-height: 1.5; margin-top: 6px; max-height: 60px; overflow: hidden; }
+
+  /* ==== 块 2:已过完月份总结 ==== */
+  .monthly-block { margin: 48px 0 24px; }
+
+  .months { display: flex; flex-direction: column; gap: 20px; }
+  .month-card { border: 1px solid var(--line); border-radius: 12px; padding: 28px; background: var(--bg-2); position: relative; overflow: hidden; transition: 0.2s; }
   .month-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--line-2); }
   .month-card:hover { border-color: var(--orange); transform: translateY(-2px); box-shadow: 0 20px 40px -20px var(--orange-soft); }
-  .month-card.current { border-color: var(--orange); background: linear-gradient(180deg, var(--orange-soft), var(--bg-2) 40%); }
-  .month-card.current::before { background: var(--orange); }
-  .month-header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+  .month-header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
   .month-date { font-family: var(--mono); font-size: 18px; color: var(--cyan); letter-spacing: 0.1em; font-weight: 600; min-width: 110px; }
-  .month-title { font-size: 22px; font-weight: 700; flex: 1; }
-  .current-badge { font-family: var(--mono); font-size: 10px; padding: 4px 10px; background: var(--orange); color: var(--bg); border-radius: 4px; letter-spacing: 0.1em; }
+  .month-title { font-size: 20px; font-weight: 700; flex: 1; }
   .month-summary { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 20px; }
-  .month-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; }
+  .month-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; }
   .month-events-title { font-family: var(--mono); font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 10px; }
   .month-events { list-style: none; padding: 0; }
   .month-events li { font-size: 13px; color: var(--text-dim); line-height: 1.7; padding: 6px 0 6px 18px; position: relative; border-bottom: 1px dashed var(--line); }
   .month-events li:last-child { border-bottom: none; }
   .month-events li::before { content: "▸"; position: absolute; left: 0; color: var(--orange); }
-
   .month-aside { background: var(--bg-3); border: 1px solid var(--line); border-radius: 8px; padding: 18px; }
   .aside-label { font-family: var(--mono); font-size: 11px; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 12px; }
   .data-points { list-style: none; padding: 0; margin-bottom: 16px; }
@@ -78,9 +95,11 @@
   footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
 
   @media (max-width: 900px) {
+    .weekly-themes { grid-template-columns: 1fr; }
     .month-body { grid-template-columns: 1fr; }
-    .annual-hero { padding: 32px 24px; }
-    .annual-hero h1 { font-size: 28px; }
+    .day-links { grid-template-columns: repeat(2, 1fr); }
+    .hero { padding: 32px 24px; }
+    .hero h1 { font-size: 28px; }
   }
 </style>
 </head>
@@ -91,68 +110,90 @@
     <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · MONTHLY</a>
     <div class="nav-links">
       <a href="index.html">今日</a>
-      <a href="weekly.html">本周</a>
       <a href="monthly.html" class="active">本月</a>
       <a href="archive.html">归档</a>
     </div>
   </header>
 
   <div id="content" class="empty">加载中...</div>
-  <footer>© 2026 AI Daily · 本月脉络 · 2026 上半年 AI 圈 6 个月度趋势分析</footer>
+  <footer>© 2026 AI Daily · 本月脉络 · 上周摘要(每周一更新)+ 已过完月份总结(每月最后一天更新)</footer>
 </div>
 
 <script>
-fetch("data/monthly_archive.json")
-  .then(r => r.ok ? r.json() : null)
-  .then(d => {
-    if (!d) {
-      document.getElementById("content").innerHTML = '<div class="empty">月度归档数据加载失败</div>';
-      return;
-    }
-    // 找到今天是哪个月(以 news.json 为准)
-    return fetch("data/news.json").then(r => r.json()).then(n => {
-      const todayDate = n.date;  // 2026-06-03
-      const todayMonth = todayDate.slice(0, 7);  // 2026-06
-      render(d, todayMonth);
-    }).catch(() => render(d, "2026-06"));
-  })
-  .catch(err => {
-    document.getElementById("content").innerHTML = '<div class="empty">加载失败:' + err.message + '</div>';
-  });
+const FALLBACK_TODAY = "2026-06-03";
 
-function render(d, todayMonth) {
-  const months = d.months || [];
-  // 月份倒序(最新在最上面)
-  const sorted = [...months].sort((a, b) => b.date.localeCompare(a.date));
+(async () => {
+  // 并行拉三个数据
+  const [newsRes, weekRes, monthRes] = await Promise.all([
+    fetch("data/news.json"),
+    fetch("data/weekly_summary.json"),
+    fetch("data/monthly_archive.json"),
+  ]);
+  const news = newsRes.ok ? await newsRes.json() : null;
+  const week = weekRes.ok ? await weekRes.json() : null;
+  const monthly = monthRes.ok ? await monthRes.json() : null;
+  render({ news, week, monthly });
+})().catch(err => {
+  document.getElementById("content").innerHTML = '<div class="empty">加载失败:' + err.message + '</div>';
+});
 
-  const stats = {
-    total: months.length,
-    totalEvents: months.reduce((s, m) => s + (m.key_events ? m.key_events.length : 0), 0),
-    current: todayMonth,
-  };
+function render({ news, week, monthly }) {
+  const todayDate = (news && news.date) || FALLBACK_TODAY;
+  const todayWeekday = (news && news.weekday) || "";
 
-  const html = `
-    <section class="annual-hero">
-      <div class="annual-meta">${escapeHTML(d.period_label || "2026 上半年 AI 圈主线")} · 6 个月趋势分析</div>
-      <h1>本月脉络 <span class="hl">· ${months[0] ? months[0].date : ''} → ${months[months.length-1] ? months[months.length-1].date : ''}</span></h1>
-      <p>${escapeHTML(d.period_summary || "")}</p>
-      <div class="annual-stats">
-        <div class="annual-stat"><div class="v">${stats.total}</div><div class="l">月份覆盖</div></div>
-        <div class="annual-stat"><div class="v">${stats.totalEvents}</div><div class="l">关键事件</div></div>
-        <div class="annual-stat"><div class="v">$4000 亿+</div><div class="l">巨头投入累计</div></div>
-        <div class="annual-stat"><div class="v">3 大 IPO</div><div class="l">下半年资本兑现</div></div>
+  // 块 1:上周摘要
+  const weekBlock = week ? `
+    <section class="weekly-block">
+      <div class="block-header">
+        <span class="num">块 1</span>
+        <h2>上周摘要</h2>
+        <span class="sub">${week.week_label} · ${week.start_date} (${week.weekday_start}) → ${week.end_date} (${week.weekday_end})</span>
+        <span class="refresh-tag">每周一 08:00 更新</span>
+      </div>
+
+      <div class="weekly-summary-card">
+        <div class="summary">${escapeHTML(week.summary || "")}</div>
+      </div>
+
+      <div class="weekly-themes">
+        ${(week.key_themes || []).map(t => `
+          <div class="theme-card">
+            <h4>▎ ${escapeHTML(t.title)}</h4>
+            <p>${escapeHTML(t.body)}</p>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="day-links">
+        ${(week.day_links || []).map(d => `
+          <a class="day-link" href="archive-view.html?date=${d.date}">
+            <div><span class="d-date">${d.date.slice(5)}</span><span class="d-weekday">${d.weekday}</span></div>
+            <div class="d-summary">${escapeHTML(d.summary || "")}</div>
+          </a>
+        `).join("")}
       </div>
     </section>
+  ` : '<div class="empty">上周摘要数据加载中(每周一 08:00 生成)</div>';
 
-    <div class="months">
-      ${sorted.map(m => {
-        const isCurrent = m.date === stats.current;
-        return `
-          <div class="month-card ${isCurrent ? 'current' : ''}">
+  // 块 2:已过完月份总结
+  const months = (monthly && monthly.months) || [];
+  // 月份倒序
+  const sorted = [...months].sort((a, b) => b.date.localeCompare(a.date));
+  const monthBlock = `
+    <section class="monthly-block">
+      <div class="block-header">
+        <span class="num">块 2</span>
+        <h2>已过完月份总结</h2>
+        <span class="sub">${sorted.length ? sorted[sorted.length-1].date : ''} → ${sorted.length ? sorted[0].date : ''} · 共 ${sorted.length} 个月</span>
+        <span class="refresh-tag">每月最后一天 08:00 更新</span>
+      </div>
+
+      <div class="months">
+        ${sorted.map(m => `
+          <div class="month-card">
             <div class="month-header">
               <div class="month-date">${m.date}</div>
               <div class="month-title">${escapeHTML(m.title || '')}</div>
-              ${isCurrent ? '<span class="current-badge">本月</span>' : ''}
             </div>
             <div class="month-summary">${escapeHTML(m.trend_summary || '')}</div>
             <div class="month-body">
@@ -178,9 +219,21 @@ function render(d, todayMonth) {
               </div>
             </div>
           </div>
-        `;
-      }).join("")}
-    </div>
+        `).join("")}
+      </div>
+    </section>
+  `;
+
+  const html = `
+    <section class="hero">
+      <div class="hero-meta">MONTHLY · 截至 ${todayDate} (${todayWeekday}) · 块 1 每周一更新 · 块 2 每月最后一天更新</div>
+      <h1>本月脉络 <span class="hl">· 上周摘要 + 已过完月份总结</span></h1>
+      <p>${monthly ? escapeHTML(monthly.period_summary || "") : "加载中..."}</p>
+    </section>
+
+    ${weekBlock}
+
+    ${monthBlock}
   `;
   document.getElementById("content").innerHTML = html;
 }
