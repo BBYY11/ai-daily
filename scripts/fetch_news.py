@@ -169,23 +169,30 @@ def build_seed_news(date_str, weekday):
 
 
 def archive_today(date_str):
-    """把 news.json 归档到 archive/YYYY-MM-DD.json + 重建 archive/index.json 清单"""
+    """先归档旧 news.json(其 date 不同于今天),再归档今天,再重建 index.json"""
     news_path = os.path.join(DATA_DIR, "news.json")
     archive_dir = os.path.join(DATA_DIR, "archive")
     os.makedirs(archive_dir, exist_ok=True)
 
-    # 1. 如果有今天的 news.json,写入当天快照
+    # 1. 如果 news.json 存在且其 date 不是今天,把它归档到自己的 date
     if os.path.exists(news_path):
-        day_path = os.path.join(archive_dir, f"{date_str}.json")
         with open(news_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        with open(day_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        print(f"[archive] {day_path} saved")
-    else:
-        print(f"[archive] news.json not found, skip today snapshot")
+        old_date = data.get("date")
+        if old_date and old_date != date_str:
+            old_path = os.path.join(archive_dir, f"{old_date}.json")
+            if not os.path.exists(old_path):
+                with open(old_path, "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                print(f"[archive] {old_path} saved (from previous news.json)")
+            else:
+                print(f"[archive] {old_path} already exists, skip")
+        elif old_date == date_str:
+            print(f"[archive] news.json is already for {date_str}, skip归档")
+        else:
+            print(f"[archive] news.json missing date, skip")
 
-    # 2. 扫描整个 archive 目录,重建 index.json(保证任何手写入的快照也能被索引)
+    # 2. 扫描整个 archive 目录,重建 index.json
     days = []
     for fn in sorted(os.listdir(archive_dir), reverse=True):
         if not fn.endswith(".json") or fn == "index.json":

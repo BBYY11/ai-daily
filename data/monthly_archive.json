@@ -1,0 +1,160 @@
+{
+  "generated_at": "2026-06-03 11:40 (Asia/Shanghai)",
+  "period_label": "2026 上半年 AI 圈主线",
+  "period_summary": "2026 上半年是 AI 行业从技术军备竞赛转向商业兑现的关键半年。Anthropic 估值从 1 月 3500 亿一路飙升至 6 月 9650 亿首次反超 OpenAI,谷歌 / 亚马逊 / 微软 / 软银累计向头部 AI 公司投入超 4000 亿美元;OpenAI 完成史上最大单笔 1220 亿融资;NVIDIA Vera Rubin 架构落地,算力进入新纪元;中美双线齐发:OpenAI 估值霸权失守,Anthropic + Cursor 企业路径崛起,国产 DeepSeek/MiniMax/Qwen 从追赶到局部反超。AI 监管、IPO 兑现、Agent 工程化是下半年三大主线。",
+  "months": [
+    {
+      "date": "2026-01",
+      "title": "Q1 蓄势期:Anthropic 商业化加速,DeepSeek 预热",
+      "trend_summary": "1 月是 Q1 蓄势期,没有大爆点,但 Anthropic 已经显露出商业化加速的迹象——Cowork 协作工具 1 月 13 日发布,把 Claude Code 能力延伸到办公场景;DeepSeek 也在持续酝酿 V4。xAI 上线全球首个 1GW 级 Colossus 2 超算(等效 140 万块 H100),OpenAI 与 Cerebras 达成 100 亿美元算力合作。这一阶段的核心信号:算力军备竞赛从概念进入实操层面,头部 AI 公司开始为后续的模型迭代与商业化放量打地基。OpenAI 1 月 17 日启动 ChatGPT Go 版广告测试,标志 C 端变现路径再添新选项。",
+      "key_events": [
+        "Anthropic 推出 Cowork 协作工具(1/13)",
+        "Anthropic 暂停 xAI 的 Claude API 访问(1/12)",
+        "OpenAI 与 Cerebras 达成 100 亿美元算力合作(1/18)",
+        "OpenAI 启动 ChatGPT Go 版广告测试(1/17)",
+        "xAI 上线全球首个 1GW 级 Colossus 2 超算(1/18)",
+        "xAI 完成 200 亿美元 E 轮融资,估值 2300 亿(1/16)",
+        "谷歌开源 1.1B 参数 TranslateGemma 模型(1/16)",
+        "1 月 18 日 OpenAI 三位核心 AI 研究员回归"
+      ],
+      "data_points": [
+        "xAI 估值:2300 亿美元",
+        "OpenAI-Cerebras 算力合作:100 亿美元 / 750 兆瓦",
+        "Colossus 2 算力规模:等效 140 万块 H100"
+      ],
+      "look_ahead": "2 月将迎来春节档——中国 AI 圈的全员发力期,Q1 模型迭代的核心战场"
+    },
+    {
+      "date": "2026-02",
+      "title": "春节 AI 大战:13 起事件密集爆发,中美双线齐发",
+      "trend_summary": "2 月是中国 AI 圈最热闹的一个月,也是全球模型迭代最密集的窗口期。短短两周(2/10 - 2/24),13 起重大事件集中落地。阿里在除夕开源 Qwen 3.5-Plus 登顶全球最强开源模型,投入 30 亿红包让 AI 从聊天框走进生活;字节豆包联手央视春晚创下 19 亿次 AI 互动;腾讯元宝分 10 亿红包 MAU 突破 1.14 亿。模型侧 Anthropic 完成 300 亿美元 G 轮(估值 3800 亿),OpenAI 下线 GPT-4o 全面进入 GPT-5.2 时代,Gemini 3 Deep Think 升级,Seedance 2.0 把 AI 视频可用率推到 90%。春节档的本质:从参数竞赛转向场景决胜,AI 从技术玩具变成国民级应用入口。",
+      "key_events": [
+        "智谱 GLM-5 全程华为昇腾训练,HLE 50.4% 全球第一(2/11)",
+        "Google Gemini 3 Deep Think 重大升级(2/12)",
+        "MiniMax M2.5 发布,1 美元/小时极致性价比(2/12)",
+        "字节 Seedance 2.0 视频模型,2K 分辨率 90% 可用率(2/13)",
+        "Anthropic 300 亿 G 轮,估值 3800 亿(2/13)",
+        "OpenAI 下线 GPT-4o 等旧模型(2/13)",
+        "字节豆包 2.0 发布(2/14)",
+        "阿里 Qwen 3.5 开源,397B 参数 201 种语言(2/16)",
+        "Anthropic Claude Sonnet 4.6 发布,1M 上下文(2/17)",
+        "xAI Grok 4.2 多 Agent 框架(2/17)",
+        "Google Gemini 3.1 Pro preview,1M 上下文(2/19)"
+      ],
+      "data_points": [
+        "春节档 AI 互动总量(豆包):19 亿次",
+        "阿里千问 App 千问帮我 50 亿次",
+        "Anthropic G 轮估值:3800 亿美元 / 年化收入 140 亿",
+        "中国 AI 模型数量:从 200+ 缩减至不足 10 家",
+        "Q1 港股 AI 股:智谱 + MiniMax 市值双双破 3000 亿港元"
+      ],
+      "look_ahead": "3 月 NVIDIA GTC + Anthropic Claude Opus 4.5/4.6 持续迭代,开源生态全面进入企业级可用阶段"
+    },
+    {
+      "date": "2026-03",
+      "title": "算力新纪元 + 估值分化:Anthropic 商业化路径明确,OpenAI 押注终局",
+      "trend_summary": "3 月的核心叙事是 NVIDIA Vera Rubin 平台在 GTC 2026 正式落地(推理成本降低 10 倍,GPU 数量比 Blackwell 减 4 倍)——算力进入新纪元。同时,Anthropic 估值从 2 月的 3800 亿再次飙升至约 5500 亿(年化营收 90 亿),OpenAI 估值冲上 8520 亿(年化 240 亿),22 倍估值溢价反映资本市场对终局想象空间的豪赌。Anthropic 凭借 Claude Code 25 亿美元 ARR、Cursor 财富 500 强渗透率 67%、Mythos 模型引发美联储关注,商业化路径明确。开源圈发生大事:智谱与 MiniMax 港股上市,MiniMax 估值超 600 亿美元。Claude Sonnet 4.6 / Opus 4.5 在 SWE-bench 突破 80%,计算机操控能力行业领先。Anthropic 占企业 API 40%、编程 54% 份额。Anthropic 源码泄露 51 万行(3/31)暴露了 KAIROS 守护进程、BUDDY 电子宠物系统等未发布功能。",
+      "key_events": [
+        "NVIDIA GTC 2026:Vera Rubin 平台发布(3/16-19)",
+        "Anthropic 估值升至 5500 亿(3 月底)",
+        "OpenAI 估值升至 8520 亿(3 月底)",
+        "智谱 + MiniMax 港股上市(3 月)",
+        "Microsoft 重组为 OpenAI 2500 亿 Azure 采购(3 月)",
+        "Anthropic 源码泄露 51 万行(3/31),KAIROS/BUDDY 曝光",
+        "Anthropic 成立 TAI 理论 AI 研究院(3 月)",
+        "Claude Opus 4.5/4.6 持续迭代(3 月)"
+      ],
+      "data_points": [
+        "Anthropic 占企业 API 40% 份额",
+        "Anthropic 占编程市场 54% 份额",
+        "Cursor 财富 500 强员工渗透率:67%",
+        "Claude Code ARR:25 亿美元",
+        "Anthropic 营收:90 亿(2025 底)→ 300 亿(2026.4)"
+      ],
+      "look_ahead": "4 月 Google 巨额加注 Anthropic 标志算力资本循环交易达到新阶段,AI 巨头估值差将持续拉大"
+    },
+    {
+      "date": "2026-04",
+      "title": "循环交易 + Anthropic 加速:Google 400 亿 + 微软 AI 创纪录回报",
+      "trend_summary": "4 月是 AI 资本循环交易的标志性月份。Google 宣布向 Anthropic 投资最高 400 亿美元(首笔 100 亿现金 + 5GW 算力 + 业绩挂钩 300 亿)——这是 AI 领域迄今最大单笔投资。同时 OpenAI 完成 1220 亿美元融资,亚马逊 500 亿领投,英伟达 / 软银各 300 亿,估值 8520 亿(刷新人类商业史纪录)。Cohere 收购德国 Aleph Alpha 打造跨大西洋 AI 力量。微软财报显示单季从 OpenAI 投资获利 76 亿美元,云业务首破 500 亿。但这种左手倒右手的资本结构引发学界担忧——哈佛经济学家 Jason Furman 指出,若剔除数据中心投资,美国 H1 2025 GDP 增长仅为 0.1%。Anthropic 营收从 90 亿飙至 300 亿,Q1 ARR 反超 OpenAI 成为可能。Cursor 三个月 ARR 从 10 亿翻倍至 20 亿,AI 编程赛道的工作流护城河成型。",
+      "key_events": [
+        "Google 400 亿投资 Anthropic(4/24)",
+        "Anthropic 与亚马逊 50 亿投资 + 200 亿追加(4 月底)",
+        "OpenAI 完成 1220 亿美元融资(4/1),估值 8520 亿",
+        "微软 FY26 财报:OpenAI 投资单季获利 76 亿(4 月)",
+        "Cohere 收购 Aleph Alpha 打造跨大西洋 AI 力量(4/24)",
+        "Anthropic 营收飙升至 300 亿美元 ARR(4 月)",
+        "Cursor ARR 三个月翻倍至 20 亿(4 月)",
+        "中国十部门印发 AI 科技伦理审查办法(4/2)",
+        "AI 周报泄露 51 万行源码后续发酵(4 月初)"
+      ],
+      "data_points": [
+        "Google 投资:400 亿美元 + 5GW 算力",
+        "OpenAI 单轮融资:1220 亿美元",
+        "Anthropic ARR 增速:90 亿 → 300 亿(15 个月)",
+        "Anthropic 估值:3500 亿 → 5500 亿",
+        "微软云季度收入:首破 500 亿美元"
+      ],
+      "look_ahead": "5 月 Anthropic 估值将首超 OpenAI,IPO 路径明确,中美 AI 圈 H1 收官之战打响"
+    },
+    {
+      "date": "2026-05",
+      "title": "估值反超 + IPO 冲刺:Anthropic 9650 亿首超 OpenAI,头部集体冲刺上市",
+      "trend_summary": "5 月是 AI 圈 H1 收官之战的核心月份。Anthropic 完成 650 亿美元 H 轮,估值飙至 9650 亿美元,首次超过 OpenAI(8520 亿)成为全球最具价值的 AI 公司。Anthropic 同时与 SpaceX 签署近 450 亿美元算力协议(2026-2029),与 Google/Broadcom 签 3.5GW TPU 算力协议,商业化引擎全开。Anthropic 成立 TAI 理论 AI 研究院,披露下一代 Claude 三大升级方向:更高判断力、近乎无限上下文、多智能体协作。OpenAI 与 Anthropic 同日宣布与华尔街 PE 巨头成立合资企业(OpenAI 40 亿 + Anthropic 15 亿),标志 AI 商业化进入巨头+资本捆绑的新阶段。DeepSeek 与阿里融资谈判破裂,坚持独立估值 3000 亿。Mistral Medium 3 以 12.5% 价格达到 Claude Sonnet 3.7 的 90% 性能,性价比竞赛正式开启。OpenAI 推出三款实时语音模型(GPT-Realtime-2 延迟 < 200ms)。MiniMax 港股市值突破 600 亿美元,中概 AI 资产重估。戴尔 AI 服务器同比 +757%,AI 算力需求传导至硬件产业链。",
+      "key_events": [
+        "Anthropic 完成 650 亿 H 轮,估值 9650 亿首超 OpenAI(5/28)",
+        "Anthropic 与 SpaceX 450 亿算力协议(2026-2029)",
+        "Anthropic 与 Google/Broadcom 3.5GW TPU 算力协议",
+        "Anthropic 成立 TAI 理论 AI 研究院(5/9)",
+        "OpenAI 与华尔街 PE 成立 40 亿合资企业(5/4)",
+        "Anthropic 与华尔街 PE 成立 15 亿合资企业(5/4)",
+        "DeepSeek 与阿里谈判破裂,坚持独立估值 3000 亿(5/9)",
+        "Mistral Medium 3 发布,价格仅 Claude Sonnet 3.7 的 12.5%",
+        "OpenAI 推出三款实时语音模型 GPT-Realtime-2(延迟 < 200ms)",
+        "戴尔 AI 服务器 Q1 同比 +757%",
+        "Anthropic 发布 Claude Mythos Preview(4 月底/5 月初)"
+      ],
+      "data_points": [
+        "Anthropic 估值:9650 亿美元(首超 OpenAI)",
+        "Anthropic Q1 ARR:440 亿美元(同比 80 倍)",
+        "Anthropic 占企业 AI 市场份额:40%",
+        "Anthropic GPU 算力:22 万块(来自 SpaceX)",
+        "OpenAI 周活:9 亿 / 付费用户 5000 万",
+        "MiniMax 港股市值:600 亿美元",
+        "AI 岗位同比涨 12 倍,平均月薪 6 万"
+      ],
+      "look_ahead": "6 月英伟达 GTC Taipei 重新定义 AI PC 边界,Anthropic 秘密递交 IPO 文件,SpaceX 启动万亿级 IPO 进程——Q2 末将出现 AI 巨头集中上市的资本兑现期"
+    },
+    {
+      "date": "2026-06",
+      "title": "Q2 收官 + 算力新纪元:英伟达 GTC Taipei / Anthropic IPO / 微软去 OpenAI 化",
+      "trend_summary": "6 月是 Q2 收官的标志性月份,三线同时加速。算力线:英伟达 GTC Taipei 2026 发布 Vera Rubin 架构 + RTX Spark(N1X)杀入 PC 端,与微软合作 ARM 架构 + 台积电 3nm 工艺,正式打破 Intel 在 PC 芯片领域的垄断;宇树 H2+ 人形机器人(75 自由度)与英伟达 Isaac GR00T 系统集成;宇树单款人形机器人累计下线 11000 台。资本线:Anthropic 秘密向 SEC 递交 Form S-1 注册声明(估值近 1 万亿),OpenAI 紧随其后目标秋季,SpaceX 启动 750 亿美元 IPO 进程(估值 1.75 万亿)。产品线:微软 Build 2026 发布 MAI-Code-1-Flash 自研编程模型(去 OpenAI 化),阿里 Qwen3.7-Plus 多模态,腾讯云 DeepSeek-V4 降价 97.5%,国产 MiniMax M3 编程超 GPT-5.5(SWE-Bench Pro 接近 Claude Opus 4.7),国产 1.6 万亿参数 DeepSeek-V4-Pro 用昇腾 910C 全流程训练完成。监管线:特朗普签 AI 行政令(强能力模型公开发布前 30 天须通报),佛州起诉 OpenAI,中美 AI 治理同步加码。本月主题:算力新纪元 + 中美双线并进 + 头部 IPO 冲刺。",
+      "key_events": [
+        "GTC Taipei:Vera Rubin 架构 + RTX Spark(N1X)发布(6/1)",
+        "Anthropic 秘密递交 IPO 招股书,估值近 1 万亿(6/1)",
+        "国产 MiniMax M3 发布,编程超 GPT-5.5,启动 A 股 IPO(6/1)",
+        "软银宣布 450 亿欧元首期投资法国 AI 基础设施(6/1)",
+        "英伟达 × 宇树 H2+ 人形机器人 75 自由度(6/1)",
+        "COMPUTEX 2026 开幕,AI Together 主题(6/1)",
+        "微软 Build 2026:MAI-Code-1-Flash 自研编程模型(6/3)",
+        "特朗普签 AI 行政令:30 天通报(6/3)",
+        "SpaceX 启动 750 亿美元 IPO 进程(6/3)",
+        "阿里 Qwen3.7-Plus 多模态智能体(6/2)",
+        "腾讯云 DeepSeek-V4 降价 97.5%(6/3)",
+        "越疆 DobotWAM 具身大模型 99.25% 成功率(6/2)",
+        "OpenAI 组建机器人事业部(6/1)",
+        "中国电信联合清华完成抗量子芯片试验(6/1)",
+        "佛州起诉 OpenAI(6/2)"
+      ],
+      "data_points": [
+        "Vera Rubin 推理成本降低 10 倍 vs Blackwell",
+        "Anthropic 估值:9650 亿美元(IPO 预期近 1 万亿)",
+        "SpaceX 估值:1.75 万亿美元",
+        "DeepSeek-V4 训练:1.6 万亿参数 / 国产昇腾 910C",
+        "DeepSeek-V4 降价:最高 97.5%",
+        "宇树单款人形量产:11000 台"
+      ],
+      "look_ahead": "Q3 核心看点:Anthropic / OpenAI / SpaceX 三大头部集中上市,AI 巨头正式进入公开市场审视期;OpenAI 估值溢价(35x ARR)能否被公开市场接受?Anthropic 的清晰商业化路径(13x ARR)会成为负责任的 AI 投资标杆;Cursor / Perplexity 等垂直应用层可能涌现 100 亿+ 美元独角兽;中美 AI 双线持续镜像式竞争"
+    }
+  ]
+}
