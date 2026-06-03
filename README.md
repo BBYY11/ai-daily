@@ -93,7 +93,7 @@ ai-daily/
 3. `bash scripts/push_to_github.sh` 推送(用 GitHub Contents API,不依赖 git 协议)
 4. GitHub Pages 1-2 分钟后自动刷新
 
-`push_to_github.sh` 需要环境变量 `GITHUB_TOKEN_BBYY11` (PAT,只勾 `repo` 权限)。
+`push_to_github.sh` 需要环境变量 `GITHUB_TOKEN_BBYY11_V2` (PAT,只勾 `repo` 权限)。
 
 现在最小化可用:把 news.json / terms.json 改一下,`bash scripts/push_to_github.sh` 一次,几分钟后公网更新。
 

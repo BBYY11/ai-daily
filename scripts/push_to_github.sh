@@ -3,7 +3,7 @@
 # 不用 git,直接调 REST API。绕开 git 协议层网络慢的问题。
 #
 # 依赖环境变量:
-#   GITHUB_TOKEN_BBYY11   GitHub PAT(repo 权限)
+#   GITHUB_TOKEN_BBYY11_V2   GitHub PAT(repo 权限)
 
 set +e
 cd "$(dirname "$0")/.."
@@ -11,15 +11,15 @@ cd "$(dirname "$0")/.."
 LOG="/tmp/ai-daily-push.log"
 echo "[$(date -Iseconds)] push start (api mode)" > "$LOG"
 
-if [ -z "$GITHUB_TOKEN_BBYY11" ]; then
-  echo "[push] ERROR: GITHUB_TOKEN_BBYY11 未设置" >> "$LOG"
+if [ -z "$GITHUB_TOKEN_BBYY11_V2" ]; then
+  echo "[push] ERROR: GITHUB_TOKEN_BBYY11_V2 未设置" >> "$LOG"
   exit 1
 fi
 
 REPO="bbyy11/ai-daily"
 BRANCH="main"
 API="https://api.github.com"
-AUTH="Authorization: token ${GITHUB_TOKEN_BBYY11}"
+AUTH="Authorization: token ${GITHUB_TOKEN_BBYY11_V2}"
 ACCEPT="Accept: application/vnd.github+json"
 
 # 1. 拿到远端 main 的最新 commit SHA
