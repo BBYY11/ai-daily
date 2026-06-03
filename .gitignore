@@ -1,0 +1,9 @@
+# 截图和调试文件(不部署到 GitHub)
+assets/
+snap.js
+
+# 临时文件
+*.log
+.DS_Store
+__pycache__/
+*.pyc
