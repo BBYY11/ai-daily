@@ -1,126 +1,108 @@
 # AI Daily · 全球 AI 早报
 
-> 每天 08:00 (Asia/Shanghai) 自动生成的全球 AI 资讯网页。
-> 信源覆盖 35+ 头部英文 / 中文 / 学术 / 行业 / 社交渠道,带技术词条悬浮百科,周月发展脉络视图。
+> 每天 08:00 (Asia/Shanghai) 自动生成、永久归档的全球 AI 资讯网页。
+> 部署在 GitHub Pages,完全自动运行,无需人工维护。
 
-## 公网链接(GitHub Pages 版)
+## 在线访问
 
-启用 GitHub Pages 后,你的早报链接形如:
+👉 **https://bbyy11.github.io/ai-daily/**
+
+| 入口 | 用途 |
+|---|---|
+| [今日](https://bbyy11.github.io/ai-daily/) | 每天 8:00 自动刷新的当日早报(15-20 条新闻) |
+| [本月](https://bbyy11.github.io/ai-daily/monthly.html) | 上周摘要 + 1-5 月总结(块 1 每周一更新,块 2 每月最后一天更新) |
+| [周报归档](https://bbyy11.github.io/ai-daily/weekly_archive.html) | 所有历史周报(W22 起,每周一追加) |
+| [单周详情](https://bbyy11.github.io/ai-daily/weekly_view.html?week=2026-W22) | 单周报内容 + Markdown / JSON / 打印 3 种下载 |
+| [每日归档](https://bbyy11.github.io/ai-daily/archive.html) | 所有历史日期(2026-05-29 起) |
+| [单日快照](https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03) | 单日早报只读视图 |
+
+## 功能
+
+- **多源信源池**:55+ 渠道,覆盖头部(OpenAI / Anthropic / NVIDIA / 阿里 / 字节)+ 新兴(HN / Reddit / GitHub Trending / Product Hunt / X)+ 学术(arXiv / Hugging Face)+ 行业(Polymarket / 财联社)+ 社区声音
+- **15-20 条每日新闻**:分头条 / 新兴 / 公司 / 论文 / 行业 / 声音 6 类
+- **多源热度估算**:每条新闻的 ▲ 分数是综合估算(HN 点数 + GitHub 涨星 + X 提及 + 媒体覆盖),不是单一排名;hover 可看明细
+- **新兴项目高亮**:品红色标识,显示 GitHub 24h 涨星 / HN 点数 / Product Hunt 排名等具体数字
+- **55+ 词条悬浮百科**:hover 任何技术名词出"AI 百科"弹层(分类 + 简述 + 详细 + 外部链接)
+- **上周摘要**(本月页块 1):每周一 8:00 自动生成,讲清上周 7 天 AI 圈主要事件 + 5 大主题
+- **月度趋势总结**(本月页块 2):每月最后一天 8:00 自动追加该月总结(趋势分析 + 关键事件 + 关键数据 + 展望下月)
+- **永久归档**:每日 / 每周 / 每月的快照都永久保存,不会丢失
+- **周报下载**:每周报可下载 Markdown / JSON / 打印 PDF 3 种格式
+
+## 自动化时间表
+
+| 时间 | 触发 | 动作 |
+|---|---|---|
+| **每天 8:00** | ai-daily-0800 | 抓 55 信源 → 整理当日 → 写 news.json → 归档昨日 → 推 GitHub |
+| **每周一 8:00** | ai-daily-weekly-summary | 算上周 7 天 → 生成 weekly_summary.json → 永久归档到 archive/weekly/ → 推 GitHub |
+| **每月最后一天 8:00** | ai-daily-monthly-summary | 读当月所有日 → 追加到 monthly_archive.json → 推 GitHub |
+| **每 6 小时** | ai-daily-healthcheck | 验证主页 / 归档 / cron 状态,异常时主动通知 |
+
+## 数据流
+
 ```
-https://<你的用户名>.github.io/<仓库名>/
-```
-例如 `https://mavis.github.io/ai-daily/`
-
----
-
-## 🛠️ 部署到 GitHub Pages(5 分钟)
-
-### 第 1 步:创建 GitHub 仓库
-
-1. 打开 https://github.com/new
-2. Repository name 填 `ai-daily`(或任意名字)
-3. **Public**(必须 Public,Pages 才免费)
-4. **Add a README file** 不勾选
-5. 点 Create repository
-
-### 第 2 步:上传代码(三种方式任选)
-
-**方式 A:网页直接拖(最简单,推荐)**
-1. 仓库页点 `uploading an existing file` 链接
-2. 把 `ai-daily-github.zip` 解压后的**所有文件和文件夹**直接拖进去
-3. 点 Commit changes
-
-**方式 B:Git 命令行(如果你装了 git)**
-```bash
-unzip ai-daily-github.zip
-cd ai-daily
-git init
-git add .
-git commit -m "init: ai-daily"
-git branch -M main
-git remote add origin https://github.com/<你的用户名>/ai-daily.git
-git push -u origin main
+cron 触发
+  ↓
+[抓信源] web_search × 55 次
+  ↓
+[整理] news.json 覆盖写入(今日 15-20 条)
+  ↓
+[归档] fetch_news.py 检查 news.json.date 旧则归档
+  ↓
+[推送] push_to_github.sh 用 GITHUB_TOKEN 推 bbyy11/ai-daily
+  ↓
+[GitHub Pages] 1-2 分钟自动刷新
 ```
 
-**方式 C:GitHub Desktop**
-- 打开 GitHub Desktop → File → Add local repository → 选解压后的 `ai-daily` 文件夹 → Publish
-
-### 第 3 步:启用 Pages
-
-1. 仓库页 → Settings → Pages(左侧菜单)
-2. Source 选 `Deploy from a branch`
-3. Branch 选 `main` / folder 选 `/ (root)`
-4. 点 Save
-5. 等 1-3 分钟,刷新页面,会显示一行:
-   > Your site is live at `https://<你的用户名>.github.io/ai-daily/`
-
-### 第 4 步:打开看看
-
-访问那个链接,应该能看到完整的早报。`/archive.html` 是归档页。
-
----
-
-## 📁 文件结构
+## 文件结构
 
 ```
 ai-daily/
-├── index.html              # 主页(单文件,无构建步骤)
-├── archive.html            # 归档列表
-├── archive-view.html       # 单日快照视图
+├── index.html              # 主页(今日早报)
+├── monthly.html            # 本月脉络(上周摘要 + 1-5 月总结)
+├── weekly_archive.html     # 周报归档列表
+├── weekly_view.html        # 单周详情 + 下载按钮
+├── archive.html            # 每日归档列表
+├── archive-view.html       # 单日早报快照
+│
 ├── data/
-│   ├── news.json           # 今日新闻
+│   ├── news.json           # 当日(覆盖)
 │   ├── terms.json          # 词条百科
-│   ├── search_queries.txt  # 信源查询清单
+│   ├── weekly_summary.json # 上周摘要(覆盖)
+│   ├── monthly_archive.json # 月度总结(追加)
+│   ├── search_queries.txt  # 信源查询
 │   └── archive/
-│       ├── index.json      # 归档索引
-│       └── YYYY-MM-DD.json # 每日快照
-├── scripts/                # 本地运行的脚本(不部署,放 GitHub 只是存档)
+│       ├── index.json      # 每日索引
+│       ├── YYYY-MM-DD.json # 每日快照
+│       └── weekly/
+│           ├── index.json  # 周报索引
+│           └── YYYY-Www.json # 周报永久归档
+│
+├── scripts/                # 后台脚本
 │   ├── fetch_news.py
-│   ├── push.py
-│   └── daily.sh
-└── README.md
+│   ├── push_to_github.sh
+│   ├── gen_weekly_summary.py
+│   ├── archive_weekly.py
+│   └── gen_monthly_summary.py
+│
+├── README.md               # 本文件
+├── PROJECT_SUMMARY.md      # 项目状态报告
+├── PROJECT_FILES.md        # 完整文件清单
+└── .gitignore              # 排除本地截图等
 ```
 
----
+## 自定义
 
-## 🤖 自动化(可选)
+### 加新信源
+编辑 `scripts/fetch_news.py` 的 `SOURCE_POOL` 字典。
 
-`scripts/` 是给 cron 任务用的本地脚本,**GitHub Pages 部署不需要它**。
+### 改主页视觉
+编辑 `index.html` 的 CSS(头部 + tab + 卡片样式)。
 
-如果要让早报**每天自动更新**到 GitHub Pages,需要:
-1. 一个能跑 cron 的机器(云函数/服务器/我所在的 Mavis)
-2. 每天跑 fetch_news.py → 重写 data/news.json
-3. `bash scripts/push_to_github.sh` 推送(用 GitHub Contents API,不依赖 git 协议)
-4. GitHub Pages 1-2 分钟后自动刷新
-
-`push_to_github.sh` 需要环境变量 `GITHUB_TOKEN_BBYY11_V2` (PAT,只勾 `repo` 权限)。
-
-现在最小化可用:把 news.json / terms.json 改一下,`bash scripts/push_to_github.sh` 一次,几分钟后公网更新。
-
----
-
-## 📦 信源池
-
-英文头部官方:OpenAI / Anthropic / Google DeepMind / NVIDIA / Meta / Mistral / xAI
-英文头部媒体:TechCrunch / The Verge / Wired / MIT Tech Review / VentureBeat / IEEE Spectrum / The Decoder
-中文头部:机器之心 / 量子位 / 新智元 / 智东西 / PaperWeekly / 36氪
-学术:arXiv cs.AI / cs.CL / Hugging Face Daily Papers / papers with code
-社区:Hacker News / Reddit r/ML / Reddit r/LocalLLaMA / GitHub Trending / Product Hunt / X/Twitter
-预测:Polymarket
-
-调整信源编辑 `scripts/fetch_news.py` 里的 `SOURCE_POOL` 字典。
-
----
-
-## 🔧 自定义
-
-### 改视觉/布局
-
-直接编辑 `index.html` / `archive.html` / `archive-view.html`,git push 即可。
+### 改周报 / 月报样式
+分别编辑 `weekly_view.html` / `monthly.html`。
 
 ### 加新词条
-
-编辑 `data/terms.json`,加一个条目:
+编辑 `data/terms.json`,加:
 ```json
 "你的术语": {
   "name": "显示名",
@@ -130,34 +112,7 @@ ai-daily/
   "links": [{"label": "参考", "url": "https://..."}]
 }
 ```
-任何 HTML / 词条里的术语 hover 都会自动显示这张卡。
 
-### 加新闻(手动)
-
-编辑 `data/news.json`,加一条:
-```json
-{
-  "id": "n19",
-  "rank": 19,
-  "category": "headline",   // headline/company/paper/industry/social/rising
-  "title": "标题",
-  "source": "来源",
-  "time": "2026-06-03",
-  "heat": {
-    "score": 5000,
-    "level": "热",            // 爆/热/中/新星
-    "sources": ["hn", "x"],
-    "breakdown": "明细"
-  },
-  "comments": 100,
-  "summary": "摘要",
-  "tags": ["标签1"],
-  "terms": ["词条1"]
-}
-```
-
----
-
-## 📜 License
+## License
 
 MIT
