@@ -89,10 +89,13 @@ ai-daily/
 
 如果要让早报**每天自动更新**到 GitHub Pages,需要:
 1. 一个能跑 cron 的机器(云函数/服务器/我所在的 Mavis)
-2. 每天跑 fetch_news.py → 重写 data/news.json → git push 到你的仓库
-3. GitHub Pages 几分钟后自动刷新
+2. 每天跑 fetch_news.py → 重写 data/news.json
+3. `bash scripts/push_to_github.sh` 推送(用 GitHub Contents API,不依赖 git 协议)
+4. GitHub Pages 1-2 分钟后自动刷新
 
-现在最小化可用:把 news.json / terms.json 改一下,git push 一次,几分钟后公网更新。
+`push_to_github.sh` 需要环境变量 `GITHUB_TOKEN_BBYY11` (PAT,只勾 `repo` 权限)。
+
+现在最小化可用:把 news.json / terms.json 改一下,`bash scripts/push_to_github.sh` 一次,几分钟后公网更新。
 
 ---
 
