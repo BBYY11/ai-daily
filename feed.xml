@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat">
+  <channel>
+    <title>AI Daily · 2026-06-03 周三 · 全球 AI 早报</title>
+    <link>https://bbyy11.github.io/ai-daily/</link>
+    <atom:link href="https://bbyy11.github.io/ai-daily/feed.xml" rel="self" type="application/rss+xml" />
+    <description><![CDATA[今天 AI 圈的核心叙事:微软 Build 重磅发布自研编程模型 MAI-Code-1-Flash,正式摆脱对 OpenAI 单一依赖;特朗普签署 AI 行政令,强能力模型公开发布前 30 天须通报;SpaceX 启动万亿级 IPO 进程。国产侧阿里 Qwen3.7-Plus 多模态、腾讯云 DeepSeek-V4 降价 97.5%、越疆 DobotWAM 具身大模型 99.25%——中美双线 + 资本 + 监管同步进入新阶段。 · 共 14 条新闻]]></description>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 03 Jun 2026 07:41:28 +0800</lastBuildDate>
+    <generator>AI Daily (Mavis)</generator>
+    <managingEditor>bbyy11 (via Mavis)</managingEditor>
+    <ttl>60</ttl>
+    <item>
+      <title>微软 Build 2026:发布 MAI-Code-1-Flash 自研编程模型,降低对 OpenAI 依赖</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
+      <guid isPermaLink="false">ai-daily-n0603-01</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[微软在旧金山 Build 大会推出首款自研 AI 编程模型 MAI-Code-1-Flash,接收文本描述直接输出应用 / 网站源代码;同步发布推理模型 MAI-Thinking-1。两款均主打极高效率——以更低成本减少对 OpenAI 的依赖,微软正从基础设施+投资方转向全栈自研。]]></description>
+      <category>头条</category>
+      <category>微软</category><category>Build</category><category>MAI-Code</category><category>自研模型</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">微软官方 / GeekWire / The Verge</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9200</heat:score><heat:level>爆</heat:level><heat:sources>media,hn,x</heat:sources><heat:comments>587</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>特朗普签 AI 行政令:强能力模型公开发布前 30 天须通报政府</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
+      <guid isPermaLink="false">ai-daily-n0603-02</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[特朗普签署精简版 AI 行政令(搁置了 5 月 21 日的更长版本),要求公开发布强能力 AI 模型前 30 天向政府通报。同时要求国安 / 网络官员与机构 + 头部科技公司合作,解决 Anthropic Mythos 等模型识别出的软件漏洞。]]></description>
+      <category>头条</category>
+      <category>AI 监管</category><category>美国</category><category>行政令</category><category>Mythos</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">环球市场播报 / 路透社</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8400</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>1023</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>SpaceX 启动 IPO 进程,目标本月 750 亿美元,创历史最大规模</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
+      <guid isPermaLink="false">ai-daily-n0603-03</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[SpaceX 与华尔街投行谈判压低承销费率至 0.75% 以下,但即便如此,银行仍有望分食 5 亿美元收入。合并 xAI 后,SpaceX 估值或达 1.75 万亿美元,有望刷新 IPO 纪录。员工已集体与理财顾问议价,提前布局财富管理。]]></description>
+      <category>头条</category>
+      <category>SpaceX</category><category>IPO</category><category>xAI</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">CNBC / WSJ / 环球市场播报</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7600</heat:score><heat:level>爆</heat:level><heat:sources>media,x</heat:sources><heat:comments>412</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>阿里发布 Qwen3.7-Plus 多模态智能体模型</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
+      <guid isPermaLink="false">ai-daily-n0603-04</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[Qwen3.7-Plus 在 Qwen3.7 文本能力基础上全面升级视觉-语言能力,完整保留编码 / 工具使用 / 生产力工作流智能体能力。国产开源 SOTA 多模态模型再添一员。]]></description>
+      <category>公司</category>
+      <category>Qwen</category><category>阿里</category><category>多模态</category><category>Agent</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">千问大模型官微 / 量子位</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>media,x,github</heat:sources><heat:comments>324</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>腾讯云宣布 DeepSeek-V4 系列降价,最高降幅 97.5%</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03 生效</link>
+      <guid isPermaLink="false">ai-daily-n0603-05</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[腾讯云智能体开发平台 6 月 3 日 00:00 起下调 DeepSeek-V4 系列模型价格,最高降幅 97.5%,模型能力不变。这是继 DeepSeek 自身降价 75% 后的又一次价格雪崩,推理成本进入分厘时代。]]></description>
+      <category>公司</category>
+      <category>腾讯云</category><category>DeepSeek</category><category>降价</category><category>推理成本</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03 生效">腾讯云官方 / 36氪</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5200</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>287</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>越疆发布空弈 DobotWAM 具身大模型,LIBERO 评测 99.25% 成功率</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
+      <guid isPermaLink="false">ai-daily-n0603-06</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[越疆自研世界动作模型空弈 DobotWAM 在 LIBERO 评测四个标准任务套件上平均成功率 99.25%,涵盖空间关系理解、物体泛化、目标指令理解、长时序任务执行。]]></description>
+      <category>公司</category>
+      <category>越疆</category><category>具身大模型</category><category>DobotWAM</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">越疆官方 / 智东西</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3100</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>156</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>Show HN:Cursor-Trace — 让 LLM 自动追踪代码变因的开源 IDE 插件</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 上线</link>
+      <guid isPermaLink="false">ai-daily-n0603-07</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[独立开发者工具:在 IDE 里选中一段代码,Cursor-Trace 调用 LLM 反向追溯&quot;这段代码为什么这么写&quot;,输出 commit 链 + 决策者 + 当时的 PR 评论。GitHub 24h 涨 3.1k 星,正在成为大型代码库&quot;考古&quot;的标配。]]></description>
+      <category>新兴</category>
+      <category>新应用</category><category>Show HN</category><category>GitHub Trending</category><category>代码考古</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 上线">Hacker News · GitHub Trending</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3500</heat:score><heat:level>新星</heat:level><heat:sources>hn,github</heat:sources><heat:comments>198</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>GitHub Trending:MsEdge-WebUI-MCP — 让任意 Web 应用变成 MCP 工具</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01 走红</link>
+      <guid isPermaLink="false">ai-daily-n0603-08</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[开源项目:把任何 Web 应用(包括 SaaS)的 UI 操作录制下来,自动转成 MCP 工具描述,让 Claude Code / Cursor 等 agent 直接调用——不需要等 SaaS 厂商开放 API。GitHub 单日涨 2.1k 星,Agent 工具链爆款。]]></description>
+      <category>新兴</category>
+      <category>新应用</category><category>GitHub Trending</category><category>MCP</category><category>Agent 工具链</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01 走红">GitHub Trending</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2800</heat:score><heat:level>新星</heat:level><heat:sources>github,hn</heat:sources><heat:comments>134</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>arXiv:phi_first 单 Token 幻觉检测成为低成本基线标准</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 引用激增</link>
+      <guid isPermaLink="false">ai-daily-n0603-09</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[本周内 6 篇新论文主动把 phi_first 作为对比基线,标志&quot;单 Token 置信度幻觉检测&quot;正式成为低成本 SOTA 标准方法。]]></description>
+      <category>学术</category>
+      <category>幻觉检测</category><category>arxiv</category><category>基线</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 引用激增">arXiv 2605.05166</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1700</heat:score><heat:level>中</heat:level><heat:sources>paper,github</heat:sources><heat:comments>56</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>LongSeeker 论文配套代码成为 Agent 上下文管理参考实现</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 累计 8.7k stars</link>
+      <guid isPermaLink="false">ai-daily-n0603-10</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[Context-ReAct 范式继续被广泛采用,GitHub Trending AI 工具分类周榜第二。多家 AI 公司内部 Agent 团队 fork 作为起点。]]></description>
+      <category>学术</category>
+      <category>Agent</category><category>上下文管理</category><category>GitHub</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 累计 8.7k stars">arXiv 2605.05191 · GitHub</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1300</heat:score><heat:level>中</heat:level><heat:sources>github,paper</heat:sources><heat:comments>42</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>美国下调部分钢铝铜关税,AI 算力供应链成本压力暂缓</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
+      <guid isPermaLink="false">ai-daily-n0603-11</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[特朗普依据《1962 年贸易扩展法》第 232 条款调整进口钢铝铜关税,收割机及部分农机从 25% 下调至 15%,本地成分门槛从 95% 降至 85%,缓解 AI 算力硬件供应链成本压力。]]></description>
+      <category>行业</category>
+      <category>关税</category><category>钢铝铜</category><category>AI 供应链</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">白宫公告 / 路透社</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1900</heat:score><heat:level>中</heat:level><heat:sources>media</heat:sources><heat:comments>78</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>宇树单款人形机器人累计下线 11000 台,H2+ 今年下半年上市</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
+      <guid isPermaLink="false">ai-daily-n0603-12</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[宇树单款双足人形(不含其他型号)截至 2026 年 5 月累计生产下线 11000 台。H2+ 将于今年下半年正式上市,搭载英伟达高性能算力平台。]]></description>
+      <category>行业</category>
+      <category>宇树</category><category>人形机器人</category><category>量产</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">宇树官方 / 中新社</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2400</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>98</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>AI 岗位月薪 6 万,2026 年初新发岗位同比涨 12 倍</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 报告</link>
+      <guid isPermaLink="false">ai-daily-n0603-13</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[AI 岗位占新经济总岗位 26.23%(2025 同期 2.29%),供需比 0.97 接近供不应求,平均月薪 60738 元。最缺:Agent 开发 / RAG / 大模型辅助运维。]]></description>
+      <category>声音</category>
+      <category>AI 就业</category><category>人才市场</category><category>Agent</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 报告">脉脉高聘人才智库</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1500</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>145</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>佛罗里达州起诉 OpenAI,要求标注高风险 AI 内容</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
+      <guid isPermaLink="false">ai-daily-n0603-14</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[佛罗里达州成为美国首个对 OpenAI 提起诉讼的州政府,要求将 AI 生成内容标注为&quot;高风险&quot;,需满足透明度、风险评估、人类监督、合规审查等要求。这可能推动其他州(加州、纽约、德州)跟随立法。]]></description>
+      <category>声音</category>
+      <category>AI 监管</category><category>OpenAI</category><category>美国州政府</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">财联社 / 凤凰网</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2100</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>167</heat:comments></heat:item>
+    </item>
+  </channel>
+</rss>
