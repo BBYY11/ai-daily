@@ -169,7 +169,9 @@ def build_seed_news(date_str, weekday):
 
 
 def archive_today(date_str):
-    """先归档旧 news.json(其 date 不同于今天),再归档今天,再重建 index.json"""
+    """先归档旧 news.json(其 date 不同于今天),再归档今天,再重建 index.json。
+    如果归档后 news.json 被清空(空文件)或缺项,写一个占位骨架,让主页不显示空白。
+    """
     news_path = os.path.join(DATA_DIR, "news.json")
     archive_dir = os.path.join(DATA_DIR, "archive")
     os.makedirs(archive_dir, exist_ok=True)
@@ -248,6 +250,32 @@ def main():
 
     # 归档当天的 news.json(如果存在)
     archive_today(date_str)
+
+    # 安全网:如果 news.json 里的 date 不是今天(说明 LLM 未在本次会话中生成新的),
+    # 写一个占位骨架,让主页不至于空白
+    placeholder_path = news_path
+    needs_placeholder = False
+    if not os.path.exists(placeholder_path):
+        needs_placeholder = True
+    else:
+        try:
+            with open(placeholder_path, "r", encoding="utf-8") as f:
+                cur = json.load(f)
+            if cur.get("date") != date_str:
+                needs_placeholder = True
+                print(f"[fetch_news] news.json 还在上一日({cur.get('date')}),写占位")
+        except Exception:
+            needs_placeholder = True
+    if needs_placeholder:
+        dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+        weekday_cn = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][dt.weekday()]
+        skeleton = build_seed_news(date_str, weekday_cn)
+        # 标 generated_at 为占位时间,让上层 agent 能识别这是占位
+        skeleton["generated_at"] = f"{date_str} 08:00 (Asia/Shanghai) · PLACEHOLDER · 等待 LLM 生成"
+        skeleton["summary"] = f"{date_str} 早报正在生成中,请稍后刷新..."
+        with open(news_path, "w", encoding="utf-8") as f:
+            json.dump(skeleton, f, ensure_ascii=False, indent=2)
+        print(f"[fetch_news] 占位骨架已写入 news.json(date={date_str})")
 
 
 if __name__ == "__main__":
