@@ -3,168 +3,190 @@
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat">
   <channel>
-    <title>AI Daily · 2026-06-03 周三 · 全球 AI 早报</title>
+    <title>AI Daily · 2026-06-04 周四 · 全球 AI 早报</title>
     <link>https://bbyy11.github.io/ai-daily/</link>
     <atom:link href="https://bbyy11.github.io/ai-daily/feed.xml" rel="self" type="application/rss+xml" />
-    <description><![CDATA[今天 AI 圈的核心叙事:微软 Build 重磅发布自研编程模型 MAI-Code-1-Flash,正式摆脱对 OpenAI 单一依赖;特朗普签署 AI 行政令,强能力模型公开发布前 30 天须通报;SpaceX 启动万亿级 IPO 进程。国产侧阿里 Qwen3.7-Plus 多模态、腾讯云 DeepSeek-V4 降价 97.5%、越疆 DobotWAM 具身大模型 99.25%——中美双线 + 资本 + 监管同步进入新阶段。 · 共 14 条新闻]]></description>
+    <description><![CDATA[今天 AI 圈的核心叙事:博通给出 2026 财年 AI 芯片营收 560 亿美元指引 + 联手 Apollo/黑石成立 AI XPV 平台部署 20+ GW 算力,AI 基础设施资本运作加速;DeepSeek 据传首轮融资 70 亿美元、估值飙至 590 亿美元,腾讯/宁德时代领投;ChatGPT 全球月活突破 10 亿,创 App 史上最快 10 亿记录;千问向第三方 Agent/Skill 全面开放,瑞幸/肯德基/蜜雪冰城/东航首批接入。中信证券研报称下半年国内外 AI 算力与具身智能将迎重要产业进展。监管侧,达利奥警告 AI 市场显现泡沫迹象。 · 共 16 条新闻]]></description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 03 Jun 2026 07:41:28 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 03:15:35 +0800</lastBuildDate>
     <generator>AI Daily (Mavis)</generator>
     <managingEditor>bbyy11 (via Mavis)</managingEditor>
     <ttl>60</ttl>
     <item>
-      <title>微软 Build 2026:发布 MAI-Code-1-Flash 自研编程模型,降低对 OpenAI 依赖</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
-      <guid isPermaLink="false">ai-daily-n0603-01</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[微软在旧金山 Build 大会推出首款自研 AI 编程模型 MAI-Code-1-Flash,接收文本描述直接输出应用 / 网站源代码;同步发布推理模型 MAI-Thinking-1。两款均主打极高效率——以更低成本减少对 OpenAI 的依赖,微软正从基础设施+投资方转向全栈自研。]]></description>
+      <title>博通预测 2026 财年 AI 芯片销售 560 亿美元,联手 Apollo/黑石建 AI XPV 平台 2028 年部署 20+ GW</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-01</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[博通公布 2026 财年 AI 芯片销售指引 560 亿美元,已向 OpenAI 交付芯片,将于 2027 年部署 1.3 GW 算力。CEO 进一步宣布与 Apollo、黑石及其他投资者共同创建 AI XPV 平台,目标到 2028 年部署超过 20 GW 计算能力,标志 AI 基础设施从芯片公司单一供给转向多方资本联合体。]]></description>
       <category>头条</category>
-      <category>微软</category><category>Build</category><category>MAI-Code</category><category>自研模型</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">微软官方 / GeekWire / The Verge</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9200</heat:score><heat:level>爆</heat:level><heat:sources>media,hn,x</heat:sources><heat:comments>587</heat:comments></heat:item>
+      <category>博通</category><category>AI 芯片</category><category>OpenAI</category><category>XPV</category><category>AI 基础设施</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">财联社 / 博通官方</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9600</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>612</heat:comments></heat:item>
     </item>
     <item>
-      <title>特朗普签 AI 行政令:强能力模型公开发布前 30 天须通报政府</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
-      <guid isPermaLink="false">ai-daily-n0603-02</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[特朗普签署精简版 AI 行政令(搁置了 5 月 21 日的更长版本),要求公开发布强能力 AI 模型前 30 天向政府通报。同时要求国安 / 网络官员与机构 + 头部科技公司合作,解决 Anthropic Mythos 等模型识别出的软件漏洞。]]></description>
+      <title>DeepSeek 传首轮融资 70 亿美元,估值 590 亿美元,腾讯/宁德时代领投</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-02</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[DeepSeek 据传在首轮融资中预计筹资约 70 亿美元,估值最高可达 590 亿美元。腾讯与宁德时代将成为最大外部投资者,网易与京东也计划参与。融资完成后 DeepSeek 将跻身全球 AI 初创公司估值前 5。]]></description>
       <category>头条</category>
-      <category>AI 监管</category><category>美国</category><category>行政令</category><category>Mythos</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">环球市场播报 / 路透社</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8400</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>1023</heat:comments></heat:item>
+      <category>DeepSeek</category><category>融资</category><category>腾讯</category><category>宁德时代</category><category>估值</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">财联社 / 36氪</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9200</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>1023</heat:comments></heat:item>
     </item>
     <item>
-      <title>SpaceX 启动 IPO 进程,目标本月 750 亿美元,创历史最大规模</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
-      <guid isPermaLink="false">ai-daily-n0603-03</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[SpaceX 与华尔街投行谈判压低承销费率至 0.75% 以下,但即便如此,银行仍有望分食 5 亿美元收入。合并 xAI 后,SpaceX 估值或达 1.75 万亿美元,有望刷新 IPO 纪录。员工已集体与理财顾问议价,提前布局财富管理。]]></description>
+      <title>ChatGPT 全球月活突破 10 亿,创 App 史上最快 10 亿记录</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-03</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[Sensor Tower 数据显示 OpenAI 旗下 ChatGPT 全球月活用户已超过 10 亿,成为有史以来最快达到 10 亿关口的应用程序。从 0 到 10 亿用时不到 3 年,相比之下 TikTok 用时约 5 年。]]></description>
       <category>头条</category>
-      <category>SpaceX</category><category>IPO</category><category>xAI</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">CNBC / WSJ / 环球市场播报</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7600</heat:score><heat:level>爆</heat:level><heat:sources>media,x</heat:sources><heat:comments>412</heat:comments></heat:item>
+      <category>ChatGPT</category><category>OpenAI</category><category>MAU</category><category>里程碑</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">财联社 / Sensor Tower</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8800</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn,reddit</heat:sources><heat:comments>1876</heat:comments></heat:item>
     </item>
     <item>
-      <title>阿里发布 Qwen3.7-Plus 多模态智能体模型</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-04</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[Qwen3.7-Plus 在 Qwen3.7 文本能力基础上全面升级视觉-语言能力,完整保留编码 / 工具使用 / 生产力工作流智能体能力。国产开源 SOTA 多模态模型再添一员。]]></description>
+      <title>千问 APP 向第三方 Agent/Skill 全面开放,瑞幸/肯德基/蜜雪冰城/东航首批接入</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-04</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[6 月 3 日千问 APP 宣布向第三方 Agent、Skill 全面开放,所有企业可在千问运营品牌 Agent。瑞幸、肯德基、蜜雪冰城、东方航空等首批企业正在测试,将陆续上线。Agent 具备记忆与主动规划能力,可主动推送行程提醒、权益到期、复购推荐等服务。]]></description>
+      <category>头条</category>
+      <category>千问</category><category>Agent</category><category>阿里</category><category>瑞幸</category><category>肯德基</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">36氪 / 千问官方</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8100</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>743</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>微软 + 英伟达推统一技术栈,部署 Agentic AI 覆盖 Win / 云 / 本地全场景</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-05</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[在 Build 开发者大会期间,英伟达与微软达成合作,推出统一技术栈,用于部署代理式人工智能(Agentic AI),覆盖从 Windows 设备到云端再到本地的全场景。两家联手打造端到端 Agent 运行时,简化企业 AI Agent 部署。]]></description>
       <category>公司</category>
-      <category>Qwen</category><category>阿里</category><category>多模态</category><category>Agent</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">千问大模型官微 / 量子位</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>media,x,github</heat:sources><heat:comments>324</heat:comments></heat:item>
+      <category>微软</category><category>英伟达</category><category>Agentic AI</category><category>Build</category><category>合作</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">TechCrunch / 微软官方</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7600</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>567</heat:comments></heat:item>
     </item>
     <item>
-      <title>腾讯云宣布 DeepSeek-V4 系列降价,最高降幅 97.5%</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03 生效</link>
-      <guid isPermaLink="false">ai-daily-n0603-05</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[腾讯云智能体开发平台 6 月 3 日 00:00 起下调 DeepSeek-V4 系列模型价格,最高降幅 97.5%,模型能力不变。这是继 DeepSeek 自身降价 75% 后的又一次价格雪崩,推理成本进入分厘时代。]]></description>
+      <title>比亚迪官宣入局人形机器人,经销商网络可售卖</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-06</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[比亚迪集团执行副总裁李柯在访谈中明确表示:比亚迪正在开发人形机器人。她指出汽车相关 AI 能力与机器人有同源性,比亚迪可作为开放平台,既能自己做机器人,也能与其他企业合作。若技术成熟,可通过 4S 经销商网络售卖。]]></description>
       <category>公司</category>
-      <category>腾讯云</category><category>DeepSeek</category><category>降价</category><category>推理成本</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03 生效">腾讯云官方 / 36氪</source>
+      <category>比亚迪</category><category>人形机器人</category><category>具身智能</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">第一财经 / 36氪</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7200</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>891</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>Apollo.io 推出 Perplexity Computer 连接器,AI 工作流深入中小企业</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-07</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[Apollo.io 宣布推出用于 Perplexity 计算机的连接器,将其销售情报和工作流功能引入面向成长型企业的 Perplexity Computer,与 Perplexity 在华盛顿特区举行的&#x27;主街 AI 峰会&#x27;同步发布。目标用户:初创创始人、精简营收团队。]]></description>
+      <category>公司</category>
+      <category>Apollo.io</category><category>Perplexity</category><category>Sales</category><category>Agent</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">新浪财经 / Apollo.io 官方</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5800</heat:score><heat:level>热</heat:level><heat:sources>media,hn</heat:sources><heat:comments>234</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>智元开源 AGIBOT WORLD 2026 主题二:行业首个聚焦物理交互的开源具身数据集</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-08</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[6 月 3 日智元开源 AGIBOT WORLD 2026 数据集主题二&#x27;多样交互(Rich Interaction)&#x27;,这是行业首个聚焦物理交互的开源具身数据集,不仅记录预期内的成功,更致力捕捉机器人与真实世界之间那些多样、精细且充满接触的物理对话,还原物理智能全貌。]]></description>
+      <category>公司</category>
+      <category>智元</category><category>AGIBOT</category><category>具身智能</category><category>开源</category><category>数据集</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">智元官方 / 36氪</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6400</heat:score><heat:level>热</heat:level><heat:sources>media,x,github</heat:sources><heat:comments>412</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>中兴 × 腾讯合作发布 WorkBuddy AI 云电脑</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-09</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[中兴通讯透露与腾讯达成深度战略合作,将推出搭载腾讯原生 WorkBuddy 的 AI 云电脑。WorkBuddy 是腾讯的 AI Agent 桌面产品,中兴负责硬件承载,双方共同面向企业办公场景。]]></description>
+      <category>公司</category>
+      <category>中兴</category><category>腾讯</category><category>WorkBuddy</category><category>AI 云电脑</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">财联社 / 中兴官方</source>
       <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5200</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>287</heat:comments></heat:item>
     </item>
     <item>
-      <title>越疆发布空弈 DobotWAM 具身大模型,LIBERO 评测 99.25% 成功率</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-06</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[越疆自研世界动作模型空弈 DobotWAM 在 LIBERO 评测四个标准任务套件上平均成功率 99.25%,涵盖空间关系理解、物体泛化、目标指令理解、长时序任务执行。]]></description>
-      <category>公司</category>
-      <category>越疆</category><category>具身大模型</category><category>DobotWAM</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">越疆官方 / 智东西</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3100</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>156</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>Show HN:Cursor-Trace — 让 LLM 自动追踪代码变因的开源 IDE 插件</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 上线</link>
-      <guid isPermaLink="false">ai-daily-n0603-07</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[独立开发者工具:在 IDE 里选中一段代码,Cursor-Trace 调用 LLM 反向追溯&quot;这段代码为什么这么写&quot;,输出 commit 链 + 决策者 + 当时的 PR 评论。GitHub 24h 涨 3.1k 星,正在成为大型代码库&quot;考古&quot;的标配。]]></description>
-      <category>新兴</category>
-      <category>新应用</category><category>Show HN</category><category>GitHub Trending</category><category>代码考古</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 上线">Hacker News · GitHub Trending</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3500</heat:score><heat:level>新星</heat:level><heat:sources>hn,github</heat:sources><heat:comments>198</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>GitHub Trending:MsEdge-WebUI-MCP — 让任意 Web 应用变成 MCP 工具</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01 走红</link>
-      <guid isPermaLink="false">ai-daily-n0603-08</guid>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[开源项目:把任何 Web 应用(包括 SaaS)的 UI 操作录制下来,自动转成 MCP 工具描述,让 Claude Code / Cursor 等 agent 直接调用——不需要等 SaaS 厂商开放 API。GitHub 单日涨 2.1k 星,Agent 工具链爆款。]]></description>
-      <category>新兴</category>
-      <category>新应用</category><category>GitHub Trending</category><category>MCP</category><category>Agent 工具链</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01 走红">GitHub Trending</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2800</heat:score><heat:level>新星</heat:level><heat:sources>github,hn</heat:sources><heat:comments>134</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>arXiv:phi_first 单 Token 幻觉检测成为低成本基线标准</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 引用激增</link>
-      <guid isPermaLink="false">ai-daily-n0603-09</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[本周内 6 篇新论文主动把 phi_first 作为对比基线,标志&quot;单 Token 置信度幻觉检测&quot;正式成为低成本 SOTA 标准方法。]]></description>
-      <category>学术</category>
-      <category>幻觉检测</category><category>arxiv</category><category>基线</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 引用激增">arXiv 2605.05166</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1700</heat:score><heat:level>中</heat:level><heat:sources>paper,github</heat:sources><heat:comments>56</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>LongSeeker 论文配套代码成为 Agent 上下文管理参考实现</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 累计 8.7k stars</link>
-      <guid isPermaLink="false">ai-daily-n0603-10</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[Context-ReAct 范式继续被广泛采用,GitHub Trending AI 工具分类周榜第二。多家 AI 公司内部 Agent 团队 fork 作为起点。]]></description>
-      <category>学术</category>
-      <category>Agent</category><category>上下文管理</category><category>GitHub</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 累计 8.7k stars">arXiv 2605.05191 · GitHub</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1300</heat:score><heat:level>中</heat:level><heat:sources>github,paper</heat:sources><heat:comments>42</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>美国下调部分钢铝铜关税,AI 算力供应链成本压力暂缓</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-11</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[特朗普依据《1962 年贸易扩展法》第 232 条款调整进口钢铝铜关税,收割机及部分农机从 25% 下调至 15%,本地成分门槛从 95% 降至 85%,缓解 AI 算力硬件供应链成本压力。]]></description>
+      <title>马斯克关联空壳公司 550 亿美元芯片厂选址休斯顿,SpaceX + 特斯拉共同支持</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-10</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[6 月 3 日据报道,与马斯克有关联的空壳公司 WIT Tech LLC 最近在休斯敦郊外 Grimes County 购入至少六幅地块,总面积超 6000 英亩,表明这位亿万富豪在为 SpaceX 与特斯拉共同支持的 550 亿美元芯片厂敲定选址。]]></description>
       <category>行业</category>
-      <category>关税</category><category>钢铝铜</category><category>AI 供应链</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">白宫公告 / 路透社</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1900</heat:score><heat:level>中</heat:level><heat:sources>media</heat:sources><heat:comments>78</heat:comments></heat:item>
+      <category>马斯克</category><category>SpaceX</category><category>特斯拉</category><category>芯片厂</category><category>得州</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">新浪财经 / 路透社</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6100</heat:score><heat:level>热</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>534</heat:comments></heat:item>
     </item>
     <item>
-      <title>宇树单款人形机器人累计下线 11000 台,H2+ 今年下半年上市</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-12</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[宇树单款双足人形(不含其他型号)截至 2026 年 5 月累计生产下线 11000 台。H2+ 将于今年下半年正式上市,搭载英伟达高性能算力平台。]]></description>
+      <title>Computex 2026 黄仁勋力挺 Marvell:将成为下一家万亿市值公司,股价单日涨 32%</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-11</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[Computex 2026 期间,英伟达 CEO 黄仁勋在与 Marvell CEO Matt Murphy 对话中称 Marvell 将成为下一家万亿市值公司。Marvell 股价单日暴涨 32%。英伟达同步宣布 Spectrum-X 以太网硅光技术全面量产,能效提升 5 倍。]]></description>
       <category>行业</category>
-      <category>宇树</category><category>人形机器人</category><category>量产</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">宇树官方 / 中新社</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2400</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>98</heat:comments></heat:item>
+      <category>Computex</category><category>英伟达</category><category>Marvell</category><category>黄仁勋</category><category>硅光</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">财联社 / 半导体行业观察</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5700</heat:score><heat:level>热</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>321</heat:comments></heat:item>
     </item>
     <item>
-      <title>AI 岗位月薪 6 万,2026 年初新发岗位同比涨 12 倍</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 报告</link>
-      <guid isPermaLink="false">ai-daily-n0603-13</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[AI 岗位占新经济总岗位 26.23%(2025 同期 2.29%),供需比 0.97 接近供不应求,平均月薪 60738 元。最缺:Agent 开发 / RAG / 大模型辅助运维。]]></description>
-      <category>声音</category>
-      <category>AI 就业</category><category>人才市场</category><category>Agent</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 报告">脉脉高聘人才智库</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1500</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>145</heat:comments></heat:item>
+      <title>[新星] 浩睿媒体研究:&#x27;信任税&#x27;— 68% 消费者不信任 AI 代为购物,40% 有负面体验</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-12</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[浩睿媒体最新研究显示,虽然消费者广泛使用 AI 进行产品研究和价格比较,但对 AI 代为购物深感怀疑。68% 消费者认为 AI 购物代理可能不为其最大利益行事,40% 在自动购物中有负面体验。&#x27;信任税&#x27;会使品牌超 27% 客户群体的长期忠诚度受威胁。研究基于 1000 名 AI 购物常使用者的调查。]]></description>
+      <category>新兴</category>
+      <category>浩睿媒体</category><category>AI 购物</category><category>消费者研究</category><category>信任税</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">新浪财经 / 浩睿媒体</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4500</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>142</heat:comments></heat:item>
     </item>
     <item>
-      <title>佛罗里达州起诉 OpenAI,要求标注高风险 AI 内容</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-14</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[佛罗里达州成为美国首个对 OpenAI 提起诉讼的州政府,要求将 AI 生成内容标注为&quot;高风险&quot;,需满足透明度、风险评估、人类监督、合规审查等要求。这可能推动其他州(加州、纽约、德州)跟随立法。]]></description>
+      <title>[新星] 北京太空智算研究院成立,2028 年前完成首发试验星,经开区 + 京东方 + 银河航天 + 长鑫集电联合发起</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-13</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[北京太空智算研究院在北京经济技术开发区注册成立,围绕星载算力芯片、星间激光通信、太空能源与散热、天地一体化网络等方向攻关,计划 2028 年前完成首发试验星研制与发射。国家信创园联合京东方、银河航天、蓝箭航天、星河动力、观宇芯算、长鑫集电等多家企业。]]></description>
+      <category>新兴</category>
+      <category>太空智算</category><category>星载芯片</category><category>京东方</category><category>银河航天</category><category>长鑫集电</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">人民日报 / 财联社</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4900</heat:score><heat:level>中</heat:level><heat:sources>media</heat:sources><heat:comments>256</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>[新星] 中国机器人在韩国与模特走秀,银河公司首尔 1.8 米人形机器人亮相</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-14</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[5 月 28 日韩国银河公司在首尔举办主题&#x27;人机共存&#x27;的实体 AI 时装秀,10 台中国机器人与模特同步走秀,默契共舞,展示了未来感夹克、太空风格连体服等 10 套概念服装。活动中展示身高超过 180 厘米的人形机器人。]]></description>
+      <category>新兴</category>
+      <category>中国机器人</category><category>银河公司</category><category>首尔</category><category>人形机器人</category><category>走秀</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">新浪 / 36氪</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3800</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>678</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>[论文] 高盛:2027 年 DRAM/NAND/HBM 供需均较 2026 紧张,紧张态势持续至 2028</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-15</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[高盛 5 月 31 日发布研究观点:到 2027 年传统 DRAM、NAND 和 HBM 供需状况都将较 2026 年更为紧张,且紧张态势将持续至 2028 年,这将有助于存储器企业未来数年内实现更高盈利水平。基于此,高盛上调对存储芯片制造商 DRAM、NAND 及 HBM 产品的定价预期。]]></description>
+      <category>学术</category>
+      <category>高盛</category><category>DRAM</category><category>NAND</category><category>HBM</category><category>存储芯片</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">高盛研报 / 财联社</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3400</heat:score><heat:level>中</heat:level><heat:sources>media,hn</heat:sources><heat:comments>167</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>达利奥警告:AI 市场显现泡沫迹象,最终可能破裂</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04</link>
+      <guid isPermaLink="false">ai-daily-n0604-16</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[亿万富翁投资者雷·达利奥警告,蓬勃发展的人工智能市场有泡沫迹象,最终可能破裂。同日黄仁勋在台北闭门活动向 300+ 金融机构嘉宾致辞,称过去 6 个月 AI 投资回报率已完全重置,业务利润惊人,引发下一轮资本投向何处的讨论。]]></description>
       <category>声音</category>
-      <category>AI 监管</category><category>OpenAI</category><category>美国州政府</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">财联社 / 凤凰网</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2100</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>167</heat:comments></heat:item>
+      <category>达利奥</category><category>黄仁勋</category><category>AI 泡沫</category><category>投资</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04">Cointelegraph / 新浪财经</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4200</heat:score><heat:level>中</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>423</heat:comments></heat:item>
     </item>
   </channel>
 </rss>
