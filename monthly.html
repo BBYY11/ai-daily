@@ -4,126 +4,183 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Daily · 本月脉络</title>
+<link rel="stylesheet" href="assets/style.css">
 <style>
-  :root {
-    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
-    --line: #1f1f24; --line-2: #2a2a31;
-    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
-    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
-    --cyan: #4adfd1; --cyan-soft: rgba(74, 223, 209, 0.12);
-    --magenta: #d65cd1; --magenta-soft: rgba(214, 92, 209, 0.12);
-    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
-    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  /* ---- monthly 专属 ---- */
+  .block-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--blue);
+    flex-wrap: wrap;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
-  .bg-fx { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-  .bg-fx::before { content: ""; position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(255, 106, 26, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 106, 26, 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    mask-image: radial-gradient(ellipse at top, black 0%, transparent 70%);
+  .block-header .num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--blue);
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    font-weight: 600;
   }
-  .bg-fx::after { content: ""; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1200px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 106, 26, 0.18), transparent 60%); filter: blur(80px); }
-  .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .block-header h2 { font-size: 24px; font-weight: 700; }
+  .block-header .sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .block-header .refresh-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
 
-  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
-  .nav-links { display: flex; gap: 6px; }
-  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
-  .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
-  .nav-links a.active { color: var(--bg); background: var(--orange); border-color: var(--orange); }
+  .weekly-summary-card {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 18px;
+  }
+  .weekly-summary-card .summary { font-size: 15px; color: var(--text); line-height: 1.8; }
 
-  .hero { margin: 32px 0 24px; padding: 48px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); position: relative; overflow: hidden; }
-  .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--orange), transparent); background-size: 200% 100%; animation: scan 3s linear infinite; }
-  @keyframes scan { 0% { background-position: 200% 0;} 100% { background-position: -200% 0;} }
-  .hero-meta { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
-  .hero h1 { font-size: 42px; margin: 12px 0 8px; font-weight: 800; letter-spacing: -0.01em; }
-  .hero h1 .hl { color: var(--orange); }
-  .hero p { font-size: 15px; color: var(--text-dim); line-height: 1.6; max-width: 760px; }
-
-  /* ==== 块 1:上周摘要 ==== */
-  .weekly-block { margin: 32px 0; }
-  .block-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--orange); }
-  .block-header .num { font-family: var(--mono); font-size: 13px; color: var(--orange); letter-spacing: 0.15em; padding: 4px 10px; border: 1px solid var(--orange); border-radius: 4px; }
-  .block-header h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
-  .block-header .sub { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
-  .block-header .refresh-tag { font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: var(--orange-soft); color: var(--orange); border: 1px solid var(--orange); border-radius: 4px; letter-spacing: 0.1em; }
-
-  .weekly-summary-card { background: var(--bg-2); border: 1px solid var(--orange); border-radius: 12px; padding: 24px 28px; margin-bottom: 20px; }
-  .weekly-summary-card .summary { font-size: 15px; color: var(--text); line-height: 1.85; }
-
-  .weekly-themes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-  .theme-card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; transition: 0.2s; }
-  .theme-card:hover { border-color: var(--orange); }
-  .theme-card h4 { font-size: 14px; color: var(--orange); margin-bottom: 8px; font-weight: 600; }
-  .theme-card p { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+  .weekly-themes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .theme-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    transition: 0.15s;
+  }
+  .theme-card:hover { border-color: var(--blue); }
+  .theme-card h4 { font-size: 15px; color: var(--blue); margin-bottom: 6px; font-weight: 600; }
+  .theme-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
 
   .day-links { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
-  .day-link { background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; text-decoration: none; color: var(--text); transition: 0.2s; display: block; }
-  .day-link:hover { border-color: var(--orange); background: var(--bg-3); transform: translateY(-2px); }
-  .day-link .d-date { font-family: var(--mono); font-size: 11px; color: var(--orange); }
-  .day-link .d-weekday { font-family: var(--mono); font-size: 9px; color: var(--text-mute); margin-left: 6px; }
-  .day-link .d-summary { font-size: 11px; color: var(--text-dim); line-height: 1.5; margin-top: 6px; max-height: 60px; overflow: hidden; }
+  .day-link {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.15s;
+    display: block;
+  }
+  .day-link:hover { border-color: var(--blue); background: var(--blue-soft); text-decoration: none; }
+  .day-link .d-date { font-family: var(--mono); font-size: 12px; color: var(--blue); font-weight: 600; }
+  .day-link .d-weekday { font-family: var(--mono); font-size: 10px; color: var(--text-mute); margin-left: 6px; }
+  .day-link .d-summary { font-size: 12px; color: var(--text-dim); line-height: 1.5; margin-top: 6px; max-height: 60px; overflow: hidden; }
 
-  /* ==== 块 2:已过完月份总结 ==== */
-  .monthly-block { margin: 48px 0 24px; }
-
-  .months { display: flex; flex-direction: column; gap: 20px; }
-  .month-card { border: 1px solid var(--line); border-radius: 12px; padding: 28px; background: var(--bg-2); position: relative; overflow: hidden; transition: 0.2s; }
-  .month-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--line-2); }
-  .month-card:hover { border-color: var(--orange); transform: translateY(-2px); box-shadow: 0 20px 40px -20px var(--orange-soft); }
-  .month-header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
-  .month-date { font-family: var(--mono); font-size: 18px; color: var(--cyan); letter-spacing: 0.1em; font-weight: 600; min-width: 110px; }
-  .month-title { font-size: 20px; font-weight: 700; flex: 1; }
+  .months { display: flex; flex-direction: column; gap: 18px; }
+  .month-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    background: var(--bg);
+    transition: 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  .month-card:hover { border-color: var(--blue); box-shadow: var(--shadow-md); }
+  .month-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .month-date { font-family: var(--mono); font-size: 18px; color: var(--blue); letter-spacing: 0.1em; font-weight: 700; min-width: 100px; }
+  .month-title { font-size: 19px; font-weight: 700; flex: 1; }
   .month-summary { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 20px; }
   .month-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; }
-  .month-events-title { font-family: var(--mono); font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 10px; }
+  .month-events-title { font-family: var(--mono); font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
   .month-events { list-style: none; padding: 0; }
-  .month-events li { font-size: 13px; color: var(--text-dim); line-height: 1.7; padding: 6px 0 6px 18px; position: relative; border-bottom: 1px dashed var(--line); }
+  .month-events li {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    padding: 6px 0 6px 18px;
+    position: relative;
+    border-bottom: 1px dashed var(--line);
+  }
   .month-events li:last-child { border-bottom: none; }
-  .month-events li::before { content: "▸"; position: absolute; left: 0; color: var(--orange); }
-  .month-aside { background: var(--bg-3); border: 1px solid var(--line); border-radius: 8px; padding: 18px; }
-  .aside-label { font-family: var(--mono); font-size: 11px; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 12px; }
+  .month-events li::before { content: "▸"; position: absolute; left: 0; color: var(--blue); }
+  .month-aside { background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+  .aside-label { font-family: var(--mono); font-size: 11px; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; font-weight: 600; }
   .data-points { list-style: none; padding: 0; margin-bottom: 16px; }
   .data-points li { font-family: var(--mono); font-size: 12px; color: var(--text); line-height: 1.6; padding: 4px 0; }
-  .data-points li::before { content: "▎ "; color: var(--orange); }
-  .look-ahead { font-size: 13px; color: var(--text-dim); line-height: 1.7; padding: 12px; background: var(--orange-soft); border-left: 3px solid var(--orange); border-radius: 4px; }
-  .look-ahead-label { font-family: var(--mono); font-size: 10px; color: var(--orange); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 6px; display: block; }
-
-  .empty { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
-  footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
+  .data-points li::before { content: "▎ "; color: var(--blue); }
+  .look-ahead {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    padding: 12px;
+    background: var(--blue-soft);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+  }
+  .look-ahead-label { font-family: var(--mono); font-size: 10px; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: block; font-weight: 600; }
 
   @media (max-width: 900px) {
     .weekly-themes { grid-template-columns: 1fr; }
     .month-body { grid-template-columns: 1fr; }
     .day-links { grid-template-columns: repeat(2, 1fr); }
-    .hero { padding: 32px 24px; }
-    .hero h1 { font-size: 28px; }
+  }
+  @media (max-width: 600px) {
+    .day-links { grid-template-columns: 1fr 1fr; }
+    .month-card { padding: 18px; }
+    .month-header { gap: 8px; }
+    .month-date { font-size: 14px; min-width: 0; }
+    .month-title { font-size: 16px; }
+    .block-header h2 { font-size: 18px; }
+    .theme-card h4 { font-size: 14px; }
   }
 </style>
 </head>
 <body>
-<div class="bg-fx"></div>
 <div class="wrap">
   <header>
-    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · MONTHLY</a>
-    <div class="nav-links">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY <span class="logo-sub">· 本月脉络</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
+    <nav class="nav" id="nav">
       <a href="index.html">今日</a>
       <a href="monthly.html" class="active">本月</a>
       <a href="archive.html">归档</a>
-    </div>
+      <a href="feed.html" class="rss-link">⚡ 订阅</a>
+    </nav>
   </header>
 
+  <section class="hero">
+    <div class="hero-meta">
+      <span class="pill">MONTHLY · 本月脉络</span>
+      <span>块 1 上周摘要(每周一)· 块 2 已过完月份(每月最后一天)</span>
+    </div>
+    <h1>本月与<span class="hl">历史月份总结</span></h1>
+    <p class="lead">从上个月 7 天脉络,到本年 1-5 月的完整复盘,一站看清 AI 圈每个月的关键事件、数据点和趋势走向。</p>
+  </section>
+
   <div id="content" class="empty">加载中...</div>
-  <footer>© 2026 AI Daily · 本月脉络 · 上周摘要(每周一更新)+ 已过完月份总结(每月最后一天更新) · <a href="weekly_archive.html" style="color:var(--orange);text-decoration:none;">查看所有历史周报 →</a></footer>
+  <footer>© 2026 AI Daily · 本月脉络 · 上周摘要(每周一更新)+ 已过完月份总结(每月最后一天更新) · <a href="weekly_archive.html">查看所有历史周报 →</a></footer>
 </div>
 
 <script>
-const FALLBACK_TODAY = "2026-06-03";
+const FALLBACK_TODAY = "2026-06-04";
 
 (async () => {
-  // 并行拉三个数据
   const [newsRes, weekRes, monthRes] = await Promise.all([
     fetch("data/news.json"),
     fetch("data/weekly_summary.json"),
@@ -141,9 +198,8 @@ function render({ news, week, monthly }) {
   const todayDate = (news && news.date) || FALLBACK_TODAY;
   const todayWeekday = (news && news.weekday) || "";
 
-  // 块 1:上周摘要
   const weekBlock = week ? `
-    <section class="weekly-block">
+    <section class="block" style="padding:0; border:none; box-shadow:none; background:transparent;">
       <div class="block-header">
         <span class="num">块 1</span>
         <h2>上周摘要</h2>
@@ -175,12 +231,10 @@ function render({ news, week, monthly }) {
     </section>
   ` : '<div class="empty">上周摘要数据加载中(每周一 08:00 生成)</div>';
 
-  // 块 2:已过完月份总结
   const months = (monthly && monthly.months) || [];
-  // 月份倒序
   const sorted = [...months].sort((a, b) => b.date.localeCompare(a.date));
   const monthBlock = `
-    <section class="monthly-block">
+    <section class="block" style="padding:0; border:none; box-shadow:none; background:transparent; margin-top:48px;">
       <div class="block-header">
         <span class="num">块 2</span>
         <h2>已过完月份总结</h2>
@@ -224,12 +278,15 @@ function render({ news, week, monthly }) {
     </section>
   `;
 
-  const html = `
-    ${weekBlock}
+  document.getElementById("content").innerHTML = weekBlock + monthBlock;
 
-    ${monthBlock}
-  `;
-  document.getElementById("content").innerHTML = html;
+  // nav toggle
+  const btn = document.getElementById("nav-toggle");
+  const nav = document.getElementById("nav");
+  if (btn) {
+    btn.addEventListener("click", () => nav.classList.toggle("open"));
+    nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+  }
 }
 
 function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }

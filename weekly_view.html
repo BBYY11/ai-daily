@@ -4,88 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Daily · 周报详情</title>
+<link rel="stylesheet" href="assets/style.css">
 <style>
-  :root {
-    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
-    --line: #1f1f24; --line-2: #2a2a31;
-    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
-    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
-    --cyan: #4adfd1; --cyan-soft: rgba(74, 223, 209, 0.12);
-    --green: #6dd47e;
-    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
-    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  .meta-bar {
+    margin: 20px 0 12px;
+    padding: 12px 18px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
-  .bg-fx { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-  .bg-fx::before { content: ""; position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(255, 106, 26, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 106, 26, 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    mask-image: radial-gradient(ellipse at top, black 0%, transparent 70%);
-  }
-  .bg-fx::after { content: ""; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1200px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 106, 26, 0.18), transparent 60%); filter: blur(80px); }
-  .wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 32px; }
-
-  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
-  .nav-links { display: flex; gap: 6px; }
-  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
-  .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
-
-  .meta-bar { margin: 24px 0 16px; padding: 14px 18px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; color: var(--text-dim); }
-  .meta-bar a { color: var(--orange); text-decoration: none; }
+  .meta-bar a { color: var(--blue); text-decoration: none; font-weight: 600; }
   .meta-bar a:hover { text-decoration: underline; }
   .meta-bar .sep { color: var(--text-mute); }
 
-  /* 报告主体(打印友好) */
-  .report { background: #fff; color: #1a1a1a; padding: 48px 56px; border-radius: 8px; margin-bottom: 24px; line-height: 1.7; font-family: var(--sans); }
-  .report h1 { font-size: 28px; margin-bottom: 8px; color: #111; border-bottom: 3px solid #ff6a1a; padding-bottom: 12px; }
-  .report h2 { font-size: 20px; margin: 28px 0 12px; color: #ff6a1a; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-  .report h3 { font-size: 16px; margin: 20px 0 8px; color: #333; }
-  .report .date-range { font-size: 14px; color: #666; margin-bottom: 16px; }
-  .report .summary-box { background: #fff8f3; border-left: 4px solid #ff6a1a; padding: 16px 20px; margin: 16px 0; border-radius: 4px; }
-  .report .summary-box p { color: #2a2a2a; font-size: 14px; }
-  .report .theme { margin: 16px 0; padding: 14px 18px; background: #fafafa; border-left: 3px solid #4adfd1; border-radius: 4px; }
-  .report .theme h4 { color: #ff6a1a; font-size: 15px; margin-bottom: 6px; }
+  /* 报告主体(白底打印友好) */
+  .report {
+    background: #fff;
+    color: #1a1a1a;
+    padding: 40px 48px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    line-height: 1.75;
+    font-family: var(--sans);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  .report h1 { font-size: 26px; margin-bottom: 8px; color: #111; border-bottom: 3px solid #2563eb; padding-bottom: 10px; }
+  .report h2 { font-size: 18px; margin: 24px 0 10px; color: #2563eb; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  .report h3 { font-size: 15px; margin: 18px 0 8px; color: #333; }
+  .report p { margin-bottom: 10px; text-align: left; }
+  .report .date-range { font-size: 13px; color: #666; margin-bottom: 14px; }
+  .report .summary-box { background: #eff6ff; border-left: 4px solid #2563eb; padding: 14px 18px; margin: 14px 0; border-radius: 4px; }
+  .report .summary-box p { color: #1f2937; font-size: 14px; }
+  .report .theme { margin: 14px 0; padding: 12px 16px; background: #f9fafb; border-left: 3px solid #4adfd1; border-radius: 4px; }
+  .report .theme h4 { color: #2563eb; font-size: 15px; margin-bottom: 6px; }
   .report .theme p { color: #444; font-size: 13px; }
-  .report table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
-  .report th { background: #f3f3f3; padding: 8px 12px; text-align: left; border-bottom: 2px solid #ddd; color: #333; }
-  .report td { padding: 8px 12px; border-bottom: 1px solid #eee; color: #555; }
-  .report .footer { margin-top: 32px; padding-top: 16px; border-top: 1px dashed #ddd; font-size: 11px; color: #999; text-align: center; }
-  .report .day-link { color: #0066cc; text-decoration: none; }
-  .report .day-link:hover { text-decoration: underline; }
+  .report table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+  .report th { background: #f3f4f6; padding: 8px 12px; text-align: left; border-bottom: 2px solid #e5e7eb; color: #111; }
+  .report td { padding: 8px 12px; border-bottom: 1px solid #f3f4f6; color: #4b5563; }
+  .report .footer { margin-top: 28px; padding-top: 14px; border-top: 1px dashed #ddd; font-size: 11px; color: #999; }
+  .report .day-link { color: #2563eb; text-decoration: none; }
 
-  /* 下载按钮(网页模式,只在屏幕显示) */
-  .actions { display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; }
-  .action-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: var(--bg-2); border: 1px solid var(--line-2); border-radius: 8px; color: var(--text); text-decoration: none; font-family: var(--mono); font-size: 13px; transition: 0.2s; cursor: pointer; }
-  .action-btn:hover { border-color: var(--orange); background: var(--orange-soft); color: var(--orange); }
-  .action-btn::before { content: "↓"; font-size: 16px; }
+  .actions { display: flex; gap: 10px; margin: 16px 0; flex-wrap: wrap; }
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    border-radius: 6px;
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 13px;
+    transition: 0.15s;
+    cursor: pointer;
+  }
+  .action-btn:hover { border-color: var(--blue); background: var(--blue-soft); color: var(--blue); }
+  .action-btn::before { content: "↓"; font-size: 16px; font-weight: 700; }
   .action-btn.print::before { content: "⎙"; }
 
-  .empty { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
-  footer { margin-top: 24px; padding: 24px 0 48px; font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
-
-  /* 打印模式:隐藏网页导航和按钮,只保留报告 */
   @media print {
     body { background: white; }
-    .bg-fx, header, .meta-bar, .actions, footer { display: none; }
+    header, .meta-bar, .actions, footer { display: none !important; }
     .wrap { padding: 0; max-width: 100%; }
-    .report { box-shadow: none; border-radius: 0; padding: 24px; }
+    .report { box-shadow: none; border-radius: 0; padding: 20px; border: none; }
+  }
+  @media (max-width: 600px) {
+    .report { padding: 20px; }
+    .report h1 { font-size: 20px; }
+    .report h2 { font-size: 16px; }
+    .actions { flex-direction: column; }
+    .action-btn { width: 100%; justify-content: center; }
   }
 </style>
 </head>
 <body>
-<div class="bg-fx"></div>
 <div class="wrap">
   <header>
-    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · WEEKLY REPORT</a>
-    <div class="nav-links">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY <span class="logo-sub">· 周报详情</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
+    <nav class="nav" id="nav">
       <a href="index.html">今日</a>
       <a href="monthly.html">本月</a>
-      <a href="weekly_archive.html">所有周报</a>
       <a href="archive.html">归档</a>
-    </div>
+      <a href="weekly_archive.html" class="active">周报</a>
+      <a href="feed.html" class="rss-link">⚡ 订阅</a>
+    </nav>
   </header>
 
   <div id="content" class="empty">加载中...</div>
@@ -101,9 +114,17 @@ if (!week) {
 } else {
   fetch(`data/archive/weekly/${week}.json`)
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-    .then(d => render(d))
+    .then(d => {
+      render(d);
+      const btn = document.getElementById("nav-toggle");
+      const nav = document.getElementById("nav");
+      if (btn) {
+        btn.addEventListener("click", () => nav.classList.toggle("open"));
+        nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+      }
+    })
     .catch(err => {
-      document.getElementById("content").innerHTML = `<div class="empty">未找到 ${week} 的周报:${err.message}<br><br><a href="weekly_archive.html" style="color:var(--orange);">查看所有周报 →</a></div>`;
+      document.getElementById("content").innerHTML = `<div class="empty">未找到 ${week} 的周报:${err.message}<br><br><a href="weekly_archive.html">查看所有周报 →</a></div>`;
     });
 }
 
@@ -133,14 +154,9 @@ function render(d) {
     </article>
   `;
 
-  // 绑定下载
   document.getElementById("dl-md").addEventListener("click", () => downloadFile(`${d.week}-AI周报.md`, md, "text/markdown;charset=utf-8"));
   document.getElementById("dl-json").addEventListener("click", () => downloadFile(`${d.week}-AI周报.json`, JSON.stringify(d, null, 2), "application/json;charset=utf-8"));
   document.getElementById("dl-print").addEventListener("click", () => window.print());
-
-  // 暴露 markdown 给需要的扩展
-  window.__weeklyData = d;
-  window.__weeklyMarkdown = md;
 }
 
 function buildHtmlReport(d) {

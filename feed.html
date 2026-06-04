@@ -4,99 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Daily · 订阅指南</title>
+<link rel="stylesheet" href="assets/style.css">
 <style>
-  :root {
-    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
-    --line: #1f1f24; --line-2: #2a2a31;
-    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
-    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
-    --cyan: #4adfd1; --magenta: #d65cd1;
-    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
-    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
-  .bg-fx { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-  .bg-fx::before { content: ""; position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(255, 106, 26, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 106, 26, 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    mask-image: radial-gradient(ellipse at top, black 0%, transparent 70%);
-  }
-  .bg-fx::after { content: ""; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1200px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 106, 26, 0.18), transparent 60%); filter: blur(80px); }
-  .wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 32px; }
-
-  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
-  .nav-links { display: flex; gap: 6px; }
-  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
-  .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
-  .nav-links a.active { color: var(--bg); background: var(--orange); border-color: var(--orange); }
-
-  .hero { margin: 32px 0 24px; padding: 40px 48px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); position: relative; overflow: hidden; }
-  .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--orange), transparent); background-size: 200% 100%; animation: scan 3s linear infinite; }
-  @keyframes scan { 0% { background-position: 200% 0;} 100% { background-position: -200% 0;} }
-  .hero-meta { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; }
-  .hero h1 { font-size: 38px; margin: 12px 0 12px; font-weight: 800; letter-spacing: -0.01em; }
-  .hero h1 .hl { color: var(--orange); }
-  .hero p { font-size: 15px; color: var(--text-dim); line-height: 1.7; max-width: 800px; }
-
-  /* === 3 种格式卡片 === */
-  .format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
-  .format-card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px; padding: 24px; transition: 0.2s; display: flex; flex-direction: column; }
-  .format-card:hover { border-color: var(--orange); transform: translateY(-3px); box-shadow: 0 20px 40px -20px var(--orange-soft); }
-  .format-card .badge { display: inline-block; font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: var(--orange-soft); color: var(--orange); border: 1px solid var(--orange); border-radius: 4px; letter-spacing: 0.1em; margin-bottom: 12px; }
-  .format-card h3 { font-size: 20px; margin-bottom: 6px; }
-  .format-card .meta { font-family: var(--mono); font-size: 11px; color: var(--text-mute); margin-bottom: 12px; }
-  .format-card .desc { font-size: 13px; color: var(--text-dim); line-height: 1.7; margin-bottom: 16px; flex: 1; }
-  .format-card .url-box { display: flex; gap: 8px; }
-  .format-card input.url { flex: 1; background: var(--bg); border: 1px solid var(--line-2); color: var(--text); padding: 10px 12px; font-family: var(--mono); font-size: 12px; border-radius: 6px; }
-  .format-card input.url:focus { outline: none; border-color: var(--orange); }
-  .format-card button.copy { background: var(--orange); color: var(--bg); border: none; padding: 0 16px; font-family: var(--mono); font-size: 12px; border-radius: 6px; cursor: pointer; font-weight: 600; }
-  .format-card button.copy:hover { background: var(--orange-glow, var(--orange)); }
-  .format-card .actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
-  .format-card .actions a { font-family: var(--mono); font-size: 11px; color: var(--orange); text-decoration: none; padding: 4px 10px; border: 1px solid var(--orange); border-radius: 4px; }
-  .format-card .actions a:hover { background: var(--orange-soft); }
-
-  /* === LLM 使用说明 === */
-  .llm-guide { background: var(--bg-2); border: 1px solid var(--cyan); border-radius: 12px; padding: 32px; margin: 48px 0 24px; }
-  .llm-guide h2 { font-size: 22px; color: var(--cyan); margin-bottom: 16px; }
-  .llm-guide h3 { font-size: 16px; color: var(--text); margin: 20px 0 8px; }
-  .llm-guide p { font-size: 14px; color: var(--text-dim); line-height: 1.8; margin-bottom: 12px; }
-  .llm-guide p strong { color: var(--text); }
-  .llm-guide .prompt-box { background: var(--bg); border: 1px solid var(--line-2); border-radius: 6px; padding: 16px; margin: 12px 0; font-family: var(--mono); font-size: 13px; color: var(--cyan); line-height: 1.6; white-space: pre-wrap; }
-  .llm-guide .note { background: var(--orange-soft); border-left: 3px solid var(--orange); padding: 12px 16px; border-radius: 4px; font-size: 13px; color: var(--text-dim); margin: 12px 0; }
-
-  /* === 阅读器列表 === */
-  .reader-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
-  .reader-tag { background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; text-align: center; font-size: 13px; color: var(--text-dim); }
-
-  .empty { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
-  footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
-
-  @media (max-width: 900px) {
-    .format-grid { grid-template-columns: 1fr; }
-    .reader-list { grid-template-columns: repeat(2, 1fr); }
-  }
+  /* feed.html 继承 style.css 即可,这里只放极少的微调 */
+  .format-card .badge { background: var(--blue-soft); color: var(--blue); border: 1px solid var(--blue); }
 </style>
 </head>
 <body>
-<div class="bg-fx"></div>
 <div class="wrap">
   <header>
-    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · SUBSCRIBE</a>
-    <div class="nav-links">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY <span class="logo-sub">· 订阅</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
+    <nav class="nav" id="nav">
       <a href="index.html">今日</a>
       <a href="monthly.html">本月</a>
       <a href="archive.html">归档</a>
       <a href="feed.html" class="active">订阅</a>
-    </div>
+    </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-meta">SUBSCRIBE · 3 种格式 · 任何阅读器 / AI Agent 都能用</div>
+    <div class="hero-meta">
+      <span class="pill">SUBSCRIBE · 3 种格式</span>
+      <span>任何阅读器 / AI Agent 都能用</span>
+    </div>
     <h1>订阅 <span class="hl">AI 早报</span></h1>
-    <p>每天 8:00 自动刷新。复制下方任意一个链接,粘到你的 RSS 阅读器,或给 AI Agent / 自动化脚本用。</p>
+    <p class="lead">每天 8:00 自动刷新。复制下方任意一个链接,粘到你的 RSS 阅读器,或给 AI Agent / 自动化脚本用。</p>
   </section>
 
   <div class="format-grid">
@@ -151,7 +84,7 @@
 
     <h3>为什么 RSS 不够用?</h3>
     <p>RSS 协议(1999 年的)对人类阅读器很友好,但很多 LLM 的 web 工具解析 XML 不稳——ChatGPT 尤其。所以我们提供了 <strong>3 种格式</strong>让你挑:</p>
-    <ul style="margin: 0 0 12px 20px; color: var(--text-dim); font-size: 14px; line-height: 1.8;">
+    <ul>
       <li><strong>RSS XML</strong> — 给 RSS 阅读器</li>
       <li><strong>JSON Feed</strong> — 给 LLM / Agent / 任何程序(强烈推荐)</li>
       <li><strong>Markdown</strong> — 直接粘到任何聊天 / 笔记 / 文档</li>
@@ -162,7 +95,7 @@
     <div class="prompt-box">请 fetch https://bbyy11.github.io/ai-daily/feed.json
 
 这是 AI Daily 每天的早报 JSON Feed。请:
-1. 总结今天(2026-06-03)AI 圈 5 大要闻
+1. 总结今天(2026-06-04)AI 圈 5 大要闻
 2. 重点分析"新兴"分类的项目(GitHub 涨星快 / HN 红的)
 3. 找出本周 1 个被低估的趋势 + 给我 3 句话的论据
 4. 用中文输出,简洁有力</div>
@@ -183,7 +116,7 @@
 
     <h3>为什么 ChatGPT 之前说"读不到内容"?</h3>
     <p>三种可能 + 我的修复:</p>
-    <ol style="margin: 0 0 12px 20px; color: var(--text-dim); font-size: 14px; line-height: 1.8;">
+    <ol>
       <li><strong>ChatGPT 当时 fetch 失败</strong>(网络 / 限流)— 换 JSON Feed 试试,LLM 解析更稳</li>
       <li><strong>ChatGPT 没有"订阅"功能</strong>(这是产品局限)— 订阅需要你每天手动去喂链接,或者用 n8n/IFTTT 这种中间件</li>
       <li><strong>XML 被 LLM 当字符串读</strong>(常见)— 现在换成 JSON Feed,LLM 解析更精准</li>
@@ -195,7 +128,7 @@
 
     <h3>3 种格式字段说明</h3>
     <p>每条新闻都包含这些字段(让 Agent 能做结构化分析):</p>
-    <ul style="margin: 0 0 12px 20px; color: var(--text-dim); font-size: 13px; line-height: 1.8; font-family: var(--mono);">
+    <ul>
       <li><strong>id / title / summary / source / time / url</strong> — 基础元数据</li>
       <li><strong>category</strong> — "headline" / "rising" / "company" / "paper" / "industry" / "social"</li>
       <li><strong>category_label</strong> — 中文分类(头条/新兴/公司/学术/行业/声音)</li>
@@ -206,7 +139,7 @@
     </ul>
   </section>
 
-  <h3 style="margin: 32px 0 16px; color: var(--text); font-size: 18px;">常用 RSS 阅读器</h3>
+  <h3 style="margin: 32px 0 12px; color: var(--text); font-size: 16px;">常用 RSS 阅读器</h3>
   <div class="reader-list">
     <div class="reader-tag">Feedly</div>
     <div class="reader-tag">Inoreader</div>
@@ -226,12 +159,24 @@ document.querySelectorAll("button.copy").forEach(btn => {
   btn.addEventListener("click", () => {
     const target = document.getElementById(btn.dataset.target);
     target.select();
-    document.execCommand("copy");
+    try {
+      navigator.clipboard.writeText(target.value);
+    } catch (e) {
+      document.execCommand("copy");
+    }
     const old = btn.textContent;
     btn.textContent = "已复制 ✓";
     setTimeout(() => btn.textContent = old, 1500);
   });
 });
+
+// nav toggle
+const btn = document.getElementById("nav-toggle");
+const nav = document.getElementById("nav");
+if (btn) {
+  btn.addEventListener("click", () => nav.classList.toggle("open"));
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+}
 </script>
 </body>
 </html>

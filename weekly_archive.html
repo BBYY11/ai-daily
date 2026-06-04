@@ -4,76 +4,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Daily · 周报归档</title>
+<link rel="stylesheet" href="assets/style.css">
 <style>
-  :root {
-    --bg: #0a0a0c; --bg-2: #111114; --bg-3: #16161a;
-    --line: #1f1f24; --line-2: #2a2a31;
-    --text: #e8e6df; --text-dim: #9a9890; --text-mute: #5e5c56;
-    --orange: #ff6a1a; --orange-soft: rgba(255, 106, 26, 0.12);
-    --cyan: #4adfd1; --magenta: #d65cd1;
-    --mono: "JetBrains Mono", "SF Mono", "Menlo", ui-monospace, monospace;
-    --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  .stats {
+    display: flex;
+    gap: 24px;
+    margin: 20px 0;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
-  .bg-fx { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-  .bg-fx::before { content: ""; position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(255, 106, 26, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 106, 26, 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    mask-image: radial-gradient(ellipse at top, black 0%, transparent 70%);
-  }
-  .bg-fx::after { content: ""; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1200px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 106, 26, 0.18), transparent 60%); filter: blur(80px); }
-  .wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 32px; }
-
-  header { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-  .logo { font-family: var(--mono); font-size: 14px; letter-spacing: 0.18em; color: var(--text-dim); display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 12px var(--orange); }
-  .nav-links { display: flex; gap: 6px; }
-  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--text-dim); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 6px; }
-  .nav-links a:hover { color: var(--orange); border-color: var(--orange); }
-  .nav-links a.active { color: var(--bg); background: var(--orange); border-color: var(--orange); }
-
-  h1 { font-size: 36px; margin: 32px 0 8px; font-weight: 800; letter-spacing: -0.01em; }
-  .sub { font-family: var(--mono); font-size: 12px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 24px; }
-
-  .stats { display: flex; gap: 32px; margin-bottom: 24px; padding: 16px 0; border-top: 1px dashed var(--line-2); border-bottom: 1px dashed var(--line-2); }
-  .stat .v { font-family: var(--mono); font-size: 22px; color: var(--orange); font-weight: 600; }
-  .stat .l { font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 2px; }
+  .stat .v { font-family: var(--mono); font-size: 22px; color: var(--blue); font-weight: 700; }
+  .stat .l { font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
 
   .week-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
-  .week-row { display: grid; grid-template-columns: 160px 1fr 80px 100px; gap: 16px; padding: 24px 16px; border-bottom: 1px solid var(--line); align-items: start; transition: 0.2s; text-decoration: none; color: var(--text); position: relative; }
-  .week-row:hover { background: var(--bg-2); }
-  .week-row:hover .w-title { color: var(--orange); }
-  .week-row::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: transparent; transition: 0.2s; }
-  .week-row:hover::before { background: var(--orange); box-shadow: 0 0 12px var(--orange); }
+  .week-row {
+    display: grid;
+    grid-template-columns: 160px 1fr 80px 100px;
+    gap: 16px;
+    padding: 20px 16px;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+    transition: 0.15s;
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+  }
+  .week-row:hover { background: var(--bg-2); text-decoration: none; }
+  .week-row:hover .w-title { color: var(--blue); }
+  .week-row::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: transparent; transition: 0.15s; }
+  .week-row:hover::before { background: var(--blue); }
 
-  .w-week { font-family: var(--mono); font-size: 16px; color: var(--orange); font-weight: 600; }
+  .w-week { font-family: var(--mono); font-size: 16px; color: var(--blue); font-weight: 700; }
   .w-range { font-family: var(--mono); font-size: 11px; color: var(--text-mute); margin-top: 2px; }
-  .w-body { display: flex; flex-direction: column; gap: 6px; }
-  .w-title { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+  .w-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .w-title { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
   .w-num { font-family: var(--mono); font-size: 14px; color: var(--text-mute); text-align: right; }
-  .w-num strong { color: var(--orange); font-size: 18px; }
-  .w-action { font-family: var(--mono); font-size: 12px; color: var(--orange); text-align: right; }
+  .w-num strong { color: var(--blue); font-size: 18px; font-weight: 700; }
+  .w-num small { font-size: 10px; }
+  .w-action { font-family: var(--mono); font-size: 12px; color: var(--blue); text-align: right; font-weight: 600; }
 
-  .empty { padding: 80px 0; text-align: center; color: var(--text-mute); font-family: var(--mono); }
-  footer { margin-top: 60px; padding: 24px 0 48px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--text-mute); }
+  @media (max-width: 600px) {
+    .week-row { grid-template-columns: 100px 1fr; gap: 12px; padding: 16px 12px; }
+    .week-row .w-num, .week-row .w-action { display: none; }
+    .w-week { font-size: 14px; }
+  }
 </style>
 </head>
 <body>
-<div class="bg-fx"></div>
 <div class="wrap">
   <header>
-    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY · WEEKLY ARCHIVE</a>
-    <div class="nav-links">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY <span class="logo-sub">· 周报归档</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
+    <nav class="nav" id="nav">
       <a href="index.html">今日</a>
       <a href="monthly.html">本月</a>
-      <a href="weekly_archive.html" class="active">周报</a>
       <a href="archive.html">归档</a>
-    </div>
+      <a href="weekly_archive.html" class="active">周报</a>
+      <a href="feed.html" class="rss-link">⚡ 订阅</a>
+    </nav>
   </header>
 
-  <h1>周报归档</h1>
-  <div class="sub">WEEKLY REPORTS · 每周一 08:00 永久保存 · 共 <span id="total-weeks">—</span> 周</div>
+  <section class="hero">
+    <div class="hero-meta">
+      <span class="pill">WEEKLY · 永久周报</span>
+      <span>每周一 08:00 永久保存</span>
+    </div>
+    <h1>周报<span class="hl">归档</span></h1>
+    <p class="lead">从 W22 (2026-05-25 → 2026-05-31) 开始,每周一 08:00 由 cron 自动归档,可下载 Markdown / JSON / 打印 3 种格式。</p>
+  </section>
 
   <div class="stats">
     <div class="stat"><div class="v" id="s-weeks">—</div><div class="l">已存周报</div></div>
@@ -91,29 +91,35 @@ fetch("data/archive/weekly/index.json")
   .then(r => r.ok ? r.json() : { weeks: [] })
   .then(d => {
     const weeks = d.weeks || [];
-    document.getElementById("total-weeks").textContent = d.total || weeks.length;
     document.getElementById("s-weeks").textContent = d.total || weeks.length;
     document.getElementById("s-themes").textContent = weeks.reduce((s, w) => s + (w.key_themes_count || 0), 0);
     document.getElementById("s-latest").textContent = weeks[0] ? weeks[0].week : "—";
 
     if (!weeks.length) {
       document.getElementById("week-list").innerHTML = '<div class="empty">还没有归档周报。等待下周一 8 点的 cron 任务跑完后会显示。</div>';
-      return;
+    } else {
+      document.getElementById("week-list").innerHTML = weeks.map(w => `
+        <a class="week-row" href="weekly_view.html?week=${w.week}">
+          <div>
+            <div class="w-week">${w.week}</div>
+            <div class="w-range">${w.start_date} → ${w.end_date}</div>
+          </div>
+          <div class="w-body">
+            <div class="w-title">${escapeHTML(w.summary || '(无摘要)')}</div>
+          </div>
+          <div class="w-num"><strong>${w.key_themes_count || 0}</strong><br><small>主题</small></div>
+          <div class="w-action">查看 / 下载 →</div>
+        </a>
+      `).join("");
     }
 
-    document.getElementById("week-list").innerHTML = weeks.map(w => `
-      <a class="week-row" href="weekly_view.html?week=${w.week}">
-        <div>
-          <div class="w-week">${w.week}</div>
-          <div class="w-range">${w.start_date} → ${w.end_date}</div>
-        </div>
-        <div class="w-body">
-          <div class="w-title">${escapeHTML(w.summary || '(无摘要)')}</div>
-        </div>
-        <div class="w-num"><strong>${w.key_themes_count || 0}</strong><br><span style="font-size:10px">主题</span></div>
-        <div class="w-action">查看 / 下载 →</div>
-      </a>
-    `).join("");
+    // nav toggle
+    const btn = document.getElementById("nav-toggle");
+    const nav = document.getElementById("nav");
+    if (btn) {
+      btn.addEventListener("click", () => nav.classList.toggle("open"));
+      nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+    }
   })
   .catch(err => {
     document.getElementById("week-list").innerHTML = '<div class="empty">加载失败:' + err.message + '</div>';
