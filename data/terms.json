@@ -40,7 +40,7 @@
     "name": "工具调用 (Tool Calling)",
     "category": "Agent",
     "summary": "模型按 schema 输出结构化指令,外部运行时把它翻译成对真实 API / 数据库 / 函数的调用。",
-    "detail": "MCP (Model Context Protocol) 是 Antrhopic 提出的工具调用标准协议。",
+    "detail": "MCP (Model Context Protocol) 是 Anthropic 提出的工具调用标准协议。",
     "links": []
   },
   "Show HN": {
@@ -163,7 +163,7 @@
     "name": "RTX Spark (N1X)",
     "category": "硬件 / 端侧 AI",
     "summary": "英伟达首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + 神经处理单元,主打本地大模型推理。",
-    "detail": "戴尔、惠普、联想、微软首批支持。它的意义在于把 AI Agent 从云端拽到本地,降低延迟、隐私和推理成本。",
+    "detail": "戴尔、惠普、联想、微软首批支持,秋季上市。它的意义在于把 AI Agent 从云端拽到本地,降低延迟、隐私和推理成本。",
     "links": [
       {"label": "Wikipedia: AI PC", "url": "https://en.wikipedia.org/wiki/AI_PC"}
     ]
@@ -299,15 +299,6 @@
     "detail": "宇树 H2+ 全身 31 自由度 + 每手 25 自由度,合计 81 自由度,在同类人形机器人中属顶级。",
     "links": []
   },
-  "Context-ReAct": {
-    "name": "Context-ReAct",
-    "category": "Agent / 学术",
-    "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
-    "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
-    "links": [
-      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
-    ]
-  },
   "BrowseComp": {
     "name": "BrowseComp",
     "category": "评测基准",
@@ -422,6 +413,202 @@
     "category": "机器人 / 评测",
     "summary": "让机器人在真实生产环境中长时间不间断运行的测试,衡量稳定性与维护成本。",
     "detail": "从 8 小时到 24 小时再到 200 小时,Figure 03 完成了量级跨越,机器人'能用'的下限被显著抬高。",
+    "links": []
+  },
+  "推测解码": {
+    "name": "推测解码 (Speculative Decoding)",
+    "category": "推理优化",
+    "summary": "用小模型快速猜测 K 个候选 token,大模型一次验证,实现 2-3 倍推理加速。",
+    "detail": "Grok 4.3 通过推测解码实现推理速度提升 3 倍,约 60% token 通过验证。",
+    "links": []
+  },
+  "KV压缩": {
+    "name": "KV Cache 压缩",
+    "category": "推理优化",
+    "summary": "将 Key-Value 缓存压缩至 1/8,节省 87.5% 显存,推理速度提升 1.4 倍。",
+    "detail": "Grok 4.3 使用 TurboQuant 技术实现 KV 压缩。",
+    "links": []
+  },
+  "并行解码": {
+    "name": "并行解码 (Parallel Decoding)",
+    "category": "推理优化",
+    "summary": "同时生成多个 Token(类似 Medusa),推理速度提升 1.6 倍。",
+    "detail": "Grok 4.3 使用 Top-5 候选动态验证机制。",
+    "links": []
+  },
+  "2M 上下文": {
+    "name": "200 万 token 上下文窗口",
+    "category": "基础模型",
+    "summary": "Grok 4.3 支持 2M tokens 超长上下文,是当前最长上下文模型之一。",
+    "detail": "通过分层注意力、压缩记忆、RoPE 位置编码优化实现。Needle-in-a-Haystack 测试 2M 长度准确率 76%。",
+    "links": []
+  },
+  "MoE": {
+    "name": "混合专家模型 (Mixture of Experts)",
+    "category": "基础模型架构",
+    "summary": "稀疏激活的模型架构,每个 token 只激活部分专家网络,大幅降低计算成本。",
+    "detail": "DeepSeek V4 使用 256 专家 Top-4 路由,Grok 4.3 使用 512 专家 Top-6 + 残差连接。",
+    "links": []
+  },
+  "残差MoE": {
+    "name": "残差连接增强的 MoE 路由",
+    "category": "基础模型架构",
+    "summary": "Grok 4.3 的创新:保留 10% 原始输入残差,Top-6 专家加权组合输出,提升专家协作能力。",
+    "detail": "实测困惑度降低 3.2%,避免'专家退化'问题。",
+    "links": []
+  },
+  "世界模型": {
+    "name": "世界模型 (World Model)",
+    "category": "AI 核心概念",
+    "summary": "能够学习事物在三维空间中如何移动和互动的 AI 系统,使 AI 能做出预测并采取行动。",
+    "detail": "LeCun 的 JEPA、李飞飞的 World Labs Marble、Runway GWM-1 都是世界模型路线。2026 年被视为'世界模型大年'。",
+    "links": []
+  },
+  "持续学习": {
+    "name": "持续学习 (Continual Learning)",
+    "category": "AI 核心概念",
+    "summary": "AI 能够在不间断的情况下,自主吸收新知识并进行改进,不遗忘之前学到的能力。",
+    "detail": "DeepMind AI 数学协作者实现了无需重新训练即可持续吸收新知识的能力。Anthropic CEO 预测 2026 年将实用化。",
+    "links": []
+  },
+  "SLM": {
+    "name": "小型语言模型 (Small Language Model)",
+    "category": "基础模型",
+    "summary": "参数量在 7B 以下,可本地或单张消费级 GPU 运行的大语言模型。",
+    "detail": "AT&T 首席数据官预测 SLM 将成为 2026 年大趋势,成本和性能优势驱动企业优先使用。",
+    "links": []
+  },
+  "MCP": {
+    "name": "MCP (Model Context Protocol)",
+    "category": "Agent 协议",
+    "summary": "Anthropic 提出的 AI Agent 互联标准协议,被称为 AI 的 USB-C 接口。",
+    "detail": "OpenAI、微软已公开拥抱 MCP,Anthropic 将其捐赠给 Linux 基金会 Agentic AI Foundation。",
+    "links": []
+  },
+  "FrontierMath": {
+    "name": "FrontierMath",
+    "category": "评测基准",
+    "summary": "Epoch AI 组织的高难度数学评测基准,Tier 4 题目为诺奖级研究问题。",
+    "detail": "DeepMind AI 数学协作者在 T4 上取得 48% 正确率,创所有 AI 系统最高分。",
+    "links": []
+  },
+  "AlphaEvolve": {
+    "name": "AlphaEvolve",
+    "category": "AI 科学发现",
+    "summary": "DeepMind 开发的进化算法框架,用 AI 发现数学猜想和优化问题解法。",
+    "detail": "DeepMind AI 数学协作者使用 Gemini Deep Think 子代理进行证明探索。",
+    "links": []
+  },
+  "Claude Code": {
+    "name": "Claude Code",
+    "category": "AI 编程工具",
+    "summary": "Anthropic 推出的命令行 AI 编程助手,支持代码生成、调试、测试全流程。",
+    "detail": "Anthropic 工程师过去一个月贡献 100% 由 AI 直出代码。7 小时完成 1250 万行代码库任务,精度 99.9%。",
+    "links": []
+  },
+  "Grok Build": {
+    "name": "Grok Build",
+    "category": "AI 编程工具",
+    "summary": "xAI 推出的终端原生编程智能体,Plan Mode + 并行子智能体 + Arena Mode。",
+    "detail": "与 Claude Code、Codex CLI、Gemini Antigravity 竞争,底层使用 grok-code-fast-1,256K 上下文。",
+    "links": []
+  },
+  "AI祛魅": {
+    "name": "AI 祛魅 (AI Pragmatism)",
+    "category": "行业趋势",
+    "summary": "2026 年 AI 从'概念炒作'转向'产业务实'的趋势。",
+    "detail": "TechCrunch 采访专家:行业从暴力算力扩张→深度研究新架构,从炫技演示→实际部署,从完全自主 Agent→增强人类工作的辅助系统。",
+    "links": []
+  },
+  "IPO": {
+    "name": "IPO (首次公开募股)",
+    "category": "资本市场",
+    "summary": "公司首次向公众发行股票,实现公开上市。",
+    "detail": "Anthropic 秘密递交 IPO 招股书,最快今秋上市,估值 9650 亿。OpenAI 也在筹备 IPO,ChatGPT 周活 9 亿。",
+    "links": []
+  },
+  "连续部署": {
+    "name": "连续部署 (Continuous Deployment)",
+    "category": "AI 行业趋势",
+    "summary": "AI 模型发布从'年度大版本'加速至'季度甚至月度更新'。",
+    "detail": "2026 年前 5 个月已有 14 个主要大模型发布,平均 9.1 天一个。xAI 从 Grok-1 到 Grok 4.3 仅 32 个月,发布 7 个主要版本。",
+    "links": []
+  },
+  "DGX Station": {
+    "name": "DGX Station",
+    "category": "硬件 / 工作站",
+    "summary": "NVIDIA 桌面级 AI 超级计算机,GB300 Grace Blackwell Ultra 超级芯片,748GB 相干内存,20 petaFLOPS FP4 AI 算力。",
+    "detail": "DGX Station for Windows 将于 Q4 上市,华硕、戴尔、技嘉、惠普、微星、超微均有相关产品。",
+    "links": []
+  },
+  "JEPA": {
+    "name": "JEPA (联合嵌入预测架构)",
+    "category": "世界模型",
+    "summary": "Yann LeCun 主导的自监督世界模型架构,不预测像素而是预测抽象表示。",
+    "detail": "LeCun 演示 JEPA 视频解析自主智能路径及无奖励学习,离开 Meta 后继续推进 JEPA 路线。",
+    "links": []
+  },
+  "Llama": {
+    "name": "Llama (Meta 开源模型)",
+    "category": "基础模型",
+    "summary": "Meta 开源的大语言模型系列,最新 Llama 4,Apache 2.0 协议商业友好。",
+    "detail": "Llama 3.2 3B 量化后仅 2GB,社区生态庞大,是开源 LLM 重要力量。",
+    "links": []
+  },
+  "Magistral": {
+    "name": "Magistral (Mistral)",
+    "category": "基础模型",
+    "summary": "Mistral 开源的多功能模型系列,支持推理、多模态、代码能力。",
+    "detail": "Magistral Small 4 统一推理与多模态能力,1190 亿总参数,256k 上下文,Apache 2.0。",
+    "links": []
+  },
+  "Devstral": {
+    "name": "Devstral (Mistral)",
+    "category": "AI 编程工具",
+    "summary": "Mistral 开发的开源 AI 编程模型,240 亿参数,单 GPU 可运行,编程基准超越竞争对手。",
+    "detail": "Apache 2.0 许可证,专为软件开发优化,是 Mistral 编程工具链核心。",
+    "links": []
+  },
+  "Vibe": {
+    "name": "Vibe (Mistral)",
+    "category": "AI 编程工具",
+    "summary": "Mistral 终端编程助手 Vibe 2.0,引入多智能体协作,Devstral 2 模型驱动。",
+    "detail": "自然语言命令交互,可定制子代理处理测试或代码审查。",
+    "links": []
+  },
+  "OpenClaw": {
+    "name": "OpenClaw",
+    "category": "AI Agent 框架",
+    "summary": "开源个人 AI 助手,跨平台本地优先,GitHub ~302k stars。",
+    "detail": "宣传语「Your own personal AI assistant. Any OS. Any Platform. The lobster way」,但存在安全漏洞(Cisco 披露)。",
+    "links": []
+  },
+  "DeerFlow": {
+    "name": "DeerFlow",
+    "category": "AI Agent 框架",
+    "summary": "字节跳动开源的多智能体研究框架,GitHub ~76k stars。",
+    "detail": "专为自动化研究、代码分析设计,模块化设计支持技能扩展,是字节在 Agent 基础设施领域的重要布局。",
+    "links": []
+  },
+  "n8n": {
+    "name": "n8n",
+    "category": "工作流自动化",
+    "summary": "支持原生 AI 能力的工作流自动化平台,GitHub ~179k stars。",
+    "detail": "集成 400+ 应用,自托管免费执行,是 Agent 落地的重要工具。",
+    "links": []
+  },
+  "Dify": {
+    "name": "Dify",
+    "category": "AI 应用开发平台",
+    "summary": "生产级 AI 应用开发平台,面向 Agent 工作流,GitHub ~132k stars。",
+    "detail": "国产开源,企业可用,是 AI 应用落地的重要工具。",
+    "links": []
+  },
+  "Ollama": {
+    "name": "Ollama",
+    "category": "本地推理引擎",
+    "summary": "一键本地运行大模型,支持 DeepSeek、GLM 等,GitHub ~171k stars。",
+    "detail": "不需要复杂部署,是本地化 AI 的重要基础设施。",
     "links": []
   }
 }

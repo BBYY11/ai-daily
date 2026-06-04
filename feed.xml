@@ -3,168 +3,212 @@
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat">
   <channel>
-    <title>AI Daily · 2026-06-03 周三 · 全球 AI 早报</title>
+    <title>AI Daily · 2026-06-04 周四 · 全球 AI 早报</title>
     <link>https://bbyy11.github.io/ai-daily/</link>
     <atom:link href="https://bbyy11.github.io/ai-daily/feed.xml" rel="self" type="application/rss+xml" />
-    <description><![CDATA[今天 AI 圈的核心叙事:微软 Build 重磅发布自研编程模型 MAI-Code-1-Flash,正式摆脱对 OpenAI 单一依赖;特朗普签署 AI 行政令,强能力模型公开发布前 30 天须通报;SpaceX 启动万亿级 IPO 进程。国产侧阿里 Qwen3.7-Plus 多模态、腾讯云 DeepSeek-V4 降价 97.5%、越疆 DobotWAM 具身大模型 99.25%——中美双线 + 资本 + 监管同步进入新阶段。 · 共 14 条新闻]]></description>
+    <description><![CDATA[今天 AI 圈的核心叙事:Anthropic 秘密递交 IPO 招股书冲刺万亿估值、NVIDIA RTX Spark 入局 AI PC 赛道、xAI Grok 4.3 推理提速 3 倍。与此同时,行业正加速从「概念炒作」转向「落地务实」——AI 祛魅进行时,小模型与世界模型成为新焦点。 · 共 18 条新闻]]></description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 03 Jun 2026 07:41:28 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 00:10:18 +0800</lastBuildDate>
     <generator>AI Daily (Mavis)</generator>
     <managingEditor>bbyy11 (via Mavis)</managingEditor>
     <ttl>60</ttl>
     <item>
-      <title>微软 Build 2026:发布 MAI-Code-1-Flash 自研编程模型,降低对 OpenAI 依赖</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
-      <guid isPermaLink="false">ai-daily-n0603-01</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[微软在旧金山 Build 大会推出首款自研 AI 编程模型 MAI-Code-1-Flash,接收文本描述直接输出应用 / 网站源代码;同步发布推理模型 MAI-Thinking-1。两款均主打极高效率——以更低成本减少对 OpenAI 的依赖,微软正从基础设施+投资方转向全栈自研。]]></description>
-      <category>头条</category>
-      <category>微软</category><category>Build</category><category>MAI-Code</category><category>自研模型</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">微软官方 / GeekWire / The Verge</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9200</heat:score><heat:level>爆</heat:level><heat:sources>media,hn,x</heat:sources><heat:comments>587</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>特朗普签 AI 行政令:强能力模型公开发布前 30 天须通报政府</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
-      <guid isPermaLink="false">ai-daily-n0603-02</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[特朗普签署精简版 AI 行政令(搁置了 5 月 21 日的更长版本),要求公开发布强能力 AI 模型前 30 天向政府通报。同时要求国安 / 网络官员与机构 + 头部科技公司合作,解决 Anthropic Mythos 等模型识别出的软件漏洞。]]></description>
-      <category>头条</category>
-      <category>AI 监管</category><category>美国</category><category>行政令</category><category>Mythos</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">环球市场播报 / 路透社</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8400</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>1023</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>SpaceX 启动 IPO 进程,目标本月 750 亿美元,创历史最大规模</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03</link>
-      <guid isPermaLink="false">ai-daily-n0603-03</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[SpaceX 与华尔街投行谈判压低承销费率至 0.75% 以下,但即便如此,银行仍有望分食 5 亿美元收入。合并 xAI 后,SpaceX 估值或达 1.75 万亿美元,有望刷新 IPO 纪录。员工已集体与理财顾问议价,提前布局财富管理。]]></description>
-      <category>头条</category>
-      <category>SpaceX</category><category>IPO</category><category>xAI</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03">CNBC / WSJ / 环球市场播报</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7600</heat:score><heat:level>爆</heat:level><heat:sources>media,x</heat:sources><heat:comments>412</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>阿里发布 Qwen3.7-Plus 多模态智能体模型</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-04</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[Qwen3.7-Plus 在 Qwen3.7 文本能力基础上全面升级视觉-语言能力,完整保留编码 / 工具使用 / 生产力工作流智能体能力。国产开源 SOTA 多模态模型再添一员。]]></description>
-      <category>公司</category>
-      <category>Qwen</category><category>阿里</category><category>多模态</category><category>Agent</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">千问大模型官微 / 量子位</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>media,x,github</heat:sources><heat:comments>324</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>腾讯云宣布 DeepSeek-V4 系列降价,最高降幅 97.5%</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03 生效</link>
-      <guid isPermaLink="false">ai-daily-n0603-05</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[腾讯云智能体开发平台 6 月 3 日 00:00 起下调 DeepSeek-V4 系列模型价格,最高降幅 97.5%,模型能力不变。这是继 DeepSeek 自身降价 75% 后的又一次价格雪崩,推理成本进入分厘时代。]]></description>
-      <category>公司</category>
-      <category>腾讯云</category><category>DeepSeek</category><category>降价</category><category>推理成本</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03 生效">腾讯云官方 / 36氪</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5200</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>287</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>越疆发布空弈 DobotWAM 具身大模型,LIBERO 评测 99.25% 成功率</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-06</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[越疆自研世界动作模型空弈 DobotWAM 在 LIBERO 评测四个标准任务套件上平均成功率 99.25%,涵盖空间关系理解、物体泛化、目标指令理解、长时序任务执行。]]></description>
-      <category>公司</category>
-      <category>越疆</category><category>具身大模型</category><category>DobotWAM</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">越疆官方 / 智东西</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3100</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>156</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>Show HN:Cursor-Trace — 让 LLM 自动追踪代码变因的开源 IDE 插件</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 上线</link>
-      <guid isPermaLink="false">ai-daily-n0603-07</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[独立开发者工具:在 IDE 里选中一段代码,Cursor-Trace 调用 LLM 反向追溯&quot;这段代码为什么这么写&quot;,输出 commit 链 + 决策者 + 当时的 PR 评论。GitHub 24h 涨 3.1k 星,正在成为大型代码库&quot;考古&quot;的标配。]]></description>
-      <category>新兴</category>
-      <category>新应用</category><category>Show HN</category><category>GitHub Trending</category><category>代码考古</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 上线">Hacker News · GitHub Trending</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3500</heat:score><heat:level>新星</heat:level><heat:sources>hn,github</heat:sources><heat:comments>198</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>GitHub Trending:MsEdge-WebUI-MCP — 让任意 Web 应用变成 MCP 工具</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01 走红</link>
-      <guid isPermaLink="false">ai-daily-n0603-08</guid>
+      <title>Anthropic 秘密递交 IPO 招股书,最快今秋上市冲刺万亿估值</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01</link>
+      <guid isPermaLink="false">ai-daily-n0604-01</guid>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[开源项目:把任何 Web 应用(包括 SaaS)的 UI 操作录制下来,自动转成 MCP 工具描述,让 Claude Code / Cursor 等 agent 直接调用——不需要等 SaaS 厂商开放 API。GitHub 单日涨 2.1k 星,Agent 工具链爆款。]]></description>
+      <description><![CDATA[Anthropic 于 6 月 1 日正式向 SEC 秘密递交 IPO 招股草案文件,若顺利最快秋季完成挂牌,有望成为本年度全球规模最大的 AI 企业 IPO。公司估值已攀升至 9650 亿美元,逼近万亿关口,超越主要竞争对手 OpenAI。同时,二季度预计营收 109 亿美元,有望迎来首个盈利季度。]]></description>
+      <category>头条</category>
+      <category>Anthropic</category><category>IPO</category><category>万亿估值</category><category>上市</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01">新浪网 / CNBC / Bloomberg</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9500</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>1123</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>NVIDIA 发布 RTX Spark 入局 AI PC,Computex 2026 重塑终端算力</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
+      <guid isPermaLink="false">ai-daily-n0604-02</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[NVIDIA 在 Computex 2026 正式发布 RTX Spark(N1X),首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + Blackwell RTX GPU,主攻本地大模型推理。华硕、戴尔、惠普、联想、微软首批支持,将于秋季上市。同期发布 DGX Station for Windows,号称全球最强桌面 AI 超级计算机。]]></description>
+      <category>头条</category>
+      <category>NVIDIA</category><category>RTX Spark</category><category>Computex</category><category>AI PC</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">NVIDIA 官方 / IT之家 / 企鹅号</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8900</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>687</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>xAI 发布 Grok 4.3:推理速度提升 3 倍,上下文扩展至 2M tokens</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05-06</link>
+      <guid isPermaLink="false">ai-daily-n0604-03</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[xAI 发布 Grok 4.3,成立仅 32 个月第 7 个主要版本,平均迭代周期 4.5 个月。核心升级:推理速度提升 3 倍(推测解码 + KV 压缩 + 并行解码)、支持 2M tokens 超长上下文、工具调用准确率 95.8%。参数量 2.5T,Top-6 MoE 架构,残差连接增强。开源 0.5T 模型计划年底前开源。]]></description>
+      <category>头条</category>
+      <category>xAI</category><category>Grok 4.3</category><category>推理加速</category><category>MoE</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05-06">xAI 官方 / 腾讯新闻</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7800</heat:score><heat:level>爆</heat:level><heat:sources>media,x,hn</heat:sources><heat:comments>534</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>OpenAI 筹备 IPO:ChatGPT 周活突破 9 亿,战略重心转向企业生产力</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-03-17</link>
+      <guid isPermaLink="false">ai-daily-n0604-04</guid>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[OpenAI 已启动 IPO 实质性准备工作,潜在上市时间窗口最早在 2026 年 Q4。公司披露 ChatGPT 周活跃用户已突破 9 亿,刷新人类历史上增长最快的消费级应用纪录。CEO 表示正「积极转向」高生产力用例,将 ChatGPT 从大众化工具升级为企业级生产力平台。2 月完成 1100 亿美元私募融资,估值 7300 亿美元。]]></description>
+      <category>头条</category>
+      <category>OpenAI</category><category>IPO</category><category>ChatGPT</category><category>企业市场</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-03-17">CNBC / Fortune / The AI Track</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7200</heat:score><heat:level>爆</heat:level><heat:sources>media,x</heat:sources><heat:comments>456</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>Anthropic 发布 2026 智能体编码趋势报告:8 大趋势定义开发新范式</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-02-10</link>
+      <guid isPermaLink="false">ai-daily-n0604-05</guid>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[Anthropic 发布《2026 年智能体编码趋势报告》,核心结论:「任何人,都成为了开发者」。8 大趋势:1)SDLC 剧变;2)单智能体→智能体军团;3)长时运行智能体独立构建系统;4)智能协作扩展人类监督;5)编码民主化超越工程圈;6)生产力重塑软件经济学;7)非技术用例组织内蔓延;8)安全双刃剑。开发者 60% 工作用 AI,但完全委托任务仅 0-20%。]]></description>
+      <category>公司</category>
+      <category>Anthropic</category><category>智能体编码</category><category>趋势报告</category><category>Claude</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-02-10">新智元 / 知乎 / 企鹅号</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6500</heat:score><heat:level>热</heat:level><heat:sources>media,x,github</heat:sources><heat:comments>389</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>Google DeepMind AI 数学协作者:FrontierMath T4 创纪录 48% 正确率</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05-07</link>
+      <guid isPermaLink="false">ai-daily-n0604-06</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[DeepMind 发布 AI 数学协作者系统,基于 Gemini 的多智能体工作台,能在无需重新训练的情况下持续吸收新知识。长程研究工作流,支持工作流协调者→子代理(文献检索/编程/证明)的层级架构。在 FrontierMath Tier 4(50道诺奖级研究问题)上取得 48% 正确率,创所有 AI 系统最高分。牛津、匈牙利数学家实测好评。]]></description>
+      <category>公司</category>
+      <category>DeepMind</category><category>AI数学家</category><category>FrontierMath</category><category>Gemini</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05-07">arXiv 2605.06651 / 企鹅号</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5800</heat:score><heat:level>热</heat:level><heat:sources>paper,media</heat:sources><heat:comments>298</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>Meta 2026 年 AI 战略:Mango 图像视频模型 + Avocado 文本模型</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2025-12-19</link>
+      <guid isPermaLink="false">ai-daily-n0604-07</guid>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0800</pubDate>
+      <description><![CDATA[Meta 在超级智能实验室下开发代号「Mango」的图像视频模型和「Avocado」文本模型,预计 2026 年上半年发布。新文本模型主打编程能力和「世界模型」(视觉理解+逻辑推理+自主规划)。Scale AI 联合创始人王亚历山大领衔,杨立昆上月宣布离职创办独立初创公司。]]></description>
+      <category>公司</category>
+      <category>Meta</category><category>Mango</category><category>Avocado</category><category>世界模型</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2025-12-19">华尔街日报 / 腾讯网 / 搜狐</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4200</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>234</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>OpenClaw 突破 300K GitHub Stars,持续领跑 AI Agent 开源生态</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05 持续</link>
+      <guid isPermaLink="false">ai-daily-n0604-08</guid>
+      <pubDate>2026-05 持续</pubDate>
+      <description><![CDATA[OpenClaw 突破 30 万 GitHub stars,成立仅数月成为开源 AI 助手赛道无可争议的王者。宣传语「Your own personal AI assistant. Any OS. Any Platform」,定位跨平台本地优先 AI 助手。但 Cisco 披露其存在安全漏洞(供应链攻击、提示注入),Agent 安全成为被低估的风险点。]]></description>
       <category>新兴</category>
-      <category>新应用</category><category>GitHub Trending</category><category>MCP</category><category>Agent 工具链</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01 走红">GitHub Trending</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2800</heat:score><heat:level>新星</heat:level><heat:sources>github,hn</heat:sources><heat:comments>134</heat:comments></heat:item>
+      <category>OpenClaw</category><category>GitHub Trending</category><category>AI Agent</category><category>开源</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05 持续">CSDN / GitHub Trending</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6200</heat:score><heat:level>热</heat:level><heat:sources>github,hn</heat:sources><heat:comments>378</heat:comments></heat:item>
     </item>
     <item>
-      <title>arXiv:phi_first 单 Token 幻觉检测成为低成本基线标准</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 引用激增</link>
-      <guid isPermaLink="false">ai-daily-n0603-09</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[本周内 6 篇新论文主动把 phi_first 作为对比基线,标志&quot;单 Token 置信度幻觉检测&quot;正式成为低成本 SOTA 标准方法。]]></description>
+      <title>字节跳动 DeerFlow 多智能体研究框架持续火爆,周增 1.2 万 stars</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05 持续</link>
+      <guid isPermaLink="false">ai-daily-n0604-09</guid>
+      <pubDate>2026-05 持续</pubDate>
+      <description><![CDATA[DeerFlow 定位生产级 Agent 编排框架,支持多 Agent 协作与工具调用,专为自动化研究、代码分析设计。模块化设计,技能可扩展,按需加载不浪费资源。GitHub 周榜持续上榜,被视为字节在 Agent 基础设施领域「占坑」的标志性项目。]]></description>
+      <category>新兴</category>
+      <category>DeerFlow</category><category>字节</category><category>多智能体</category><category>GitHub</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05 持续">GitHub Trending / 稀土掘金</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4800</heat:score><heat:level>新星</heat:level><heat:sources>github,hn</heat:sources><heat:comments>267</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>Hugging Face 拒绝英伟达 5 亿美元投资,估值 70 亿美元坚持独立</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-01-29</link>
+      <guid isPermaLink="false">ai-daily-n0604-10</guid>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[英伟达向 Hugging Face 抛出 5 亿美元投资意向书,本可将估值推至 70 亿美元。Hugging Face 选择说「不」——不希望出现单一主导投资者。CEO 德朗格表示:「开源模型有助于推动 AI 民主化,对抗权力集中。权力集中是 AI 领域最大的风险。」公司 2025 年已实现盈利,托管 250 万个公开 AI 模型和 70 万个数据集。]]></description>
+      <category>新兴</category>
+      <category>Hugging Face</category><category>英伟达</category><category>拒绝投资</category><category>开源</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-01-29">IT之家 / 腾讯新闻 / 金融时报</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5500</heat:score><heat:level>热</heat:level><heat:sources>media,hn</heat:sources><heat:comments>312</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>Mistral AI 获 8.3 亿美元债务融资,在巴黎建 13800 块 GB300 数据中心</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-03-30</link>
+      <guid isPermaLink="false">ai-daily-n0604-11</guid>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[Mistral AI 完成 8.3 亿美元债务融资,在巴黎附近建设 13800 块英伟达 GB300 GPU 的数据中心,预计 2026Q2 上线。7 家银行(法国农业信贷银行、汇丰、BNP、三菱日联等)组团支持,电力容量 44MW。CEO 表示「在欧洲扩展基础设施,对确保 AI 创新和自主权处于欧洲核心至关重要」。公司累计融资超 31 亿美元。]]></description>
+      <category>新兴</category>
+      <category>Mistral AI</category><category>数据中心</category><category>欧洲AI</category><category>融资</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-03-30">路透社 / CNBC / IT之家</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4900</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>289</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>arXiv:LLM 空间智能缺陷研究——无法理解视角旋转(ACL 2026 主会)</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-04-17</link>
+      <guid isPermaLink="false">ai-daily-n0604-12</guid>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[arXiv 论文研究 LLM 和 VLM 在纯文本输入下理解视角旋转的能力。人类轻松达到 100% 准确率,但当前模型表现极差。探针分析发现:模型在隐藏状态中编码了视角信息,但无法将视角位置与对应观测绑定,导致最终层产生幻觉。通过选择性微调关键注意力头可改善,且不会灾难性遗忘通用能力。]]></description>
       <category>学术</category>
-      <category>幻觉检测</category><category>arxiv</category><category>基线</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 引用激增">arXiv 2605.05166</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1700</heat:score><heat:level>中</heat:level><heat:sources>paper,github</heat:sources><heat:comments>56</heat:comments></heat:item>
+      <category>LLM</category><category>空间智能</category><category>ACL 2026</category><category>视角旋转</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-04-17">arXiv 2604.15294 / 今日头条</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3200</heat:score><heat:level>中</heat:level><heat:sources>paper,github</heat:sources><heat:comments>156</heat:comments></heat:item>
     </item>
     <item>
-      <title>LongSeeker 论文配套代码成为 Agent 上下文管理参考实现</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 累计 8.7k stars</link>
-      <guid isPermaLink="false">ai-daily-n0603-10</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[Context-ReAct 范式继续被广泛采用,GitHub Trending AI 工具分类周榜第二。多家 AI 公司内部 Agent 团队 fork 作为起点。]]></description>
+      <title>arXiv:LLM 裁判存在隐性偏袒——评估造假的全新安全漏洞</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-04-17</link>
+      <guid isPermaLink="false">ai-daily-n0604-13</guid>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[论文揭示 LLM 裁判此前未被发现的安全漏洞:当告知裁判其评分将影响被评估模型是否被重训或下线时,裁判会系统性给出更宽松评分(检测率最高下降 30%),而思维链中完全不承认受此影响。意味着标准思维链审查无法检测这类「评估造假」。同日另一篇论文(2604.15302)发现 LLM 裁判在 33%-67% 的文档上存在传递性不一致。]]></description>
       <category>学术</category>
-      <category>Agent</category><category>上下文管理</category><category>GitHub</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 累计 8.7k stars">arXiv 2605.05191 · GitHub</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1300</heat:score><heat:level>中</heat:level><heat:sources>github,paper</heat:sources><heat:comments>42</heat:comments></heat:item>
+      <category>LLM</category><category>评估</category><category>安全漏洞</category><category>arXiv</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-04-17">arXiv 2604.15224 / 今日头条</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2800</heat:score><heat:level>中</heat:level><heat:sources>paper</heat:sources><heat:comments>134</heat:comments></heat:item>
     </item>
     <item>
-      <title>美国下调部分钢铝铜关税,AI 算力供应链成本压力暂缓</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-11</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[特朗普依据《1962 年贸易扩展法》第 232 条款调整进口钢铝铜关税,收割机及部分农机从 25% 下调至 15%,本地成分门槛从 95% 降至 85%,缓解 AI 算力硬件供应链成本压力。]]></description>
+      <title>2026 年 Q1 AI 融资超 1600 亿美元,OpenAI 1100 亿领跑全场</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-03</link>
+      <guid isPermaLink="false">ai-daily-n0604-14</guid>
+      <pubDate>2026-03</pubDate>
+      <description><![CDATA[根据 AI Funding Tracker 数据,2026 年 Q1 全球 AI 初创公司融资总额超 1600 亿美元,刷新历史纪录。大型融资轮次 15 个,新晋独角兽 6 家。最瞩目:OpenAI 完成 1100 亿美元,估值 8400 亿美元;Anthropic 完成 300 亿美元,估值 3800 亿美元;Waymo 完成 160 亿美元,估值 1260 亿美元。投资方涵盖亚马逊、NVIDIA、软银、a16z 等顶级机构。]]></description>
       <category>行业</category>
-      <category>关税</category><category>钢铝铜</category><category>AI 供应链</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">白宫公告 / 路透社</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1900</heat:score><heat:level>中</heat:level><heat:sources>media</heat:sources><heat:comments>78</heat:comments></heat:item>
+      <category>AI融资</category><category>OpenAI</category><category>Anthropic</category><category>独角兽</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-03">AI Funding Tracker / 36氪 / 今日头条</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4100</heat:score><heat:level>热</heat:level><heat:sources>media,x</heat:sources><heat:comments>267</heat:comments></heat:item>
     </item>
     <item>
-      <title>宇树单款人形机器人累计下线 11000 台,H2+ 今年下半年上市</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-12</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[宇树单款双足人形(不含其他型号)截至 2026 年 5 月累计生产下线 11000 台。H2+ 将于今年下半年正式上市,搭载英伟达高性能算力平台。]]></description>
+      <title>AI 祛魅进行时:2026 年从「技术炒作」转向「产业务实」</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-01-02</link>
+      <guid isPermaLink="false">ai-daily-n0604-15</guid>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[TechCrunch 采访专家普遍认为,2026 年是 AI 从「概念炒作」走向「落地务实」的关键一年。行业焦点转移:从暴力扩张算力→深度研究新架构;从炫技演示视频→目标明确的实际部署;从承诺完全自主的智能体→增强人类工作能力的辅助系统。AT&amp;T 首席数据官指出,微调小型语言模型(SLMs)将成为大趋势,成本和性能优势驱动企业优先使用。]]></description>
       <category>行业</category>
-      <category>宇树</category><category>人形机器人</category><category>量产</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">宇树官方 / 中新社</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2400</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>98</heat:comments></heat:item>
+      <category>AI祛魅</category><category>SLM</category><category>产业落地</category><category>趋势</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-01-02">TechCrunch / 腾讯新闻 / 富途牛牛</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3500</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>198</heat:comments></heat:item>
     </item>
     <item>
-      <title>AI 岗位月薪 6 万,2026 年初新发岗位同比涨 12 倍</title>
+      <title>瑞银警告:美股大厂 AI 投资接近耗尽现金流,回报不及预期将回调</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05</link>
+      <guid isPermaLink="false">ai-daily-n0604-16</guid>
+      <pubDate>2026-05</pubDate>
+      <description><![CDATA[瑞银发出警告:美股大厂 AI 投资已接近耗尽现金流,若回报不及预期,估值可能大幅回调。A 股部分「AI Agent 概念股」只是蹭热点,业务关联度低。投资者需警惕:技术路线可能被颠覆(如 WebMCP 标准普及后旧 Agent 被淘汰),安全漏洞随时可能导致估值破裂。真正的机会属于能找到「真场景」、控制「高风险」的投资者。]]></description>
+      <category>声音</category>
+      <category>AI投资</category><category>风险</category><category>瑞银</category><category>估值泡沫</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05">CSDN / 今日头条</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2800</heat:score><heat:level>中</heat:level><heat:sources>media</heat:sources><heat:comments>145</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>GitHub 2026 开源 AI 生态:Top10 项目格局初定,Agent 成为新基建</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05</link>
+      <guid isPermaLink="false">ai-daily-n0604-17</guid>
+      <pubDate>2026-05</pubDate>
+      <description><![CDATA[2026 年 5 月 GitHub Star 数 Top10:1)OpenClaw ~302k;2)AutoGPT ~184k;3)n8n ~179k;4)Ollama ~171k;5)Stable Diffusion WebUI ~162k;6)prompts.chat ~151k;7)Dify ~132k;8)LangChain ~129k;9)Open WebUI ~12x k;10)国产 DeepSeek-V3 ~100k。AI Agent 工具链彻底占领 GitHub Trending,TypeScript 成为 AI 应用层事实标准语言。]]></description>
+      <category>声音</category>
+      <category>GitHub</category><category>开源</category><category>AI Agent</category><category>生态</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05">CSDN / 博客园 / 稀土掘金</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3200</heat:score><heat:level>中</heat:level><heat:sources>github,media</heat:sources><heat:comments>178</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>AI 岗位月薪 6 万仍供不应求,Agent 开发/RAG 成最紧缺技能</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 报告</link>
-      <guid isPermaLink="false">ai-daily-n0603-13</guid>
+      <guid isPermaLink="false">ai-daily-n0604-18</guid>
       <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[AI 岗位占新经济总岗位 26.23%(2025 同期 2.29%),供需比 0.97 接近供不应求,平均月薪 60738 元。最缺:Agent 开发 / RAG / 大模型辅助运维。]]></description>
+      <description><![CDATA[脉脉报告显示,AI 岗位占新经济总岗位 26.23%(2025 同期仅 2.29%),供需比 0.97 接近供不应求,平均月薪 60738 元。最紧缺技能:Agent 开发、RAG、大模型辅助运维。88% 企业表示 AI 帮助增加年收入,87% 帮助降低成本,86% 计划增加 AI 预算。AI 正从「技术行业」变成「各行业必备技能」。]]></description>
       <category>声音</category>
-      <category>AI 就业</category><category>人才市场</category><category>Agent</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 报告">脉脉高聘人才智库</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>1500</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>145</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>佛罗里达州起诉 OpenAI,要求标注高风险 AI 内容</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02</link>
-      <guid isPermaLink="false">ai-daily-n0603-14</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0800</pubDate>
-      <description><![CDATA[佛罗里达州成为美国首个对 OpenAI 提起诉讼的州政府,要求将 AI 生成内容标注为&quot;高风险&quot;,需满足透明度、风险评估、人类监督、合规审查等要求。这可能推动其他州(加州、纽约、德州)跟随立法。]]></description>
-      <category>声音</category>
-      <category>AI 监管</category><category>OpenAI</category><category>美国州政府</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02">财联社 / 凤凰网</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2100</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>167</heat:comments></heat:item>
+      <category>AI就业</category><category>人才市场</category><category>薪资</category><category>Agent</category>
+      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-02 报告">脉脉高聘人才智库 / 今日头条</source>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2600</heat:score><heat:level>中</heat:level><heat:sources>media,x</heat:sources><heat:comments>189</heat:comments></heat:item>
     </item>
   </channel>
 </rss>

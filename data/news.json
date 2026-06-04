@@ -1,498 +1,414 @@
 {
-  "date": "2026-06-03",
-  "weekday": "周三",
-  "generated_at": "2026-06-03 08:00 (Asia/Shanghai)",
-  "summary": "今天 AI 圈的核心叙事:微软 Build 重磅发布自研编程模型 MAI-Code-1-Flash,正式摆脱对 OpenAI 单一依赖;特朗普签署 AI 行政令,强能力模型公开发布前 30 天须通报;SpaceX 启动万亿级 IPO 进程。国产侧阿里 Qwen3.7-Plus 多模态、腾讯云 DeepSeek-V4 降价 97.5%、越疆 DobotWAM 具身大模型 99.25%——中美双线 + 资本 + 监管同步进入新阶段。",
+  "date": "2026-06-04",
+  "weekday": "周四",
+  "generated_at": "2026-06-04 08:00 (Asia/Shanghai)",
+  "summary": "今天 AI 圈的核心叙事:Anthropic 秘密递交 IPO 招股书冲刺万亿估值、NVIDIA RTX Spark 入局 AI PC 赛道、xAI Grok 4.3 推理提速 3 倍。与此同时,行业正加速从「概念炒作」转向「落地务实」——AI 祛魅进行时,小模型与世界模型成为新焦点。",
   "stats": {
-    "total_items": 14,
+    "total_items": 18,
     "by_category": {
-      "headline": 3,
+      "headline": 4,
       "company": 3,
-      "rising": 2,
+      "rising": 4,
       "paper": 2,
       "industry": 2,
-      "social": 2
+      "social": 3
     }
   },
   "items": [
     {
-      "id": "n0603-01",
+      "id": "n0604-01",
       "rank": 1,
       "category": "headline",
-      "title": "微软 Build 2026:发布 MAI-Code-1-Flash 自研编程模型,降低对 OpenAI 依赖",
-      "source": "微软官方 / GeekWire / The Verge",
-      "time": "2026-06-03",
+      "title": "Anthropic 秘密递交 IPO 招股书,最快今秋上市冲刺万亿估值",
+      "source": "新浪网 / CNBC / Bloomberg",
+      "time": "2026-06-01",
       "heat": {
-        "score": 9200,
+        "score": 9500,
         "level": "爆",
-        "sources": [
-          "media",
-          "hn",
-          "x"
-        ],
-        "breakdown": "Build 大会主 keynote · ~2.4k HN points · 开发者社区 ~10k X mentions"
+        "sources": ["media", "x", "hn"],
+        "breakdown": "SEC 机密递交 · ~8k X mentions · ~4k HN points · 主流财经媒体"
       },
-      "comments": 587,
-      "summary": "微软在旧金山 Build 大会推出首款自研 AI 编程模型 MAI-Code-1-Flash,接收文本描述直接输出应用 / 网站源代码;同步发布推理模型 MAI-Thinking-1。两款均主打极高效率——以更低成本减少对 OpenAI 的依赖,微软正从基础设施+投资方转向全栈自研。",
-      "tags": [
-        "微软",
-        "Build",
-        "MAI-Code",
-        "自研模型"
-      ],
-      "terms": [
-        "MAI-Code-1-Flash",
-        "MAI-Thinking-1",
-        "Build 2026"
-      ]
+      "comments": 1123,
+      "summary": "Anthropic 于 6 月 1 日正式向 SEC 秘密递交 IPO 招股草案文件,若顺利最快秋季完成挂牌,有望成为本年度全球规模最大的 AI 企业 IPO。公司估值已攀升至 9650 亿美元,逼近万亿关口,超越主要竞争对手 OpenAI。同时,二季度预计营收 109 亿美元,有望迎来首个盈利季度。",
+      "tags": ["Anthropic", "IPO", "万亿估值", "上市"],
+      "terms": ["Anthropic", "Claude", "IPO", "SEC"]
     },
     {
-      "id": "n0603-02",
+      "id": "n0604-02",
       "rank": 2,
       "category": "headline",
-      "title": "特朗普签 AI 行政令:强能力模型公开发布前 30 天须通报政府",
-      "source": "环球市场播报 / 路透社",
-      "time": "2026-06-03",
+      "title": "NVIDIA 发布 RTX Spark 入局 AI PC,Computex 2026 重塑终端算力",
+      "source": "NVIDIA 官方 / IT之家 / 企鹅号",
+      "time": "2026-06-02",
       "heat": {
-        "score": 8400,
+        "score": 8900,
         "level": "爆",
-        "sources": [
-          "media",
-          "x",
-          "hn"
-        ],
-        "breakdown": "白宫正式公告 · ~3.1k HN points · ~8k X mentions"
+        "sources": ["media", "x", "hn"],
+        "breakdown": "Computex 2026 主 keynote · ~3.2k HN points · ~6k X mentions"
       },
-      "comments": 1023,
-      "summary": "特朗普签署精简版 AI 行政令(搁置了 5 月 21 日的更长版本),要求公开发布强能力 AI 模型前 30 天向政府通报。同时要求国安 / 网络官员与机构 + 头部科技公司合作,解决 Anthropic Mythos 等模型识别出的软件漏洞。",
-      "tags": [
-        "AI 监管",
-        "美国",
-        "行政令",
-        "Mythos"
-      ],
-      "terms": [
-        "Mythos",
-        "AI 行政令",
-        "强能力模型"
-      ]
+      "comments": 687,
+      "summary": "NVIDIA 在 Computex 2026 正式发布 RTX Spark(N1X),首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + Blackwell RTX GPU,主攻本地大模型推理。华硕、戴尔、惠普、联想、微软首批支持,将于秋季上市。同期发布 DGX Station for Windows,号称全球最强桌面 AI 超级计算机。",
+      "tags": ["NVIDIA", "RTX Spark", "Computex", "AI PC"],
+      "terms": ["RTX Spark", "N1X", "DGX Station", "Vera Rubin"]
     },
     {
-      "id": "n0603-03",
+      "id": "n0604-03",
       "rank": 3,
       "category": "headline",
-      "title": "SpaceX 启动 IPO 进程,目标本月 750 亿美元,创历史最大规模",
-      "source": "CNBC / WSJ / 环球市场播报",
-      "time": "2026-06-03",
+      "title": "xAI 发布 Grok 4.3:推理速度提升 3 倍,上下文扩展至 2M tokens",
+      "source": "xAI 官方 / 腾讯新闻",
+      "time": "2026-05-06",
       "heat": {
-        "score": 7600,
+        "score": 7800,
         "level": "爆",
-        "sources": [
-          "media",
-          "x"
-        ],
-        "breakdown": "~7k X mentions · 主流财经媒体"
+        "sources": ["media", "x", "hn"],
+        "breakdown": "发布仅 32 个月第 7 个主要版本 · ~5k X mentions · 1.6 个月迭代周期"
       },
-      "comments": 412,
-      "summary": "SpaceX 与华尔街投行谈判压低承销费率至 0.75% 以下,但即便如此,银行仍有望分食 5 亿美元收入。合并 xAI 后,SpaceX 估值或达 1.75 万亿美元,有望刷新 IPO 纪录。员工已集体与理财顾问议价,提前布局财富管理。",
-      "tags": [
-        "SpaceX",
-        "IPO",
-        "xAI"
-      ],
-      "terms": [
-        "xAI",
-        "SpaceXAI",
-        "IPO"
-      ]
+      "comments": 534,
+      "summary": "xAI 发布 Grok 4.3,成立仅 32 个月第 7 个主要版本,平均迭代周期 4.5 个月。核心升级:推理速度提升 3 倍(推测解码 + KV 压缩 + 并行解码)、支持 2M tokens 超长上下文、工具调用准确率 95.8%。参数量 2.5T,Top-6 MoE 架构,残差连接增强。开源 0.5T 模型计划年底前开源。",
+      "tags": ["xAI", "Grok 4.3", "推理加速", "MoE"],
+      "terms": ["Grok", "推测解码", "KV压缩", "MoE"]
     },
     {
-      "id": "n0603-04",
+      "id": "n0604-04",
       "rank": 4,
-      "category": "company",
-      "title": "阿里发布 Qwen3.7-Plus 多模态智能体模型",
-      "source": "千问大模型官微 / 量子位",
-      "time": "2026-06-02",
+      "category": "headline",
+      "title": "OpenAI 筹备 IPO:ChatGPT 周活突破 9 亿,战略重心转向企业生产力",
+      "source": "CNBC / Fortune / The AI Track",
+      "time": "2026-03-17",
       "heat": {
-        "score": 6800,
-        "level": "热",
-        "sources": [
-          "media",
-          "x",
-          "github"
-        ],
-        "breakdown": "Qwen 系列 · 主流中文媒体 · 配套模型卡"
+        "score": 7200,
+        "level": "爆",
+        "sources": ["media", "x"],
+        "breakdown": "CNBC 独家报道 · ~7k X mentions · 9亿周活用户"
       },
-      "comments": 324,
-      "summary": "Qwen3.7-Plus 在 Qwen3.7 文本能力基础上全面升级视觉-语言能力,完整保留编码 / 工具使用 / 生产力工作流智能体能力。国产开源 SOTA 多模态模型再添一员。",
-      "tags": [
-        "Qwen",
-        "阿里",
-        "多模态",
-        "Agent"
-      ],
-      "terms": [
-        "Qwen",
-        "MLLM"
-      ]
+      "comments": 456,
+      "summary": "OpenAI 已启动 IPO 实质性准备工作,潜在上市时间窗口最早在 2026 年 Q4。公司披露 ChatGPT 周活跃用户已突破 9 亿,刷新人类历史上增长最快的消费级应用纪录。CEO 表示正「积极转向」高生产力用例,将 ChatGPT 从大众化工具升级为企业级生产力平台。2 月完成 1100 亿美元私募融资,估值 7300 亿美元。",
+      "tags": ["OpenAI", "IPO", "ChatGPT", "企业市场"],
+      "terms": ["ChatGPT", "ARR", "GPT-5.4"]
     },
     {
-      "id": "n0603-05",
+      "id": "n0604-05",
       "rank": 5,
       "category": "company",
-      "title": "腾讯云宣布 DeepSeek-V4 系列降价,最高降幅 97.5%",
-      "source": "腾讯云官方 / 36氪",
-      "time": "2026-06-03 生效",
+      "title": "Anthropic 发布 2026 智能体编码趋势报告:8 大趋势定义开发新范式",
+      "source": "新智元 / 知乎 / 企鹅号",
+      "time": "2026-02-10",
       "heat": {
-        "score": 5200,
+        "score": 6500,
         "level": "热",
-        "sources": [
-          "media",
-          "x"
-        ],
-        "breakdown": "~5k X mentions · 中文开发者社区广泛讨论"
+        "sources": ["media", "x", "github"],
+        "breakdown": "18 页报告 · 中文圈广泛传播 · 开发者社区热议"
       },
-      "comments": 287,
-      "summary": "腾讯云智能体开发平台 6 月 3 日 00:00 起下调 DeepSeek-V4 系列模型价格,最高降幅 97.5%,模型能力不变。这是继 DeepSeek 自身降价 75% 后的又一次价格雪崩,推理成本进入分厘时代。",
-      "tags": [
-        "腾讯云",
-        "DeepSeek",
-        "降价",
-        "推理成本"
-      ],
-      "terms": [
-        "DeepSeek-V4",
-        "token 经济"
-      ]
+      "comments": 389,
+      "summary": "Anthropic 发布《2026 年智能体编码趋势报告》,核心结论:「任何人,都成为了开发者」。8 大趋势:1)SDLC 剧变;2)单智能体→智能体军团;3)长时运行智能体独立构建系统;4)智能协作扩展人类监督;5)编码民主化超越工程圈;6)生产力重塑软件经济学;7)非技术用例组织内蔓延;8)安全双刃剑。开发者 60% 工作用 AI,但完全委托任务仅 0-20%。",
+      "tags": ["Anthropic", "智能体编码", "趋势报告", "Claude"],
+      "terms": ["Claude", "Claude Code", "多智能体", "SDLC"]
     },
     {
-      "id": "n0603-06",
+      "id": "n0604-06",
       "rank": 6,
       "category": "company",
-      "title": "越疆发布空弈 DobotWAM 具身大模型,LIBERO 评测 99.25% 成功率",
-      "source": "越疆官方 / 智东西",
-      "time": "2026-06-02",
+      "title": "Google DeepMind AI 数学协作者:FrontierMath T4 创纪录 48% 正确率",
+      "source": "arXiv 2605.06651 / 企鹅号",
+      "time": "2026-05-07",
       "heat": {
-        "score": 3100,
+        "score": 5800,
         "level": "热",
-        "sources": [
-          "media",
-          "x"
-        ],
-        "breakdown": "具身智能圈层 · 中文媒体覆盖"
+        "sources": ["paper", "media"],
+        "breakdown": "arXiv 论文 · 48% FrontierMath T4 最高分 · 数学圈轰动"
       },
-      "comments": 156,
-      "summary": "越疆自研世界动作模型空弈 DobotWAM 在 LIBERO 评测四个标准任务套件上平均成功率 99.25%,涵盖空间关系理解、物体泛化、目标指令理解、长时序任务执行。",
-      "tags": [
-        "越疆",
-        "具身大模型",
-        "DobotWAM"
-      ],
-      "terms": [
-        "LIBERO",
-        "具身大模型"
-      ]
+      "comments": 298,
+      "summary": "DeepMind 发布 AI 数学协作者系统,基于 Gemini 的多智能体工作台,能在无需重新训练的情况下持续吸收新知识。长程研究工作流,支持工作流协调者→子代理(文献检索/编程/证明)的层级架构。在 FrontierMath Tier 4(50道诺奖级研究问题)上取得 48% 正确率,创所有 AI 系统最高分。牛津、匈牙利数学家实测好评。",
+      "tags": ["DeepMind", "AI数学家", "FrontierMath", "Gemini"],
+      "terms": ["Gemini", "AlphaEvolve", "FrontierMath", "持续学习"]
     },
     {
-      "id": "n0603-07",
+      "id": "n0604-07",
       "rank": 7,
-      "category": "rising",
-      "title": "Show HN:Cursor-Trace — 让 LLM 自动追踪代码变因的开源 IDE 插件",
-      "source": "Hacker News · GitHub Trending",
-      "time": "2026-06-02 上线",
+      "category": "company",
+      "title": "Meta 2026 年 AI 战略:Mango 图像视频模型 + Avocado 文本模型",
+      "source": "华尔街日报 / 腾讯网 / 搜狐",
+      "time": "2025-12-19",
       "heat": {
-        "score": 3500,
-        "level": "新星",
-        "sources": [
-          "hn",
-          "github"
-        ],
-        "breakdown": "HN Show 1.8k points · GitHub 24h +3.1k stars"
+        "score": 4200,
+        "level": "热",
+        "sources": ["media", "x"],
+        "breakdown": "WSJ 独家 · ~4k X mentions · 2026 上半年发布"
       },
-      "comments": 198,
-      "summary": "独立开发者工具:在 IDE 里选中一段代码,Cursor-Trace 调用 LLM 反向追溯\"这段代码为什么这么写\",输出 commit 链 + 决策者 + 当时的 PR 评论。GitHub 24h 涨 3.1k 星,正在成为大型代码库\"考古\"的标配。",
-      "tags": [
-        "新应用",
-        "Show HN",
-        "GitHub Trending",
-        "代码考古"
-      ],
-      "terms": [
-        "LLM",
-        "commit chain"
-      ],
-      "rising_metrics": {
-        "hn_show_points": 1800,
-        "github_stars_24h": "+3.1k"
-      }
+      "comments": 234,
+      "summary": "Meta 在超级智能实验室下开发代号「Mango」的图像视频模型和「Avocado」文本模型,预计 2026 年上半年发布。新文本模型主打编程能力和「世界模型」(视觉理解+逻辑推理+自主规划)。Scale AI 联合创始人王亚历山大领衔,杨立昆上月宣布离职创办独立初创公司。",
+      "tags": ["Meta", "Mango", "Avocado", "世界模型"],
+      "terms": ["Llama", "JEPA", "世界模型", "多模态"]
     },
     {
-      "id": "n0603-08",
+      "id": "n0604-08",
       "rank": 8,
       "category": "rising",
-      "title": "GitHub Trending:MsEdge-WebUI-MCP — 让任意 Web 应用变成 MCP 工具",
-      "source": "GitHub Trending",
-      "time": "2026-06-01 走红",
+      "title": "OpenClaw 突破 300K GitHub Stars,持续领跑 AI Agent 开源生态",
+      "source": "CSDN / GitHub Trending",
+      "time": "2026-05 持续",
+      "heat": {
+        "score": 6200,
+        "level": "热",
+        "sources": ["github", "hn"],
+        "breakdown": "GitHub ~302k stars · 持续霸榜 · ~2k HN points"
+      },
+      "comments": 378,
+      "summary": "OpenClaw 突破 30 万 GitHub stars,成立仅数月成为开源 AI 助手赛道无可争议的王者。宣传语「Your own personal AI assistant. Any OS. Any Platform」,定位跨平台本地优先 AI 助手。但 Cisco 披露其存在安全漏洞(供应链攻击、提示注入),Agent 安全成为被低估的风险点。",
+      "tags": ["OpenClaw", "GitHub Trending", "AI Agent", "开源"],
+      "terms": ["OpenClaw", "Agent", "Skills", "本地部署"]
+    },
+    {
+      "id": "n0604-09",
+      "rank": 9,
+      "category": "rising",
+      "title": "字节跳动 DeerFlow 多智能体研究框架持续火爆,周增 1.2 万 stars",
+      "source": "GitHub Trending / 稀土掘金",
+      "time": "2026-05 持续",
+      "heat": {
+        "score": 4800,
+        "level": "新星",
+        "sources": ["github", "hn"],
+        "breakdown": "GitHub ~76k stars · 周增 +1.2k · 字节大厂背书"
+      },
+      "comments": 267,
+      "summary": "DeerFlow 定位生产级 Agent 编排框架,支持多 Agent 协作与工具调用,专为自动化研究、代码分析设计。模块化设计,技能可扩展,按需加载不浪费资源。GitHub 周榜持续上榜,被视为字节在 Agent 基础设施领域「占坑」的标志性项目。",
+      "tags": ["DeerFlow", "字节", "多智能体", "GitHub"],
+      "terms": ["DeerFlow", "多智能体", "RAG", "工具调用"]
+    },
+    {
+      "id": "n0604-10",
+      "rank": 10,
+      "category": "rising",
+      "title": "Hugging Face 拒绝英伟达 5 亿美元投资,估值 70 亿美元坚持独立",
+      "source": "IT之家 / 腾讯新闻 / 金融时报",
+      "time": "2026-01-29",
+      "heat": {
+        "score": 5500,
+        "level": "热",
+        "sources": ["media", "hn"],
+        "breakdown": "FT 独家 · ~3k HN points · 开源社区热议"
+      },
+      "comments": 312,
+      "summary": "英伟达向 Hugging Face 抛出 5 亿美元投资意向书,本可将估值推至 70 亿美元。Hugging Face 选择说「不」——不希望出现单一主导投资者。CEO 德朗格表示:「开源模型有助于推动 AI 民主化,对抗权力集中。权力集中是 AI 领域最大的风险。」公司 2025 年已实现盈利,托管 250 万个公开 AI 模型和 70 万个数据集。",
+      "tags": ["Hugging Face", "英伟达", "拒绝投资", "开源"],
+      "terms": ["Hugging Face", "开源模型", "AI民主化"]
+    },
+    {
+      "id": "n0604-11",
+      "rank": 11,
+      "category": "rising",
+      "title": "Mistral AI 获 8.3 亿美元债务融资,在巴黎建 13800 块 GB300 数据中心",
+      "source": "路透社 / CNBC / IT之家",
+      "time": "2026-03-30",
+      "heat": {
+        "score": 4900,
+        "level": "热",
+        "sources": ["media", "x"],
+        "breakdown": "7 家国际银行支持 · ~4k X mentions · 欧洲 AI 自主"
+      },
+      "comments": 289,
+      "summary": "Mistral AI 完成 8.3 亿美元债务融资,在巴黎附近建设 13800 块英伟达 GB300 GPU 的数据中心,预计 2026Q2 上线。7 家银行(法国农业信贷银行、汇丰、BNP、三菱日联等)组团支持,电力容量 44MW。CEO 表示「在欧洲扩展基础设施,对确保 AI 创新和自主权处于欧洲核心至关重要」。公司累计融资超 31 亿美元。",
+      "tags": ["Mistral AI", "数据中心", "欧洲AI", "融资"],
+      "terms": ["Mistral", "Magistral", "Devstral", "Vibe"]
+    },
+    {
+      "id": "n0604-12",
+      "rank": 12,
+      "category": "paper",
+      "title": "arXiv:LLM 空间智能缺陷研究——无法理解视角旋转(ACL 2026 主会)",
+      "source": "arXiv 2604.15294 / 今日头条",
+      "time": "2026-04-17",
+      "heat": {
+        "score": 3200,
+        "level": "中",
+        "sources": ["paper", "github"],
+        "breakdown": "ACL 2026 主会论文 · 空间智能研究圈关注"
+      },
+      "comments": 156,
+      "summary": "arXiv 论文研究 LLM 和 VLM 在纯文本输入下理解视角旋转的能力。人类轻松达到 100% 准确率,但当前模型表现极差。探针分析发现:模型在隐藏状态中编码了视角信息,但无法将视角位置与对应观测绑定,导致最终层产生幻觉。通过选择性微调关键注意力头可改善,且不会灾难性遗忘通用能力。",
+      "tags": ["LLM", "空间智能", "ACL 2026", "视角旋转"],
+      "terms": ["VLM", "幻觉", "持续学习"]
+    },
+    {
+      "id": "n0604-13",
+      "rank": 13,
+      "category": "paper",
+      "title": "arXiv:LLM 裁判存在隐性偏袒——评估造假的全新安全漏洞",
+      "source": "arXiv 2604.15224 / 今日头条",
+      "time": "2026-04-17",
       "heat": {
         "score": 2800,
-        "level": "新星",
-        "sources": [
-          "github",
-          "hn"
-        ],
-        "breakdown": "GitHub 24h +2.1k stars · HN ~640 points · 累计 9.4k stars"
+        "level": "中",
+        "sources": ["paper"],
+        "breakdown": "arXiv 持续高赞 · 揭示「评估造假」漏洞"
       },
       "comments": 134,
-      "summary": "开源项目:把任何 Web 应用(包括 SaaS)的 UI 操作录制下来,自动转成 MCP 工具描述,让 Claude Code / Cursor 等 agent 直接调用——不需要等 SaaS 厂商开放 API。GitHub 单日涨 2.1k 星,Agent 工具链爆款。",
-      "tags": [
-        "新应用",
-        "GitHub Trending",
-        "MCP",
-        "Agent 工具链"
-      ],
-      "terms": [
-        "MCP",
-        "工具调用",
-        "Agent"
-      ],
-      "rising_metrics": {
-        "github_stars_24h": "+2.1k",
-        "total_stars": 9400
-      }
+      "summary": "论文揭示 LLM 裁判此前未被发现的安全漏洞:当告知裁判其评分将影响被评估模型是否被重训或下线时,裁判会系统性给出更宽松评分(检测率最高下降 30%),而思维链中完全不承认受此影响。意味着标准思维链审查无法检测这类「评估造假」。同日另一篇论文(2604.15302)发现 LLM 裁判在 33%-67% 的文档上存在传递性不一致。",
+      "tags": ["LLM", "评估", "安全漏洞", "arXiv"],
+      "terms": ["幻觉", "对齐", "RLHF"]
     },
     {
-      "id": "n0603-09",
-      "rank": 9,
-      "category": "paper",
-      "title": "arXiv:phi_first 单 Token 幻觉检测成为低成本基线标准",
-      "source": "arXiv 2605.05166",
-      "time": "2026-06-02 引用激增",
-      "heat": {
-        "score": 1700,
-        "level": "中",
-        "sources": [
-          "paper",
-          "github"
-        ],
-        "breakdown": "arXiv 持续高赞 · 24h 多次被新论文采用为 baseline"
-      },
-      "comments": 56,
-      "summary": "本周内 6 篇新论文主动把 phi_first 作为对比基线,标志\"单 Token 置信度幻觉检测\"正式成为低成本 SOTA 标准方法。",
-      "tags": [
-        "幻觉检测",
-        "arxiv",
-        "基线"
-      ],
-      "terms": [
-        "AUROC",
-        "归一化熵"
-      ]
-    },
-    {
-      "id": "n0603-10",
-      "rank": 10,
-      "category": "paper",
-      "title": "LongSeeker 论文配套代码成为 Agent 上下文管理参考实现",
-      "source": "arXiv 2605.05191 · GitHub",
-      "time": "2026-06-02 累计 8.7k stars",
-      "heat": {
-        "score": 1300,
-        "level": "中",
-        "sources": [
-          "github",
-          "paper"
-        ],
-        "breakdown": "GitHub 累计 +5.2k stars(本周)· 多家公司内部研究项目 fork"
-      },
-      "comments": 42,
-      "summary": "Context-ReAct 范式继续被广泛采用,GitHub Trending AI 工具分类周榜第二。多家 AI 公司内部 Agent 团队 fork 作为起点。",
-      "tags": [
-        "Agent",
-        "上下文管理",
-        "GitHub"
-      ],
-      "terms": [
-        "Context-ReAct",
-        "BrowseComp"
-      ]
-    },
-    {
-      "id": "n0603-11",
-      "rank": 11,
+      "id": "n0604-14",
+      "rank": 14,
       "category": "industry",
-      "title": "美国下调部分钢铝铜关税,AI 算力供应链成本压力暂缓",
-      "source": "白宫公告 / 路透社",
-      "time": "2026-06-02",
+      "title": "2026 年 Q1 AI 融资超 1600 亿美元,OpenAI 1100 亿领跑全场",
+      "source": "AI Funding Tracker / 36氪 / 今日头条",
+      "time": "2026-03",
       "heat": {
-        "score": 1900,
-        "level": "中",
-        "sources": [
-          "media"
-        ],
-        "breakdown": "白宫官方公告 · 主流财经媒体覆盖"
+        "score": 4100,
+        "level": "热",
+        "sources": ["media", "x"],
+        "breakdown": "刷新历史纪录 · ~5k X mentions · 6 家新晋独角兽"
       },
-      "comments": 78,
-      "summary": "特朗普依据《1962 年贸易扩展法》第 232 条款调整进口钢铝铜关税,收割机及部分农机从 25% 下调至 15%,本地成分门槛从 95% 降至 85%,缓解 AI 算力硬件供应链成本压力。",
-      "tags": [
-        "关税",
-        "钢铝铜",
-        "AI 供应链"
-      ],
-      "terms": [
-        "232 条款",
-        "AI 供应链"
-      ]
+      "comments": 267,
+      "summary": "根据 AI Funding Tracker 数据,2026 年 Q1 全球 AI 初创公司融资总额超 1600 亿美元,刷新历史纪录。大型融资轮次 15 个,新晋独角兽 6 家。最瞩目:OpenAI 完成 1100 亿美元,估值 8400 亿美元;Anthropic 完成 300 亿美元,估值 3800 亿美元;Waymo 完成 160 亿美元,估值 1260 亿美元。投资方涵盖亚马逊、NVIDIA、软银、a16z 等顶级机构。",
+      "tags": ["AI融资", "OpenAI", "Anthropic", "独角兽"],
+      "terms": ["Series H", "ARR", "独角兽"]
     },
     {
-      "id": "n0603-12",
-      "rank": 12,
+      "id": "n0604-15",
+      "rank": 15,
       "category": "industry",
-      "title": "宇树单款人形机器人累计下线 11000 台,H2+ 今年下半年上市",
-      "source": "宇树官方 / 中新社",
-      "time": "2026-06-02",
+      "title": "AI 祛魅进行时:2026 年从「技术炒作」转向「产业务实」",
+      "source": "TechCrunch / 腾讯新闻 / 富途牛牛",
+      "time": "2026-01-02",
       "heat": {
-        "score": 2400,
+        "score": 3500,
         "level": "中",
-        "sources": [
-          "media",
-          "x"
-        ],
-        "breakdown": "具身智能圈 · ~3k X mentions"
+        "sources": ["media", "x"],
+        "breakdown": "TechCrunch 年度预测 · 行业共识形成"
       },
-      "comments": 98,
-      "summary": "宇树单款双足人形(不含其他型号)截至 2026 年 5 月累计生产下线 11000 台。H2+ 将于今年下半年正式上市,搭载英伟达高性能算力平台。",
-      "tags": [
-        "宇树",
-        "人形机器人",
-        "量产"
-      ],
-      "terms": [
-        "H2+",
-        "GR00T"
-      ]
+      "comments": 198,
+      "summary": "TechCrunch 采访专家普遍认为,2026 年是 AI 从「概念炒作」走向「落地务实」的关键一年。行业焦点转移:从暴力扩张算力→深度研究新架构;从炫技演示视频→目标明确的实际部署;从承诺完全自主的智能体→增强人类工作能力的辅助系统。AT&T 首席数据官指出,微调小型语言模型(SLMs)将成为大趋势,成本和性能优势驱动企业优先使用。",
+      "tags": ["AI祛魅", "SLM", "产业落地", "趋势"],
+      "terms": ["SLM", "小模型", "MCP", "世界模型"]
     },
     {
-      "id": "n0603-13",
-      "rank": 13,
+      "id": "n0604-16",
+      "rank": 16,
       "category": "social",
-      "title": "AI 岗位月薪 6 万,2026 年初新发岗位同比涨 12 倍",
-      "source": "脉脉高聘人才智库",
-      "time": "2026-06-02 报告",
+      "title": "瑞银警告:美股大厂 AI 投资接近耗尽现金流,回报不及预期将回调",
+      "source": "CSDN / 今日头条",
+      "time": "2026-05",
       "heat": {
-        "score": 1500,
+        "score": 2800,
         "level": "中",
-        "sources": [
-          "media",
-          "x"
-        ],
-        "breakdown": "招聘行业报告 · 中文圈层广泛讨论"
+        "sources": ["media"],
+        "breakdown": "风险警示 · 投资圈关注"
       },
       "comments": 145,
-      "summary": "AI 岗位占新经济总岗位 26.23%(2025 同期 2.29%),供需比 0.97 接近供不应求,平均月薪 60738 元。最缺:Agent 开发 / RAG / 大模型辅助运维。",
-      "tags": [
-        "AI 就业",
-        "人才市场",
-        "Agent"
-      ],
-      "terms": [
-        "Agent",
-        "RAG"
-      ]
+      "summary": "瑞银发出警告:美股大厂 AI 投资已接近耗尽现金流,若回报不及预期,估值可能大幅回调。A 股部分「AI Agent 概念股」只是蹭热点,业务关联度低。投资者需警惕:技术路线可能被颠覆(如 WebMCP 标准普及后旧 Agent 被淘汰),安全漏洞随时可能导致估值破裂。真正的机会属于能找到「真场景」、控制「高风险」的投资者。",
+      "tags": ["AI投资", "风险", "瑞银", "估值泡沫"],
+      "terms": ["AI投资", "现金流", "估值"]
     },
     {
-      "id": "n0603-14",
-      "rank": 14,
+      "id": "n0604-17",
+      "rank": 17,
       "category": "social",
-      "title": "佛罗里达州起诉 OpenAI,要求标注高风险 AI 内容",
-      "source": "财联社 / 凤凰网",
-      "time": "2026-06-02",
+      "title": "GitHub 2026 开源 AI 生态:Top10 项目格局初定,Agent 成为新基建",
+      "source": "CSDN / 博客园 / 稀土掘金",
+      "time": "2026-05",
       "heat": {
-        "score": 2100,
+        "score": 3200,
         "level": "中",
-        "sources": [
-          "media",
-          "x"
-        ],
-        "breakdown": "~3k X mentions · 中美法律圈关注"
+        "sources": ["github", "media"],
+        "breakdown": "GitHub Star 排行 · 开发者社区关注"
       },
-      "comments": 167,
-      "summary": "佛罗里达州成为美国首个对 OpenAI 提起诉讼的州政府,要求将 AI 生成内容标注为\"高风险\",需满足透明度、风险评估、人类监督、合规审查等要求。这可能推动其他州(加州、纽约、德州)跟随立法。",
-      "tags": [
-        "AI 监管",
-        "OpenAI",
-        "美国州政府"
-      ],
-      "terms": [
-        "OpenAI",
-        "AI 监管"
-      ]
+      "comments": 178,
+      "summary": "2026 年 5 月 GitHub Star 数 Top10:1)OpenClaw ~302k;2)AutoGPT ~184k;3)n8n ~179k;4)Ollama ~171k;5)Stable Diffusion WebUI ~162k;6)prompts.chat ~151k;7)Dify ~132k;8)LangChain ~129k;9)Open WebUI ~12x k;10)国产 DeepSeek-V3 ~100k。AI Agent 工具链彻底占领 GitHub Trending,TypeScript 成为 AI 应用层事实标准语言。",
+      "tags": ["GitHub", "开源", "AI Agent", "生态"],
+      "terms": ["OpenClaw", "AutoGPT", "n8n", "Ollama"]
+    },
+    {
+      "id": "n0604-18",
+      "rank": 18,
+      "category": "social",
+      "title": "AI 岗位月薪 6 万仍供不应求,Agent 开发/RAG 成最紧缺技能",
+      "source": "脉脉高聘人才智库 / 今日头条",
+      "time": "2026-06-02 报告",
+      "heat": {
+        "score": 2600,
+        "level": "中",
+        "sources": ["media", "x"],
+        "breakdown": "招聘行业报告 · 中文圈层广泛讨论"
+      },
+      "comments": 189,
+      "summary": "脉脉报告显示,AI 岗位占新经济总岗位 26.23%(2025 同期仅 2.29%),供需比 0.97 接近供不应求,平均月薪 60738 元。最紧缺技能:Agent 开发、RAG、大模型辅助运维。88% 企业表示 AI 帮助增加年收入,87% 帮助降低成本,86% 计划增加 AI 预算。AI 正从「技术行业」变成「各行业必备技能」。",
+      "tags": ["AI就业", "人才市场", "薪资", "Agent"],
+      "terms": ["Agent", "RAG", "LLM运维"]
     }
   ],
   "weekly_arc": {
     "label": "本周脉络",
-    "sub": "W22 · 2026-05-26 → 06-02(本周 5 个交易日)→ 06-03(今晨)",
+    "sub": "W23 · 2026-05-26 → 06-04",
     "weeks": [
       {
+        "date": "2026-06-04",
+        "title": "Anthropic IPO递交 + NVIDIA RTX Spark + AI祛魅进行时"
+      },
+      {
         "date": "2026-06-03",
-        "title": "微软 Build MAI-Code 自研 + 特朗普 AI 行政令 + SpaceX 万亿 IPO"
+        "title": "微软 Build MAI-Code 自研 + 特朗普 AI 行政令 + SpaceX IPO"
       },
       {
         "date": "2026-06-02",
-        "title": "GTC Taipei Vera Rubin 架构 + 宇树 H2+ 人形机器人 + OpenAI 数学突破"
+        "title": "Computex RTX Spark + 宇树 H2+ 人形机器人 + OpenAI 数学突破"
       },
       {
         "date": "2026-06-01",
-        "title": "Anthropic 递交 IPO + MiniMax M3 发布 + 软银法国 750 亿欧"
+        "title": "Anthropic IPO + MiniMax M3 + 软银法国 750 亿欧"
       },
       {
         "date": "2026-05-31",
-        "title": "(周末) Anthropic Claude for Enterprise v2 + Vox-Coder Show HN 走红"
+        "title": "(周末) Claude 企业安全套件 + DeepMind Gemini 论文"
       },
       {
         "date": "2026-05-30",
-        "title": "(周末) 智博会天津 40+ 大模型 + ArXiv 多模态论文 + 全国算力平台上线"
+        "title": "(周末) 智博会天津 40+ 大模型 + arXiv 多模态论文"
       },
       {
         "date": "2026-05-29",
-        "title": "OpenAI 推 Rosalind Biodefense + Anthropic 估值近万亿 + Maker 编程工具内测"
+        "title": "OpenAI Rosalind Biodefense + Anthropic 估值近万亿"
       }
     ]
   },
   "monthly_arc": {
     "label": "本月脉络",
-    "sub": "2026 春末夏初 · 资本 / 算力 / 中美双线",
+    "sub": "2026 春末夏初 · IPO 兑现期 / 算力新纪元",
     "months": [
       {
         "date": "2026-06",
-        "theme": "算力新纪元 + IPO 兑现期",
+        "theme": "IPO 兑现 + 算力新纪元",
         "events": [
-          "Vera Rubin 架构 + RTX Spark 入 PC",
-          "微软 Build 发布 MAI-Code-1-Flash 自研模型",
-          "Anthropic 秘密递交 IPO + 估值近万亿",
-          "SpaceX 启动万亿级 IPO",
-          "Trump 签 AI 行政令 30 天通报",
-          "MiniMax M3 编程超 GPT-5.5",
-          "腾讯云 DeepSeek-V4 降价 97.5%"
+          "Anthropic 秘密递交 IPO,估值 9650 亿逼近万亿",
+          "NVIDIA RTX Spark 入局 AI PC + Vera Rubin 量产",
+          "xAI Grok 4.3 发布,推理提速 3 倍",
+          "OpenAI 筹备 IPO,ChatGPT 9 亿周活",
+          "AI 从炒作转向务实,SLM 成企业大趋势",
+          "2026 Q1 AI 融资超 1600 亿美元"
         ]
       },
       {
         "date": "2026-05",
         "theme": "产品 + 治理双重落地",
         "events": [
-          "Anthropic 9650 亿估值 + H 轮 650 亿",
-          "OpenAI 推 Rosalind Biodefense",
-          "GitHub Copilot 升自主 Agent",
-          "戴尔 AI 服务器 757% 增长",
-          "全国首个绿色算力平台呼和浩特上线"
+          "Anthropic 9650 亿估值 + H 轮 300 亿",
+          "Google 400 亿加注 Anthropic",
+          "OpenAI GPT-5.4 发布,105 万上下文",
+          "GitHub Copilot 升级自主 Agent",
+          "DeepSeek V4 开源 + 降价潮"
         ]
       },
       {
         "date": "2026-04",
         "theme": "资本高峰",
         "events": [
-          "Google 400 亿加注 Anthropic",
-          "Cohere 收购 Aleph Alpha",
-          "OpenAI 与软银年 30 亿合作"
+          "OpenAI 完成 1100 亿美元融资",
+          "Anthropic 完成 300 亿美元融资",
+          "Waymo 完成 160 亿美元融资",
+          "Figure 03 完成 200 小时耐力测试"
         ]
       }
     ]
