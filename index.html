@@ -10,13 +10,67 @@
 <link rel="alternate" type="application/json" title="AI Daily JSON Feed (LLM 友好)" href="feed.json">
 <link rel="alternate" type="text/markdown" title="AI Daily Markdown Digest (LLM 友好)" href="digest.md">
 <style>
-  /* ---- index 专属:列表(HN 风格桌面 4 列,手机堆叠)---- */
-  .news-list { display: flex; flex-direction: column; gap: 0; }
+  /* ---- index 专属:头部 3 大头条 + 列表 ---- */
+  .headline-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; margin: 20px 0 8px; }
+  .headline-card {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 24px 26px;
+    position: relative;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+    overflow: hidden;
+  }
+  .headline-card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--blue);
+  }
+  .headline-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; color: var(--text); border-color: var(--blue-soft-3); }
+  .headline-card.feature {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    border-color: #0f172a;
+  }
+  .headline-card.feature::before { background: var(--orange); }
+  .headline-card.feature h3 { color: #f8fafc; }
+  .headline-card.feature .summary { color: #cbd5e1; }
+  .headline-card.feature .meta { color: #94a3b8; border-top-color: rgba(255,255,255,0.12); }
+  .headline-card.feature .rank { color: var(--orange); }
+  .headline-card.feature:hover { box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.5); }
+  .headline-card .rank { font-family: var(--mono); font-size: 13px; color: var(--blue); font-weight: 700; letter-spacing: 0.04em; }
+  .headline-card .meta-top { display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--text-mute); font-family: var(--mono); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .headline-card h3 { font-size: 22px; font-weight: 800; line-height: 1.25; letter-spacing: -0.02em; margin: 0; }
+  .headline-card .summary { font-size: 14px; line-height: 1.65; color: var(--text-dim); margin: 0; }
+  .headline-card .meta { display: flex; gap: 12px; font-size: 12px; color: var(--text-mute); font-family: var(--mono); margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--line-2); font-weight: 600; }
+  .headline-card .heat { color: var(--orange); font-weight: 800; }
+
+  @media (max-width: 900px) {
+    .headline-grid { grid-template-columns: 1fr 1fr; }
+    .headline-card.feature { grid-column: span 2; }
+    .headline-card h3 { font-size: 18px; }
+    .headline-card.feature h3 { font-size: 22px; }
+  }
+  @media (max-width: 600px) {
+    .headline-grid { grid-template-columns: 1fr; }
+    .headline-card.feature { grid-column: span 1; }
+    .headline-card { padding: 18px 20px; }
+  }
+
+  /* ---- 列表 4 列 → 3 列(手机)---- */
+  .news-list { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
   .news-item {
     display: grid;
-    grid-template-columns: 60px 100px 1fr 140px;
-    gap: 16px;
-    padding: 20px 16px;
+    grid-template-columns: 56px 110px 1fr 130px;
+    gap: 18px;
+    padding: 22px 16px;
     border-bottom: 1px solid var(--line);
     align-items: start;
     transition: 0.15s;
@@ -24,78 +78,73 @@
   }
   .news-item:hover { background: var(--bg-2); }
   .news-item:hover .title-link { color: var(--blue); }
-  .news-item::before {
-    content: ""; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 2px; background: transparent; transition: 0.15s;
-  }
+  .news-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: transparent; transition: 0.15s; }
   .news-item:hover::before { background: var(--blue); }
-  .news-item.is-rising { background: linear-gradient(90deg, var(--orange-soft), transparent 30%); }
+  .news-item.is-rising { background: linear-gradient(90deg, var(--orange-soft) 0%, transparent 60%); }
   .news-item.is-rising::before { background: var(--orange); }
   .news-item.is-rising:hover::before { background: var(--orange); }
 
-  .rank { font-family: var(--mono); font-size: 18px; color: var(--text-mute); text-align: right; padding-top: 2px; }
-  .news-item:nth-child(1) .rank, .news-item:nth-child(2) .rank, .news-item:nth-child(3) .rank { color: var(--blue); font-weight: 700; }
+  .rank { font-family: var(--mono); font-size: 18px; color: var(--text-mute); text-align: right; padding-top: 2px; font-weight: 700; letter-spacing: -0.02em; }
+  .news-item:nth-child(1) .rank, .news-item:nth-child(2) .rank, .news-item:nth-child(3) .rank { color: var(--blue); }
   .news-item.is-rising .rank { color: var(--orange); }
 
   .meta-cell { font-family: var(--mono); font-size: 11px; color: var(--text-mute); display: flex; flex-direction: column; gap: 4px; padding-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
-  .meta-cell .cat { color: var(--blue); font-weight: 600; }
+  .meta-cell .cat { color: var(--blue); font-weight: 700; }
   .meta-cell .cat.rising { color: var(--orange); }
 
   .body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-  .title-link { font-size: 17px; font-weight: 600; color: var(--text); text-decoration: none; line-height: 1.4; transition: 0.15s; }
+  .title-link { font-size: 18px; font-weight: 700; color: var(--text); text-decoration: none; line-height: 1.4; letter-spacing: -0.015em; transition: 0.15s; }
   .title-link:hover { color: var(--blue); text-decoration: none; }
   .summary { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
   .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
-  .tag { font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: var(--bg-2); color: var(--text-mute); border-radius: 3px; letter-spacing: 0.04em; text-transform: uppercase; }
-  .tag.term { color: var(--orange); border: 1px solid rgba(234, 88, 12, 0.3); cursor: help; }
-  .tag.term:hover { background: var(--orange-soft); }
-  .rising-inline { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; padding-top: 8px; border-top: 1px dashed var(--orange); }
-  .rising-metric { font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: var(--orange-soft); color: var(--orange); border-radius: 3px; border: 1px solid var(--orange); }
+  .tag { font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: var(--bg-2); color: var(--text-dim); border: 1px solid var(--line); border-radius: 4px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
+  .tag.term { color: var(--orange); border-color: var(--orange-soft); background: var(--orange-soft); cursor: help; }
+  .tag.term:hover { background: var(--orange); color: white; }
+  .rising-inline { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; padding-top: 8px; border-top: 1px dashed var(--orange-soft); }
+  .rising-metric { font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: var(--orange-soft); color: var(--orange); border-radius: 4px; border: 1px solid var(--orange); font-weight: 700; }
   .rising-metric strong { color: var(--text); margin-right: 4px; }
 
   .heat { text-align: right; display: flex; flex-direction: column; gap: 4px; padding-top: 4px; cursor: help; position: relative; }
-  .heat .h { font-family: var(--mono); font-size: 17px; color: var(--hot); font-weight: 700; display: flex; align-items: center; justify-content: flex-end; gap: 4px; }
+  .heat .h { font-family: var(--mono); font-size: 20px; color: var(--hot); font-weight: 800; display: flex; align-items: center; justify-content: flex-end; gap: 4px; letter-spacing: -0.02em; }
   .heat .h::before { content: "▲"; font-size: 10px; opacity: 0.7; }
-  .heat .lvl { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; display: inline-block; width: fit-content; margin-left: auto; font-weight: 600; }
-  .heat .lvl.爆 { color: var(--red); background: rgba(220, 38, 38, 0.1); border: 1px solid var(--red); }
-  .heat .lvl.热 { color: var(--hot); background: rgba(217, 119, 6, 0.1); border: 1px solid var(--hot); }
+  .heat .lvl { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; display: inline-block; width: fit-content; margin-left: auto; font-weight: 700; }
+  .heat .lvl.爆 { color: var(--red); background: rgba(220, 38, 38, 0.10); border: 1px solid var(--red); }
+  .heat .lvl.热 { color: var(--hot); background: var(--hot-soft); border: 1px solid var(--hot); }
   .heat .lvl.中 { color: var(--blue); background: var(--blue-soft); border: 1px solid var(--blue); }
   .heat .lvl.新星 { color: var(--orange); background: var(--orange-soft); border: 1px solid var(--orange); }
-  .heat .srcs { font-family: var(--mono); font-size: 9px; color: var(--text-mute); display: flex; gap: 3px; justify-content: flex-end; margin-top: 2px; }
+  .heat .srcs { font-family: var(--mono); font-size: 9px; color: var(--text-mute); display: flex; gap: 3px; justify-content: flex-end; margin-top: 2px; font-weight: 600; }
   .heat .srcs .src-tag { padding: 1px 5px; border-radius: 2px; background: var(--bg-2); border: 1px solid var(--line); }
-  .heat .c { color: var(--text-mute); font-size: 10px; font-family: var(--mono); margin-top: 2px; }
+  .heat .c { color: var(--text-mute); font-size: 11px; font-family: var(--mono); margin-top: 2px; font-weight: 600; }
 
-  /* ---- 词条 / 热度 popup(桌面)---- */
   .glossary-pop, .heat-pop { position: fixed; z-index: 1000; display: none; pointer-events: none; }
   .glossary-pop.show, .heat-pop.show { display: block; }
-  .glossary-pop { max-width: 380px; background: white; border: 1px solid var(--blue); border-radius: 8px; padding: 18px; box-shadow: var(--shadow-lg); }
-  .gp-cat { font-family: var(--mono); font-size: 11px; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600; }
-  .gp-name { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .glossary-pop { max-width: 380px; background: var(--bg-2); border: 1px solid var(--blue); border-radius: 8px; padding: 18px; box-shadow: var(--shadow-lg); }
+  .gp-cat { font-family: var(--mono); font-size: 11px; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 700; }
+  .gp-name { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
   .gp-summary { font-size: 13px; color: var(--text); line-height: 1.6; margin-bottom: 8px; }
   .gp-detail { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
   .gp-links { display: flex; gap: 6px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); flex-wrap: wrap; }
-  .gp-links a { font-family: var(--mono); font-size: 11px; color: var(--blue); text-decoration: none; padding: 4px 8px; border: 1px solid var(--blue-soft); border-radius: 4px; }
+  .gp-links a { font-family: var(--mono); font-size: 11px; color: var(--blue); text-decoration: none; padding: 4px 8px; border: 1px solid var(--blue-soft-3); border-radius: 4px; font-weight: 600; }
   .gp-links a:hover { background: var(--blue-soft); }
-  .heat-pop { max-width: 320px; background: white; border: 1px solid var(--hot); border-radius: 8px; padding: 12px 14px; box-shadow: var(--shadow-lg); font-family: var(--mono); font-size: 11px; }
+  .heat-pop { max-width: 320px; background: var(--bg-2); border: 1px solid var(--hot); border-radius: 8px; padding: 12px 14px; box-shadow: var(--shadow-lg); font-family: var(--mono); font-size: 11px; }
   .heat-pop .title { color: var(--hot); margin-bottom: 6px; font-weight: 700; }
   .heat-pop .breakdown { color: var(--text); line-height: 1.6; }
   .heat-pop .note { color: var(--text-mute); margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line); }
 
-  .tab .count { font-size: 10px; color: var(--text-mute); padding: 2px 6px; background: var(--bg-2); border-radius: 100px; }
-  .tab.active .count { color: var(--blue); background: var(--blue-soft); font-weight: 600; }
+  .tab .count { font-size: 10px; color: var(--text-mute); padding: 2px 6px; background: var(--bg-2); border-radius: 100px; font-weight: 600; }
+  .tab.active .count { color: var(--blue); background: var(--blue-soft); }
   .tab.rising .count { color: var(--orange); background: var(--orange-soft); }
   .tab.rising.active .count { color: var(--orange); }
   .tab-spacer { flex: 1; }
   .search { display: flex; align-items: center; gap: 8px; background: var(--bg-2); border: 1px solid var(--line-2); border-radius: 6px; padding: 8px 14px; min-width: 240px; margin-bottom: 8px; }
-  .search input { background: none; border: none; outline: none; color: var(--text); font-family: var(--mono); font-size: 13px; width: 100%; }
+  .search input { background: none; border: none; outline: none; color: var(--text); font-family: var(--sans); font-size: 13px; width: 100%; }
   .search::before { content: "🔍"; font-size: 13px; opacity: 0.5; }
 
   .source-list { display: flex; gap: 6px; flex-wrap: wrap; }
-  .src { padding: 3px 8px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 3px; font-size: 11px; color: var(--text-dim); }
+  .src { padding: 3px 8px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 3px; font-size: 11px; color: var(--text-dim); font-family: var(--mono); font-weight: 600; }
 
-  /* ---- 手机端 4 列 grid 折叠成 3 列,后 2 列隐藏在 meta 单元 ---- */
   @media (max-width: 600px) {
-    .news-item { grid-template-columns: 36px 1fr 70px; gap: 10px; padding: 16px 12px; }
+    .news-item { grid-template-columns: 32px 1fr 60px; gap: 10px; padding: 18px 8px; }
     .news-item .meta-cell { display: none; }
     .title-link { font-size: 15px; }
     .summary { font-size: 13px; }
@@ -109,10 +158,18 @@
 </head>
 <body>
 
+<div class="top-stripe"></div>
+
 <div class="wrap">
 
   <header>
-    <a href="index.html" class="logo"><span class="logo-dot"></span>AI DAILY <span class="logo-sub">· 全球早报</span></a>
+    <a href="index.html" class="logo">
+      <span class="logo-mark">AI</span>
+      <span class="logo-text">
+        <span class="t1">AI Daily</span>
+        <span class="t2">Global Intel · 08:00 CST</span>
+      </span>
+    </a>
     <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
     <nav class="nav" id="nav">
       <a href="index.html" class="active">今日</a>
@@ -124,18 +181,18 @@
 
   <section class="hero" id="daily">
     <div class="hero-meta">
-      <span class="pill" id="date-pill">— 加载中 —</span>
-      <span id="weekday-pill">·</span>
-      <span>GEN 08:00 CST</span>
-      <span>· 全球 18 条核心</span>
+      <span class="pill live" id="date-pill">加载中</span>
+      <span class="pill" id="weekday-pill">—</span>
+      <span class="pill">GEN 08:00 CST</span>
+      <span class="pill" id="item-count-pill">— 条</span>
     </div>
     <h1>每日全球 AI <span class="hl">热点 / 新势力 / 趋势</span></h1>
     <p class="lead" id="summary-text">加载中...</p>
     <div class="hero-stats">
-      <div class="stat"><div class="v" id="stat-total">18</div><div class="l">今日条数</div></div>
-      <div class="stat"><div class="v" id="stat-rising">4</div><div class="l">新兴项目</div></div>
-      <div class="stat"><div class="v" id="stat-source">35+</div><div class="l">信源覆盖</div></div>
-      <div class="stat"><div class="v" id="stat-terms">30+</div><div class="l">可查词条</div></div>
+      <div class="stat"><div class="v" id="stat-total">—</div><div class="l">今日条数</div></div>
+      <div class="stat"><div class="v" id="stat-rising">—</div><div class="l">新兴项目</div></div>
+      <div class="stat"><div class="v"><span id="stat-source">—</span><span class="unit">+</span></div><div class="l">信源覆盖</div></div>
+      <div class="stat"><div class="v"><span id="stat-terms">—</span><span class="unit">+</span></div><div class="l">可查词条</div></div>
     </div>
   </section>
 
@@ -145,8 +202,10 @@
     <span class="line"></span>
   </div>
   <div class="heat-note">
-    热度数字为多源估算(HN 点数 + GitHub 24h 涨星 + X 提及 + 媒体覆盖),不是单一权威排名。鼠标悬停每条新闻右上角的"热度"可看来源明细。点击页眉"本月"看趋势脉络。
+    <strong>热度</strong>为多源估算(HN 点数 + GitHub 24h 涨星 + X 提及 + 媒体覆盖),不是单一权威排名。鼠标悬停每条新闻右上角的"热度"可看来源明细。
   </div>
+
+  <div id="headline-grid" class="headline-grid"></div>
 
   <div class="tabs" id="tabs"></div>
   <div class="news-list" id="news-list"></div>
@@ -207,12 +266,16 @@ async function load() {
 
   document.getElementById("date-pill").textContent = `${news.date} · ${news.weekday}`;
   document.getElementById("weekday-pill").textContent = `${news.weekday} 早晨`;
+  document.getElementById("item-count-pill").textContent = `${news.items.length} 条新闻`;
   document.getElementById("summary-text").textContent = news.summary;
   document.getElementById("stat-total").textContent = news.items.length;
   document.getElementById("stat-rising").textContent = (news.stats.by_category.rising || 0);
+  document.getElementById("stat-source").textContent = 35;
+  document.getElementById("stat-terms").textContent = Object.keys(ALL_TERMS).length || 30;
   document.getElementById("gen-time").textContent = news.generated_at || news.date;
   document.title = `AI Daily · ${news.date} · 全球 AI 早报`;
 
+  renderHeadlines(news.items);
   renderTabs(news.stats.by_category);
   renderNews();
   renderSources();
@@ -228,8 +291,40 @@ function bindNavToggle() {
   const nav = document.getElementById("nav");
   if (!btn) return;
   btn.addEventListener("click", () => nav.classList.toggle("open"));
-  // 点击 nav 链接后自动收起(手机)
   nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+}
+
+function renderHeadlines(items) {
+  const grid = document.getElementById("headline-grid");
+  // 取前 3 条 headline(优先),如果没有就取前 3 条
+  const top3 = items.filter(i => i.category === "headline").slice(0, 3);
+  const useItems = top3.length === 3 ? top3 : items.slice(0, 3);
+  if (useItems.length < 3) {
+    grid.style.display = "none";
+    return;
+  }
+  grid.innerHTML = useItems.map((it, i) => {
+    const heat = it.heat || {};
+    const isFeature = i === 0;
+    return `
+      <a class="headline-card ${isFeature ? 'feature' : ''}" href="archive-view.html?date=${escapeHTML(it.time)}" data-id="${it.id}">
+        <div class="meta-top">
+          <span class="rank">#${(it.rank || (i+1)).toString().padStart(2, "0")}</span>
+          <span>${CATEGORY_LABELS[it.category] || it.category}</span>
+          <span>· ${it.time}</span>
+        </div>
+        <h3>${highlight(it.title)}</h3>
+        <p class="summary">${highlight(it.summary)}</p>
+        <div class="meta">
+          <span>${escapeHTML((it.source || "").split(" / ")[0] || "")}</span>
+          <span>·</span>
+          <span class="heat">▲ ${formatNumber(heat.score || 0)}</span>
+          <span>·</span>
+          <span>${escapeHTML(heat.level || "中")}</span>
+        </div>
+      </a>
+    `;
+  }).join("");
 }
 
 function renderTabs(byCat) {
@@ -270,7 +365,10 @@ function renderNews() {
     }
     return true;
   });
-  list.innerHTML = filtered.map(it => {
+  // 列表里跳过前 3 个 headline(已经在顶部头条卡展示)
+  const isAll = ACTIVE_CAT === "all";
+  const listItems = isAll ? filtered.slice(3) : filtered;
+  list.innerHTML = listItems.map(it => {
     const isRising = it.category === "rising";
     const tagsHTML = (it.tags || []).slice(0, 4).map(t => `<span class="tag">${escapeHTML(t)}</span>`).join("");
     const termsHTML = (it.terms || []).map(t => `<span class="tag term" data-term="${escapeHTML(t)}">${escapeHTML(t)}</span>`).join("");
@@ -290,7 +388,7 @@ function renderNews() {
           <span>${it.time}</span>
         </div>
         <div class="body">
-          <a class="title-link" href="#">${highlight(it.title)}</a>
+          <a class="title-link" href="archive-view.html?date=${escapeHTML(it.time)}">${highlight(it.title)}</a>
           <div class="summary">${highlight(it.summary)}</div>
           <div class="tags">${tagsHTML}${termsHTML}</div>
           ${risingInline}
@@ -303,7 +401,7 @@ function renderNews() {
         </div>
       </article>
     `;
-  }).join("") || `<div style="padding:60px;text-align:left;color:var(--text-mute);font-family:var(--mono);">没有匹配的内容</div>`;
+  }).join("") || `<div style="padding:60px 0;color:var(--text-mute);font-family:var(--mono);">没有匹配的内容</div>`;
 }
 
 function formatNumber(n) {
@@ -315,7 +413,7 @@ function highlight(text) {
   if (!SEARCH_Q) return escapeHTML(text);
   const safe = escapeHTML(text);
   const re = new RegExp(SEARCH_Q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "ig");
-  return safe.replace(re, m => `<mark style="background:rgba(37,99,235,0.18);color:var(--blue);padding:0 2px;border-radius:2px;">${m}</mark>`);
+  return safe.replace(re, m => `<mark style="background:var(--blue-soft-3);color:var(--blue-2);padding:0 2px;border-radius:2px;">${m}</mark>`);
 }
 
 function renderSources() {
