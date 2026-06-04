@@ -206,7 +206,7 @@ function render({ news, week, monthly }) {
   const todayWeekday = (news && news.weekday) || "";
 
   const weekBlock = week ? `
-    <section class="block" style="padding:0; border:none; box-shadow:none; background:transparent;">
+    <section class="block">
       <div class="block-header">
         <span class="num">块 1</span>
         <h2>上周摘要</h2>
@@ -241,7 +241,7 @@ function render({ news, week, monthly }) {
   const months = (monthly && monthly.months) || [];
   const sorted = [...months].sort((a, b) => b.date.localeCompare(a.date));
   const monthBlock = `
-    <section class="block" style="padding:0; border:none; box-shadow:none; background:transparent; margin-top:48px;">
+    <section class="block" style="margin-top:48px;">
       <div class="block-header">
         <span class="num">块 2</span>
         <h2>已过完月份总结</h2>
