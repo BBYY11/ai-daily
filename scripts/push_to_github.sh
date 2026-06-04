@@ -51,7 +51,7 @@ while IFS= read -r -d '' file; do
   esac
   # 排除 assets/ 和 snap.js(以 .gitignore 为准,这里手动起一份防快选)
   case "$rel" in
-    assets/*) continue ;;
+    assets/preview-*.png) continue ;;
     snap.js) continue ;;
   esac
   FILES+=("$rel")
