@@ -1,9 +1,9 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "AI Daily · 2026-06-04 周四 · 全球 AI 早报",
+  "title": "AI Daily · 2026-06-05 周五 · 全球 AI 早报",
   "home_page_url": "https://bbyy11.github.io/ai-daily/",
   "feed_url": "https://bbyy11.github.io/ai-daily/feed.json",
-  "description": "今天 AI 圈的核心叙事:博通给出 2026 财年 AI 芯片营收 560 亿美元指引 + 联手 Apollo/黑石成立 AI XPV 平台部署 20+ GW 算力,AI 基础设施资本运作加速;DeepSeek 据传首轮融资 70 亿美元、估值飙至 590 亿美元,腾讯/宁德时代领投;ChatGPT 全球月活突破 10 亿,创 App 史上最快 10 亿记录;千问向第三方 Agent/Skill 全面开放,瑞幸/肯德基/蜜雪冰城/东航首批接入。中信证券研报称下半年国内外 AI 算力与具身智能将迎重要产业进展。监管侧,达利奥警告 AI 市场显现泡沫迹象。",
+  "description": "今天 AI 圈的核心叙事:Anthropic 以 9650 亿美元估值抢先递交 S-1 招股书,正式开启 IPO 之路,成为全球估值最高 AI 公司;字节 AI 战略全貌曝光,目标年底世界模型对标 Google Genie 3、豆包 DAU 破 2 亿后加速商业化;英伟达台北 GTC 发布 Cosmos 3 全模态物理 AI 模型,联手宇树推 H2+ 人形机器人参考设计;OpenAI 硬件 CFO 确认年底发布;MiniMax M3 编程能力 SOTA;Meta 宣布 6 月开放最新模型 API;金融 AI 大模型生态联盟成立。",
   "language": "zh-cn",
   "authors": [
     {
@@ -13,92 +13,30 @@
   ],
   "items": [
     {
-      "id": "n0604-01",
-      "title": "博通预测 2026 财年 AI 芯片销售 560 亿美元,联手 Apollo/黑石建 AI XPV 平台 2028 年部署 20+ GW",
-      "summary": "博通公布 2026 财年 AI 芯片销售指引 560 亿美元,已向 OpenAI 交付芯片,将于 2027 年部署 1.3 GW 算力。CEO 进一步宣布与 Apollo、黑石及其他投资者共同创建 AI XPV 平台,目标到 2028 年部署超过 20 GW 计算能力,标志 AI 基础设施从芯片公司单一供给转向多方资本联合体。",
+      "id": "n0605-01",
+      "title": "Anthropic 正式递交 S-1,9650 亿美元估值登顶全球 AI 公司榜首",
+      "summary": "6 月 1 日 Anthropic 宣布已秘密向美国证券交易委员会(SEC)递交 S-1 招股书,计划推动公司公开上市。公司以 9650 亿美元估值超越 OpenAI 的 8520 亿美元,正式成为全球估值最高的 AI 创业公司。Anthropic CEO Dario Amodei 表示,公司有望在 2026 年二季度首次实现运营盈利,利润约 5.59 亿美元;年化收入已达 470 亿美元,ARR 年增长约 10 倍。由 Dario Amodei 与 Daniela Amodei 兄妹于 2021 年创立,专注 AI 安全。",
       "category": "headline",
       "category_label": "头条",
-      "source": "财联社 / 博通官方",
-      "time": "2026-06-04",
+      "source": "财联社 / 华尔街日报",
+      "time": "2026-06-05",
       "tags": [
-        "博通",
-        "AI 芯片",
-        "OpenAI",
-        "XPV",
-        "AI 基础设施"
+        "Anthropic",
+        "IPO",
+        "Claude",
+        "S-1",
+        "估值",
+        "AI安全"
       ],
       "terms": [
-        "博通",
-        "OpenAI",
-        "AI 工厂"
-      ],
-      "heat": {
-        "score": 9600,
-        "level": "爆",
-        "sources": [
-          "media",
-          "x",
-          "hn"
-        ],
-        "breakdown": "博通官方指引 · 主流财经媒体头条 · ~3.2k HN points · ~12k X mentions"
-      },
-      "comments": 612,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
-    },
-    {
-      "id": "n0604-02",
-      "title": "DeepSeek 传首轮融资 70 亿美元,估值 590 亿美元,腾讯/宁德时代领投",
-      "summary": "DeepSeek 据传在首轮融资中预计筹资约 70 亿美元,估值最高可达 590 亿美元。腾讯与宁德时代将成为最大外部投资者,网易与京东也计划参与。融资完成后 DeepSeek 将跻身全球 AI 初创公司估值前 5。",
-      "category": "headline",
-      "category_label": "头条",
-      "source": "财联社 / 36氪",
-      "time": "2026-06-04",
-      "tags": [
-        "DeepSeek",
-        "融资",
-        "腾讯",
-        "宁德时代",
-        "估值"
-      ],
-      "terms": [
-        "DeepSeek",
+        "Anthropic",
+        "Claude",
         "ARR",
-        "估值"
+        "估值",
+        "IPO"
       ],
       "heat": {
-        "score": 9200,
-        "level": "爆",
-        "sources": [
-          "media",
-          "x",
-          "hn"
-        ],
-        "breakdown": "中文财经头条 · ~4.5k HN points · ~15k X mentions · 全球科技媒体跟进"
-      },
-      "comments": 1023,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
-    },
-    {
-      "id": "n0604-03",
-      "title": "ChatGPT 全球月活突破 10 亿,创 App 史上最快 10 亿记录",
-      "summary": "Sensor Tower 数据显示 OpenAI 旗下 ChatGPT 全球月活用户已超过 10 亿,成为有史以来最快达到 10 亿关口的应用程序。从 0 到 10 亿用时不到 3 年,相比之下 TikTok 用时约 5 年。",
-      "category": "headline",
-      "category_label": "头条",
-      "source": "财联社 / Sensor Tower",
-      "time": "2026-06-04",
-      "tags": [
-        "ChatGPT",
-        "OpenAI",
-        "MAU",
-        "里程碑"
-      ],
-      "terms": [
-        "ChatGPT",
-        "OpenAI",
-        "Token"
-      ],
-      "heat": {
-        "score": 8800,
+        "score": 9800,
         "level": "爆",
         "sources": [
           "media",
@@ -106,417 +44,604 @@
           "hn",
           "reddit"
         ],
-        "breakdown": "Sensor Tower 报告 · 主流媒体头条 · ~6k HN points · ~25k X mentions"
+        "breakdown": "S-1 递交公告 · 财联社头条 · ~8k HN points · ~30k X mentions · 全球财经媒体头版"
       },
-      "comments": 1876,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 2341,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-04",
-      "title": "千问 APP 向第三方 Agent/Skill 全面开放,瑞幸/肯德基/蜜雪冰城/东航首批接入",
-      "summary": "6 月 3 日千问 APP 宣布向第三方 Agent、Skill 全面开放,所有企业可在千问运营品牌 Agent。瑞幸、肯德基、蜜雪冰城、东方航空等首批企业正在测试,将陆续上线。Agent 具备记忆与主动规划能力,可主动推送行程提醒、权益到期、复购推荐等服务。",
+      "id": "n0605-02",
+      "title": "36氪独家:字节 2026 AI 四个关键命题,世界模型年底对标 Google Genie 3",
+      "summary": "《智能涌现》独家获悉,字节 2026 年 AI 有四个重要命题:①加大对世界模型训练的投入,年底前模型性能达到 Google Genie 3 的全球 SOTA 水平;②视频模型 Seedance 继续保持领先地位,探索\"动态生成\"互动视频;③进一步打好 Coding 地基,强制业务侧使用 Seed 模型形成数据飞轮;④豆包强化商业化,DAU 已破 2 亿,6 月下旬上线付费内容,PPT 生成为核心切入点。企业版与出海(Dola 年底目标 3000 万 DAU)同步推进。",
       "category": "headline",
       "category_label": "头条",
-      "source": "36氪 / 千问官方",
-      "time": "2026-06-04",
+      "source": "36氪 / 智能涌现",
+      "time": "2026-06-05",
       "tags": [
-        "千问",
-        "Agent",
-        "阿里",
-        "瑞幸",
-        "肯德基"
+        "字节跳动",
+        "Seed",
+        "世界模型",
+        "豆包",
+        "Seedance"
       ],
       "terms": [
-        "Qwen",
-        "Agent",
-        "MCP"
+        "字节",
+        "Seed",
+        "VLA",
+        "世界模型",
+        "豆包"
       ],
       "heat": {
-        "score": 8100,
+        "score": 9400,
         "level": "爆",
         "sources": [
           "media",
           "x",
           "hn"
         ],
-        "breakdown": "千问官方公告 · 中文媒体头条 · ~3.8k HN points · ~10k X mentions"
+        "breakdown": "36氪独家 · 智能涌现深度报道 · ~5k HN points · ~18k X mentions · 中文科技圈刷屏"
       },
-      "comments": 743,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 1876,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-05",
-      "title": "微软 + 英伟达推统一技术栈,部署 Agentic AI 覆盖 Win / 云 / 本地全场景",
-      "summary": "在 Build 开发者大会期间,英伟达与微软达成合作,推出统一技术栈,用于部署代理式人工智能(Agentic AI),覆盖从 Windows 设备到云端再到本地的全场景。两家联手打造端到端 Agent 运行时,简化企业 AI Agent 部署。",
-      "category": "company",
-      "category_label": "公司",
-      "source": "TechCrunch / 微软官方",
-      "time": "2026-06-04",
+      "id": "n0605-03",
+      "title": "英伟达台北 GTC 发布 Cosmos 3,全球首款完全开放的全模态物理 AI 模型",
+      "summary": "在台北 Computex 期间,英伟达正式发布 NVIDIA Cosmos 3,面向物理 AI 的开放世界基础模型,凭借全新混合 Transformer 架构,打通视觉推理、世界生成、动作预测三大核心能力,成为全球首款完全开放的全模态物理 AI 模型。英伟达同步成立 Cosmos Coalition 全球协作联盟,集结全球顶尖世界模型研发团队与 AI 开发者。机构认为,人形机器人是物理 AI 最好的载体。",
+      "category": "headline",
+      "category_label": "头条",
+      "source": "财联社 / 英伟达官方",
+      "time": "2026-06-05",
       "tags": [
-        "微软",
         "英伟达",
-        "Agentic AI",
-        "Build",
-        "合作"
+        "Cosmos",
+        "物理AI",
+        "世界模型",
+        "GTC",
+        "台北"
       ],
       "terms": [
-        "Agent",
-        "MCP"
+        "英伟达",
+        "Cosmos",
+        "物理AI",
+        "世界模型",
+        "人形机器人"
       ],
       "heat": {
-        "score": 7600,
+        "score": 8900,
         "level": "爆",
         "sources": [
           "media",
           "x",
           "hn"
         ],
-        "breakdown": "Build 2026 主 keynote · ~2.8k HN points · ~9k X mentions"
+        "breakdown": "Computex 2026 主 keynote · ~6k HN points · ~22k X mentions · 机器人 ETF 鹏华净申购 3400 万份"
       },
-      "comments": 567,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 1567,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-06",
-      "title": "比亚迪官宣入局人形机器人,经销商网络可售卖",
-      "summary": "比亚迪集团执行副总裁李柯在访谈中明确表示:比亚迪正在开发人形机器人。她指出汽车相关 AI 能力与机器人有同源性,比亚迪可作为开放平台,既能自己做机器人,也能与其他企业合作。若技术成熟,可通过 4S 经销商网络售卖。",
-      "category": "company",
-      "category_label": "公司",
-      "source": "第一财经 / 36氪",
-      "time": "2026-06-04",
+      "id": "n0605-04",
+      "title": "英伟达 × 宇树科技发布 H2+ 人形机器人参考设计,加速全球落地",
+      "summary": "英伟达 CEO 黄仁勋在台北 GTC 2026 大会宣布与宇树科技合作,推出新一代人形机器人参考设计 H2+,基于 Isaac GR00T 系统,旨在加速全球人形机器人行业创新。黄仁勋表示,这套系统已经完成整体集成。宇树科技是国产四足/人形机器人龙头,此前已与英伟达在机器人仿真领域有深度合作。",
+      "category": "headline",
+      "category_label": "头条",
+      "source": "红星新闻 / 英伟达官方",
+      "time": "2026-06-05",
       "tags": [
-        "比亚迪",
+        "英伟达",
+        "宇树科技",
         "人形机器人",
+        "GR00T",
         "具身智能"
       ],
       "terms": [
-        "具身智能",
+        "英伟达",
         "人形机器人",
-        "比亚迪"
+        "具身智能",
+        "GR00T"
       ],
       "heat": {
-        "score": 7200,
+        "score": 8500,
+        "level": "爆",
+        "sources": [
+          "media",
+          "x",
+          "hn"
+        ],
+        "breakdown": "GTC 2026 大会发布 · ~4k HN points · ~15k X mentions · 机器人板块集体异动"
+      },
+      "comments": 892,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-05",
+      "title": "OpenAI CFO 确认:AI 硬件设备将于 2026 年底前正式发布,已亲自体验",
+      "summary": "OpenAI 首席财务官 Sarah Friar 在加州峰会采访中透露,已亲自体验过 OpenAI 与前苹果设计总监 Jony Ive 团队合作开发的 AI 硬件设备,形容其\"非常自然且让人产生喜爱之情\"。她明确表示,OpenAI 将在 2026 年底前正式发布这款产品。此前法律文件显示预计最早 2027 年 2 月出货,Friar 的表态暗示发布时间表有所提前。产品形态尚未公开,但非手机,定位\"不显眼、便携、能全面感知周围环境\"。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "科创板日报 / 财联社",
+      "time": "2026-06-05",
+      "tags": [
+        "OpenAI",
+        "Jony Ive",
+        "AI硬件",
+        "Sarah Friar"
+      ],
+      "terms": [
+        "OpenAI",
+        "Agent",
+        "Token"
+      ],
+      "heat": {
+        "score": 8200,
+        "level": "爆",
+        "sources": [
+          "media",
+          "x",
+          "hn"
+        ],
+        "breakdown": "CFO 公开采访 · ~5k HN points · ~20k X mentions · 消费电子圈热议"
+      },
+      "comments": 1432,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-06",
+      "title": "MiniMax M3 发布:编程能力 SOTA、1M 上下文、原生多模态",
+      "summary": "MiniMax 于 6 月 1 日发布第三代旗舰模型 M3,官方用六个关键词概括:编程能力 SOTA、1M 上下文、原生多模态、Computer Use 2026、全模态推理、端到端视频生成。M3 在编程benchmark 上达到全球领先水平,上下文窗口扩展至 100 万 token,原生支持文本/图像/音频/视频统一处理。M3 还具备端到端视频生成能力,进一步缩小与 Seedance 2.0 的差距。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "36氪 / MiniMax 官方",
+      "time": "2026-06-05",
+      "tags": [
+        "MiniMax",
+        "M3",
+        "编程",
+        "SOTA",
+        "多模态"
+      ],
+      "terms": [
+        "MiniMax",
+        "多模态",
+        "M3"
+      ],
+      "heat": {
+        "score": 7800,
+        "level": "热",
+        "sources": [
+          "media",
+          "x",
+          "hn"
+        ],
+        "breakdown": "MiniMax 官方发布 · ~3k HN points · ~12k X mentions · 中文大模型圈热议"
+      },
+      "comments": 967,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-07",
+      "title": "Meta 宣布 6 月发布最新 AI 模型 API,剑指企业级市场",
+      "summary": "据华尔街日报,Meta Platforms 表示计划于 2026 年 6 月发布最新 AI 模型的 API,面向全球开发者与企业。这意味着 Meta 将成为本月第二家开放新模型 API 的科技巨头(MiniMax 已于 6 月 1 日发布 M3)。此前 Meta 正在研发代号为'Mango'的图像及视频 AI 模型,预计 2026 年上半年发布。此次 API 开放将进一步加剧大模型 API 价格战。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "华尔街日报 / 汇通财经",
+      "time": "2026-06-05",
+      "tags": [
+        "Meta",
+        "Llama",
+        "API",
+        "企业级"
+      ],
+      "terms": [
+        "Meta",
+        "Llama",
+        "Agent"
+      ],
+      "heat": {
+        "score": 7400,
+        "level": "热",
+        "sources": [
+          "media",
+          "x",
+          "hn"
+        ],
+        "breakdown": "华尔街日报报道 · ~2.5k HN points · ~10k X mentions"
+      },
+      "comments": 654,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-08",
+      "title": "金融 AI 大模型生态联盟成立,神州信息牵头华为/阿里云/腾讯云等",
+      "summary": "6 月 3 日,由中国科学技术大学国际金融研究院与神州信息联合主办的\"数云原力2026·数智金融论坛\"在合肥举办。期间,神州信息牵头华为、阿里云、腾讯云、百度智能云、海光科技、深信服科技、OceanBase、神州鲲泰等生态伙伴共同发起行业首个金融 AI 应用领域大模型生态联盟。旨在汇聚基础模型、云计算、核心应用、安全防护、数据库及算力服务等领域核心力量,推动 AI 智能体从试点走向规模化落地。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "央广网 / 财联社",
+      "time": "2026-06-05",
+      "tags": [
+        "神州信息",
+        "金融AI",
+        "大模型生态联盟",
+        "中科大",
+        "华为"
+      ],
+      "terms": [
+        "Agent",
+        "MCP",
+        "金融AI"
+      ],
+      "heat": {
+        "score": 6200,
         "level": "热",
         "sources": [
           "media",
           "x"
         ],
-        "breakdown": "第一财经访谈 · ~3.5k X mentions · 中文媒体广泛跟进"
+        "breakdown": "央广网报道 · 金融行业 AI 首个生态联盟 · 政企场景落地"
       },
-      "comments": 891,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 387,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-07",
-      "title": "Apollo.io 推出 Perplexity Computer 连接器,AI 工作流深入中小企业",
-      "summary": "Apollo.io 宣布推出用于 Perplexity 计算机的连接器,将其销售情报和工作流功能引入面向成长型企业的 Perplexity Computer,与 Perplexity 在华盛顿特区举行的'主街 AI 峰会'同步发布。目标用户:初创创始人、精简营收团队。",
+      "id": "n0605-09",
+      "title": "LM Studio 上线 LM Link,iPhone 直连 Mac 本地 AI 模型",
+      "summary": "6 月 5 日,LM Studio 更新 Mac 版 Locally 应用,新增 LM Link 功能,用户可直接在 iPhone 上调用 Mac 本地运行的 AI 大语言模型。LM Link 采用端到端加密,运行在 Tailscale 虚拟专用网络之上,设备间的全部数据与通信保持私密和安全,设备不会直接暴露到公共互联网。预览阶段免费,支持用户安装在 Mac 上的任意模型,也包括 Apple Intelligence 基础模型。",
       "category": "company",
       "category_label": "公司",
-      "source": "新浪财经 / Apollo.io 官方",
-      "time": "2026-06-04",
+      "source": "IT之家 / LM Studio 官方",
+      "time": "2026-06-05",
       "tags": [
-        "Apollo.io",
-        "Perplexity",
-        "Sales",
-        "Agent"
+        "LM Studio",
+        "LM Link",
+        "本地AI",
+        "端侧AI"
       ],
       "terms": [
-        "Agent"
+        "端侧AI",
+        "本地模型",
+        "隐私"
       ],
       "heat": {
         "score": 5800,
         "level": "热",
         "sources": [
           "media",
+          "x",
           "hn"
         ],
-        "breakdown": "Apollo 官方公告 · ~1.2k HN points · 中小企业主关注"
+        "breakdown": "IT之家报道 · ~2k HN points · ~8k X mentions · 端侧 AI 开发者圈热议"
       },
-      "comments": 234,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 543,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-08",
-      "title": "智元开源 AGIBOT WORLD 2026 主题二:行业首个聚焦物理交互的开源具身数据集",
-      "summary": "6 月 3 日智元开源 AGIBOT WORLD 2026 数据集主题二'多样交互(Rich Interaction)',这是行业首个聚焦物理交互的开源具身数据集,不仅记录预期内的成功,更致力捕捉机器人与真实世界之间那些多样、精细且充满接触的物理对话,还原物理智能全貌。",
-      "category": "company",
-      "category_label": "公司",
-      "source": "智元官方 / 36氪",
-      "time": "2026-06-04",
+      "id": "n0605-10",
+      "title": "[新星] Anthropic 造富:七位联创各持 80 亿美元,同时登彭博亿万富豪榜",
+      "summary": "Anthropic 高达 9650 亿美元估值之下,Dario Amodei、Daniela Amodei 等七位联创各自持股价值约 80 亿美元,七人同时登彭博亿万富豪指数,创下该指数历史上单日新增同一公司上榜人数最多的纪录。此外,智谱和 MiniMax 在港股上市后的造富效应也持续,智谱员工持股平台持股市值超 460 亿港元,MiniMax 363 位普通员工人均持股市值超 1800 万港元。AI 正掀起新一轮造富狂潮。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "财联社",
+      "time": "2026-06-05",
       "tags": [
-        "智元",
-        "AGIBOT",
-        "具身智能",
-        "开源",
-        "数据集"
+        "Anthropic",
+        "造富",
+        "亿万富豪",
+        "联创",
+        "股权"
       ],
       "terms": [
-        "具身智能",
-        "AGIBOT"
+        "Anthropic",
+        "估值",
+        "IPO"
       ],
       "heat": {
-        "score": 6400,
+        "score": 7100,
         "level": "热",
         "sources": [
           "media",
-          "x",
-          "github"
+          "x"
         ],
-        "breakdown": "智元 GitHub 仓库 · 24h 涨星 1.2k · 中文机器人圈热议"
+        "breakdown": "财联社深度报道 · ~5k X mentions · 创业圈/投资圈刷屏"
       },
-      "comments": 412,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 1234,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-09",
-      "title": "中兴 × 腾讯合作发布 WorkBuddy AI 云电脑",
-      "summary": "中兴通讯透露与腾讯达成深度战略合作,将推出搭载腾讯原生 WorkBuddy 的 AI 云电脑。WorkBuddy 是腾讯的 AI Agent 桌面产品,中兴负责硬件承载,双方共同面向企业办公场景。",
-      "category": "company",
-      "category_label": "公司",
-      "source": "财联社 / 中兴官方",
-      "time": "2026-06-04",
+      "id": "n0605-11",
+      "title": "[新星] 首尔大学论文:AI 语言模型会被\"过度自信\"骗到,扩散模型有提前终止陷阱",
+      "summary": "首尔大学联合多个研究院发表论文(arXiv:2605.28181),发现 AI 语言模型存在一种\"过度自信\"陷阱:扩散语言模型在生成文字时,文本结束符(EOT)标记会在回答区域末尾获得极高置信度,导致模型在回答刚刚开始时就提前停止。为解决此问题,团队提出 SACM(带后缀锚点的置信度调制)方法,在不使用额外训练的情况下,将 LLaDA 8B 在 GSM8K 数学题上的正确率从 14.94% 提升至 76.88%。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "arXiv:2605.28181 / 学术媒体",
+      "time": "2026-06-05",
       "tags": [
-        "中兴",
-        "腾讯",
-        "WorkBuddy",
-        "AI 云电脑"
+        "首尔大学",
+        "扩散语言模型",
+        "EOT过度自信",
+        "SACM",
+        "arXiv"
       ],
       "terms": [
-        "Agent"
+        "推理",
+        "Agent",
+        "arXiv"
       ],
       "heat": {
         "score": 5200,
-        "level": "热",
+        "level": "中",
         "sources": [
-          "media",
-          "x"
+          "x",
+          "arxiv"
         ],
-        "breakdown": "中兴官方公告 · ~2.8k X mentions"
+        "breakdown": "arXiv 论文 · ~1.5k HN points · NLP 学术圈讨论"
       },
       "comments": 287,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-10",
-      "title": "马斯克关联空壳公司 550 亿美元芯片厂选址休斯顿,SpaceX + 特斯拉共同支持",
-      "summary": "6 月 3 日据报道,与马斯克有关联的空壳公司 WIT Tech LLC 最近在休斯敦郊外 Grimes County 购入至少六幅地块,总面积超 6000 英亩,表明这位亿万富豪在为 SpaceX 与特斯拉共同支持的 550 亿美元芯片厂敲定选址。",
-      "category": "industry",
-      "category_label": "行业",
-      "source": "新浪财经 / 路透社",
-      "time": "2026-06-04",
-      "tags": [
-        "马斯克",
-        "SpaceX",
-        "特斯拉",
-        "芯片厂",
-        "得州"
-      ],
-      "terms": [
-        "GPU",
-        "TPU"
-      ],
-      "heat": {
-        "score": 6100,
-        "level": "热",
-        "sources": [
-          "media",
-          "x",
-          "hn"
-        ],
-        "breakdown": "路透社独家 · ~3.1k HN points · ~8k X mentions"
-      },
-      "comments": 534,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
-    },
-    {
-      "id": "n0604-11",
-      "title": "Computex 2026 黄仁勋力挺 Marvell:将成为下一家万亿市值公司,股价单日涨 32%",
-      "summary": "Computex 2026 期间,英伟达 CEO 黄仁勋在与 Marvell CEO Matt Murphy 对话中称 Marvell 将成为下一家万亿市值公司。Marvell 股价单日暴涨 32%。英伟达同步宣布 Spectrum-X 以太网硅光技术全面量产,能效提升 5 倍。",
-      "category": "industry",
-      "category_label": "行业",
-      "source": "财联社 / 半导体行业观察",
-      "time": "2026-06-04",
-      "tags": [
-        "Computex",
-        "英伟达",
-        "Marvell",
-        "黄仁勋",
-        "硅光"
-      ],
-      "terms": [
-        "GPU",
-        "Blackwell"
-      ],
-      "heat": {
-        "score": 5700,
-        "level": "热",
-        "sources": [
-          "media",
-          "x",
-          "hn"
-        ],
-        "breakdown": "Computex 2026 主旨演讲 · ~2.4k HN points · ~7k X mentions"
-      },
-      "comments": 321,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
-    },
-    {
-      "id": "n0604-12",
-      "title": "[新星] 浩睿媒体研究:'信任税'— 68% 消费者不信任 AI 代为购物,40% 有负面体验",
-      "summary": "浩睿媒体最新研究显示,虽然消费者广泛使用 AI 进行产品研究和价格比较,但对 AI 代为购物深感怀疑。68% 消费者认为 AI 购物代理可能不为其最大利益行事,40% 在自动购物中有负面体验。'信任税'会使品牌超 27% 客户群体的长期忠诚度受威胁。研究基于 1000 名 AI 购物常使用者的调查。",
+      "id": "n0605-12",
+      "title": "[新星] 斯坦福研究:2025 年全球英语文稿中 24% 企业新闻稿由 AI 生成",
+      "summary": "斯坦福大学最新研究显示,2025 年全球英语文稿中,24% 的企业新闻稿和 18% 的消费者投诉内容由 AI 大模型产出。研究指出 AI 生成内容已正式超越人类原创,引发关于互联网内容质量和创意危机的广泛讨论。同时 Graphite 报告显示,当前互联网上 AI 生成内容规模已正式超越人类原创,行业长期担忧成为现实。",
       "category": "rising",
       "category_label": "新兴",
-      "source": "新浪财经 / 浩睿媒体",
-      "time": "2026-06-04",
+      "source": "金十数据 / 斯坦福研究",
+      "time": "2026-06-05",
       "tags": [
-        "浩睿媒体",
-        "AI 购物",
-        "消费者研究",
-        "信任税"
+        "斯坦福",
+        "AI内容",
+        "原创",
+        "新闻稿",
+        "AIGC"
       ],
       "terms": [
+        "AIGC",
         "Agent"
       ],
       "heat": {
-        "score": 4500,
+        "score": 4800,
         "level": "中",
         "sources": [
           "media",
           "x"
         ],
-        "breakdown": "新研究报告 · ~1.2k X mentions · 品牌营销圈关注"
+        "breakdown": "斯坦福研究报告 · ~2k X mentions · 内容行业关注"
       },
-      "comments": 142,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 456,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-13",
-      "title": "[新星] 北京太空智算研究院成立,2028 年前完成首发试验星,经开区 + 京东方 + 银河航天 + 长鑫集电联合发起",
-      "summary": "北京太空智算研究院在北京经济技术开发区注册成立,围绕星载算力芯片、星间激光通信、太空能源与散热、天地一体化网络等方向攻关,计划 2028 年前完成首发试验星研制与发射。国家信创园联合京东方、银河航天、蓝箭航天、星河动力、观宇芯算、长鑫集电等多家企业。",
+      "id": "n0605-13",
+      "title": "[新星] 马斯克 xAI 将于 2026 年底发布全规模 AI 生成游戏,英伟达 200 亿美元融资参与",
+      "summary": "马斯克在公开场合表示,xAI 将于 2026 年底发布全规模 AI 生成游戏。与此同时,据多方消息,英伟达将参与 xAI 的 200 亿美元融资轮,成为重要投资方。xAI 目前正在构建算力基础设施,Grok 系列模型已集成至特斯拉汽车和 X 平台。英伟达的参与将进一步强化双方在 AI 与汽车/游戏领域的协同。",
       "category": "rising",
       "category_label": "新兴",
-      "source": "人民日报 / 财联社",
-      "time": "2026-06-04",
+      "source": "金十数据 / 华尔街见闻",
+      "time": "2026-06-05",
       "tags": [
-        "太空智算",
-        "星载芯片",
-        "京东方",
-        "银河航天",
-        "长鑫集电"
+        "马斯克",
+        "xAI",
+        "AI生成游戏",
+        "英伟达",
+        "Grok"
       ],
       "terms": [
-        "GPU",
-        "ASIC"
+        "xAI",
+        "Agent",
+        "多模态"
       ],
       "heat": {
-        "score": 4900,
-        "level": "中",
-        "sources": [
-          "media"
-        ],
-        "breakdown": "人民日报报道 · 国家政策关注 · 中文媒体广泛跟进"
-      },
-      "comments": 256,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
-    },
-    {
-      "id": "n0604-14",
-      "title": "[新星] 中国机器人在韩国与模特走秀,银河公司首尔 1.8 米人形机器人亮相",
-      "summary": "5 月 28 日韩国银河公司在首尔举办主题'人机共存'的实体 AI 时装秀,10 台中国机器人与模特同步走秀,默契共舞,展示了未来感夹克、太空风格连体服等 10 套概念服装。活动中展示身高超过 180 厘米的人形机器人。",
-      "category": "rising",
-      "category_label": "新兴",
-      "source": "新浪 / 36氪",
-      "time": "2026-06-04",
-      "tags": [
-        "中国机器人",
-        "银河公司",
-        "首尔",
-        "人形机器人",
-        "走秀"
-      ],
-      "terms": [
-        "人形机器人",
-        "具身智能"
-      ],
-      "heat": {
-        "score": 3800,
-        "level": "中",
+        "score": 5600,
+        "level": "热",
         "sources": [
           "media",
-          "x"
-        ],
-        "breakdown": "病毒视频 · ~5k X mentions · 抖音/B 站广泛传播"
-      },
-      "comments": 678,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
-    },
-    {
-      "id": "n0604-15",
-      "title": "[论文] 高盛:2027 年 DRAM/NAND/HBM 供需均较 2026 紧张,紧张态势持续至 2028",
-      "summary": "高盛 5 月 31 日发布研究观点:到 2027 年传统 DRAM、NAND 和 HBM 供需状况都将较 2026 年更为紧张,且紧张态势将持续至 2028 年,这将有助于存储器企业未来数年内实现更高盈利水平。基于此,高盛上调对存储芯片制造商 DRAM、NAND 及 HBM 产品的定价预期。",
-      "category": "paper",
-      "category_label": "学术",
-      "source": "高盛研报 / 财联社",
-      "time": "2026-06-04",
-      "tags": [
-        "高盛",
-        "DRAM",
-        "NAND",
-        "HBM",
-        "存储芯片"
-      ],
-      "terms": [
-        "HBM",
-        "H100",
-        "H200"
-      ],
-      "heat": {
-        "score": 3400,
-        "level": "中",
-        "sources": [
-          "media",
+          "x",
           "hn"
         ],
-        "breakdown": "高盛 31 页研报 · 投行覆盖 · 半导体股票普遍跟涨"
+        "breakdown": "多方信源 · ~3k X mentions · 游戏圈/AI圈双热点"
       },
-      "comments": 167,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 678,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     },
     {
-      "id": "n0604-16",
-      "title": "达利奥警告:AI 市场显现泡沫迹象,最终可能破裂",
-      "summary": "亿万富翁投资者雷·达利奥警告,蓬勃发展的人工智能市场有泡沫迹象,最终可能破裂。同日黄仁勋在台北闭门活动向 300+ 金融机构嘉宾致辞,称过去 6 个月 AI 投资回报率已完全重置,业务利润惊人,引发下一轮资本投向何处的讨论。",
-      "category": "social",
-      "category_label": "声音",
-      "source": "Cointelegraph / 新浪财经",
-      "time": "2026-06-04",
+      "id": "n0605-14",
+      "title": "[新星] 字节 Seed 科学家顾全全离职,曾主导 AI 药物发现研究",
+      "summary": "字节跳动 Seed 旗下聚焦科学智能领域(AI4S)的团队核心成员顾全全在 X 平台上宣布离职。顾全全于 2023 年加入字节 Seed,主导用于药物发现的 AI 工作。顾全全的离职意味着字节 Seed AI4S 团队流失一位核心科学家。字节 Seed 近年来在大模型领域动作频频,AI4S 方向是其重要战略布局之一。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "三茅网 / 脉脉",
+      "time": "2026-06-05",
       "tags": [
-        "达利奥",
-        "黄仁勋",
-        "AI 泡沫",
-        "投资"
+        "字节",
+        "Seed",
+        "顾全全",
+        "AI4S",
+        "药物发现"
       ],
       "terms": [
-        "估值"
+        "字节",
+        "Agent",
+        "AI4S"
       ],
       "heat": {
         "score": 4200,
         "level": "中",
         "sources": [
           "media",
+          "x"
+        ],
+        "breakdown": "X 平台官宣 · ~1.8k X mentions · 猎头圈/科研圈关注"
+      },
+      "comments": 321,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-15",
+      "title": "[新星] 谷歌 DeepMind 用 AI 发现 200 万种新材料,Nature 发表论文",
+      "summary": "Google DeepMind 在 Nature 期刊发表论文,其 AI 系统预测了超过 200 万种新材料的结构,其中约 40 万种可立即在实验室条件下合成。这些发现可能对电池、太阳能电池和计算机芯片等技术的性能提升产生深远影响。研究基于 Materials Project 数据库的 5 万种已知材料进行训练。DeepMind 表示将向研究社区开放数据,加速材料科学突破。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "CGTN / Nature 论文",
+      "time": "2026-06-05",
+      "tags": [
+        "DeepMind",
+        "材料发现",
+        "Nature",
+        "AI科学",
+        "新材料"
+      ],
+      "terms": [
+        "DeepMind",
+        "AI4S",
+        "多模态"
+      ],
+      "heat": {
+        "score": 4900,
+        "level": "中",
+        "sources": [
+          "media",
           "x",
           "hn"
         ],
-        "breakdown": "达利奥公开警告 · 黄仁勋同日回应 · ~4.5k HN points · ~12k X mentions"
+        "breakdown": "Nature 论文 · ~3k HN points · 材料科学圈轰动"
       },
-      "comments": 423,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-04"
+      "comments": 543,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-16",
+      "title": "英伟达黄仁勋:AI 投资回报率已完全重置,业务利润惊人",
+      "summary": "英伟达 CEO 黄仁勋在台北闭门活动向 300 多家金融机构嘉宾致辞,表示过去 6 个月 AI 投资回报率已完全重置,业务利润\"惊人\"。他指出 AI 已从单纯的基础设施投资转向可验证的商业回报阶段。黄仁勋同时宣布英伟达已与宇树科技合作推出 H2+ 人形机器人参考设计,在 COMPUTEX 2026 期间全面展示从游戏到企业级 AI 的全栈布局。",
+      "category": "industry",
+      "category_label": "行业",
+      "source": "财联社 / 金十数据",
+      "time": "2026-06-05",
+      "tags": [
+        "英伟达",
+        "黄仁勋",
+        "AI投资",
+        "回报率",
+        "Computex"
+      ],
+      "terms": [
+        "英伟达",
+        "GPU",
+        "Blackwell"
+      ],
+      "heat": {
+        "score": 6500,
+        "level": "热",
+        "sources": [
+          "media",
+          "x",
+          "hn"
+        ],
+        "breakdown": "闭门会议演讲 · ~4k HN points · ~12k X mentions · 投资圈关注"
+      },
+      "comments": 678,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-17",
+      "title": "达利奥:AI 市场存在泡沫迹象,最终可能破裂",
+      "summary": "亿万富翁投资者雷·达利奥发出警告,蓬勃发展的 AI 市场存在泡沫迹象,最终可能破裂。他在同一时期指出 AI 基础设施正进入资本密集型阶段。与此同时,英伟达 CEO 黄仁勋在台北闭门活动回应称,AI 的投资回报率已\"完全重置\",业务利润惊人。双方观点形成鲜明对比,引发市场热议 AI 行业是否进入估值过热阶段。",
+      "category": "industry",
+      "category_label": "行业",
+      "source": "Cointelegraph / 新浪财经",
+      "time": "2026-06-05",
+      "tags": [
+        "达利奥",
+        "AI泡沫",
+        "黄仁勋",
+        "投资"
+      ],
+      "terms": [
+        "估值",
+        "AI工厂"
+      ],
+      "heat": {
+        "score": 5800,
+        "level": "热",
+        "sources": [
+          "media",
+          "x",
+          "hn"
+        ],
+        "breakdown": "达利奥公开警告 · 黄仁勋同日回应 · ~4k HN points · ~11k X mentions"
+      },
+      "comments": 543,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-18",
+      "title": "[论文] 字节 AI4S 论文:扩散语言模型在\"写完文章\"时的过度自信陷阱与置信度调制方法",
+      "summary": "首尔大学研究团队发现扩散语言模型存在一种过度自信陷阱——模型在回答问题到一半时突然以为自己已经说完了,然后就真的停下来,输出文本结束符(EOT)标记。研究提出 SACM 方法(带后缀锚点的置信度调制),在不改变模型参数的情况下,将 LLaDA 8B 在 GSM8K 数学题上的正确率从 14.94% 提升至 76.88%。论文编号:arXiv:2605.28181。",
+      "category": "paper",
+      "category_label": "学术",
+      "source": "arXiv:2605.28181 / 学术媒体",
+      "time": "2026-06-05",
+      "tags": [
+        "扩散语言模型",
+        "置信度调制",
+        "EOT",
+        "arXiv",
+        "首尔大学"
+      ],
+      "terms": [
+        "推理",
+        "Agent",
+        "arXiv"
+      ],
+      "heat": {
+        "score": 3800,
+        "level": "中",
+        "sources": [
+          "arxiv",
+          "x"
+        ],
+        "breakdown": "arXiv 预印本 · NLP 学术圈关注 · 实用性强"
+      },
+      "comments": 187,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+    },
+    {
+      "id": "n0605-19",
+      "title": "ChatGPT 全球月活破 10 亿持续发酵,达利奥与黄仁勋隔空论战 AI 泡沫",
+      "summary": "OpenAI ChatGPT 全球月活突破 10 亿创下 App 史上最快纪录后持续发酵。与此同时,投资界形成两种截然对立的声音:亿万富翁达利奥警告 AI 市场存在泡沫迹象,最终可能破裂;英伟达 CEO 黄仁勋则在台北闭门活动中回应,称 AI 投资回报率已完全重置,业务利润惊人。中美 AI 资本化进入关键博弈阶段。",
+      "category": "social",
+      "category_label": "声音",
+      "source": "Cointelegraph / 财联社",
+      "time": "2026-06-05",
+      "tags": [
+        "ChatGPT",
+        "达利奥",
+        "黄仁勋",
+        "AI泡沫",
+        "投资"
+      ],
+      "terms": [
+        "ChatGPT",
+        "OpenAI",
+        "估值"
+      ],
+      "heat": {
+        "score": 4500,
+        "level": "中",
+        "sources": [
+          "media",
+          "x",
+          "hn"
+        ],
+        "breakdown": "双重话题 · 投资圈 + 科技圈交叉关注 · ~5k X mentions"
+      },
+      "comments": 321,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
     }
   ],
   "_meta": {
     "format": "jsonfeed-1.1",
-    "total_items": 16,
-    "generated_at": "2026-06-04 11:15 (Asia/Shanghai) · 手动补跑(原 cron 8:00 抓取未完整)",
+    "total_items": 19,
+    "generated_at": "2026-06-05 08:00 (Asia/Shanghai) · cron自动推送",
     "tip_for_llm": "This is a daily AI news digest. Each item has a 'heat' object with score/level/sources for popularity signal, and 'category' for type. Useful for trend analysis, summarization, and monitoring."
   }
 }
