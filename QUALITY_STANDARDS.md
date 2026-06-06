@@ -54,6 +54,15 @@
 - **detail**:2-3 句讲清技术意义或商业价值
 - **links**:1-3 个外链(官方 / 论文 / 报道)
 
+### 1.6 JSON 硬规则(事故 #008 教训)
+
+- 【**任何 JSON 字符串内禁止内嵌 ASCII 双引号 `"`**】
+  - 错:`"summary": "今天 AI 圈\"很火\""` ← 看着对,实际 JSON 合法,但 hand-writing 易写错
+  - 对:`"summary": "今天 AI 圈‘很火’"`(单引号)或 `"summary": "今天 AI 圈“很火”"`(中文引号)
+  - 验证:写完 news.json 立刻 `python3 -c "import json; json.load(open('data/news.json'))"` 不报错
+- **所有手动写 JSON 之前先跑 validate_news.py** — 它有 try/except 兜底
+- **占位骨架**必须以 `🚧 PLACEHOLDER` 开头,不能只有日期描述(避免被误认为真早报)
+
 ---
 
 ## 2. 视觉/交互质量(HTML)

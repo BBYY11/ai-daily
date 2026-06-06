@@ -226,3 +226,54 @@
 - [ ] 我手写 news.json 之前先 `cp` 备份到 archive
 - [ ] 推送脚本加 `--no-data` 选项(只推 HTML/CSS/JS/MD)
 - [ ] 占位骨架改用 "🚧 今日早报生成中,见档案 archive/{昨天}.json" 显眼标识
+
+---
+
+## 2026-06-06  · #009 · 全栈体检发现的隐性 bug(预防性)
+
+**症状**
+用户说"不要再错了"后,Mavis 做了一次全栈体检。表面上系统正常,但发现 5 个隐性 bug。
+
+**根因**
+
+1. **watchdog active_hours 边界**(07:00-10:30,边界 10:30 算 "outside active hours" 被跳过)
+2. **watchdog prompt 里 Python -c 引号转义语法错误**(跟 #007 同一个坑)
+3. **push_to_github.sh 默认全推所有文件,无数据保护**(导致 #008 我自己覆盖 6-05 早报)
+4. **fetch_news.py archive_today 没 try/except**(坏 JSON 让整个 cron 挂)
+5. **fetch_news.py 占位骨架没有 🚧 显眼标识**(导致用户以为"6-05 早报"是占位)
+6. **没有 validate_news.py 质量门**(LLM 写空 news.json 也能推上去)
+7. **JSON 字符串内嵌 ASCII 双引号没硬规则**(导致 #008)
+
+**修复(已完成)**
+1. ✅ 新建 `scripts/check_health.py`(watchdog 专用,文件脚本,无引号陷阱)
+2. ✅ 新建 `scripts/validate_news.py`(主 cron 写完 news.json 必须跑)
+3. ✅ push_to_github.sh 加"news.json date ≠ 今天"硬门(支持 --force-data 绕过)
+4. ✅ fetch_news.py archive_today 加 try/except + 占位骨架用 🚧 显眼标识 + 写后 json 验证
+5. ✅ watchdog prompt 改成调 check_health.py 文件脚本
+6. ✅ watchdog active_hours 07:00-10:35
+7. ✅ 主 cron prompt 集成 validate_news.py(写完必须通过才能推送)
+8. ✅ QUALITY_STANDARDS.md 加 JSON 字符串硬规则
+
+**测试结果**
+- `python3 fetch_news.py 2026-06-06` → ✓
+- `python3 validate_news.py` → ✓ OK 16 条 4 headline 4 rising
+- `python3 check_health.py` → ✓ OK
+- `python3 gen_feed.py / gen_json_feed.py / gen_digest.py` → ✓
+- `bash push_to_github.sh`(date=今天)→ ✓ 49 文件推送
+- `bash push_to_github.sh`(date=昨天,模拟误操作)→ ❌ REFUSE 拒绝推送
+- 已用 GitHub API 验证 news.json 17KB date=2026-06-06 已上仓库
+
+**教训**
+- **"看着对"≠"跑得通"**——体检发现 7 个隐性 bug
+- **预防比治疗便宜 10 倍**——花 30 分钟体检,省下未来 N 个"用户报告后再修"
+- **每次新增脚本,必须问"LLM 写错时会不会炸"**——LLM 写中文文本用 ASCII 双引号是高频错误
+- **"全栈体检"应该每 2 周做一次**,不是出问题才看
+
+**未来体检清单(每 2 周)**
+- [ ] 5 个 cron 状态(enabled/last_result/last_error/next_run)
+- [ ] 4 个核心数据文件 date 对齐
+- [ ] push 脚本 4 种状态模拟(date=今天 / 不是今天 / PLACEHOLDER / 损坏)
+- [ ] validate_news.py / check_health.py exit 0
+- [ ] 7 个 HTML 都能渲染(用 puppeteer 截图桌面 + 手机)
+- [ ] 3 种 feed XML/JSON/MD 合法
+- [ ] GitHub 关键文件 sha 不变(说明没漏推)
