@@ -324,3 +324,44 @@
 - [x] 写 sync_check.py
 - [ ] 把 sync_check.py 接到 watchdog,30 分钟一次
 - [ ] 每天 healthcheck 跑一次 sync_check.py
+
+---
+
+## 2026-06-06  · #011 · GitHub Actions 启用过程(2 个隐藏坑)
+
+**症状**
+- 启动 GitHub Actions workflow(`.github/workflows/healthcheck.yml`)
+- 第一次 push 失败 — API 报 404(因为 Contents API 不能推 `.github/`)
+- 改用 git 协议直接 push,GitHub 报:`refusing to allow a Personal Access Token to create or update workflow .github/workflows/healthcheck.yml without 'workflow' scope`
+- 解决:用户升级 token 加 `workflow` scope
+- 推上去,第一次 run 失败 — `Validate feeds` step 报 exit 100(xmllint 不存在)
+- 改用 Python xml.etree 验证,run 成功
+
+**根因(2 个隐藏坑)**
+1. **`.github/` 目录 Contents API 不能推** — GitHub 安全机制,任何用 Contents API 写 `.github/*` 都被拒(包括 workflow 文件)
+2. **workflow 文件必须用带 `workflow` scope 的 token** — `repo` scope 不足以创建/更新 workflow 文件,需要额外 `workflow` scope
+3. **GitHub Actions runner 没装 xmllint** — 装包又需要 sudo,新 runner `apt-get install` 会无声失败,导致 step 整体 exit 100
+
+**修复**
+1. ✅ token 升级加 `workflow` scope(用户操作)
+2. ✅ 改用 `urllib + base64 + PUT /contents` API 直接传 workflow 文件(我帮推的,token 升级后能用了)
+3. ✅ workflow 改用 Python `xml.etree.ElementTree` 验证 RSS XML,不再依赖系统包
+4. ✅ 加 `set +e` 防止 step 早期失败带崩整个 workflow
+
+**最终结果(12:55 run #27053129592)**
+- ✅ 9 个 step 全部 success
+- 包含 6 项真硬检查 + 3 项环境步骤
+- 触发器:push / schedule (UTC 0:30) / workflow_dispatch
+
+**教训**
+- **GitHub 的安全机制是有层次的**:Contents API + workflow scope + Actions runner 包缺失,任何一个都可能让 CI 启动失败
+- **任何"装系统包"在 CI 里都脆弱** — 优先用标准库(urllib, xml.etree, json, hashlib)
+- **token scope 要一次到位** — `repo` + `workflow` 一起勾,别拆
+
+**当前 3 通道检查机制**
+- A 通道(GitHub Actions)✅ 启用,每次 push + 每天 8:30 自动跑
+- B 通道(daemon_check.sh)✅ 可用,任何有 cron 的机器可装
+- C 通道(LLM cron)⚠️ 不可靠,只辅助
+
+**未来每 2 周体检清单加一项**
+- [ ] 看 GitHub Actions 最近 1 周的 run 状态(全 ✓?)
