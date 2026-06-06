@@ -270,12 +270,22 @@ def main():
         dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
         weekday_cn = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][dt.weekday()]
         skeleton = build_seed_news(date_str, weekday_cn)
-        # 标 generated_at 为占位时间,让上层 agent 能识别这是占位
-        skeleton["generated_at"] = f"{date_str} 08:00 (Asia/Shanghai) · PLACEHOLDER · 等待 LLM 生成"
-        skeleton["summary"] = f"{date_str} 早报正在生成中,请稍后刷新..."
+        # 显眼 PLACEHOLDER 标识,避免被误认为真早报
+        skeleton["generated_at"] = f"{date_str} 08:00 (Asia/Shanghai) · 🚧 PLACEHOLDER · 等待 LLM 生成"
+        skeleton["summary"] = f"🚧 占位骨架 · {date_str} 早报生成中 · 请稍后刷新或查看归档"
+        skeleton["stats"] = {"total_items": 0, "by_category": {}}
+        skeleton["weekly_arc"] = {"label": "本周脉络", "weeks": []}
+        skeleton["monthly_arc"] = {"label": "本月脉络", "months": []}
         with open(news_path, "w", encoding="utf-8") as f:
             json.dump(skeleton, f, ensure_ascii=False, indent=2)
-        print(f"[fetch_news] 占位骨架已写入 news.json(date={date_str})")
+        print(f"[fetch_news] 占位骨架已写入 news.json(date={date_str}, items=0)")
+        # 写后验证
+        try:
+            with open(news_path, "r", encoding="utf-8") as f:
+                json.load(f)
+            print(f"[fetch_news] 写后验证:JSON 合法")
+        except Exception as e:
+            print(f"[fetch_news] ⚠ 写后验证失败: {e}")
 
 
 if __name__ == "__main__":

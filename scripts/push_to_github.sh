@@ -57,6 +57,28 @@ while IFS= read -r -d '' file; do
   FILES+=("$rel")
 done < <(find . -type f -not -path './.git/*' -print0 | sort -z)
 
+# 4.0 【数据保护】检查 news.json 是否是今天的——不是今天则警告、提示用户
+if [ -f "data/news.json" ]; then
+  NEWS_DATE=$(python3 -c "import json; d=json.load(open('data/news.json')); print(d.get('date',''))" 2>/dev/null)
+  TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+  if [ -z "$NEWS_DATE" ]; then
+    echo "[push] ⚠ news.json 读不出 date,可能 JSON 损坏"
+  elif [ "$NEWS_DATE" != "$TODAY" ]; then
+    # 允许两个例外:1) summary 含 PLACEHOLDER 2) 手动带上 --force-data
+    IS_PLACEHOLDER=$(python3 -c "import json; d=json.load(open('data/news.json')); s=d.get('summary',''); print('yes' if ('PLACEHOLDER' in s or '🚧' in s) else 'no')" 2>/dev/null)
+    if [ "$IS_PLACEHOLDER" = "yes" ] || [ "$1" = "--force-data" ]; then
+      echo "[push] ⚠ news.json date=$NEWS_DATE != 今天($TODAY),但属于 PLACEHOLDER 或 --force-data,放行" >> "$LOG"
+    else
+      echo "[push] ❌ REFUSE: news.json date=$NEWS_DATE 不是今天($TODAY),拒绝推送!"
+      echo "[push] 如果确认要推(比如手写补当天的),加 --force-data 参数"
+      echo "[push] 建议:先 cp data/news.json data/archive/${NEWS_DATE}.json 备份"
+      exit 2
+    fi
+  else
+    echo "[push] ✓ news.json date=$NEWS_DATE == 今天,放行" >> "$LOG"
+  fi
+fi
+
 echo "[push] 共 ${#FILES[@]} 个文件" >> "$LOG"
 
 # 4. 用 Git Data API 创建 blob(每个文件一个)
