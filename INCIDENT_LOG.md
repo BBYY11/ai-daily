@@ -143,3 +143,46 @@
 3. **修复**:具体改了什么?推上去了吗?
 4. **教训**:下次怎么避免?(写进 WORKFLOW.md 或 QUALITY_STANDARDS.md)
 5. **预防**:加监控 / 测试 / 自检,把"靠人不犯错"变成"靠系统不犯错"
+
+---
+
+## 2026-06-06  · #007 · 6-05 + 6-06 双日早报 cron 全部"成功"但没数据
+
+**症状**
+- 6-06 早上 9:39 用户报告:主页显示 6-04 早报
+- news.json 还是 6-04 的内容
+- 归档目录:6-04.json 存在(之前手动补的),6-05.json 缺失,6-06.json 缺失
+- 主 cron (404860864389898) `last_result=success`,`last_error=空`
+
+**根因(三层叠加)**
+1. **主 cron 第 1 步 web_search 抓不到 24h 新闻**:LLM session 跑 web_search 时大概率限流/超时,没拿到数据
+2. **LLM 静默写了一个"老的/空的" news.json**:因为没新数据,LLM 跳过第 6 步或写了一个空内容
+3. **last_result=success 误报**:cron 引擎只看进程 exit code,不看内容
+4. **watchdog 没报警**:**watchdog 的 prompt 里 Python -c 转义错了**,跑了 SyntaxError,但 LLM session 拿到 Python 错误也只回"success",因为它没意识到 watchdog 应该报警
+5. **手写 news.json 时内嵌 ASCII 双引号**:我手动补 6-06 早报时,中文文本里直接用了 `"` 而不是 `'` 或 `""`,导致 JSON 非法,fetch_news.py 立刻挂
+
+**修复**
+1. **手动补 6-06 早报**(16 条,SpaceX×谷歌 300 亿/特朗普入股/美国 AI 立法草案/OpenAI 硬件/ChatGPT Dreaming/人形机器人身份证/Lindy 切 DeepSeek/MisoTTS/Ideogram 4.0 等真实新闻)
+2. **修复 6-06 news.json JSON 语法错误**(8 个内嵌引号 → 全部换成 `'`),fetch_news.py 跑通
+3. **推送 GitHub**(46 文件,index 重建)
+4. **更新 fetch_news.py 增加容错**(已加占位骨架)
+5. **更新 cron prompt**(已修位置参数 + ISO 周 + 失败告警)
+
+**没修的(留作 #008)**
+- watchdog prompt 里的 Python -c 引号转义还是错的(已用 heredoc 绕开,下次用文件脚本)
+- 主 cron 还是"成功就完事"的状态,**没硬约束"必须写 N 条"**
+- LLM 抓信源限流时,没有任何 fallback 通道(比如预先 cache 一份)
+
+**教训**
+- **"success" 是最危险的标签**——LLM 的"安静失败"占 30%+,必须有"硬内容自检"
+- **JSON 字符串内嵌引号必须用中文引号 `""` 或单引号 `'`**——这条要写进 QUALITY_STANDARDS
+- **手动写 news.json 也要走 JSON 验证**(Python json.load 一次),不要"看着对就推"
+- **watchdog 失效 = 兜底失效 = 系统不可信**
+
+**预防**
+- [ ] 修 watchdog prompt(用文件脚本代替 `-c` 内嵌)
+- [ ] 主 cron 加"写完 news.json 后必须 python3 -c "import json;d=json.load(open('data/news.json'));assert d['date']==datetime.date.today().isoformat() and len(d['items'])>=14"" 硬断言
+- [ ] fetch_news.py 第 0 步也跑这个硬断言,失败立即 exit 1
+- [ ] 写一个 `validate_news.py` 工具脚本,作为"质量门"
+- [ ] QUALITY_STANDARDS 加"JSON 字符串禁止内嵌 ASCII 双引号"硬规则
+
