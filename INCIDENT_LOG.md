@@ -186,3 +186,43 @@
 - [ ] 写一个 `validate_news.py` 工具脚本,作为"质量门"
 - [ ] QUALITY_STANDARDS 加"JSON 字符串禁止内嵌 ASCII 双引号"硬规则
 
+
+---
+
+## 2026-06-06  · #008 · 我自己推送文档时把 6-05 早报覆盖成 6-04
+
+**症状**
+- 用户说"昨天 6-05 看到了,但今天又变成 6-04"
+- 用 GitHub commit history 排查:6-05 早上 8:05 cron **真的写出了 6-05 早报 16 条** ✓
+- 但 6-05 17:50 我推送 WORKFLOW/QUALITY/INCIDENT 三份文档时,**意外把 news.json 也一起推送**——那时本地 news.json 是 6-04(我之前手写的)**6-05 真早报被覆盖了**
+
+**根因**
+- 我(AI 编辑)的 push 操作习惯:**`bash scripts/push_to_github.sh` 会无脑推送所有文件,包括数据文件**
+- 当我"修一下 HTML 顺便推"时,本意只推 HTML,但脚本把整个 `data/` 目录都推了
+- 6-05 真早报被推回 6-04 内容(那时本地是 6-04 早报)
+- **6-05.json 归档没生成**(我手写时没经过 fetch_news.py 的归档逻辑)
+
+**修复(已完成)**
+1. **从 GitHub 历史恢复 6-05 真早报**:用 API 抓 `e6ec28d1` commit 的 news.json → 18KB / 19 条 / 周五
+2. **恢复 6-05 的 3 种 feed**:feed.xml / feed.json / digest.md 都从那个 commit 拿了回来
+3. **归档 6-05.json**:放到 `data/archive/2026-06-05.json`
+4. **重建 archive/index.json**:8 天(5-30 到 6-05,5-29 因为 6-04 那天被覆盖没了)
+5. **推送 GitHub**:47 文件
+6. **6-06 主页维持手写的 16 条 6-06 早报**
+
+**没修的(下次必做)**
+1. **推送脚本应只推"明确列出的文件"**,而不是 `find . -type f` 全收
+2. **手动写 news.json 之前必须先 `cp data/news.json data/archive/$(date +%Y-%m-%d).json`** — 强制保留
+3. **加"推送前确认 news.json 是不是今天的"硬门**——如果不是今天,提示"今天要推的早报,会覆盖昨天"
+
+**教训**
+- **"修一下 HTML 顺便推"是个危险操作**——任何"顺便"都应该只推明确知道要推的文件
+- **GitHub commit history 是数据恢复的金矿**——这次救回 6-05 早报全靠它
+- **手动写数据文件时,要先备份**——我太随便了,直接 `Write` 覆盖
+- **占位骨架的"2026-XX-XX 早报正在生成中"文字让用户误以为是真早报**——占位应该有更明显的"PLACEHOLDER"标识,而不是日期
+
+**预防**
+- [ ] push_to_github.sh 增加"数据文件确认"门:news.json.date != 今天 → 拒绝推,提示用户
+- [ ] 我手写 news.json 之前先 `cp` 备份到 archive
+- [ ] 推送脚本加 `--no-data` 选项(只推 HTML/CSS/JS/MD)
+- [ ] 占位骨架改用 "🚧 今日早报生成中,见档案 archive/{昨天}.json" 显眼标识
