@@ -69,15 +69,30 @@ jobs:
       # 4. 3 种 feed 合法
       - name: Validate feeds
         run: |
-          # RSS XML
-          if command -v xmllint >/dev/null 2>&1; then
-            xmllint --noout feed.xml && echo "✓ feed.xml 是合法 XML"
-          else
-            apt-get install -y libxml2-utils >/dev/null 2>&1
-            xmllint --noout feed.xml && echo "✓ feed.xml 是合法 XML"
-          fi
+          set +e  # 不让任何子命令的失败让整个 step 挂
+          # RSS XML — 用 Python 的 xml.etree 验证(避免装包)
+          python3 -c "
+          import xml.etree.ElementTree as ET
+          try:
+              tree = ET.parse('feed.xml')
+              root = tree.getroot()
+              items = root.findall('.//item')
+              assert root.tag == 'rss', f'不是 RSS 2.0, 根节点是 {root.tag}'
+              assert len(items) >= 10, f'RSS items 只有 {len(items)} (< 10)'
+              print(f'✓ feed.xml 是合法 RSS 2.0 ({len(items)} items)')
+          except Exception as e:
+              print(f'::error::feed.xml 验证失败: {e}')
+              raise
+          "
           # JSON Feed
           python3 -c "import json; d=json.load(open('feed.json')); assert d.get('version','').startswith('https://jsonfeed.org'), 'jsonfeed 格式错误'; assert len(d.get('items',[]))>=10, 'items 太少'; print(f'✓ feed.json 合法 ({len(d[\"items\"])} items)')"
+          # Markdown
+          python3 -c "
+          content = open('digest.md').read()
+          assert len(content) > 1000, f'digest.md 太小 ({len(content)} chars)'
+          assert content.startswith('# AI Daily'), 'digest.md 标题不是 # AI Daily'
+          print(f'✓ digest.md 合法 ({len(content)} chars)')
+          "
 
       # 5. news.json 跟 archive 一致性
       - name: Cross-check news.json vs archive
