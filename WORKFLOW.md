@@ -166,6 +166,52 @@ done
 
 ---
 
+## 8. 真实检查机制(双通道)
+
+### 8.1 通道 A:GitHub Actions(主要)
+
+`.github/workflows/healthcheck.yml` 在以下情况触发:
+- 每次 push 到 main
+- 每天 UTC 0:30(=北京时间 8:30,主 cron 后 30 分钟)
+- 手动 workflow_dispatch
+
+跑 6 项检查:
+1. 关键文件存在性
+2. news.json schema 验证
+3. index.html 引用 style.css
+4. RSS/JSON Feed 合法
+5. news.json 跟 archive 交叉一致
+6. 文件总数合理性
+
+**任一失败 → commit 状态显示 ✗ → 我会在下一个对话轮手动查 GitHub Actions log**
+
+### 8.2 通道 B:服务器 cron(辅助)
+
+如果用户在能跑 cron 的环境(自己的服务器、本地)装了 `scripts/daemon_check.sh`,加到 crontab:
+```
+*/30 * * * * /path/to/ai-daily/scripts/daemon_check.sh
+```
+脚本会跑 check_health + validate + sync_check,失败 exit 1。
+
+### 8.3 通道 C:LLM session(补充,不可靠)
+
+- ai-daily-watchdog(每 30 分钟 7-10:30)
+- ai-daily-healthcheck(每 6 小时)
+- ai-daily-0800(每天 8:00)
+
+这些 LLM session **会失败而假装成功**(#002/#007/#008 教训),**不能依赖**。
+只能作为辅助通知手段,真告警靠 A + B。
+
+### 8.4 优先级
+
+发现异常时,排查顺序:
+1. 看 GitHub Actions 最近一次 run(通道 A)
+2. 看 server daemon_check.log(通道 B,如果装了)
+3. 看 cron last_error(通道 C)
+4. **不要只看 cron last_result=success**——可能误报
+
+---
+
 ## 8. 变更记录
 
 | 日期 | 变更 | 原因 |

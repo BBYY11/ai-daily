@@ -58,6 +58,10 @@ while IFS= read -r -d '' file; do
     *.pyo) continue ;;
     *.log) continue ;;
     .DS_Store) continue ;;
+    # .github/ 目录不能通过 Contents API 推送(GitHub 安全机制)
+    # 要推 .github/workflows/*.yml 需要带 'workflow' scope 的 token
+    # 详见 scripts/README.md
+    .github/*) continue ;;
   esac
   FILES+=("$rel")
 done < <(find . -type f -not -path './.git/*' -print0 | sort -z)
