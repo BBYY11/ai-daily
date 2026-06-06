@@ -49,13 +49,32 @@ while IFS= read -r -d '' file; do
   case "$rel" in
     .git/*) continue ;;
   esac
-  # 排除 assets/ 和 snap.js(以 .gitignore 为准,这里手动起一份防快选)
+  # 排除(以 .gitignore 为准,这里手动起一份防快选)
   case "$rel" in
     assets/preview-*.png) continue ;;
     snap.js) continue ;;
+    scripts/__pycache__/*) continue ;;
+    *.pyc) continue ;;
+    *.pyo) continue ;;
+    *.log) continue ;;
+    .DS_Store) continue ;;
   esac
   FILES+=("$rel")
 done < <(find . -type f -not -path './.git/*' -print0 | sort -z)
+
+# 4.0.5 【幽灵文件检查】对比本地文件列表与仓库远端,提醒需删除的远端文件
+# (API 拉取所有文件可能超大,这里只提醒 4 个已知的)
+REMOTE_TO_DELETE=(
+  "weekly.html"            # 6-04 改名后未删除
+  "snap.js"                # .gitignore 之前的 commit 遗留下
+  "scripts/__pycache__"    # pycache 误推
+)
+for f in "${REMOTE_TO_DELETE[@]}"; do
+  REMOTE_CHECK=$(curl -fsS -H "$AUTH" -H "$ACCEPT" "$API/repos/$REPO/contents/$f" 2>>"$LOG" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('name',''))" 2>/dev/null)
+  if [ -n "$REMOTE_CHECK" ]; then
+    echo "[push] ⚠ 远端有幽灵文件 $f,本次推送不会删除它。请手动 git rm 或在 GitHub 网页删除" >> "$LOG"
+  fi
+done
 
 # 4.0 【数据保护】检查 news.json 是否是今天的——不是今天则警告、提示用户
 if [ -f "data/news.json" ]; then
