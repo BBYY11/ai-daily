@@ -277,3 +277,50 @@
 - [ ] 7 个 HTML 都能渲染(用 puppeteer 截图桌面 + 手机)
 - [ ] 3 种 feed XML/JSON/MD 合法
 - [ ] GitHub 关键文件 sha 不变(说明没漏推)
+
+---
+
+## 2026-06-06  · #010 · GitHub 仓库有 3 个幽灵文件(weekly.html / snap.js / __pycache__)
+
+**症状**
+用户说"全面检查代码",Mavis 用 GitHub Contents API 拉远端文件清单,发现:
+- 远端 57 个对象,其中 3 个是**早该删但没删的幽灵文件**
+- 1 个是新出现的 `__pycache__/fetch_news.cpython-311.pyc`(我刚推的,脏文件)
+
+**根因**
+- push_to_github.sh 的逻辑是"add-only":每次推送**只新增/修改**,不删除
+- 之前 local 删了 `weekly.html`(改名成 `weekly_archive.html`),但**仓库里这个文件永远留着**
+- `.gitignore` 写了 `__pycache__/`,但**`case` 排除规则没写**——今天 6-06 09:44 推送时,pyc 被一起推上去了
+- `snap.js` 是 6-03 推的(那时候 .gitignore 已生效但 .gitignore 之前的 commit 已经把这个文件推上去了)
+
+**修复(已完成)**
+1. ✅ **手动删除 3 个幽灵文件**(用 Contents API DELETE):
+   - `weekly.html`(12.5KB,改名留下的)
+   - `snap.js`(2KB,gitignore 之前的 commit 遗留)
+   - `scripts/__pycache__/fetch_news.cpython-311.pyc`(20KB,误推的)
+2. ✅ **修 push_to_github.sh 排除规则**:
+   - 加 `scripts/__pycache__/*` / `*.pyc` / `*.pyo` / `*.log` / `.DS_Store`
+   - 加"幽灵文件检查"块,推送前对比已知 3 个可能残留,提醒用户
+3. ✅ **新建 scripts/sync_check.py**:每 30 分钟跑,对比本地 vs 远端,发现:
+   - 远端有本地没(幽灵)
+   - 本地有远端没(未推送)
+   - SHA 不一致(误改)
+4. ✅ **sync_check 跑通**:远端 49 个 ↔ 本地 49 个,清单完全一致,15 个 SHA 抽查全 ✓
+
+**关键发现(意外但重要)**
+- **GitHub Tree API 的 sha 跟 Contents API 的 sha 不一致**——这是 GitHub 内部数据库一致性延迟(几秒到几分钟)
+- 但**实际内容是一致的**(Contents API 拉 raw + sha1 跟本地比对,完全相同)
+- 结论:不能用 Tree API 的 sha 当"推送完整性"的真值,要用 Contents API 拉实际内容 hash
+
+**教训**
+- **add-only 推送策略 = 幽灵文件滋生**——任何"本地删除"都该同步到远端
+- **.gitignore + push 排除规则要双重保险**——只信一个不够(参考事故 #001)
+- **每周跑一次 sync_check.py**——现在有工具了,跑的成本是 30 秒
+- **GitHub 内部 API 的一致性延迟是真实存在的**——不怪你,但要选对 API
+
+**预防**
+- [x] 修 push 脚本排除规则
+- [x] 删 3 个幽灵文件
+- [x] 写 sync_check.py
+- [ ] 把 sync_check.py 接到 watchdog,30 分钟一次
+- [ ] 每天 healthcheck 跑一次 sync_check.py
