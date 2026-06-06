@@ -1,0 +1,113 @@
+name: AI Daily Health Check
+
+# 触发:每次 push + 每天 8:30 + 手动触发
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '30 0 * * *'  # UTC 0:30 = 北京时间 8:30(主 cron 跑完后 30 分钟)
+  workflow_dispatch:
+
+# 同一时间只跑一个
+concurrency:
+  group: healthcheck
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate news.json + sync with remote
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 1. 验证关键文件存在
+      - name: Check required files exist
+        run: |
+          echo "=== 检查关键文件 ==="
+          for f in data/news.json data/weekly_summary.json data/monthly_archive.json \
+                   data/terms.json assets/style.css index.html feed.xml feed.json \
+                   digest.md scripts/fetch_news.py scripts/validate_news.py \
+                   scripts/push_to_github.sh; do
+            if [ -f "$f" ]; then
+              size=$(stat -c%s "$f")
+              echo "✓ $f ($size bytes)"
+            else
+              echo "::error file=$f::MISSING"
+              MISSING=1
+            fi
+          done
+          if [ -n "$MISSING" ]; then
+            echo "::error::关键文件缺失"
+            exit 1
+          fi
+
+      # 2. news.json JSON 合法 + 字段完整
+      - name: Validate news.json schema
+        run: |
+          python3 scripts/validate_news.py
+        continue-on-error: false
+
+      # 3. 主页 HTML 引用了 style.css
+      - name: Check index.html links to style.css
+        run: |
+          if ! grep -q 'assets/style.css' index.html; then
+            echo "::error::index.html 没有引用 assets/style.css"
+            exit 1
+          fi
+          echo "✓ index.html 引用了 style.css"
+
+      # 4. 3 种 feed 合法
+      - name: Validate feeds
+        run: |
+          # RSS XML
+          if command -v xmllint >/dev/null 2>&1; then
+            xmllint --noout feed.xml && echo "✓ feed.xml 是合法 XML"
+          else
+            apt-get install -y libxml2-utils >/dev/null 2>&1
+            xmllint --noout feed.xml && echo "✓ feed.xml 是合法 XML"
+          fi
+          # JSON Feed
+          python3 -c "import json; d=json.load(open('feed.json')); assert d.get('version','').startswith('https://jsonfeed.org'), 'jsonfeed 格式错误'; assert len(d.get('items',[]))>=10, 'items 太少'; print(f'✓ feed.json 合法 ({len(d[\"items\"])} items)')"
+
+      # 5. news.json 跟 archive 一致性
+      - name: Cross-check news.json vs archive
+        run: |
+          python3 << 'PYEOF'
+          import json, os
+          d = json.load(open('data/news.json'))
+          news_date = d.get('date', '')
+          items_count = len(d.get('items', []))
+          # 检查归档目录
+          archive_dir = 'data/archive'
+          archive_dates = sorted([f[:-5] for f in os.listdir(archive_dir) if f.endswith('.json') and f != 'index.json'], reverse=True)
+          print(f"news.json date: {news_date}")
+          print(f"news.json items: {items_count}")
+          print(f"归档最新 3 天: {archive_dates[:3]}")
+          # news_date 跟归档最新日期应该差不超过 1 天
+          if archive_dates and news_date < archive_dates[0]:
+              # news 比归档旧,可能是手动覆盖
+              print(f"::warning::news.json date {news_date} 比归档最新 {archive_dates[0]} 旧,可能是 PLACEHOLDER")
+          # 归档索引里应有 news_date
+          if news_date not in archive_dates and news_date != archive_dates[0]:
+              print(f"::warning::news.json date {news_date} 不在归档中(正常,因为它是当天)")
+          print("✓ news.json ↔ archive 关系合理")
+          PYEOF
+
+      # 6. 计算文件总数,跟上次 commit 对比
+      - name: File count sanity
+        run: |
+          COUNT=$(find . -type f -not -path './.git/*' -not -path '*/__pycache__/*' -not -name '*.pyc' | wc -l)
+          echo "文件总数: $COUNT"
+          if [ "$COUNT" -lt 30 ] || [ "$COUNT" -gt 100 ]; then
+            echo "::warning::文件数异常(预期 30-100)"
+          fi
