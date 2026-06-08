@@ -1,14 +1,6 @@
 {
   "weeks": [
     {
-      "week": "2026-W23",
-      "week_label": "第 23 周",
-      "start_date": "2026-06-01",
-      "end_date": "2026-06-07",
-      "summary": "第 23 周(6/1 - 6/7)是「资本 + 算力 + 监管」三主线共振的一周。头条是 Anthropic IPO 全链路打通:6/1 秘密递表、6/2 收 650 亿美元 H 轮估值 9650 亿首超 OpenAI、6/5 正式递交 S...",
-      "key_themes_count": 5
-    },
-    {
       "week": "2026-W22",
       "week_label": "第 22 周",
       "start_date": "2026-05-25",
@@ -17,5 +9,5 @@
       "key_themes_count": 5
     }
   ],
-  "total": 2
+  "total": 1
 }

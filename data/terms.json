@@ -5,10 +5,7 @@
     "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
     "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
     "links": [
-      {
-        "label": "arXiv 2605.05191",
-        "url": "https://arxiv.org/abs/2605.05191"
-      }
+      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
     ]
   },
   "Qwen": {
@@ -52,10 +49,7 @@
     "summary": "Hacker News 的产品发布板块,创作者亲手发帖,社区以项目质量投票。",
     "detail": "Show HN 上 1k+ points 的项目常预示未来 6 个月的趋势。",
     "links": [
-      {
-        "label": "Hacker News Show",
-        "url": "https://news.ycombinator.com/show"
-      }
+      {"label": "Hacker News Show", "url": "https://news.ycombinator.com/show"}
     ]
   },
   "Product Hunt": {
@@ -64,10 +58,7 @@
     "summary": "全球每日新产品发现平台,AI 工具日榜是行业内最具风向标意义的产品榜单。",
     "detail": "PH 上 #1 的 AI 工具,几乎都会在 2 周内获得大量媒体报道。",
     "links": [
-      {
-        "label": "Product Hunt AI",
-        "url": "https://www.producthunt.com/topics/artificial-intelligence"
-      }
+      {"label": "Product Hunt AI", "url": "https://www.producthunt.com/topics/artificial-intelligence"}
     ]
   },
   "GitHub Trending": {
@@ -76,10 +67,7 @@
     "summary": "GitHub 官方每日榜单,按仓库 24h 涨星排序,被视作开源世界最有用的'早期信号'。",
     "detail": "Trending 出现的新面孔(陌生名字)往往比'老牌项目'更有信息量。",
     "links": [
-      {
-        "label": "GitHub Trending",
-        "url": "https://github.com/trending"
-      }
+      {"label": "GitHub Trending", "url": "https://github.com/trending"}
     ]
   },
   "Reddit r/LocalLLaMA": {
@@ -95,10 +83,7 @@
     "summary": "Y Combinator 旗下的技术新闻聚合社区,首页点数的'含金量'在技术圈公认最高。",
     "detail": "首页出现 30+ 分钟且点数 > 500 的几乎都是值得关注的趋势事件。",
     "links": [
-      {
-        "label": "Hacker News",
-        "url": "https://news.ycombinator.com/"
-      }
+      {"label": "Hacker News", "url": "https://news.ycombinator.com/"}
     ]
   },
   "HN points": {
@@ -170,14 +155,8 @@
     "summary": "英伟达下一代 GPU 架构,接替 Blackwell,主打推理与能效。命名取自确认暗物质存在证据的天文学家 Vera Rubin。",
     "detail": "Vera Rubin 平台整合新一代 GPU + CPU Vera,设计目标是让 AI 工厂在每兆瓦 token 性能上做到极致,继续巩固英伟达在算力层的霸主地位。",
     "links": [
-      {
-        "label": "NVIDIA 官方",
-        "url": "https://nvidianews.nvidia.com/"
-      },
-      {
-        "label": "The Verge 报道",
-        "url": "https://www.theverge.com/"
-      }
+      {"label": "NVIDIA 官方", "url": "https://nvidianews.nvidia.com/"},
+      {"label": "The Verge 报道", "url": "https://www.theverge.com/"}
     ]
   },
   "RTX Spark": {
@@ -186,10 +165,7 @@
     "summary": "英伟达首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + 神经处理单元,主打本地大模型推理。",
     "detail": "戴尔、惠普、联想、微软首批支持。它的意义在于把 AI Agent 从云端拽到本地,降低延迟、隐私和推理成本。",
     "links": [
-      {
-        "label": "Wikipedia: AI PC",
-        "url": "https://en.wikipedia.org/wiki/AI_PC"
-      }
+      {"label": "Wikipedia: AI PC", "url": "https://en.wikipedia.org/wiki/AI_PC"}
     ]
   },
   "Nemotron": {
@@ -198,10 +174,7 @@
     "summary": "英伟达自研大语言模型系列,主打多模态、Agent 能力与企业级部署。",
     "detail": "Nemotron 与 NIM 微服务配套发布,常被用于与开源模型做蒸馏比较,也是英伟达从'卖铲子'到'也下场挖金子'的标志。",
     "links": [
-      {
-        "label": "NVIDIA NIM",
-        "url": "https://www.nvidia.com/en-us/ai-software/"
-      }
+      {"label": "NVIDIA NIM", "url": "https://www.nvidia.com/en-us/ai-software/"}
     ]
   },
   "DSX": {
@@ -210,10 +183,7 @@
     "summary": "面向 AI 工厂全生命周期的参考设计与操作系统平台,DSX MaxLPS 支持 45°C 液冷,在固定电力预算内多跑 40% GPU。",
     "detail": "把建 AI 数据中心从'工程难题'变成'参考蓝图',客户可直接复用。",
     "links": [
-      {
-        "label": "NVIDIA 数据中心",
-        "url": "https://www.nvidia.com/en-us/data-center/"
-      }
+      {"label": "NVIDIA 数据中心", "url": "https://www.nvidia.com/en-us/data-center/"}
     ]
   },
   "Isaac GR00T": {
@@ -222,10 +192,7 @@
     "summary": "英伟达推出的通用人形机器人基础模型与参考设计,目标是让机器人能听懂自然语言并执行复杂操作任务。",
     "detail": "GR00T 走'基础模型 + 仿真训练 + 硬件参考'三位一体路线,合作方包括宇树、Figure 等。",
     "links": [
-      {
-        "label": "Isaac GR00T 官方",
-        "url": "https://developer.nvidia.com/isaac/gr00t"
-      }
+      {"label": "Isaac GR00T 官方", "url": "https://developer.nvidia.com/isaac/gr00t"}
     ]
   },
   "HBM": {
@@ -234,10 +201,7 @@
     "summary": "高带宽内存,3D 堆叠的 DRAM,专为大模型训练推理设计。",
     "detail": "HBM3e、HBM4 是当前最紧俏的 AI 供应链环节,SK 海力士、三星、美光三足鼎立。这次三家联合投资 Anthropic,本质是'锁需求'。",
     "links": [
-      {
-        "label": "SK hynix HBM",
-        "url": "https://www.skhynix.com/eng/solutions.do"
-      }
+      {"label": "SK hynix HBM", "url": "https://www.skhynix.com/eng/solutions.do"}
     ]
   },
   "Series H": {
@@ -260,10 +224,7 @@
     "summary": "20 世纪最多产、游走于全世界的匈牙利数学家,以组合学、概率论贡献著称,留下了大量'Erdős 猜想'。",
     "detail": "OpenAI 推翻的是他 1946 年提出的'单位距离问题上界'猜想——这是 AI 首次在主流数学猜想上给出反例级突破。",
     "links": [
-      {
-        "label": "Erdős Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"
-      }
+      {"label": "Erdős Wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"}
     ]
   },
   "单位距离问题": {
@@ -286,10 +247,7 @@
     "summary": "DeepSeek 2026 年主力模型,主打代码与 Agent 任务,API 定价一次性下调 75%。",
     "detail": "DeepSeek 用'开源 + 极致降价 + 架构创新'重画硬件生态成本曲线,被视作'东半球 AI 价格战'的标杆事件。",
     "links": [
-      {
-        "label": "DeepSeek 官方",
-        "url": "https://www.deepseek.com/"
-      }
+      {"label": "DeepSeek 官方", "url": "https://www.deepseek.com/"}
     ]
   },
   "token 经济": {
@@ -340,6 +298,15 @@
     "summary": "机器人能独立运动的关节数量,直接决定其动作灵活度。",
     "detail": "宇树 H2+ 全身 31 自由度 + 每手 25 自由度,合计 81 自由度,在同类人形机器人中属顶级。",
     "links": []
+  },
+  "Context-ReAct": {
+    "name": "Context-ReAct",
+    "category": "Agent / 学术",
+    "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
+    "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
+    "links": [
+      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
+    ]
   },
   "BrowseComp": {
     "name": "BrowseComp",
@@ -431,10 +398,7 @@
     "summary": "基于区块链的事件预测市场,用户用真金白银押注未来事件结果。",
     "detail": "Polymarket 上 Anthropic 83.2% 概率被市场视为 6 月底最佳 AI 模型,反映资本与社区的共识方向。",
     "links": [
-      {
-        "label": "Polymarket",
-        "url": "https://polymarket.com/"
-      }
+      {"label": "Polymarket", "url": "https://polymarket.com/"}
     ]
   },
   "流动性池": {
@@ -450,10 +414,7 @@
     "summary": "Figure AI 第三代人形机器人,主打工业自动化分拣与物流作业。",
     "detail": "200 小时直播 + 25 万包裹零故障,是当前人形机器人'工厂可用性'的最强公开证据之一。",
     "links": [
-      {
-        "label": "Figure AI",
-        "url": "https://www.figure.ai/"
-      }
+      {"label": "Figure AI", "url": "https://www.figure.ai/"}
     ]
   },
   "耐力测试": {
@@ -462,237 +423,5 @@
     "summary": "让机器人在真实生产环境中长时间不间断运行的测试,衡量稳定性与维护成本。",
     "detail": "从 8 小时到 24 小时再到 200 小时,Figure 03 完成了量级跨越,机器人'能用'的下限被显著抬高。",
     "links": []
-  },
-  "Cosmos 3": {
-    "name": "Cosmos 3",
-    "category": "模型 / 英伟达",
-    "summary": "英伟达发布的全球首款全开源全模态物理 AI 世界基础模型,采用混合 Transformer 架构,集成视觉推理、世界生成与动作预测三大能力。在 Artificial Analysis、Physics-IQ 等榜单中世界生成精度排名第一。",
-    "detail": "Cosmos 3 采用推理 Transformer 与生成 Transformer 双模块架构,可原生理解并生成文本、图像、视频、环境音及动作指令,大幅降低物理 AI 训练周期。与 Runway、Agile Robots 等成立的 Cosmos Coalition 联盟推动开放世界模型生态。",
-    "links": [
-      {
-        "label": "NVIDIA 官方博客",
-        "url": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/"
-      }
-    ]
-  },
-  "Vera CPU": {
-    "name": "Vera CPU",
-    "category": "硬件 / 英伟达",
-    "summary": "英伟达为 AI Agent 时代打造的全新架构处理器。全球单线程性能最高,88 个 Olympus 内核通过整体网格互联,内核到内核通信比传统 CPU 快 50%;LPDDR5X 内存 1.2 TB/s 带宽,比最高性能 x86 CPU 高 3 倍;SQL 查询速度快 3 倍,Agent 沙箱性能比 x86 高 1.8 倍。",
-    "detail": "Vera CPU 专为智能体时代设计——智能体活在纳秒级时间尺度,每刻等待都阻碍进入下一步。CPU 不能抢夺 GPU 生成 Token 的电力,必须在高性能同时极度节能。全球 PC产业 100% 参与合作。",
-    "links": [
-      {
-        "label": "NVIDIA 官方",
-        "url": "https://www.nvidia.com/"
-      }
-    ]
-  },
-  "物理AI": {
-    "name": "物理AI (Physical AI)",
-    "category": "概念 / 技术趋势",
-    "summary": "让 AI 系统能够理解真实物理世界并在真实世界中行动的 AI类别,涵盖机器人、自动驾驶车辆和智能空间。核心要求是理解当前环境、预测未来状态、生成特定环境下的动作。",
-    "detail": "物理 AI 是 2026 年最核心的技术趋势之一。黄仁勋在台北 GTC 大会表示:得益于多模态推理语言、视觉和世界模型领域的多项突破,物理 AI 爆发的时代已近在眼前。英伟达 Cosmos 3 是物理 AI 领域的核心基础设施。",
-    "links": [
-      {
-        "label": "NVIDIA Cosmos 3 技术博客",
-        "url": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/"
-      }
-    ]
-  },
-  "世界模型": {
-    "name": "世界模型 (World Model)",
-    "category": "概念 / 技术趋势",
-    "summary": "让 AI 在脑子里先模拟现实世界会如何变化的模型。AI 要拿一个杯子,需要预测手伸过去会不会滑、用多大力会不会碎、里面的水会不会洒。世界模型使 AI 不再局限于屏幕内的任务,而能进入现实世界执行。",
-    "detail": "视频生成公司 Runway 加入 Cosmos Coalition 表明:视频生成不是终点,而是世界模型的训练场——视频是时间里的世界变化。如果模型能生成符合物理规律的视频,某种程度上就在学习世界怎么运转。",
-    "links": [
-      {
-        "label": "NVIDIA Cosmos 3",
-        "url": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/"
-      }
-    ]
-  },
-  "A2A协议": {
-    "name": "A2A (Agent-to-Agent)协议",
-    "category": "Agent / 行业标准",
-    "summary": "让不同 AI Agent 之间能够相互通信和协作的协议标准。微信正在与华为、小米、荣耀、OPPO 等手机厂商合作推出 A2A 助手能力,将微信高频沟通功能融入手机系统助手。",
-    "detail": "A2A 协议是2026 年 AI Agent 生态互联的核心基础设施。不同于 MCP(模型到工具),A2A 实现 Agent 到 Agent 的通信,支持跨平台、跨应用的任务协作。腾讯在 AI 产业应用大会上系统展示了基于 A2A 的智能体生态。",
-    "links": [
-      {
-        "label": "腾讯 AI 产业应用大会 2026",
-        "url": "https://腾讯云官网"
-      }
-    ]
-  },
-  "Kimi Work": {
-    "name": "Kimi Work",
-    "category": "产品 / 月之暗面",
-    "summary": "Kimi 发布的桌面端通用型本地 Agent,面向知识工作者,支持 Mac 和 Windows 客户端。支持 13 小时连续编码、300 个子 Agent 并行协作、4000+ 次自主工具调用,可自主完成文档、表格、PPT 等工作产物交付。",
-    "detail": "Kimi Work 内核为 Kimi Code,每天有几十万程序员和 Kimi 全员使用该内核开发。这是月之暗面首次推出本地化 Agent 产品,标志着 Kimi 从云端 AI 助手向生产力工具的全面升级。",
-    "links": [
-      {
-        "label": "Kimi 官方",
-        "url": "https://kimi.moonshot.cn/"
-      }
-    ]
-  },
-  "Coze 3.0": {
-    "name": "Coze 3.0",
-    "category": "产品 / 字节跳动",
-    "summary": "字节跳动旗下 AI Agent 平台扣子(Coze)3.0 版本正式上线。支持多人多 Agent 协作,提供金融、自媒体、医疗、法律、科研等行业技能包,并支持一键加载、多端同步。Claude Code、Codex CLI、Openclaw 可一键接入。",
-    "detail": "Coze 3.0 在团队协作和生态接入方面实现显著突破,支持灵活的 Agent 组合模式——一人多 Agent 和多人多 Agent 的灵活组合。同时加强了跨端同步和本地生态融合。",
-    "links": [
-      {
-        "label": "Coze 官网",
-        "url": "https://www.coze.cn/"
-      }
-    ]
-  },
-  "豆包专业版": {
-    "name": "豆包专业版",
-    "category": "产品 / 字节跳动",
-    "summary": "豆包针对专业人群推出的付费版本,包含软件开发、数据分析、专业设计、流程自动化、金融分析、科学研究等专业服务。搜索问答、写作生图、语音视频对话等基础功能保持免费。专业版服务也将在一定额度内免费。",
-    "detail": "豆包是国内体量最大的 AI 对话助手,日活用户数已突破 1 亿,月活 2.27 亿(QuestMobile 数据)。豆包专业版的推出标志着国内用户量最大的 AI 应用首次尝试分层收费,是豆包商业化的实质性进展。",
-    "links": [
-      {
-        "label": "豆包官方公告",
-        "url": "https://www.doubao.com/"
-      }
-    ]
-  },
-  "ClinEnv": {
-    "name": "ClinEnv",
-    "category": "学术 / 论文",
-    "summary": "首个临床环境多阶段长视距 EHR(电子健康记录) Agent 评测环境,模拟不可逆临床决策 Sequential Decision-Making under Uncertainty。核心创新:增量证据获取、不确定下承诺、异构数据整合。",
-    "detail": "ClinEnv 论文重新定义了医疗 AI 评测标准——放弃静态多选题格式,转向顺序、不可逆决策的动态评测。其环境设计原则可直接迁移到其他高风险领域,是临床 Agent研究的参考标准。",
-    "links": [
-      {
-        "label": "ArXiv:ClinEnv",
-        "url": "https://arxiv.org/"
-      }
-    ]
-  },
-  "Agent可靠性": {
-    "name": "Agent 可靠性评测",
-    "category": "学术 / 技术趋势",
-    "summary": "AI Agent领域从能力展示转向部署就绪的关键研究方向。核心问题是:在 Agent 不完全可靠的情况下如何监控结构级故障而非任务级错误,以及如何建立针对临床、金融等高风险场景的专项安全框架。",
-    "detail": "2026 年 6 月 ArXiv 论文趋势明确:AI 正从能力演示转向部署就绪。多篇论文聚焦 Speculative Tool Execution 隐私泄漏、结构级故障监控、高风险场景安全框架,标志着 Agent部署从技术可行走向工程可靠。",
-    "links": [
-      {
-        "label": "ArXiv agents-radar #1428",
-        "url": "https://arxiv.org/"
-      }
-    ]
-  },
-  "多模态持续学习": {
-    "name": "多模态持续学习 (Multimodal Continual Learning)",
-    "category": "学术 / 论文",
-    "summary": "让视觉语言模型在不发生灾难性遗忘的情况下扩展能力的研究方向。ProtoAda 和 CRAM 两篇论文独立提出解决方案——前者通过原型引导的适配器扩展+几何聚合,后者通过专家混合路由,共同推进多模态持续学习。",
-    "detail": "多模态持续学习从边缘研究方向升级为2026 年主流优先事项。两篇论文同时出现(MoE/Adapter两条技术路径),表明该问题的重要性和研究热度。",
-    "links": [
-      {
-        "label": "ArXiv ProtoAda",
-        "url": "https://arxiv.org/"
-      },
-      {
-        "label": "ArXiv CRAM",
-        "url": "https://arxiv.org/"
-      }
-    ]
-  },
-  "speculative decoding": {
-    "name": "Speculative Decoding",
-    "category": "学术 / 论文",
-    "summary": "一种通过投机解码提升 AI推理速度的技术。2026 年 6 月 ArXiv 显示该技术正从自回归 Transformer 扩展到扩散语言模型和分子动力学等新领域,标志着该技术对跨范式高效推理的基础性意义。",
-    "detail": "Cui 等人的工作将投机解码扩展到扩散 LLM,解决这类新型架构的推理速度瓶颈。分子动力学领域的应用表明该技术的普适性价值。",
-    "links": [
-      {
-        "label": "ArXiv:Speculative Decoding",
-        "url": "https://arxiv.org/"
-      }
-    ]
-  },
-  "BioNeMo": {
-    "name": "NVIDIA BioNeMo",
-    "category": "平台 / 英伟达",
-    "summary": "英伟达生物医学 AI 平台,新增 Proteina-Complexa 生成模型,联合 DeepMind、EMBL 欧洲生物信息学研究所和首尔大学,向 AlphaFold 数据库新增 170 万蛋白质复合体预测。GPU 加速仿真引擎 nvQSP 速度较 CPU 快 77 倍。",
-    "detail": "BioNeMo 是英伟达面向生物医药研究的核心平台,所有模型与工具已上线 GitHub 和 HuggingFace,开发者可通过 NVIDIA NIM 微服务快速部署。诺和诺德、Viva Biotech、Manifold Bio 等已采用该平台。",
-    "links": [
-      {
-        "label": "NVIDIA BioNeMo",
-        "url": "https://www.nvidia.com/"
-      }
-    ]
-  },
-  "Kimi K2.6": {
-    "name": "Kimi K2.6",
-    "category": "模型 / 月之暗面",
-    "summary": "月之暗面 Kimi K2.6 模型,以 94.3 分位居全球综合基准测试 Artificial Analysis Intelligence Index v4.0 榜首。首创 Agent集群调度架构,可动态调度 100 个专业子 Agent 并行工作,支持 1500 次工具调用。",
-    "detail": "Kimi K2.5 发布不到20 天 ARR 突破 1亿美元,超过2025 年全年总和。月之暗面估值从 2025 年底的 40 亿美元升至 2026 年初的 180 亿美元。K2.6 在宽搜场景中延迟最高降低 4.5 倍。",
-    "links": [
-      {
-        "label": "CSDN 5月AI大模型全景报告",
-        "url": "https://blog.csdn.net/"
-      }
-    ]
-  },
-  "DeepSeek V4": {
-    "name": "DeepSeek V4",
-    "category": "模型 / 深度求索",
-    "summary": "DeepSeek V4 以 93.8 分位居全球综合基准测试第二名。核心亮点:全面国产算力适配(100% 基于华为昇腾 950PR 训练),万亿参数 MoE 架构,单次激活约 370B,原生多模态处理能力,百万 Token 超长上下文。",
-    "detail": "DeepSeek V4 构建了中国芯片+中国模型的自主可控生态闭环,未使用英伟达 GPU。引入 Engram 条件记忆机制,实现长期记忆能力。下一代模型聚焦 Agent 能力,可实现仅需少量提示就能执行复杂操作。",
-    "links": [
-      {
-        "label": "DeepSeek 官方",
-        "url": "https://www.deepseek.com/"
-      }
-    ]
-  },
-  "AI内容审核": {
-    "name": "AI 内容审核",
-    "category": "应用 / 社会",
-    "summary": "利用 AI 技术自动化内容审核,过滤违规信息。2026 年世界杯期间,国际足联启用 AI 内容审核,基于 30000 个关键词过滤,在 2 秒内隐藏违规评论。系统已适配 Meta、YouTube、TikTok 与 Threads。",
-    "detail": "AI 内容审核是 AI 从生成向治理延伸的重要应用场景。Cision 报告显示,79% 记者依赖 AI 辅助工作,但 53% 反对公关用 AI 生成提案。AI 内容审核在商业化和社会治理中的双重角色正在被重新定义。",
-    "links": [
-      {
-        "label": "IT之家报道",
-        "url": "https://www.ithome.com/"
-      }
-    ]
-  },
-  "Vibe Coding": {
-    "name": "Vibe Coding (氛围编程)",
-    "category": "概念 / 行业趋势",
-    "summary": "OpenAI 联合创始人 Andrej Karpathy 在 X平台上随手创造的概念,用来描述他在 AI 辅助编程中的工作状态。如今成为 AI 年度行业热词,代表着用自然语言、感觉驱动的编程方式。",
-    "detail": "Vibe Coding 概念不是出自论文或产品发布会,而是随手发在 X 上的一条动态,被行业广泛采用。这反映了 X 平台作为 AI 行业风向标的独特能力——让概念从社区自发产生并快速传播。",
-    "links": [
-      {
-        "label": "X / @karpathy",
-        "url": "https://x.com/karpathy"
-      }
-    ]
-  },
-  "MiniMax": {
-    "name": "MiniMax",
-    "category": "公司 / 国产大模型",
-    "summary": "国内头部大模型公司,2026 年 5 月 31 日在港交所公告,董事会宣布已决议探究拟发行人民币股份于科创板上市的初步建议。MiniMax 已聘请专业顾问就科创板上市条件提供咨询并签订辅导协议。",
-    "detail": "MiniMax 的 M2.7 模型展示了模型自我进化路径——通过 Agent Harness 体系,模型深度参与自身训练与优化流程。在部分研发场景中可承担 30%-50% 的工作量,内部评测集效果提升约 30%。API 价格极低(输入约 0.3 美元/百万 Token)。",
-    "links": [
-      {
-        "label": "港交所公告",
-        "url": "https://www.hkex.com.hk/"
-      }
-    ]
-  },
-  "英伟达企业AI工具包": {
-    "name": "英伟达企业 AI 工具包 (NVIDIA Agent Toolkit for Enterprise AI)",
-    "category": "工具 / 英伟达",
-    "summary": "英伟达发布的企业级 AI Agent 构建工具包,包含四大核心组件:Nemotron 3 Ultra 开放模型、Open Shell/Hermes 安全框架、CUDA-X 工具库、深度优化运行时。全球主要 ODM 和服务器厂商已合作,Red Hat、Canonical、微软等已采用。",
-    "detail": "英伟达 CEO 黄仁勋表示:每家公司都将成为智能体公司。该工具包让每家企业都能构建属于自己的智能体,其中 Open Shell 是高安全性开源企业智能体框架,为智能体提供安全沙箱保护、企业安全策略绑定和隐私保护。",
-    "links": [
-      {
-        "label": "NVIDIA 官方",
-        "url": "https://www.nvidia.com/"
-      }
-    ]
   }
 }

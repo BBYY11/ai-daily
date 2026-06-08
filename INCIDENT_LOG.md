@@ -365,3 +365,39 @@
 
 **未来每 2 周体检清单加一项**
 - [ ] 看 GitHub Actions 最近 1 周的 run 状态(全 ✓?)
+
+---
+
+## 2026-06-08 · #012 · 6-08 早报被 watchdog/重复 push 覆盖(LLM 隐患再现)
+
+**症状**
+- 6-08 早上 8:07 主 cron 跑了 commit `02f2659d`,生成 6-08 18 条早报(OpenAI ChatGPT 转型、Anthropic S-1、苹果 WWDC26、Meta 帐篷数据中心等)
+- 6-08 早上 8:08 第二次 commit `e7be5461`(间隔 1 分 45 秒),把 news.json **回滚成 6-07**(16 条),并推了一份 W23 周报归档
+- 6-08 早上 8:30 健康检查跑 × 失败 × 失败(本机不同步)
+- 6-08 早上 10:09 用户发现:"今天没更新 6-08 早报"
+
+**根因分析**
+- 主 cron `ai-daily-0800`(8:00) 触发 LLM session A → 跑 fetch_news.py + push_to_github.sh → commit `02f2659d`(6-08 18 条)→ push 成功
+- LLM session A 完成后**沙箱里的某种机制(可能是 watchdog cron 触发的 session B)**又跑了一次 fetch_news.py,这次**LLM 不知道当天是 6-08 早报该发布**,误判为"6-08 应该是周末 6-07 的归档状态",**回滚了 news.json**
+- 1 分 45 秒内两次 commit,内容互相矛盾
+- **commit author 显示 `BBYY11`** 是因为 push_to_github.sh 用 Contents API 推,GitHub 把 committer 写成 token 持有者,**这造成用户困惑("我没跑过")**
+
+**修复**
+- ✅ 从 commit `02f2659d` 提取 6-08 news.json + digest.md + feed.xml/json + search_queries.txt
+- ✅ 新建 data/archive/2026-06-08.json 作为归档
+- ✅ 重建 data/archive/index.json(11 天,加 6-08)
+- ✅ 保留 W23 周报(在 e7be5461 里)
+- ✅ 7 个文件 PUT 推送,GitHub Actions 健康检查通过
+- ✅ 本机同步,sync_check 远端 56 / 本地 56 一致
+
+**教训**
+- **事故 #011 提到的隐患再次出现**——LLM session 失败/重复时静默"成功"
+- **`push_to_github.sh` 应该加一个去重机制**:如果 news.json 跟 git 远端最新 commit 里的 news.json 一样,**skip push**
+- **commit author 写 token 持有者**不是好实践——**应该用不同的 author email**(例如 `ai-daily-bot@MiniMax.ai`),区分"LLM 推"vs"人推"
+- **重复触发问题**——主 cron + watchdog cron 时间窗撞了(8:00 vs 7:00-10:30)——**应该让 watchdog 在主 cron 跑完后 30 分钟才检查**
+
+**改进建议(下次实施)**
+1. push_to_github.sh 加"如果 news.json 内容跟 HEAD 一致,skip"
+2. push_to_github.sh 用 `author.email = "ai-daily-bot@MiniMax.ai"` 而非 token holder
+3. watchdog cron 的检查窗口从 7:00-10:30 改为 8:30-10:30(避开主 cron)
+4. 6-08 早晨应该**两次 cron 之间的间隔 ≥ 30 分钟**——主 cron 跑完,watchdog 才检查
