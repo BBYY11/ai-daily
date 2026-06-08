@@ -1,46 +1,74 @@
 {
-  "generated_at": "2026-06-03 12:14 (Asia/Shanghai)",
-  "week": "2026-W22",
-  "week_label": "第 22 周",
-  "start_date": "2026-05-25",
-  "end_date": "2026-05-31",
+  "generated_at": "2026-06-08 16:07 (Asia/Shanghai)",
+  "week": "2026-W23",
+  "week_label": "第 23 周",
+  "start_date": "2026-06-01",
+  "end_date": "2026-06-07",
   "weekday_start": "周一",
   "weekday_end": "周日",
-  "summary": "第 22 周(5/25 - 5/31)是 Anthropic 完成 650 亿美元 H 轮融资、估值飙升至 9650 亿美元并首次反超 OpenAI 的标志性一周,也是英伟达 GTC Taipei 2026 重新定义 AI PC 算力边界的奠基性一周。Anthropic 同步与 SpaceX 签署近 450 亿美元算力协议(2026-2029)、与 Google/Broadcom 签署 3.5GW TPU 算力协议,商业化引擎全开。Anthropic 还成立 TAI 理论 AI 研究院,披露下一代 Claude 三大升级方向(更高判断力 / 近乎无限上下文 / 多智能体协作)。OpenAI 与 Anthropic 同日宣布与华尔街 PE 巨头成立合资企业(40 亿 + 15 亿),标志 AI 商业化进入巨头+资本捆绑的新阶段。DeepSeek 与阿里融资谈判破裂,坚持独立估值 3000 亿。Mistral Medium 3 以 12.5% 价格达到 Claude Sonnet 3.7 的 90% 性能。Anthropic 还在本周与软银法国数据中心 / 德国 Aleph Alpha 并购 / Cohere 跨大西洋 AI 力量 等多线并发。Anthropic 一个月内估值从 3800 亿飙升至 9650 亿,涨幅 154%,H1 收官战的资本狂飙。",
+  "summary": "第 23 周(2026-06-01 - 2026-06-07)AI 圈共 7 天有归档,共 113 条新闻。详细主题待 cron 任务上层 agent 提炼。",
   "key_themes": [
     {
-      "title": "估值反超:Anthropic 9650 亿首超 OpenAI",
-      "body": "5/28 Anthropic 宣布完成 650 亿美元 H 轮,估值飙至 9650 亿美元,首次超过 OpenAI(8520 亿),成为全球最具价值 AI 公司。从 2025 年 3 月的 615 亿美元估值到 9650 亿,14 个月涨 15 倍,Q1 ARR 达 440 亿美元(同比 80 倍),企业 AI 市场份额 40%。市场重新评估两家路径:Anthropic 是高确定性企业软件公司(13x ARR),OpenAI 是高溢价终局想象(35x ARR)。"
+      "title": "(待生成)",
+      "body": "待上层 agent 提炼,基于上周 daily items 的 high-heat 条目聚类"
     },
     {
-      "title": "算力锁定:Anthropic 拿下未来 5 年 3.5GW+ 算力",
-      "body": "Anthropic 与 SpaceX 签署 450 亿美元算力协议(2026-2029,使用 Colossus 数据中心 22 万块 GPU),与 Google/Broadcom 签署 3.5GW TPU 算力协议。这种规模的电力消耗相当于一个 300 万人口城市的总用电量。算力 = AI 时代的硬通货,头部 AI 公司靠算力锁定构建长期护城河。"
+      "title": "(待生成)",
+      "body": ""
     },
     {
-      "title": "GTC Taipei 重新定义 AI PC 算力边界",
-      "body": "黄仁勋在台北发布 Vera Rubin 架构(代号 Rubin,专攻 Agentic AI,OpenAI 与 Anthropic 已率先采用)、NVIDIA DSX AI 工厂平台、RTX Spark(N1X)SoC(ARM + 台积电 3nm 工艺)。RTX Spark 戴尔、惠普、联想、微软首批响应,正式打破 Intel 在 PC 芯片领域的垄断。Vera Rubin 推理成本降低 10 倍,GPU 数量比 Blackwell 减 4 倍。"
+      "title": "(待生成)",
+      "body": ""
     },
     {
-      "title": "资本捆绑:巨头+PE 合资企业模式成型",
-      "body": "OpenAI 与 TPG / Brookfield / Advent / 贝恩成立 40 亿美元合资企业,Anthropic 与黑石 / Hellman & Friedman / 高盛成立 15 亿美元合资企业。AI 公司的商业化从卖 API 转向卖服务,合资企业以咨询+集成+培训+运维的完整方案服务企业客户,直接冲击麦肯锡等传统咨询巨头。"
+      "title": "(待生成)",
+      "body": ""
     },
     {
-      "title": "性价比 + 独立路径:DeepSeek 与 Mistral",
-      "body": "DeepSeek 与阿里融资谈判破裂,坚持保持公司独立性,坚持开源 + MIT 协议 + 模型权重完全开放,3000 亿人民币估值仍在与腾讯、高瓴等谈判。Mistral Medium 3 达到 Claude Sonnet 3.7 的 90% 性能,价格仅 12.5%,性价比指数达 Claude 的 7.8 倍。OpenAI 推出三款实时语音模型(GPT-Realtime-2 延迟 < 200ms),C 端实时语音进入无感知时代。"
+      "title": "(待生成)",
+      "body": ""
     }
   ],
   "data_highlights": {
-    "total_events": 11,
-    "key_funding_total": "1100 亿+ 美元",
-    "biggest_news": "Anthropic 9650 亿估值反超 OpenAI"
+    "total_events": 113,
+    "key_funding_total": "—",
+    "biggest_news": "—"
   },
   "day_links": [
-    {"date": "2026-05-25", "weekday": "周一", "summary": "(周末延续事件,Anthropic 与 SpaceX 算力合作加速谈判阶段)"},
-    {"date": "2026-05-26", "weekday": "周二", "summary": "(工作日,Anthropic G 轮正式进入最后阶段)"},
-    {"date": "2026-05-27", "weekday": "周三", "summary": "(工作日,DeepSeek 与阿里融资谈判进入关键期)"},
-    {"date": "2026-05-28", "weekday": "周四", "summary": "Anthropic 完成 650 亿 H 轮,估值 9650 亿首超 OpenAI"},
-    {"date": "2026-05-29", "weekday": "周五", "summary": "Anthropic 成立 TAI 理论 AI 研究院 + 戴尔 AI 服务器 Q1 同比 +757%"},
-    {"date": "2026-05-30", "weekday": "周六", "summary": "Anthropic 与 Google/Broadcom 签 3.5GW TPU 算力协议 + Mistral Medium 3 发布"},
-    {"date": "2026-05-31", "weekday": "周日", "summary": "OpenAI GPT-Realtime-2 实时语音模型 < 200ms 延迟 + Cohere 收购 Aleph Alpha"}
+    {
+      "date": "2026-06-01",
+      "weekday": "周一",
+      "summary": "GTC Taipei 2026 开幕:Vera Rubin 架构 + RTX Spark(N1X)双; Anthropic 秘密递交 IPO 招股书,估值近 1 万亿美元,首次领先 OpenAI; 国产 MiniMax M3 发布:1M 上下文 + 编程超 GPT-5.5,启动 A 股 IPO 辅"
+    },
+    {
+      "date": "2026-06-02",
+      "weekday": "周二",
+      "summary": "英伟达 GTC Taipei 2026:发布 Vera Rubin 架构,RTX Spark 杀入 ; Anthropic 完成 650 亿美元 H 轮融资,估值 9650 亿首超 OpenAI; OpenAI 声称 AI 攻克 80 年数学难题,推翻 Erdős 1946 猜想"
+    },
+    {
+      "date": "2026-06-03",
+      "weekday": "周三",
+      "summary": "微软 Build 2026:发布 MAI-Code-1-Flash 自研编程模型,降低对 OpenA; 特朗普签 AI 行政令:强能力模型公开发布前 30 天须通报政府; SpaceX 启动 IPO 进程,目标本月 750 亿美元,创历史最大规模"
+    },
+    {
+      "date": "2026-06-04",
+      "weekday": "周四",
+      "summary": "博通预测 2026 财年 AI 芯片销售 560 亿美元,联手 Apollo/黑石建 AI XPV ; DeepSeek 传首轮融资 70 亿美元,估值 590 亿美元,腾讯/宁德时代领投; ChatGPT 全球月活突破 10 亿,创 App 史上最快 10 亿记录"
+    },
+    {
+      "date": "2026-06-05",
+      "weekday": "周五",
+      "summary": "Anthropic 正式递交 S-1,9650 亿美元估值登顶全球 AI 公司榜首; 36氪独家:字节 2026 AI 四个关键命题,世界模型年底对标 Google Genie 3; 英伟达台北 GTC 发布 Cosmos 3,全球首款完全开放的全模态物理 AI 模型"
+    },
+    {
+      "date": "2026-06-06",
+      "weekday": "周六",
+      "summary": "SpaceX × 谷歌签署 300 亿美元算力大单:每月 9.2 亿租 11 万块英伟达 GPU,持; 特朗普政府拟入股顶尖 AI 公司,最快下周与高管会谈,OpenAI 推动方案; 美国众议院公布 269 页《伟大美国 AI 法案》草案:年收入 5 亿美元以上大模型公司每半年审计"
+    },
+    {
+      "date": "2026-06-07",
+      "weekday": "周日",
+      "summary": "OpenAI Robotics 正式组建,孙正义3000 亿美元 AI 基础设施计划曝光; 英伟达台北 GTC 2026 连环重磅:Cosmos 3 开源+Kumo AI 收购+Vera Ru; 腾讯 2026 AI 产业应用大会:效率智能体工具集首发,微信 AI 助手接入手机厂商"
+    }
   ]
 }
