@@ -181,12 +181,11 @@ echo "[push] 6. 创建 commit" >> "$LOG"
 COMMIT_PAYLOAD=$(python3 -c "
 import json
 print(json.dumps({
-  'message': 'ai-daily auto-update $COMMIT_DATE',
+  'message': 'ai-daily auto-update $COMMIT_DATE (Mavis Bot)',
   'tree': '''$TREE_SHA''',
-  'parents': ['$HEAD_SHA'] if '''$HEAD_SHA''' else [],
-  # 区分 LLM 推 vs 人推:事故 #012 改进
-  'author': {'name': 'Mavis Bot', 'email': 'ai-daily-bot@MiniMax.ai', 'date': None},
-  'committer': {'name': 'Mavis Bot', 'email': 'ai-daily-bot@MiniMax.ai', 'date': None}
+  'parents': ['$HEAD_SHA'] if '''$HEAD_SHA''' else []
+  # 事故 #012 改进:GitHub API 不接受非 token 持有者的 author/committer email
+  # 所以不能改成 bot email,但 commit message 末尾加 "(Mavis Bot)" 区分
 }))
 ")
 COMMIT_RESP=$(curl -fsS -X POST \
