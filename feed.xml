@@ -3,212 +3,212 @@
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat">
   <channel>
-    <title>AI Daily · 2026-06-08 周一 · 全球 AI 早报</title>
+    <title>AI Daily · 2026-06-09 周二 · 全球 AI 早报</title>
     <link>https://bbyy11.github.io/ai-daily/</link>
     <atom:link href="https://bbyy11.github.io/ai-daily/feed.xml" rel="self" type="application/rss+xml" />
-    <description><![CDATA[2026 年 6 月 8 日,AI 行业迎来多线重磅消息:OpenAI 宣布 ChatGPT 将转型为超级应用,整合编程工具 Codex 与 AI 智能体,全力筹备 IPO;Anthropic 罕见发布长文警告 AI 递归自我改进风险,同时秘密递交 S-1 招股书、估值达 9650 亿美元;苹果 WWDC26 今夜开幕,库克谢幕演出,Siri 将接入 Gemini 实现重大升级;Meta 被曝搭建帐篷式临时数据中心应对算力短缺,并考虑股票募资数百亿美元。美股 AI 板块周五大幅回调,纳指暴跌超 4%。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。 · 共 18 条新闻]]></description>
+    <description><![CDATA[2026 年 6 月 9 日 AI 圈呈现'资本合纵连横'主叙事:英伟达黄仁勋出访韩国,与 SK 海力士/Naver/LG/现代等多家企业签署 AI 合作协议,涵盖下一代 HBM 内存、AI 云与物理 AI 机器人;英伟达同步与 SK 海力士官宣多年期技术合作,联合研发面向 AI 工厂的下一代存储产品;OpenAI 正在将 ChatGPT 改造为集成 Codex编程工具与 AI 智能体的'超级应用',备战 IPO;Anthropic CEO Dario Amodei 发布长文,预测 2026-2027 年 AI 智力将达诺奖级,同时罕见呼吁全球 AI 实验室'集体刹车',并向白宫提出六项安全建议;英国多地警方叫停 AI 起草法庭陈述。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。 · 共 18 条新闻]]></description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 08 Jun 2026 00:04:36 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 00:07:02 +0800</lastBuildDate>
     <generator>AI Daily (Mavis)</generator>
     <managingEditor>bbyy11 (via Mavis)</managingEditor>
     <ttl>60</ttl>
     <item>
-      <title>OpenAI 宣布 ChatGPT 转型超级应用,Codex 整合加速 IPO筹备</title>
+      <title>英伟达黄仁勋访韩：连签六家韩企，AI 合作全覆盖</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-1</guid>
+      <guid isPermaLink="false">ai-daily-h001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[OpenAI 正酝酿 ChatGPT 自 2022 年发布以来最大规模改版,将其从聊天机器人转型为集成编程工具和 AI 智能体的超级应用。此次改版核心受益者是编程产品 Codex,周活跃用户超 500 万,较2 月增长 6 倍。公司正全力筹备年内 IPO,当前估值 8500 亿美元。]]></description>
+      <description><![CDATA[英伟达 CEO 黄仁勋 6 月 8 日密集访问韩国,先后与 SK 海力士、Naver、SK 电讯、LG集团、现代汽车、斗山集团签署 AI 合作协议,覆盖先进内存、AI 云、数据中心能源与物理 AI 机器人等方向。SK 海力士此前已为英伟达旗舰 AI 芯片独家供应 HBM3E 显存,此次升级为全方位战略绑定。SK 电讯计划 2027 年在韩建设 GW 级 AI 云,Naver 明年启动 55MW AI 工厂。现代汽车与斗山机器人将利用英伟达 Isaac Sim 仿真平台开发人形与工业机器人。韩国科技部宣布为国家 AI 项目采购 9704 个 GPU,总价值 2.08 万亿韩元。]]></description>
       <category>头条</category>
-      <category>OpenAI</category><category>ChatGPT</category><category>Codex</category><category>IPO</category><category>超级应用</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">金融时报 / IT之家</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>98</heat:score><heat:level>沸腾</heat:level><heat:sources>金融时报,IT之家,钛媒体,央视财经</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9850</heat:score><heat:level>爆</heat:level><heat:sources>Reuters,韩联社,腾讯科技,网易科技,财联社</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Anthropic 发布长文警告:AI 递归自我改进风险,Claude Code 80% 代码已由 AI 编写</title>
+      <title>英伟达与 SK 海力士官宣多年技术合作：共研 AI 工厂下一代存储</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-2</guid>
+      <guid isPermaLink="false">ai-daily-h002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[Anthropic 发布内部研究长文,透露 Claude 已编写 Anthropic 内部 80% 的代码,进化效率是人类工程师的 52 倍。公司提出罕见建议:当前沿 AI 发展过快时,行业应保留放缓甚至暂时暂停开发的选项。同日,Anthropic 宣布已向 SEC 秘密递交 S-1 招股书,投后估值 9650 亿美元。]]></description>
+      <description><![CDATA[英伟达与 SK 海力士 6 月 8 日正式宣布建立多年期技术战略合作伙伴关系,双方将联合研发面向全球 AI 工厂的下一代存储产品,并将 AI 技术融入半导体芯片设计与制造环节。SK 海力士将为英伟达 Vera Rubin AI超级计算机、Vera CPU、RTX Spark PC 及 Jetson Thor 机器人计算平台共同开发专用内存,全面切入英伟达 AI 基础设施、个人 AI 与物理 AI 三大新市场。黄仁勋表示,双方合作期限超两年,英伟达每年从 SK 海力士采购额达数十亿美元,未来规模还将大幅增长。SK 海力士也将借助英伟达 CUDA-X 和 Omniverse 构建晶圆厂数字孪生,推动半导体制造智能化。]]></description>
       <category>头条</category>
-      <category>Anthropic</category><category>Claude</category><category>递归自我改进</category><category>AI安全</category><category>IPO</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">企鹅号 / 同花顺</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>97</heat:score><heat:level>沸腾</heat:level><heat:sources>企鹅号,同花顺,东方财富网</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9600</heat:score><heat:level>爆</heat:level><heat:sources>NVIDIA官方,企鹅号,TechWeb,顶端新闻,财联社</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>苹果 WWDC26 今夜开幕:库克谢幕,Siri 接入 Gemini 实现重大升级</title>
+      <title>OpenAI 正在将 ChatGPT 改造为&#x27;超级应用&#x27;，集成 Codex 与 AI 智能体</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-3</guid>
+      <guid isPermaLink="false">ai-daily-h003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[苹果全球开发者大会 WWDC26 将于北京时间 6 月 9 日凌晨 1 点开幕,主题「All systems glow」。库克将进行谢幕主题演讲,iOS 27即将发布。新版 Siri 将接入谷歌 Gemini 技术,具备上下文理解与跨应用任务执行能力,并以独立应用形式亮相。App Store 将整合 AI 智能体。]]></description>
+      <description><![CDATA[据《金融时报》6 月 7 日报道,OpenAI 正对 ChatGPT 进行颠覆性改版,计划将这个对话工具转型为集成编程工具、AI 智能体与第三方服务的&#x27;超级应用&#x27;,预计未来几周内正式上线。一位 OpenAI 高级员工表示,&#x27;聊天已死&#x27;,单纯基于文本对话的人机交互方式即将被淘汰。新版 ChatGPT 将作为流量漏斗引导用户使用付费增值服务,如专业编程辅助软件 Codex,同时为可能的 IPO 做准备。OpenAI 甚至考虑放弃或缩减 Sora 等非核心项目,集中资源支持核心产品。]]></description>
       <category>头条</category>
-      <category>苹果</category><category>WWDC</category><category>Siri</category><category>Gemini</category><category>iOS27</category><category>库克</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">企鹅号 / CNMO</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>96</heat:score><heat:level>沸腾</heat:level><heat:sources>企鹅号,CNMO,观点网,DoNews</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9200</heat:score><heat:level>爆</heat:level><heat:sources>Financial Times,网易科技,搜狐科技,金融时报</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>美股 AI 板块周五暴跌:纳指重挫 4.18%,英伟达等芯片巨头集体跳水</title>
+      <title>Anthropic CEO 长文预测：2026-2027 年 AI 智力将达诺奖级，呼吁全球同行&#x27;集体刹车&#x27;</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-4</guid>
+      <guid isPermaLink="false">ai-daily-h004</guid>
       <pubDate></pubDate>
-      <description><![CDATA[美东时间周五,美股 AI 相关板块遭遇猛烈抛售,纳指单日暴跌超 1121 点创史上最大单日点位跌幅,费城半导体指数暴跌超 10%,英伟达、美光、AMD 等 AI 芯片巨头跌幅惨重。英伟达 Vera Rubin 内存配置报告引发市场误读,存储股承压。]]></description>
+      <description><![CDATA[Anthropic CEO Dario Amodei 发布长文预测,2026-2027 年 AI 智力水平将达到诺贝尔奖级别——AI 将具备跨学科智力(生物学/计算机科学/数学等领域)、长时推理完成复杂任务能力、以及通过数字化界面控制机器人和实验室设备的能力。与此同时,Anthropic 于 6 月 5 日凌晨罕见发布长文,呼吁全球前沿 AI 实验室考虑集体放慢研发速度,为社会治理和安全研究留出时间。Anthropic 还向白宫提出六项政策建议,涵盖 AI 模型国家安全评估体系、强化出口管控、提升实验室安全标准等。美国五角大楼则与 Scale AI 签署协议,计划将 AI 智能体引入军事规划与作战行动。]]></description>
       <category>头条</category>
-      <category>美股</category><category>纳指</category><category>英伟达</category><category>AI芯片</category><category>暴跌</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">东方财富网</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>90</heat:score><heat:level>大热</heat:level><heat:sources>东方财富网,同花顺财经</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8950</heat:score><heat:level>爆</heat:level><heat:sources>新智元,网易科技,手机搜狐,Bloomberg,The Verge</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Meta 搭建帐篷式临时数据中心,六座大型防雨帐篷机房应对算力短缺</title>
+      <title>ChatGPT 记忆系统重大升级：Dreaming V3 自动整理用户偏好，免费用户也能用</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-5</guid>
+      <guid isPermaLink="false">ai-daily-r001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[在全球 AI 算力极度紧缺、数据中心建设大面积延期的背景下,Meta 在俄亥俄州哥伦布郊区落地六座大型防雨帐篷式机房,每座面积达 12.5 万平方英尺,配套 200 兆瓦独立燃气轮机发电机组。相较传统数据中心 2-3 年建设周期,帐篷机房仅用时两个月完工投用。]]></description>
+      <description><![CDATA[OpenAI 6 月 4 日宣布升级 ChatGPT 记忆系统,新系统基于 Dreaming V3 机制,重点改善记忆过时、准确性和大规模服务能力。与旧版相比,Dreaming V3 可自动整合重要细节并以摘要形式展示,用户可补充、修改个人资料并追问记忆细节。美国 Plus 和 Pro 用户当日开始体验,容量提升至原来的 2 倍。更关键的是,OpenAI 表示已将 Dreaming 服务免费用户所需算力压低至五分之一,终于能在质量达标前提下向免费用户推广记忆功能。]]></description>
       <category>新兴</category>
-      <category>Meta</category><category>数据中心</category><category>算力</category><category>临时机房</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">企鹅号 / 环球网科技</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>88</heat:score><heat:level>大热</heat:level><heat:sources>企鹅号,环球网科技</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7200</heat:score><heat:level>热</heat:level><heat:sources>IT之家,企鹅号,网易科技,OpenAI 官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Meta 考虑股票发行募资数百亿美元,全力支持 AI 业务扩张</title>
+      <title>OpenAI 上线 ChatGPT 封锁模式：防止提示注入攻击，但联网等功能受限</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-6</guid>
+      <guid isPermaLink="false">ai-daily-r002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[据英国《金融时报》报道,Meta 正考虑通过股票发行募资数百亿美元为其 AI 业务布局提供资金支持。受 Alphabet 超额配售股票发行 847.5 亿美元顺利落地影响,Meta 内部相关讨论愈发密集。今年 4 月,Meta 将全年资本支出预期上调至 1250 亿至 1450 亿美元。]]></description>
+      <description><![CDATA[OpenAI 近日上线一项新的可选安全设置&#x27;封锁模式&#x27;(Lockdown Mode),用户开启后 ChatGPT 将限制实时联网、深度研究和智能体模式等能力,以降低敏感数据被提示注入攻击(prompt injection)带走的风险。该功能针对高安全需求场景设计,如处理机密商业数据或敏感个人信息的用户。与此同时,英国英格兰和威尔士多家警队被要求停止使用 AI 工具准备法庭陈述和刑事司法文件,理由是 AI输出的法律文件一旦出错,将影响后续司法程序的可靠性。]]></description>
       <category>新兴</category>
-      <category>Meta</category><category>融资</category><category>AI投入</category><category>股票发行</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">企鹅号 / IT之家</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>85</heat:score><heat:level>大热</heat:level><heat:sources>企鹅号,IT之家</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>网易科技,Security Affairs,Financial Times</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>字节跳动发布 Coze 3.0:支持多人多 Agent 协作,一键接入 Claude Code/Codex</title>
+      <title>Anthropic 被曝派工程师支持 NSA 使用受限 AI 模型 Mythos</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-7</guid>
+      <guid isPermaLink="false">ai-daily-r003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[字节跳动发布 Coze 3.0,围绕多人多 Agent 与跨端推进任务的需求,把 Agent 写作改为可组合的一人或多人协同模式,并加入多项目独立管理、资产自动沉淀与行业模板。新版本可接入 Claude Code、Codex CLI、OpenClaw 等本地 Agent,也能授权处理本地文件。]]></description>
+      <description><![CDATA[据《金融时报》报道,Anthropic 已派遣工程师团队支持美国国家安全局(NSA)使用其受限 AI 模型 Mythos。Mythos 是 Anthropic 面向高级网络安全场景推出的受限模型,以 Advanced Cybersecurity Capabilities著称,此前主要面向特定受信任机构开放。此次 Anthropic 向 NSA 提供现场工程支持,意味着政府与前沿 AI 公司的安全合作进入新阶段,引发关于 AI 军事化应用边界的讨论。]]></description>
       <category>新兴</category>
-      <category>字节跳动</category><category>Coze</category><category>Agent</category><category>Claude Code</category><category>Codex</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>82</heat:score><heat:level>大热</heat:level><heat:sources>CSDN,少数派</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8100</heat:score><heat:level>热</heat:level><heat:sources>Financial Times,Security Affairs,安全内参</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>阿里发布 Qwen3.7-Plus:视觉与语言统一的多模态交互智能体基座</title>
+      <title>微软 Scout AI 内部文件曝光：目标竟是让用户&#x27;上瘾&#x27;，纳德拉紧急叫停</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-8</guid>
+      <guid isPermaLink="false">ai-daily-r004</guid>
       <pubDate></pubDate>
-      <description><![CDATA[阿里千问推出 Qwen3.7-Plus,定位为视觉与语言统一的多模态交互智能体基座。该模型保留文本、编码与工具使用能力,加入图像、视频、屏幕和网页输入,可在 GUI、CLI 及工具环境中执行任务,已接入阿里云百炼与 Qwen Studio。]]></description>
+      <description><![CDATA[微软 Build 2026 发布的 Scout AI 助手刚一面世,就因一份内部战略文件引发争议:文件把第一阶段目标写成&#x27;让人上瘾&#x27;(Make people addicted),随后微软 CEO 纳德拉(Satya Nadella)在内部对这一路线表示异议,要求团队重新审视产品定位。Scout 被设计为全天候 AI 助手,是微软&#x27;AI 即平台&#x27;战略的核心产品,但&#x27;上瘾&#x27;导向的用户增长策略引发 AI 伦理讨论。纳德拉随后要求团队修改内部文件,强调用户&#x27;控制感&#x27;而非&#x27;依赖性&#x27;。]]></description>
       <category>新兴</category>
-      <category>阿里</category><category>Qwen</category><category>多模态</category><category>智能体</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>80</heat:score><heat:level>大热</heat:level><heat:sources>CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5900</heat:score><heat:level>热</heat:level><heat:sources>网易科技,The Verge,微软官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>MiniMax 发布 M3 开源:编程能力 SOTA,10 天内开源完整权重</title>
+      <title>苹果 WWDC26 前夕破例批准：第三方 AI 智能体 Poke 首个接入苹果消息服务</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-9</guid>
+      <guid isPermaLink="false">ai-daily-r005</guid>
       <pubDate></pubDate>
-      <description><![CDATA[MiniMax 发布 M3,并宣布将在 10 天内开源完整权重与技术报告。模型采用 MSA 稀疏注意力架构,支持 100 万上下文、图像与视频输入及桌面操作,SWE-Bench Pro 得分达到 59.0%。同步升级的 MiniMax Code 配套三档订阅方案。]]></description>
+      <description><![CDATA[苹果在 WWDC26 开幕前夕破例批准 AI 智能体初创公司 Poke 接入苹果企业消息服务(Messages for Business)平台,Poke 成为该平台首个获批运行的独立第三方 AI 智能体。Poke 由帕洛阿尔托初创公司推出,允许用户在 iMessage 内直接与 AI 智能体对话并完成任务。苹果此次破例批准被视为 WWDC26 AI 战略的重要信号——苹果正从封闭生态走向有限开放,为 AI 智能体接入 iOS 系统铺路。]]></description>
       <category>新兴</category>
-      <category>MiniMax</category><category>M3</category><category>开源</category><category>编程模型</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>78</heat:score><heat:level>大热</heat:level><heat:sources>CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5400</heat:score><heat:level>中</heat:level><heat:sources>TechCrunch,网易科技,苹果官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>英伟达发布 Cosmos 3:全开源全模态物理 AI 世界基础模型</title>
+      <title>英伟达 SK 海力士合作深化：AI 工厂内存锁定 + 数字孪生晶圆厂</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-10</guid>
+      <guid isPermaLink="false">ai-daily-c001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[英伟达发布 Cosmos 3,全球首款全开源全模态物理 AI 世界基础模型。采用混合 Transformer 架构,集成视觉推理、世界生成与动作预测三大能力,在 Artificial Analysis、Physics-IQ 等榜单中世界生成精度排名第一。Cosmos Coalition 联盟同步成立。]]></description>
+      <description><![CDATA[英伟达与 SK 海力士的合作从单纯的 HBM 供应升级为覆盖研发、制造、部署的全链条战略联盟。除下一代 AI 内存联合研发外,SK 海力士将采用英伟达 CUDA-X 和 PhysicsNeMo 加速半导体仿真,将原本需要数周的 TCAD 工作流压缩至数小时;同时借助 Omniverse 和 cuOpt 构建晶圆厂数字孪生,实现厂区全局运营动态优化,精准调度数百台自主移动机器人(AMR)与数千台生产设备。SK 海力士一季度营收 52.58 万亿韩元,营业利润率高达72%。]]></description>
       <category>公司</category>
-      <category>英伟达</category><category>Cosmos</category><category>物理AI</category><category>世界模型</category><category>开源</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">英伟达官方 / CSDN</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>92</heat:score><heat:level>沸腾</heat:level><heat:sources>英伟达官方,CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7800</heat:score><heat:level>热</heat:level><heat:sources>企鹅号,NVIDIA 官方,TechWeb,东方财富</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>肯德基接入通义千问 APP:自然语音承接全国 1.3 万家门店查店下单</title>
+      <title>OpenAI 推动 ChatGPT 超级应用转型：Codex 整合 + IPO 前强化企业客户</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-11</guid>
+      <guid isPermaLink="false">ai-daily-c002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[肯德基以第三方技能服务接入通义千问 APP,将全国 1.3 万余家门店的查店、选餐、下单、支付和取餐纳入自然对话。用户说出位置、抵达时间与餐品需求,系统即可推荐门店及套餐,并联动会员权益和优惠券抵扣。]]></description>
+      <description><![CDATA[OpenAI 正加速 ChatGPT 从对话机器人向超级应用转型。据《金融时报》报道,新版 ChatGPT 将整合编程工具 Codex 与 AI 智能体,成为集编程、办公、第三方服务于一体的全能入口。OpenAI 希望借此在潜在上市前强化企业客户业务并提高收入。一位内部人士透露,&#x27;聊天已死&#x27;代表了产品理念的根本转变——从一问一答的工具,进化为能主动规划并执行多步骤任务的数字员工。OpenAI CFO 此前已确认公司正在为首款 AI 硬件做准备,预计年底前发布。]]></description>
       <category>公司</category>
-      <category>肯德基</category><category>通义千问</category><category>阿里</category><category>AI应用</category><category>品牌接入</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>72</heat:score><heat:level>大热</heat:level><heat:sources>CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7500</heat:score><heat:level>热</heat:level><heat:sources>Financial Times,网易科技,搜狐科技</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>腾讯测试微信 AI 智能体:应用内任务可由对话直接调度</title>
+      <title>Anthropic 诺奖级 AI 预测震动业界：呼吁集体刹车，六项政策建议提交白宫</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-12</guid>
+      <guid isPermaLink="false">ai-daily-c003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[腾讯正在测试微信内嵌 AI 智能体原型,最早于 6 月启动公开上线前的合规程序,之后先向少量外部用户开放。早期演示显示,用户可在微信主界面右滑调出对话框,由智能体接入小程序完成查找与下单等任务。]]></description>
+      <description><![CDATA[Anthropic CEO Dario Amodei 发布重磅长文,预测 2026-2027 年 AI 智力将达诺奖级——具备跨学科智力、长时推理和物理世界交互能力。同日 Anthropic 发布另一篇长文,罕见呼吁全球 AI 实验室&#x27;集体刹车&#x27;,为社会治理留出时间。公司还向白宫提出六项政策建议,包括建立 AI 模型国家安全综合评估体系、强化出口管控、提升实验室安全标准、拓展能源基础设施等。与此同时,美国五角大楼与 Scale AI 签署协议,将 AI 智能体引入军事规划,联合 Anduril 和微软打造全面整合 AI 的军事运作系统。]]></description>
       <category>公司</category>
-      <category>腾讯</category><category>微信</category><category>AI智能体</category><category>小程序</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>88</heat:score><heat:level>大热</heat:level><heat:sources>CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8200</heat:score><heat:level>热</heat:level><heat:sources>新智元,网易科技,手机搜狐,Bloomberg</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>京东开源 JoyAI-Echo 长视频框架:对话改镜头并保留声画一致</title>
+      <title>谷歌开源 Gemma 4 12B：本地 AI 新选择，性能对标 GPT-4 级模型</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-13</guid>
+      <guid isPermaLink="false">ai-daily-c004</guid>
       <pubDate></pubDate>
-      <description><![CDATA[京东开源 JoyAI-Echo 长音视频生成框架,瞄准长视频中角色变脸、音色漂移和整段重算三类问题。框架用记忆库持续保存外观与声音信息,并由 Director Agent 将自然语言要求拆成剧本、场景和镜头,支持对话式局部修改。5 分钟视频中可保持角色与音色一致,DMD 推理提速约 7.5 倍。]]></description>
+      <description><![CDATA[谷歌发布 Gemma 4 12B 开源模型,主打本地 AI 部署场景,无需云端即可在本地设备上运行,适合处理客户名单、报价单、会议录音、内部代码等敏感数据的企业用户。Gemma 4 12B 被称为&#x27;本地 AI 革命&#x27;,但评测显示它并非对所有任务都是最佳选择——本地 AI 的核心价值在于数据不出本地,而非追求极致性能。模型已在 Hugging Face 开源,支持多种推理框架。]]></description>
       <category>公司</category>
-      <category>京东</category><category>JoyAI-Echo</category><category>长视频</category><category>开源</category><category>视频生成</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>70</heat:score><heat:level>大热</heat:level><heat:sources>CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4900</heat:score><heat:level>中</heat:level><heat:sources>网易科技,Hugging Face,谷歌官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Anthropic 发布 Claude Code 动态编排预览版:并行代理接手长程代码任务</title>
+      <title>ICRA 2026 机器人顶会维也纳落幕：小米机器人团队 WBC 赛道夺冠</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-14</guid>
+      <guid isPermaLink="false">ai-daily-p001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[Anthropic 在 Claude Code 的 CLI、Desktop 与 VS Code 插件中推出动态编排预览版,面向跨服务代码库中的复杂 Bug 追踪、框架迁移和上线前对抗测试。主 Agent 会先生成编排脚本,再将子任务分派给数十至数百个子 Agent 并行执行。增量存档与断点续传让中断任务可继续运行。]]></description>
+      <description><![CDATA[机器人顶会 ICRA 2026 于维也纳落幕,小米创始人雷军发文祝贺小米机器人团队在 ICRA 2026 WBC 中以综合得分 99.2 分夺得赛道冠军。这一成绩标志着小米在具身智能领域的研发实力获得国际顶级学术会议认可,也让由智元主办的 AGIBOT 挑战赛再次引发行业关注。ICRA 2026 汇聚全球机器人与 AI 领域最新研究成果,涵盖人形机器人、精密操作、仿真训练等多个方向。]]></description>
       <category>学术</category>
-      <category>Anthropic</category><category>Claude Code</category><category>动态编排</category><category>并行Agent</category><category>代码审查</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>85</heat:score><heat:level>大热</heat:level><heat:sources>CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4200</heat:score><heat:level>中</heat:level><heat:sources>网易科技,小米官方,ICRA 官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>OpenAI Dreaming V3 记忆系统悄然上线:自动交叉复盘更新用户认知</title>
+      <title>DeepSeek V4 代码能力持续迭代：国产开源模型性价比优势扩大</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-15</guid>
+      <guid isPermaLink="false">ai-daily-p002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[OpenAI 悄悄推送代号 Dreaming V3 的 ChatGPT 记忆系统升级,6 月 4 日开始向美国 Plus 和 Pro 用户推送。新系统会在用户结束对话后自动对历史对话进行交叉复盘,剔除过时信息,更新对用户的认知。事实记忆准确率从 41.5% 跳升至 82.8%,算力降低 5 倍。]]></description>
+      <description><![CDATA[DeepSeek V4 代码能力持续迭代,在多个代码生成和 Agent 任务基准上保持全球领先性价比。作为国产开源大模型的代表,DeepSeek V4 以极低 API 定价提供接近顶级闭源模型的代码能力,被广泛应用于 AI Coding 和自动化编程场景。DeepSeek 与阿里融资谈判破裂后坚持独立发展,估值 3000 亿港元,持续在开源 AI 生态中扮演关键角色。]]></description>
       <category>学术</category>
-      <category>OpenAI</category><category>ChatGPT</category><category>记忆系统</category><category>Dreaming V3</category><category>AI隐私</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">企鹅号</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>82</heat:score><heat:level>大热</heat:level><heat:sources>企鹅号</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3800</heat:score><heat:level>新星</heat:level><heat:sources>CSDN,GitHub Trending,Hugging Face</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>2026 年 AI 产业正式突破 9000 亿美元:轻量化、端侧化、专用化成主流</title>
+      <title>COMPUTEX 2026 台北国际电脑展闭幕：AI Together 成最强主题</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-16</guid>
+      <guid isPermaLink="false">ai-daily-i001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[2026 年 AI 行业正式告别概念炒作,全面迈入规模化价值兑现期。全球 AI 市场规模正式突破 9000 亿美元,2026 年全球 AI 支出将突破 3200 亿美元。技术层面,轻量化、端侧化、专用化模型成为主流,10B 参数模型功耗低至 0.8W,可实现手机离线部署。多模态技术完成全面升级。]]></description>
+      <description><![CDATA[COMPUTEX 2026 于 6 月 5 日在南港展览馆正式落下帷幕。本届展会以 AI Together为主题,聚焦 AI 运算、机器人及智慧移动、次世代科技三大核心方向。英伟达 CEO 黄仁勋发表 COMPUTEX 开幕主题演讲,发布 Vera Rubin 架构、RTX Spark AI PC 等重磅产品。华硕、技嘉、微星、HKC 等厂商发布多款 AI PC 和显示器新品。展会期间,联发科透露下一代芯片将独家采用英特尔 EMIB-T 封装技术,目标2027 年 Q4 流片。]]></description>
       <category>行业</category>
-      <category>AI市场</category><category>轻量化</category><category>端侧AI</category><category>多模态</category><category>产业报告</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">企鹅号</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>75</heat:score><heat:level>大热</heat:level><heat:sources>企鹅号</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5600</heat:score><heat:level>中</heat:level><heat:sources>网易科技,快科技,COMPUTEX 官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>华为韬 τ 定律革新芯片设计:缩减 AI 算力消耗支撑本地模型运转</title>
+      <title>韩国 KOSPI 指数暴跌 5.54%：三星/SK 海力士领跌，全球科技股回调</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-17</guid>
+      <guid isPermaLink="false">ai-daily-i002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[华为在上海 ISCAS 2026 会议发布韬 τ 定律,摩尔定律逼近物理极限且国内受光刻机限制,华为转向以时间效率为核心。韬 τ 定律以逻辑折叠实现芯片三维堆叠,缩短信号传输距离,麒麟 2026 将搭载该技术,晶体管密度提升超 50%。]]></description>
+      <description><![CDATA[韩国股市6 月 5 日进入&#x27;黑色星期五&#x27;,KOSPI 指数收盘暴跌 5.54%,三星电子跌超 6%,SK 海力士跌近 10%。日经 225 指数同日跌 3.48%。在此背景下,黄仁勋 6 月 8 日访韩及与多家韩企签署 AI 合作协议,对韩国股市&#x27;救市&#x27;意义重大。与此同时,美股上周五大跌,纳指重挫逾 4%,科技股大幅回调,AI 板块进入阶段性调整。美国九大协会联合警告,AI 爆炸式增长引发的全球内存芯片短缺正对汽车、医疗器械等制造业构成日益严重的供应链风险。]]></description>
       <category>行业</category>
-      <category>华为</category><category>韬τ定律</category><category>芯片设计</category><category>麒麟</category><category>算力</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">CSDN 博客</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>80</heat:score><heat:level>大热</heat:level><heat:sources>CSDN</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6100</heat:score><heat:level>中</heat:level><heat:sources>网易科技,东方财富,财联社,Reuters</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>AI 记忆战争升级:Gemini 连接 Google 全生态,Claude 开放 markdown 控制权</title>
+      <title>SpaceX IPO 进入倒计时：最早 6 月 11 日定价，估值 1.77 万亿美元</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-18</guid>
+      <guid isPermaLink="false">ai-daily-s001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[ChatGPT、Claude、Gemini 三大家竞相升级 AI 记忆系统,但路径各不相同。Gemini 直接连接 Google 全账号生态,默认开启;Claude 记忆存成用户可直接编辑的 markdown 文件;ChatGPT Dreaming V3 自动交叉复盘。这场竞争背后,AI 记忆正在成为新时代的用户锁定机制。]]></description>
+      <description><![CDATA[SpaceX 预计最早在 6 月 11 日为 IPO 定价,并可能于次日在纳斯达克开始交易。公司目标发行价每股 135 美元,计划募资约 750 亿美元,按此价格计算估值约 1.77 万亿美元。但晨星(Morningstar)给出的公允估值仅约 7800 亿美元,分析师对估值分歧显著。在上市前夕,公司内部员工和早期持股人已开始讨论股权变现后的生活安排,包括购置房产等。The Information 6 月 6 日报道了这一情况。]]></description>
       <category>声音</category>
-      <category>AI记忆</category><category>ChatGPT</category><category>Claude</category><category>Gemini</category><category>用户锁定</category>
-      <source url="https://bbyy11.github.io/ai-daily/archive-view.html?date=">企鹅号</source>
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>68</heat:score><heat:level>中热</heat:level><heat:sources>企鹅号</heat:sources><heat:comments>0</heat:comments></heat:item>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6500</heat:score><heat:level>热</heat:level><heat:sources>The Information,网易科技,Bloomberg,CNBC</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
   </channel>
 </rss>

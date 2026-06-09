@@ -1,9 +1,9 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "AI Daily · 2026-06-07 周日 · 全球 AI 早报",
+  "title": "AI Daily · 2026-06-09 周二 · 全球 AI 早报",
   "home_page_url": "https://bbyy11.github.io/ai-daily/",
   "feed_url": "https://bbyy11.github.io/ai-daily/feed.json",
-  "description": "2026 年 6 月 7 日,AI 行业呈现三线并进格局:算力层,英伟达台北 GTC 成果持续释放,Cosmos 3 开源+Vera Rubin 量产+软银 3000 亿 AI 基础设施计划曝光;应用层,OpenAI Robotics 正式组建(孙正义 3000 亿美元 AI 计划同日披露)、腾讯 AI 产业应用大会发布效率智能体工具集、微信 AI 助手与四大手机厂商合作;开源层,国产大模型周调用量超美国两倍,Kimi K2.6 登顶全球综合基准。今日共收录 16 条,覆盖 headline×3 / rising×4 / company×3 / paper×2 / industry×2 / social×2。",
+  "description": "2026 年 6 月 9 日 AI 圈呈现'资本合纵连横'主叙事:英伟达黄仁勋出访韩国,与 SK 海力士/Naver/LG/现代等多家企业签署 AI 合作协议,涵盖下一代 HBM 内存、AI 云与物理 AI 机器人;英伟达同步与 SK 海力士官宣多年期技术合作,联合研发面向 AI 工厂的下一代存储产品;OpenAI 正在将 ChatGPT 改造为集成 Codex编程工具与 AI 智能体的'超级应用',备战 IPO;Anthropic CEO Dario Amodei 发布长文,预测 2026-2027 年 AI 智力将达诺奖级,同时罕见呼吁全球 AI 实验室'集体刹车',并向白宫提出六项安全建议;英国多地警方叫停 AI 起草法庭陈述。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。",
   "language": "zh-cn",
   "authors": [
     {
@@ -13,523 +13,436 @@
   ],
   "items": [
     {
-      "id": "n01",
-      "title": "OpenAI Robotics 正式组建,孙正义3000 亿美元 AI 基础设施计划曝光",
-      "summary": "OpenAI CEO奥特曼宣布 OpenAI Robotics 团队已正式组建并开始招聘,首批岗位涵盖全栈硬件工程师、系统工程师和机器学习工程师。该团队由 DALL-E 相关研究负责人 Aditya Ramesh 领导,短期目标是开发用于数据中心、电网等基础设施建设场景的协助型机器人,长期愿景是让每个人都拥有一个个人机器人。同日,软银 CEO 孙正义披露一项 3000 亿美元 AI 基础设施投资计划,涵盖数据中心、机器人和能源领域。",
+      "id": "h001",
+      "title": "英伟达黄仁勋访韩：连签六家韩企，AI 合作全覆盖",
+      "summary": "英伟达 CEO 黄仁勋 6 月 8 日密集访问韩国,先后与 SK 海力士、Naver、SK 电讯、LG集团、现代汽车、斗山集团签署 AI 合作协议,覆盖先进内存、AI 云、数据中心能源与物理 AI 机器人等方向。SK 海力士此前已为英伟达旗舰 AI 芯片独家供应 HBM3E 显存,此次升级为全方位战略绑定。SK 电讯计划 2027 年在韩建设 GW 级 AI 云,Naver 明年启动 55MW AI 工厂。现代汽车与斗山机器人将利用英伟达 Isaac Sim 仿真平台开发人形与工业机器人。韩国科技部宣布为国家 AI 项目采购 9704 个 GPU,总价值 2.08 万亿韩元。",
       "category": "headline",
       "category_label": "头条",
-      "source": "OpenAI 官方 / 财联社 / The Verge",
-      "time": "2026-06-05",
-      "tags": [
-        "OpenAI",
-        "Robotics",
-        "Sam Altman",
-        "机器人",
-        "AI基础设施"
-      ],
-      "terms": [
-        "OpenAI Robotics",
-        "世界模型",
-        "具身智能"
-      ],
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
         "score": 9850,
         "level": "爆",
         "sources": [
-          "x",
-          "hn",
-          "media"
+          "Reuters",
+          "韩联社",
+          "腾讯科技",
+          "网易科技",
+          "财联社"
         ],
-        "breakdown": "~8.5k X mentions · ~15k HN points · 20+ 头部媒体报道"
+        "breakdown": "黄仁勋访韩+6家韩企签约+2.08万亿韩元国家AI项目+英伟达AI生态全覆盖韩国产业链"
       },
-      "comments": 624,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n02",
-      "title": "英伟达台北 GTC 2026 连环重磅:Cosmos 3 开源+Kumo AI 收购+Vera Rubin 量产",
-      "summary": "台北 GTC 大会首日,英伟达 CEO 黄仁勋一口气发布多款重磅产品:Cosmos 3 成为全球首款全开源全模态物理 AI 模型,采用混合 Transformer 架构打通视觉推理、世界生成与动作预测三大能力;同步收购预测分析初创公司 Kumo AI(Kumo AI 三位创始人均已加入英伟达);Vera Rubin GPU 进入全面量产,供应链规模是 Grace Blackwell 的两倍;推出 AI Agent专用 CPU Vera,单线程性能全球最高;与微软联合发布 RTX Spark 重新定义 PC。此外,英伟达宣布成立 Cosmos Coalition 联盟,成员包括 Runway、Agile Robots、Skild AI 等。",
+      "id": "h002",
+      "title": "英伟达与 SK 海力士官宣多年技术合作：共研 AI 工厂下一代存储",
+      "summary": "英伟达与 SK 海力士 6 月 8 日正式宣布建立多年期技术战略合作伙伴关系,双方将联合研发面向全球 AI 工厂的下一代存储产品,并将 AI 技术融入半导体芯片设计与制造环节。SK 海力士将为英伟达 Vera Rubin AI超级计算机、Vera CPU、RTX Spark PC 及 Jetson Thor 机器人计算平台共同开发专用内存,全面切入英伟达 AI 基础设施、个人 AI 与物理 AI 三大新市场。黄仁勋表示,双方合作期限超两年,英伟达每年从 SK 海力士采购额达数十亿美元,未来规模还将大幅增长。SK 海力士也将借助英伟达 CUDA-X 和 Omniverse 构建晶圆厂数字孪生,推动半导体制造智能化。",
       "category": "headline",
       "category_label": "头条",
-      "source": "NVIDIA官方 / IT之家 / 快科技",
-      "time": "2026-06-01",
-      "tags": [
-        "NVIDIA",
-        "Cosmos 3",
-        "Kumo AI",
-        "Vera Rubin",
-        "RTX Spark"
-      ],
-      "terms": [
-        "Cosmos 3",
-        "Vera Rubin",
-        "RTX Spark",
-        "Vera CPU",
-        "物理AI",
-        "世界模型",
-        "Isaac GR00T"
-      ],
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 9700,
+        "score": 9600,
         "level": "爆",
         "sources": [
-          "hn",
-          "media",
-          "x"
+          "NVIDIA官方",
+          "企鹅号",
+          "TechWeb",
+          "顶端新闻",
+          "财联社"
         ],
-        "breakdown": "~12k HN points · ~18k X mentions · 30+ 媒体报道"
+        "breakdown": "多年期战略合作+下一代AI内存+英伟达Vera/RTX/Jetson全产品线覆盖+数字孪生晶圆厂"
       },
-      "comments": 538,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n03",
-      "title": "腾讯 2026 AI 产业应用大会:效率智能体工具集首发,微信 AI 助手接入手机厂商",
-      "summary": "腾讯 2026 AI 产业应用大会在北京举办,首次系统发布效率智能体工具集,面向个人提效、办公提效、企业提效三类需求,覆盖 20+ 垂直场景。汤道生与姚顺雨同台对话,透露腾讯大部分代码已由 AI 生成。同期,微信正在与华为、小米、荣耀、OPPO 等手机厂商合作推出 A2A 助手能力,将微信高频沟通功能融入手机系统助手,双重授权机制保障隐私安全。",
+      "id": "h003",
+      "title": "OpenAI 正在将 ChatGPT 改造为'超级应用'，集成 Codex 与 AI 智能体",
+      "summary": "据《金融时报》6 月 7 日报道,OpenAI 正对 ChatGPT 进行颠覆性改版,计划将这个对话工具转型为集成编程工具、AI 智能体与第三方服务的'超级应用',预计未来几周内正式上线。一位 OpenAI 高级员工表示,'聊天已死',单纯基于文本对话的人机交互方式即将被淘汰。新版 ChatGPT 将作为流量漏斗引导用户使用付费增值服务,如专业编程辅助软件 Codex,同时为可能的 IPO 做准备。OpenAI 甚至考虑放弃或缩减 Sora 等非核心项目,集中资源支持核心产品。",
       "category": "headline",
       "category_label": "头条",
-      "source": "腾讯官方 / 36氪 / 量子位",
-      "time": "2026-06-05",
-      "tags": [
-        "腾讯",
-        "AI产业应用大会",
-        "效率智能体",
-        "微信AI助手",
-        "A2A"
-      ],
-      "terms": [
-        "A2A协议",
-        "Agent-to-Agent",
-        "效率智能体"
-      ],
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 9450,
+        "score": 9200,
         "level": "爆",
         "sources": [
-          "media",
-          "x",
-          "weibo"
+          "Financial Times",
+          "网易科技",
+          "搜狐科技",
+          "金融时报"
         ],
-        "breakdown": "微信 AI 助手内测 · 10+ 媒体报道 · 微博热搜第3"
+        "breakdown": "ChatGPT转型超级应用+集成Codex+AI Agent+放弃Sora备战IPO+金融时报独家"
       },
-      "comments": 389,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n04",
-      "title": "Kimi 发布桌面端 Kimi Work:13 小时连续编码+300 子 Agent 并行",
-      "summary": "Kimi 发布桌面端产品 Kimi Work Beta 版,面向知识工作者的通用型本地 Agent,支持 Mac 和 Windows 客户端。内核为 Kimi Code,每天有几十万程序员和 Kimi 全员使用该内核开发。支持 13 小时连续编码、300 个子 Agent 并行协作、4000+ 次自主工具调用,可自主完成文档、表格、PPT 等工作产物交付。这是月之暗面首次推出本地化 Agent 产品,标志着 Kimi 从云端 AI 助手向生产力工具的全面升级。",
-      "category": "rising",
-      "category_label": "新兴",
-      "source": "腾讯新闻 / 北京商报 / AiBase",
-      "time": "2026-06-03",
-      "tags": [
-        "Kimi",
-        "Kimi Work",
-        "月之暗面",
-        "本地Agent",
-        "桌面端"
-      ],
-      "terms": [
-        "Kimi Work",
-        "本地Agent"
-      ],
+      "id": "h004",
+      "title": "Anthropic CEO 长文预测：2026-2027 年 AI 智力将达诺奖级，呼吁全球同行'集体刹车'",
+      "summary": "Anthropic CEO Dario Amodei 发布长文预测,2026-2027 年 AI 智力水平将达到诺贝尔奖级别——AI 将具备跨学科智力(生物学/计算机科学/数学等领域)、长时推理完成复杂任务能力、以及通过数字化界面控制机器人和实验室设备的能力。与此同时,Anthropic 于 6 月 5 日凌晨罕见发布长文,呼吁全球前沿 AI 实验室考虑集体放慢研发速度,为社会治理和安全研究留出时间。Anthropic 还向白宫提出六项政策建议,涵盖 AI 模型国家安全评估体系、强化出口管控、提升实验室安全标准等。美国五角大楼则与 Scale AI 签署协议,计划将 AI 智能体引入军事规划与作战行动。",
+      "category": "headline",
+      "category_label": "头条",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 8200,
-        "level": "热",
-        "sources": [
-          "media",
-          "weibo",
-          "zhihu"
-        ],
-        "breakdown": "微博科技热搜第5 · 知乎热榜 · 10+ 媒体报道"
-      },
-      "comments": 267,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03"
-    },
-    {
-      "id": "n05",
-      "title": "字节 Coze 3.0 正式上线:多人多 Agent协作+行业技能包一键加载",
-      "summary": "字节跳动旗下 AI Agent 平台 Coze 3.0 正式上线。新版本支持多人多 Agent 协作,提供金融、自媒体、医疗、法律、科研等行业技能包,并支持一键加载、多端同步。Claude Code、Codex CLI、Openclaw 等可一键接入。Coze 3.0 在团队协作和生态接入方面实现显著突破,是字节跳动在 AI Agent 平台赛道的重要升级。",
-      "category": "rising",
-      "category_label": "新兴",
-      "source": "AiBase / 搜狐 / IT之家",
-      "time": "2026-06-01",
-      "tags": [
-        "Coze 3.0",
-        "字节跳动",
-        "AI Agent平台",
-        "多Agent协作"
-      ],
-      "terms": [
-        "Coze 3.0",
-        "多Agent协作"
-      ],
-      "heat": {
-        "score": 7600,
-        "level": "热",
-        "sources": [
-          "media",
-          "weibo"
-        ],
-        "breakdown": "微博热议 · 8+ 媒体报道"
-      },
-      "comments": 198,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01"
-    },
-    {
-      "id": "n06",
-      "title": "豆包计划 6 月下旬推出专业版,搜索问答等基础功能保持免费",
-      "summary": "豆包发布《关于豆包即将推出专业版的说明》,宣布针对专业人群的生产力需求,计划推出豆包专业版,包含软件开发、数据分析、专业设计、流程自动化、金融分析、科学研究等专业服务。日常使用的搜索问答、写作生图、语音视频对话等功能将保持免费。专业版服务也将在一定额度内免费提供。目前专业版仍在测试阶段,正式上线时将通过官方渠道发布完整信息。这是国内用户量最大的 AI 应用首次尝试分层收费。",
-      "category": "rising",
-      "category_label": "新兴",
-      "source": "AiBase / 搜狐 / 量子位",
-      "time": "2026-06-03",
-      "tags": [
-        "豆包",
-        "字节跳动",
-        "专业版",
-        "付费",
-        "商业化"
-      ],
-      "terms": [
-        "豆包专业版"
-      ],
-      "heat": {
-        "score": 7300,
-        "level": "热",
-        "sources": [
-          "media",
-          "weibo"
-        ],
-        "breakdown": "微博热议 · 12+ 媒体报道"
-      },
-      "comments": 231,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03"
-    },
-    {
-      "id": "n07",
-      "title": "宇树 H2+ 机器人曝光:英伟达 Isaac GR00T 加持,下半年新产品亮相",
-      "summary": "英伟达 CEO 黄仁勋宣布已与宇树科技合作推出新一代人形机器人参考设计 H2+。宇树科技工作人员透露,H2+ 基于英伟达算力平台研发,算力水平优于此前机器人,新产品将于今年下半年正式亮相。此前,英伟达在台北 GTC 大会上发布 Isaac GR00T N1.7 人形机器人参考设计,计划2026 年底由宇树推出。该参考设计身高 6 英尺、体重 150 磅,搭载 Thor 处理器及英伟达完整软件栈,全身 31 个自由度、25 个手部自由度。",
-      "category": "rising",
-      "category_label": "新兴",
-      "source": "企鹅号 / 快科技 / 太平洋科技",
-      "time": "2026-06-06",
-      "tags": [
-        "宇树科技",
-        "H2+",
-        "英伟达",
-        "Isaac GR00T",
-        "人形机器人"
-      ],
-      "terms": [
-        "Isaac GR00T",
-        "宇树H2+",
-        "人形机器人"
-      ],
-      "heat": {
-        "score": 6900,
-        "level": "热",
-        "sources": [
-          "media",
-          "weibo"
-        ],
-        "breakdown": "微博热议 · 6+ 媒体报道"
-      },
-      "comments": 156,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-06"
-    },
-    {
-      "id": "n08",
-      "title": "英伟达发布全球首款开源全模态物理 AI 大模型 Cosmos 3,世界模型全面开源",
-      "summary": "英伟达在台北 GTC 大会上正式发布 Cosmos 3,这是全球首款全开源全模态物理 AI 世界基础模型。采用混合 Transformer 架构,集视觉推理、世界生成、动作预测于一体,可原生理解并生成文本、图像、视频、环境音及动作指令。在 Artificial Analysis、Physics-IQ 等榜单中世界生成精度排名第一,动作策略能力领跑 RoboLab 和 RoboArena 基准。提供 Super、Nano、Edge 三个版本,目前 Super 和 Nano 已可用,Edge 即将上线。英伟达同步成立 Cosmos Coalition 联盟,联合 Runway、Agile Robots 等推进下一代世界模型。",
-      "category": "company",
-      "category_label": "公司",
-      "source": "NVIDIA 官方 / IT之家 / 电子创新网",
-      "time": "2026-06-01",
-      "tags": [
-        "NVIDIA",
-        "Cosmos 3",
-        "世界模型",
-        "物理AI",
-        "开源"
-      ],
-      "terms": [
-        "Cosmos 3",
-        "物理AI",
-        "世界模型",
-        "全模态"
-      ],
-      "heat": {
-        "score": 8900,
+        "score": 8950,
         "level": "爆",
         "sources": [
-          "hn",
-          "media",
-          "x"
+          "新智元",
+          "网易科技",
+          "手机搜狐",
+          "Bloomberg",
+          "The Verge"
         ],
-        "breakdown": "~10k HN points · ~15k X mentions · 25+ 媒体报道"
+        "breakdown": "诺奖级AI预测+Anthropic呼吁放慢研发+六项政策建议+五角大楼布局AI军事规划"
       },
-      "comments": 412,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-01"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n09",
-      "title": "比亚迪入局人形机器人:最强制造能力+软件能力+硬件能力的机器人赛道竞争",
-      "summary": "比亚迪集团执行副总裁李柯在访谈节目中明确表示:比亚迪正在开发人形机器人。她指出,机器人的竞争在于制造能力、软件能力和硬件能力,而汽车相关 AI 能力与机器人有同源性,如果有一天机器人可以走向家庭,比亚迪可以通过经销商网络售卖机器人。比亚迪可以做一个开放平台,既可以自己做机器人,也可以与其他企业合作。6月3日,据比亚迪人士处消息,该公司确实已在研发人形机器人。",
-      "category": "company",
-      "category_label": "公司",
-      "source": "企鹅号 / 快科技 / 36氪",
-      "time": "2026-06-06",
-      "tags": [
-        "比亚迪",
-        "人形机器人",
-        "具身智能",
-        "智能汽车"
-      ],
-      "terms": [
-        "人形机器人",
-        "具身智能"
-      ],
+      "id": "r001",
+      "title": "ChatGPT 记忆系统重大升级：Dreaming V3 自动整理用户偏好，免费用户也能用",
+      "summary": "OpenAI 6 月 4 日宣布升级 ChatGPT 记忆系统,新系统基于 Dreaming V3 机制,重点改善记忆过时、准确性和大规模服务能力。与旧版相比,Dreaming V3 可自动整合重要细节并以摘要形式展示,用户可补充、修改个人资料并追问记忆细节。美国 Plus 和 Pro 用户当日开始体验,容量提升至原来的 2 倍。更关键的是,OpenAI 表示已将 Dreaming 服务免费用户所需算力压低至五分之一,终于能在质量达标前提下向免费用户推广记忆功能。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 7100,
+        "score": 7200,
         "level": "热",
         "sources": [
-          "media",
-          "weibo"
+          "IT之家",
+          "企鹅号",
+          "网易科技",
+          "OpenAI 官方"
         ],
-        "breakdown": "微博热搜第7 · 8+ 媒体报道"
+        "breakdown": "Dreaming V3升级+容量翻倍+免费用户开放记忆功能+记忆过时问题首次系统性解决"
       },
-      "comments": 289,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-06"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n10",
-      "title": "MiniMax 拟于科创板上市,国产大模型独角兽加速资本化",
-      "summary": "MiniMax Group Inc.在港交所公告,董事会宣布已决议探究拟发行人民币股份的初步建议,其中可能涉及与专业顾问订立协议以及与相关监管机构进行咨询及磋商。MiniMax 已聘请专业顾问就符合在科创板上市条件提供咨询并签订辅导协议。拟发行人民币股份事宜将取决于市场状况及必要的监管批准。MiniMax 是国内头部大模型公司之一,其 M2.7 模型展示了模型自我进化路径。",
-      "category": "company",
-      "category_label": "公司",
-      "source": "港交所公告 / 36氪 / 量子位",
-      "time": "2026-05-31",
-      "tags": [
-        "MiniMax",
-        "科创板",
-        "上市",
-        "国产大模型"
-      ],
-      "terms": [
-        "MiniMax",
-        "科创板"
-      ],
+      "id": "r002",
+      "title": "OpenAI 上线 ChatGPT 封锁模式：防止提示注入攻击，但联网等功能受限",
+      "summary": "OpenAI 近日上线一项新的可选安全设置'封锁模式'(Lockdown Mode),用户开启后 ChatGPT 将限制实时联网、深度研究和智能体模式等能力,以降低敏感数据被提示注入攻击(prompt injection)带走的风险。该功能针对高安全需求场景设计,如处理机密商业数据或敏感个人信息的用户。与此同时,英国英格兰和威尔士多家警队被要求停止使用 AI 工具准备法庭陈述和刑事司法文件,理由是 AI输出的法律文件一旦出错,将影响后续司法程序的可靠性。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 6500,
+        "score": 6800,
         "level": "热",
         "sources": [
-          "media"
+          "网易科技",
+          "Security Affairs",
+          "Financial Times"
         ],
-        "breakdown": "港交所公告 · 15+ 媒体报道"
+        "breakdown": "Lockdown Mode防提示注入+英国警方停用AI起草法庭文件+安全合规双线并进"
       },
-      "comments": 178,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05-31"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n11",
-      "title": "ArXiv 6 月 3 日:临床环境 Agent 评测基准 ClinEnv 发布,多篇 Agent 可靠性研究亮相",
-      "summary": "ArXiv 6 月 3 日 AI 研究 Digest 显示,当日提交论文集中呈现 Agentic 系统可靠性与安全问题。核心亮点包括:ClinEnv——首个临床环境多阶段长视距 EHR Agent 评测环境,模拟不可逆临床决策;多篇论文针对未完全可靠的 Agent 部署场景,提出结构级故障检测而非任务级错误检测的新框架;Speculative Tool Execution 中的隐私泄漏问题被发现并给出加密解决方案;ProtoAda 和 CRAM 两篇论文独立提出多模态持续学习方法。今日论文趋势明确指向:AI 正从能力展示转向部署就绪。",
-      "category": "paper",
-      "category_label": "学术",
-      "source": "ArXiv / agents-radar",
-      "time": "2026-06-03",
-      "tags": [
-        "ArXiv",
-        "ClinEnv",
-        "Agent可靠性",
-        "多模态持续学习",
-        "临床AI"
-      ],
-      "terms": [
-        "ClinEnv",
-        "Agent可靠性",
-        "多模态持续学习",
-        "speculative decoding"
-      ],
+      "id": "r003",
+      "title": "Anthropic 被曝派工程师支持 NSA 使用受限 AI 模型 Mythos",
+      "summary": "据《金融时报》报道,Anthropic 已派遣工程师团队支持美国国家安全局(NSA)使用其受限 AI 模型 Mythos。Mythos 是 Anthropic 面向高级网络安全场景推出的受限模型,以 Advanced Cybersecurity Capabilities著称,此前主要面向特定受信任机构开放。此次 Anthropic 向 NSA 提供现场工程支持,意味着政府与前沿 AI 公司的安全合作进入新阶段,引发关于 AI 军事化应用边界的讨论。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
+      "heat": {
+        "score": 8100,
+        "level": "热",
+        "sources": [
+          "Financial Times",
+          "Security Affairs",
+          "安全内参"
+        ],
+        "breakdown": "Anthropic工程师入驻NSA+Mythos网络安全模型+AI军事化合作新阶段+政府AI深度捆绑"
+      },
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
+    },
+    {
+      "id": "r004",
+      "title": "微软 Scout AI 内部文件曝光：目标竟是让用户'上瘾'，纳德拉紧急叫停",
+      "summary": "微软 Build 2026 发布的 Scout AI 助手刚一面世,就因一份内部战略文件引发争议:文件把第一阶段目标写成'让人上瘾'(Make people addicted),随后微软 CEO 纳德拉(Satya Nadella)在内部对这一路线表示异议,要求团队重新审视产品定位。Scout 被设计为全天候 AI 助手,是微软'AI 即平台'战略的核心产品,但'上瘾'导向的用户增长策略引发 AI 伦理讨论。纳德拉随后要求团队修改内部文件,强调用户'控制感'而非'依赖性'。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
+      "heat": {
+        "score": 5900,
+        "level": "热",
+        "sources": [
+          "网易科技",
+          "The Verge",
+          "微软官方"
+        ],
+        "breakdown": "Scout内部文件'让人上瘾'争议+纳德拉叫停+Build 2026核心产品伦理问题+AI产品增长策略反思"
+      },
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
+    },
+    {
+      "id": "r005",
+      "title": "苹果 WWDC26 前夕破例批准：第三方 AI 智能体 Poke 首个接入苹果消息服务",
+      "summary": "苹果在 WWDC26 开幕前夕破例批准 AI 智能体初创公司 Poke 接入苹果企业消息服务(Messages for Business)平台,Poke 成为该平台首个获批运行的独立第三方 AI 智能体。Poke 由帕洛阿尔托初创公司推出,允许用户在 iMessage 内直接与 AI 智能体对话并完成任务。苹果此次破例批准被视为 WWDC26 AI 战略的重要信号——苹果正从封闭生态走向有限开放,为 AI 智能体接入 iOS 系统铺路。",
+      "category": "rising",
+      "category_label": "新兴",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
         "score": 5400,
-        "level": "新",
+        "level": "中",
         "sources": [
-          "arxiv",
-          "hn"
+          "TechCrunch",
+          "网易科技",
+          "苹果官方"
         ],
-        "breakdown": "~2.1k HN points · ArXiv 50篇相关论文 · agents-radar 精选"
+        "breakdown": "苹果破例批准Poke接入iMessage+WWDC26前开放信号+封闭生态向AI Agent敞开大门"
       },
-      "comments": 87,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-03"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n12",
-      "title": "英伟达扩展开放模型系列:BioNeMo 新蛋白预测+Proteina-Complexa 开放数据集",
-      "summary": "英伟达在 GTC 大会上扩展其开放模型系列,面向医疗 AI 推出 BioNeMo 平台新成员 Proteina-Complexa 生成模型,联合 DeepMind、EMBL 欧洲生物信息学研究所和首尔大学,向 AlphaFold 数据库新增 170 万蛋白质复合体预测。同时推出 GPU 加速仿真引擎 nvQSP,速度较 CPU 快 77 倍。所有模型与工具已上线 GitHub 和 HuggingFace,开发者可通过 NVIDIA NIM 微服务快速部署。英伟达开放模型已被 Cadence、ServiceNow、Perplexity 等用于代理式 AI;被诺和诺德、Viva Biotech 用于医疗 AI。",
-      "category": "paper",
-      "category_label": "学术",
-      "source": "NVIDIA 官方 / 凤凰网汽车 / 新浪新闻",
-      "time": "2026-03-16",
-      "tags": [
-        "NVIDIA",
-        "BioNeMo",
-        "蛋白质预测",
-        "AlphaFold",
-        "医疗AI"
-      ],
-      "terms": [
-        "BioNeMo",
-        "Proteina-Complexa",
-        "AlphaFold",
-        "nvQSP",
-        "医疗AI"
-      ],
-      "heat": {
-        "score": 4800,
-        "level": "新",
-        "sources": [
-          "hn",
-          "media"
-        ],
-        "breakdown": "~3.5k HN points · 10+ 媒体报道"
-      },
-      "comments": 64,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-03-16"
-    },
-    {
-      "id": "n13",
-      "title": "OpenRouter 数据:国产大模型周调用量 7.94 万亿 Token,超美国两倍",
-      "summary": "OpenRouter数据显示,2026 年 5 月 4 日至 10 日当周,国内主流大模型周调用 Token 量达 7.94 万亿,超美国主流模型 3.76 万亿 Token 的两倍以上。CSDN 联合稀土掘金发布的《2026 年5 月 AI 大模型全景报告》显示:月之暗面 Kimi K2.6 以 94.3 分位居全球综合基准测试榜首,DeepSeek V4 以 93.8 分紧随其后,OpenAI GPT-5 以 93.5 分位列第三。国产大模型在用户规模、技术能力层面实现双重突破。",
-      "category": "industry",
-      "category_label": "行业",
-      "source": "CCTV News / 新浪新闻 / OpenRouter",
-      "time": "2026-05",
-      "tags": [
-        "国产大模型",
-        "OpenRouter",
-        "Kimi K2.6",
-        "DeepSeek",
-        "Token调用量"
-      ],
-      "terms": [
-        "Kimi K2.6",
-        "DeepSeek V4",
-        "OpenRouter",
-        "Token调用量"
-      ],
+      "id": "c001",
+      "title": "英伟达 SK 海力士合作深化：AI 工厂内存锁定 + 数字孪生晶圆厂",
+      "summary": "英伟达与 SK 海力士的合作从单纯的 HBM 供应升级为覆盖研发、制造、部署的全链条战略联盟。除下一代 AI 内存联合研发外,SK 海力士将采用英伟达 CUDA-X 和 PhysicsNeMo 加速半导体仿真,将原本需要数周的 TCAD 工作流压缩至数小时;同时借助 Omniverse 和 cuOpt 构建晶圆厂数字孪生,实现厂区全局运营动态优化,精准调度数百台自主移动机器人(AMR)与数千台生产设备。SK 海力士一季度营收 52.58 万亿韩元,营业利润率高达72%。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
         "score": 7800,
         "level": "热",
         "sources": [
-          "media",
-          "weibo",
-          "zhihu"
+          "企鹅号",
+          "NVIDIA 官方",
+          "TechWeb",
+          "东方财富"
         ],
-        "breakdown": "CCTV 报道 · 微博热议 · 知乎热榜"
+        "breakdown": "英伟达SK海力士全链条战略联盟+数字孪生晶圆厂+CUDA-X半导体仿真+SK H1营业利润率72%"
       },
-      "comments": 312,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-05"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n14",
-      "title": "2026 年世界杯启用 AI 内容审核:实时过滤 3 万个关键词,2 秒内隐藏违规评论",
-      "summary": "国际足联在 2026 年世界杯期间扩大 AI 社交媒体保护服务,用来减少球员和球队看到的辱骂内容。系统依据 30000 个关键词过滤辱骂和冒犯性评论,并在 2 秒内完成隐藏。发帖者仍能看到自己的留言,但不会知道评论已被隐藏并上报调查。若后续核查确认违规,相关人员可能被禁止购买国际足联比赛门票,或被俱乐部限制入场。系统已适配 Meta 旗下平台、YouTube、TikTok 与 Threads,重点屏蔽种族主义、恐同和厌女内容。",
+      "id": "c002",
+      "title": "OpenAI 推动 ChatGPT 超级应用转型：Codex 整合 + IPO 前强化企业客户",
+      "summary": "OpenAI 正加速 ChatGPT 从对话机器人向超级应用转型。据《金融时报》报道,新版 ChatGPT 将整合编程工具 Codex 与 AI 智能体,成为集编程、办公、第三方服务于一体的全能入口。OpenAI 希望借此在潜在上市前强化企业客户业务并提高收入。一位内部人士透露,'聊天已死'代表了产品理念的根本转变——从一问一答的工具,进化为能主动规划并执行多步骤任务的数字员工。OpenAI CFO 此前已确认公司正在为首款 AI 硬件做准备,预计年底前发布。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
+      "heat": {
+        "score": 7500,
+        "level": "热",
+        "sources": [
+          "Financial Times",
+          "网易科技",
+          "搜狐科技"
+        ],
+        "breakdown": "ChatGPT转型超级应用+Codex集成+AI Agent主动执行+IPO前企业客户战略"
+      },
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
+    },
+    {
+      "id": "c003",
+      "title": "Anthropic 诺奖级 AI 预测震动业界：呼吁集体刹车，六项政策建议提交白宫",
+      "summary": "Anthropic CEO Dario Amodei 发布重磅长文,预测 2026-2027 年 AI 智力将达诺奖级——具备跨学科智力、长时推理和物理世界交互能力。同日 Anthropic 发布另一篇长文,罕见呼吁全球 AI 实验室'集体刹车',为社会治理留出时间。公司还向白宫提出六项政策建议,包括建立 AI 模型国家安全综合评估体系、强化出口管控、提升实验室安全标准、拓展能源基础设施等。与此同时,美国五角大楼与 Scale AI 签署协议,将 AI 智能体引入军事规划,联合 Anduril 和微软打造全面整合 AI 的军事运作系统。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
+      "heat": {
+        "score": 8200,
+        "level": "热",
+        "sources": [
+          "新智元",
+          "网易科技",
+          "手机搜狐",
+          "Bloomberg"
+        ],
+        "breakdown": "Anthropic诺奖级AI预测+呼吁放慢研发+六项政策建议+五角大楼Scale AI军事AI合作"
+      },
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
+    },
+    {
+      "id": "c004",
+      "title": "谷歌开源 Gemma 4 12B：本地 AI 新选择，性能对标 GPT-4 级模型",
+      "summary": "谷歌发布 Gemma 4 12B 开源模型,主打本地 AI 部署场景,无需云端即可在本地设备上运行,适合处理客户名单、报价单、会议录音、内部代码等敏感数据的企业用户。Gemma 4 12B 被称为'本地 AI 革命',但评测显示它并非对所有任务都是最佳选择——本地 AI 的核心价值在于数据不出本地,而非追求极致性能。模型已在 Hugging Face 开源,支持多种推理框架。",
+      "category": "company",
+      "category_label": "公司",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
+      "heat": {
+        "score": 4900,
+        "level": "中",
+        "sources": [
+          "网易科技",
+          "Hugging Face",
+          "谷歌官方"
+        ],
+        "breakdown": "Gemma 4 12B开源本地AI+敏感数据本地处理+数据安全优先+开源社区首发"
+      },
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
+    },
+    {
+      "id": "p001",
+      "title": "ICRA 2026 机器人顶会维也纳落幕：小米机器人团队 WBC 赛道夺冠",
+      "summary": "机器人顶会 ICRA 2026 于维也纳落幕,小米创始人雷军发文祝贺小米机器人团队在 ICRA 2026 WBC 中以综合得分 99.2 分夺得赛道冠军。这一成绩标志着小米在具身智能领域的研发实力获得国际顶级学术会议认可,也让由智元主办的 AGIBOT 挑战赛再次引发行业关注。ICRA 2026 汇聚全球机器人与 AI 领域最新研究成果,涵盖人形机器人、精密操作、仿真训练等多个方向。",
+      "category": "paper",
+      "category_label": "学术",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
+      "heat": {
+        "score": 4200,
+        "level": "中",
+        "sources": [
+          "网易科技",
+          "小米官方",
+          "ICRA 官方"
+        ],
+        "breakdown": "ICRA 2026落幕+小米机器人WBC赛道冠军99.2分+雷军祝贺+智元AGIBOT挑战赛关注度提升"
+      },
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
+    },
+    {
+      "id": "p002",
+      "title": "DeepSeek V4 代码能力持续迭代：国产开源模型性价比优势扩大",
+      "summary": "DeepSeek V4 代码能力持续迭代,在多个代码生成和 Agent 任务基准上保持全球领先性价比。作为国产开源大模型的代表,DeepSeek V4 以极低 API 定价提供接近顶级闭源模型的代码能力,被广泛应用于 AI Coding 和自动化编程场景。DeepSeek 与阿里融资谈判破裂后坚持独立发展,估值 3000 亿港元,持续在开源 AI 生态中扮演关键角色。",
+      "category": "paper",
+      "category_label": "学术",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
+      "heat": {
+        "score": 3800,
+        "level": "新星",
+        "sources": [
+          "CSDN",
+          "GitHub Trending",
+          "Hugging Face"
+        ],
+        "breakdown": "DeepSeek V4持续迭代+国产开源代码模型性价比领先+独立发展估值3000亿港元"
+      },
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
+    },
+    {
+      "id": "i001",
+      "title": "COMPUTEX 2026 台北国际电脑展闭幕：AI Together 成最强主题",
+      "summary": "COMPUTEX 2026 于 6 月 5 日在南港展览馆正式落下帷幕。本届展会以 AI Together为主题,聚焦 AI 运算、机器人及智慧移动、次世代科技三大核心方向。英伟达 CEO 黄仁勋发表 COMPUTEX 开幕主题演讲,发布 Vera Rubin 架构、RTX Spark AI PC 等重磅产品。华硕、技嘉、微星、HKC 等厂商发布多款 AI PC 和显示器新品。展会期间,联发科透露下一代芯片将独家采用英特尔 EMIB-T 封装技术,目标2027 年 Q4 流片。",
       "category": "industry",
       "category_label": "行业",
-      "source": "IT之家 / The Guardian / 网易科技",
-      "time": "2026-06-06",
-      "tags": [
-        "FIFA",
-        "2026世界杯",
-        "AI内容审核",
-        "社交媒体保护"
-      ],
-      "terms": [
-        "AI内容审核",
-        "FIFA世界杯"
-      ],
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 5200,
-        "level": "新",
+        "score": 5600,
+        "level": "中",
         "sources": [
-          "media",
-          "weibo"
+          "网易科技",
+          "快科技",
+          "COMPUTEX 官方"
         ],
-        "breakdown": "微博热议 · 6+ 媒体报道"
+        "breakdown": "COMPUTEX 2026闭幕+AI Together主题+Vera Rubin/RTX Spark发布+联发科英特尔封装合作"
       },
-      "comments": 143,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-06"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n15",
-      "title": "中国 AI 行业缺一个 Twitter:X平台已成 AI 行业风向标,氛围编程概念引爆",
-      "summary": "《纽约杂志》刊发深度文章指出,马斯克的 X(前 Twitter)已成为 AI 行业风向标:几乎所有头部 AI 公司(Meta、Anthropic、Google)的高管和研究人员在 X 上发布研究、路线图和产品;OpenAI CEO 奥特曼每天发帖,平均每天一条,总计 7335 条;Karpathy 在 X 上随手创造的氛围编程(Vibe Coding)概念,如今成为 AI 行业年度热词;论文在 ArXiv 发布前,研究者已在 X 上讨论并积累声望。虎嗅刊文探讨中国 AI 行业缺乏类似 X 的行业广场,引发从业者广泛共鸣。",
-      "category": "social",
-      "category_label": "声音",
-      "source": "虎嗅 / 腾讯新闻 / 纽约杂志",
-      "time": "2026-01",
-      "tags": [
-        "X平台",
-        "AI社区",
-        "氛围编程",
-        "Vibe Coding",
-        "社交媒体"
-      ],
-      "terms": [
-        "Vibe Coding",
-        "氛围编程",
-        "AI社区"
-      ],
+      "id": "i002",
+      "title": "韩国 KOSPI 指数暴跌 5.54%：三星/SK 海力士领跌，全球科技股回调",
+      "summary": "韩国股市6 月 5 日进入'黑色星期五',KOSPI 指数收盘暴跌 5.54%,三星电子跌超 6%,SK 海力士跌近 10%。日经 225 指数同日跌 3.48%。在此背景下,黄仁勋 6 月 8 日访韩及与多家韩企签署 AI 合作协议,对韩国股市'救市'意义重大。与此同时,美股上周五大跌,纳指重挫逾 4%,科技股大幅回调,AI 板块进入阶段性调整。美国九大协会联合警告,AI 爆炸式增长引发的全球内存芯片短缺正对汽车、医疗器械等制造业构成日益严重的供应链风险。",
+      "category": "industry",
+      "category_label": "行业",
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 5800,
-        "level": "新",
+        "score": 6100,
+        "level": "中",
         "sources": [
-          "media",
-          "weibo"
+          "网易科技",
+          "东方财富",
+          "财联社",
+          "Reuters"
         ],
-        "breakdown": "虎嗅 10万+ 阅读 · 微博热议 · 知乎热榜"
+        "breakdown": "韩国KOSPI暴跌5.54%+三星/SK海力士领跌+黄仁勋访韩救市+全球科技股回调+内存短缺警告"
       },
-      "comments": 234,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-01"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     },
     {
-      "id": "n16",
-      "title": "Cision 发布《2026 全球媒体调查报告》:79% 记者依赖 AI辅助但反对公关用 AI 生成内容",
-      "summary": "全球媒体情报公司 Cision 发布《2026 全球媒体调查报告》,基于对 19 个市场近2000 位记者的调研。报告显示:50% 的记者将准确性挑战列为最大压力;49% 将资源限制列为第二大挑战(较 2025 年的 29% 大幅跃升);66% 的记者依赖公关提供的内容寻找故事创意,但 72% 指出每周收到的 50 余条投稿中仅不到 25% 与自身工作相关;AI 应用呈双重标准——21% 的记者已使用 AI(用于头脑风暴、研究支持、转录摘要),但 53% 反对公关用 AI 生成提案或新闻稿(26% 强烈反对)。",
+      "id": "s001",
+      "title": "SpaceX IPO 进入倒计时：最早 6 月 11 日定价，估值 1.77 万亿美元",
+      "summary": "SpaceX 预计最早在 6 月 11 日为 IPO 定价,并可能于次日在纳斯达克开始交易。公司目标发行价每股 135 美元,计划募资约 750 亿美元,按此价格计算估值约 1.77 万亿美元。但晨星(Morningstar)给出的公允估值仅约 7800 亿美元,分析师对估值分歧显著。在上市前夕,公司内部员工和早期持股人已开始讨论股权变现后的生活安排,包括购置房产等。The Information 6 月 6 日报道了这一情况。",
       "category": "social",
       "category_label": "声音",
-      "source": "企鹅号 / Cision 官方 /网易科技",
-      "time": "2026-06-05",
-      "tags": [
-        "Cision",
-        "媒体调查",
-        "AI新闻",
-        "公关",
-        "记者"
-      ],
-      "terms": [
-        "AI新闻",
-        "公关AI"
-      ],
+      "source": "",
+      "time": "",
+      "tags": [],
+      "terms": [],
       "heat": {
-        "score": 4600,
-        "level": "新",
+        "score": 6500,
+        "level": "热",
         "sources": [
-          "media"
+          "The Information",
+          "网易科技",
+          "Bloomberg",
+          "CNBC"
         ],
-        "breakdown": "19 个市场调研 · 2000 位记者 · 5+ 媒体报道"
+        "breakdown": "SpaceX IPO 6月11日定价+目标估值1.77万亿美元+晨星公允估值仅7800亿+员工讨论变现"
       },
-      "comments": 98,
-      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date=2026-06-05"
+      "comments": 0,
+      "url": "https://bbyy11.github.io/ai-daily/archive-view.html?date="
     }
   ],
   "_meta": {
     "format": "jsonfeed-1.1",
-    "total_items": 16,
-    "generated_at": "2026-06-07T00:05:24+08:00",
+    "total_items": 18,
+    "generated_at": "2026-06-09 08:00 (Asia/Shanghai)",
     "tip_for_llm": "This is a daily AI news digest. Each item has a 'heat' object with score/level/sources for popularity signal, and 'category' for type. Useful for trend analysis, summarization, and monitoring."
   }
 }
