@@ -79,6 +79,11 @@ while IFS= read -r -d '' file; do
     *.pyo) continue ;;
     *.log) continue ;;
     .DS_Store) continue ;;
+    # archive/index.json 不在这里推 —— 事故 #013 教训:
+    # push_to_github.sh 推全套时拿本机 index.json 覆盖远端,
+    # 但本机 index.json 通常是过期版(只有几天,远端可能有 6-09/6-10)
+    # archive/index.json 由 update_archive_index.py 在 fetch_news 里调
+    data/archive/index.json) continue ;;
     # .github/ 目录不能通过 Contents API 推送(GitHub 安全机制)
     # 要推 .github/workflows/*.yml 需要带 'workflow' scope 的 token
     # 详见 scripts/README.md
