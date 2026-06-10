@@ -594,16 +594,28 @@ header {
 .heat .lvl.中 { color: var(--blue); background: var(--blue-soft); border: 1px solid var(--blue); }
 .heat .lvl.新星 { color: var(--orange); background: var(--orange-soft); border: 1px solid var(--orange); }
 .heat .srcs {
-  font-family: var(--mono);
-  font-size: 9px;
-  color: var(--text-mute);
-  display: flex;
-  gap: 3px;
-  justify-content: flex-end;
-  margin-top: 2px;
-  font-weight: 600;
+  /* 源标签不再在 .heat 侧栏内显示,改在 .body 下方 .sources 独立行横排 */
+  display: none;
 }
 .heat .srcs .src-tag { padding: 1px 5px; border-radius: 2px; background: var(--bg-2); border: 1px solid var(--line); }
+
+/* 来源标签独立行(事故 #015 修复:从 .heat 列移到 body 下方) */
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.sources .src-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+  font-weight: 600;
+}
 .heat .c { color: var(--text-mute); font-size: 11px; font-family: var(--mono); margin-top: 2px; font-weight: 600; }
 
 /* ---- 词条 / 热度 popup(桌面)---- */

@@ -415,6 +415,7 @@ function renderNews() {
           <a class="title-link" href="archive-view.html?date=${escapeHTML(it.time)}">${highlight(it.title)}</a>
           <div class="summary">${highlight(it.summary)}</div>
           <div class="tags">${tagsHTML}${termsHTML}</div>
+          <div class="sources">${sourcesHTML}</div>
           ${risingInline}
         </div>
         <div class="heat" data-id="${it.id}">
