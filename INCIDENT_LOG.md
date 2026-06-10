@@ -441,3 +441,44 @@
 1. 给 GitHub token 加 admin scope(或新建一个 admin token),用来清理误建仓库
 2. 验证明天 6-11 8:00 主 cron 跑成功,且 LLM session 不再"从零建项目"
 3. 写一个 GitHub Actions 工作流监控"bbyy11/ai-daily 的 news.json 是不是今天"
+
+---
+
+## 2026-06-10 · #014 · push_to_github.sh 推全套时回滚 archive/index.json(事故 #013 残留 + 衍生)
+
+**症状**
+- 6-10 早上 9:08,用户反馈主页 news.json 是 6-10 但 archive/ 目录里**没有 6-10.json**(正常,还没过完)
+- 但 archive.html 显示 6-10 在列表里——`archive/index.json` 里有 6-10 这条
+- 用户疑惑"今天没完,为什么 6-10 被归档了"
+
+**根因(更深的)**
+- 6-10 8:00 主 cron 触发的 LLM session 误以为项目不存在,从零创建了一个新仓库 `BBYY11/ai-daily.github.io`(事故 #013)
+- 我手动补 6-10 早报时,commit `d2e04805` 推了 archive/index.json 的 +24 行,**加了 6-09 + 6-10 两天**(本意是"补索引"!)
+- 但**6-10 当天不能进归档索引**——没完
+- 然后 9:23 我又推了 normalize() 修复,commit `fcdf057e` 走 `push_to_github.sh` 推全套——**该脚本用本机的 archive/index.json 覆盖远端**
+- **本机的 archive/index.json 只到 6-08**(因为 fetch_news 跑了之后没重建索引),所以**远端 6-09 + 6-10 两条被移除**
+- 但 commit `d2e04805` 加的 6-09 没被这个 commit 抹掉(我后来又 PUT 了一次修复,见后续)
+
+**为什么用户看到"6-10 被归档"**
+- 我 commit `d2e04805` 加的 6-10 索引条目**在那一刻是远端状态**
+- `fcdf057e` 推全套时**会回滚 archive/index.json**——把 6-09 + 6-10 删掉
+- 后来我 commit `e2652049` 修复,重新 PUT archive/index.json 把 6-09 + 6-10 加回
+- 所以**远端 index.json 出现了 6-10 索引条目**(13 days),但 archive/ 目录里没有 6-10.json
+- 主页 archive.html 显示 6-10 在列表 → 用户看到"被归档了"
+
+**修复**
+- ✅ 从 archive/index.json 移除 6-10 索引条目(commit `1cc4b3ba`),12 天,最新 6-09
+- ✅ `push_to_github.sh` 增加排除规则:`data/archive/index.json` 不在 push 范围内
+  - 理由:archive/index.json 由 fetch_news.py 跑完后**单独 PUT**,不在 push_to_github.sh 推全套范围
+  - 防止 fetch_news 跑完没更新 index.json 时,push_to_github.sh 用过期 index.json 覆盖远端
+- ✅ 文档更新:scripts/push_to_github.sh 注释里写明事故 #013 教训
+
+**教训(同类 #012/#013 链式衍生)**
+- **任何"全自动推全套"的工作流都有"单文件回滚"风险**——推全套时,**每个文件必须以本机为准**,本机没更新的文件就**不该被推到远端**(因为本机会覆盖远端已有的更新)
+- **fetch_news.py / push_to_github.sh 不应该是"两个独立脚本"**——它们之间需要状态机,确保 archive/index.json 总是在 push 之前更新
+- **更安全方案**:`push_to_github.sh` 推时**对比每个文件 hash**,**只推有差异的**——但目前没做(事故 #012 的改进只做了"news.json 跟远端一致就 skip",**对其他文件没有同样处理**)
+
+**未来改进(下次实施)**
+1. push_to_github.sh 改为"逐文件 hash 比对",只推有变化的(可大幅减少覆盖风险)
+2. 把 archive/index.json 重建逻辑塞进 fetch_news.py 末尾,确保每次 push 都有最新 index
+3. 写一个 push_dryrun 模式,先 diff 再问"是否推这些"
