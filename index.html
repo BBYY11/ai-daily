@@ -306,8 +306,7 @@ function normalize(news) {
       const terms = (it.terms && it.terms.length > 0) ? it.terms
         : termKeys.filter(k => blob.includes(k.toLowerCase())).slice(0, 4);
       return { ...it, id, rank, time, tags, terms };
-    })
-  };
+    });
 }
 
 
