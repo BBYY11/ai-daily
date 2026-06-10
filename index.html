@@ -112,8 +112,8 @@
   .heat .lvl.热 { color: var(--hot); background: var(--hot-soft); border: 1px solid var(--hot); }
   .heat .lvl.中 { color: var(--blue); background: var(--blue-soft); border: 1px solid var(--blue); }
   .heat .lvl.新星 { color: var(--orange); background: var(--orange-soft); border: 1px solid var(--orange); }
-  .heat .srcs { font-family: var(--mono); font-size: 9px; color: var(--text-mute); display: flex; gap: 3px; justify-content: flex-end; margin-top: 2px; font-weight: 600; }
-  .heat .srcs .src-tag { padding: 1px 5px; border-radius: 2px; background: var(--bg-2); border: 1px solid var(--line); }
+  /* 事故 #015 修复:源标签不在 .heat 侧栏内显示,改在 .body 下方 .sources 独立行 */
+  .heat .srcs { display: none; }
   .heat .c { color: var(--text-mute); font-size: 11px; font-family: var(--mono); margin-top: 2px; font-weight: 600; }
 
   .glossary-pop, .heat-pop { position: fixed; z-index: 1000; display: none; pointer-events: none; }
@@ -152,6 +152,7 @@
     .heat .lvl { font-size: 9px; padding: 1px 4px; }
     .heat .srcs { display: none; }
     .heat .c { font-size: 9px; }
+    .sources .src-tag { font-size: 9px; padding: 1px 5px; }
     .search { min-width: 160px; padding: 6px 10px; }
   }
 </style>
