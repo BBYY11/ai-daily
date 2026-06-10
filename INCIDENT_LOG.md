@@ -482,3 +482,42 @@
 1. push_to_github.sh 改为"逐文件 hash 比对",只推有变化的(可大幅减少覆盖风险)
 2. 把 archive/index.json 重建逻辑塞进 fetch_news.py 末尾,确保每次 push 都有最新 index
 3. 写一个 push_dryrun 模式,先 diff 再问"是否推这些"
+
+---
+
+## 2026-06-10 · #015 · 主页只有头条 + 本月周报停留在 W22(双事故)
+
+**症状(用户 10:38 反馈)**
+- 主页只显示头条卡(4 条),下面列表是空的——只有顶部"🔥 HEADLINES"区有内容,其余 14 条不见
+- 本月 tab 里"上一周总结"还停留在 W22(5-25 ~ 5-31),但用户前几天看过 W23(6-01 ~ 6-07)周报
+
+**根因 1(主页空列表)**
+- 6-10 9:23 我加的 `normalize(news)` 函数**return 了 news 对象**(含 items 字段),**不是 items 数组**
+- index.html line 265: `ALL_ITEMS = normalize(news)` 期望 ALL_ITEMS 是数组
+- 但 normalize 返回的是 `{...news, items: [...]}`——是个对象
+- 导致 `ALL_ITEMS.length` 永远是 undefined,`renderNews().filter()` 出 0 条,列表空白
+- **renderHeadlines()** 不依赖 ALL_ITEMS.length(它直接 filter items),所以**头条卡正常显示**
+- 因此用户看到"只有头条"——bug 范围确认
+
+**根因 2(W22 不更新)**
+- weekly-summary cron 6-08 8:00:14 触发,`last_result=success` 但**实际没改 weekly_summary.json**
+- 跟事故 #013 同样的"假成功"——LLM session 在新 sandbox,系统提示空,没改 W23
+- 用户这几天看到的 W23 实际是 archive/weekly/2026-W23.json 的归档(6-08 8:08 commit `e7be5461` 推的),不是 monthly.html 块的"当前周"
+- 6-08 那次 cron 假成功 + 6-09 没跑(周一不是周一)+ 6-10 主 cron 失败 = **weekly_summary.json 一直停在 W22**
+
+**修复**
+- ✅ 修 normalize 函数 return 类型:`return (news.items || []).map(...)` 直接返回数组
+- ✅ 复制 `data/archive/weekly/2026-W23.json` → `data/weekly_summary.json`
+- ✅ 推送(commit `557da750`)
+- ✅ 本机同步
+
+**教训(再次同类 #011/#012/#013)**
+- **normalize 函数返回值类型必须跟调用方期望一致**——调用 `ALL_ITEMS = normalize(news)` 期望数组,normalize 必须 return 数组
+- **weekly_summary.json 必须由 cron 跑完**才能更新——但 cron "假成功" 是个老问题,6-08/6-09/6-10 三次 cron 失败都没报警
+- **monthly.html 块的"上一周总结"依赖 weekly_summary.json**——一旦该文件没更新,主页 monthly tab 就一直显示旧的
+
+**未来改进(累计 #012-015 一致的根因)**
+1. **每周日 23:00 加一个 weekly_summary.json 自检 cron**——检查 weekly_summary.json 的 `week` 是不是 `当前周-1`,不对就报警
+2. **week / month 边界值校验**——validate_news.py 加一个 weekly_summary 校验,跑在主流程前
+3. **根本修法**:weekly_summary.json 的更新**不应该靠 LLM 写**——应该 `gen_weekly_summary.py` 跑完就自动写,LLM 只负责补 summary 和 key_themes
+4. **修 #013 的根因**:`AI Daliy Agent` system_prompt 已经是"禁止从零建项目"——但 weekly-summary cron 用的 `Mavis` agent,不是 `AI Daliy Agent`,**root cause 是 `Mavis` agent 跨 sandbox 也不携带项目上下文**——解决方案:**weekly-summary cron prompt 开头**就要求 `git clone https://github.com/BBYY11/ai-daily.git` 拉项目
