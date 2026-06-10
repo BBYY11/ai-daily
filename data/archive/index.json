@@ -5,8 +5,12 @@
       "weekday": "周一",
       "summary": "2026 年 6 月 8 日,AI 行业迎来多线重磅消息:OpenAI 宣布 ChatGPT 将转型为超级应用,整合编程工具 Codex 与 AI 智能体,全力筹备 IPO;Anthropic 罕见发布长文警告 AI 递归自我改进风险,同时秘密递交 S-1 招股书、估值达 9650 亿美元;苹果 WWDC26 今夜开幕,库克谢幕演出,Siri 将接入 Gemini 实现重大升级;Meta 被曝搭建帐篷式临时数据中心应对算力短缺,并考虑股票募资数百亿美元。美股 AI 板块周五大幅回调,纳指暴跌超 4%。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。",
       "total": 18,
+      "headline": 4,
       "rising": 5,
-      "headline": 4
+      "company": 4,
+      "paper": 2,
+      "industry": 2,
+      "social": 1
     },
     {
       "date": "2026-06-07",

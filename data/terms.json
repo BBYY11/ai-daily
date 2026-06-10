@@ -5,10 +5,7 @@
     "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
     "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
     "links": [
-      {
-        "label": "arXiv 2605.05191",
-        "url": "https://arxiv.org/abs/2605.05191"
-      }
+      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
     ]
   },
   "Qwen": {
@@ -52,10 +49,7 @@
     "summary": "Hacker News 的产品发布板块,创作者亲手发帖,社区以项目质量投票。",
     "detail": "Show HN 上 1k+ points 的项目常预示未来 6 个月的趋势。",
     "links": [
-      {
-        "label": "Hacker News Show",
-        "url": "https://news.ycombinator.com/show"
-      }
+      {"label": "Hacker News Show", "url": "https://news.ycombinator.com/show"}
     ]
   },
   "Product Hunt": {
@@ -64,10 +58,7 @@
     "summary": "全球每日新产品发现平台,AI 工具日榜是行业内最具风向标意义的产品榜单。",
     "detail": "PH 上 #1 的 AI 工具,几乎都会在 2 周内获得大量媒体报道。",
     "links": [
-      {
-        "label": "Product Hunt AI",
-        "url": "https://www.producthunt.com/topics/artificial-intelligence"
-      }
+      {"label": "Product Hunt AI", "url": "https://www.producthunt.com/topics/artificial-intelligence"}
     ]
   },
   "GitHub Trending": {
@@ -76,10 +67,7 @@
     "summary": "GitHub 官方每日榜单,按仓库 24h 涨星排序,被视作开源世界最有用的'早期信号'。",
     "detail": "Trending 出现的新面孔(陌生名字)往往比'老牌项目'更有信息量。",
     "links": [
-      {
-        "label": "GitHub Trending",
-        "url": "https://github.com/trending"
-      }
+      {"label": "GitHub Trending", "url": "https://github.com/trending"}
     ]
   },
   "Reddit r/LocalLLaMA": {
@@ -95,10 +83,7 @@
     "summary": "Y Combinator 旗下的技术新闻聚合社区,首页点数的'含金量'在技术圈公认最高。",
     "detail": "首页出现 30+ 分钟且点数 > 500 的几乎都是值得关注的趋势事件。",
     "links": [
-      {
-        "label": "Hacker News",
-        "url": "https://news.ycombinator.com/"
-      }
+      {"label": "Hacker News", "url": "https://news.ycombinator.com/"}
     ]
   },
   "HN points": {
@@ -170,14 +155,8 @@
     "summary": "英伟达下一代 GPU 架构,接替 Blackwell,主打推理与能效。命名取自确认暗物质存在证据的天文学家 Vera Rubin。",
     "detail": "Vera Rubin 平台整合新一代 GPU + CPU Vera,设计目标是让 AI 工厂在每兆瓦 token 性能上做到极致,继续巩固英伟达在算力层的霸主地位。",
     "links": [
-      {
-        "label": "NVIDIA 官方",
-        "url": "https://nvidianews.nvidia.com/"
-      },
-      {
-        "label": "The Verge 报道",
-        "url": "https://www.theverge.com/"
-      }
+      {"label": "NVIDIA 官方", "url": "https://nvidianews.nvidia.com/"},
+      {"label": "The Verge 报道", "url": "https://www.theverge.com/"}
     ]
   },
   "RTX Spark": {
@@ -186,10 +165,7 @@
     "summary": "英伟达首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + 神经处理单元,主打本地大模型推理。",
     "detail": "戴尔、惠普、联想、微软首批支持。它的意义在于把 AI Agent 从云端拽到本地,降低延迟、隐私和推理成本。",
     "links": [
-      {
-        "label": "Wikipedia: AI PC",
-        "url": "https://en.wikipedia.org/wiki/AI_PC"
-      }
+      {"label": "Wikipedia: AI PC", "url": "https://en.wikipedia.org/wiki/AI_PC"}
     ]
   },
   "Nemotron": {
@@ -198,10 +174,7 @@
     "summary": "英伟达自研大语言模型系列,主打多模态、Agent 能力与企业级部署。",
     "detail": "Nemotron 与 NIM 微服务配套发布,常被用于与开源模型做蒸馏比较,也是英伟达从'卖铲子'到'也下场挖金子'的标志。",
     "links": [
-      {
-        "label": "NVIDIA NIM",
-        "url": "https://www.nvidia.com/en-us/ai-software/"
-      }
+      {"label": "NVIDIA NIM", "url": "https://www.nvidia.com/en-us/ai-software/"}
     ]
   },
   "DSX": {
@@ -210,10 +183,7 @@
     "summary": "面向 AI 工厂全生命周期的参考设计与操作系统平台,DSX MaxLPS 支持 45°C 液冷,在固定电力预算内多跑 40% GPU。",
     "detail": "把建 AI 数据中心从'工程难题'变成'参考蓝图',客户可直接复用。",
     "links": [
-      {
-        "label": "NVIDIA 数据中心",
-        "url": "https://www.nvidia.com/en-us/data-center/"
-      }
+      {"label": "NVIDIA 数据中心", "url": "https://www.nvidia.com/en-us/data-center/"}
     ]
   },
   "Isaac GR00T": {
@@ -222,10 +192,7 @@
     "summary": "英伟达推出的通用人形机器人基础模型与参考设计,目标是让机器人能听懂自然语言并执行复杂操作任务。",
     "detail": "GR00T 走'基础模型 + 仿真训练 + 硬件参考'三位一体路线,合作方包括宇树、Figure 等。",
     "links": [
-      {
-        "label": "Isaac GR00T 官方",
-        "url": "https://developer.nvidia.com/isaac/gr00t"
-      }
+      {"label": "Isaac GR00T 官方", "url": "https://developer.nvidia.com/isaac/gr00t"}
     ]
   },
   "HBM": {
@@ -234,10 +201,7 @@
     "summary": "高带宽内存,3D 堆叠的 DRAM,专为大模型训练推理设计。",
     "detail": "HBM3e、HBM4 是当前最紧俏的 AI 供应链环节,SK 海力士、三星、美光三足鼎立。这次三家联合投资 Anthropic,本质是'锁需求'。",
     "links": [
-      {
-        "label": "SK hynix HBM",
-        "url": "https://www.skhynix.com/eng/solutions.do"
-      }
+      {"label": "SK hynix HBM", "url": "https://www.skhynix.com/eng/solutions.do"}
     ]
   },
   "Series H": {
@@ -260,10 +224,7 @@
     "summary": "20 世纪最多产、游走于全世界的匈牙利数学家,以组合学、概率论贡献著称,留下了大量'Erdős 猜想'。",
     "detail": "OpenAI 推翻的是他 1946 年提出的'单位距离问题上界'猜想——这是 AI 首次在主流数学猜想上给出反例级突破。",
     "links": [
-      {
-        "label": "Erdős Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"
-      }
+      {"label": "Erdős Wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"}
     ]
   },
   "单位距离问题": {
@@ -286,10 +247,7 @@
     "summary": "DeepSeek 2026 年主力模型,主打代码与 Agent 任务,API 定价一次性下调 75%。",
     "detail": "DeepSeek 用'开源 + 极致降价 + 架构创新'重画硬件生态成本曲线,被视作'东半球 AI 价格战'的标杆事件。",
     "links": [
-      {
-        "label": "DeepSeek 官方",
-        "url": "https://www.deepseek.com/"
-      }
+      {"label": "DeepSeek 官方", "url": "https://www.deepseek.com/"}
     ]
   },
   "token 经济": {
@@ -340,6 +298,15 @@
     "summary": "机器人能独立运动的关节数量,直接决定其动作灵活度。",
     "detail": "宇树 H2+ 全身 31 自由度 + 每手 25 自由度,合计 81 自由度,在同类人形机器人中属顶级。",
     "links": []
+  },
+  "Context-ReAct": {
+    "name": "Context-ReAct",
+    "category": "Agent / 学术",
+    "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
+    "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
+    "links": [
+      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
+    ]
   },
   "BrowseComp": {
     "name": "BrowseComp",
@@ -431,10 +398,7 @@
     "summary": "基于区块链的事件预测市场,用户用真金白银押注未来事件结果。",
     "detail": "Polymarket 上 Anthropic 83.2% 概率被市场视为 6 月底最佳 AI 模型,反映资本与社区的共识方向。",
     "links": [
-      {
-        "label": "Polymarket",
-        "url": "https://polymarket.com/"
-      }
+      {"label": "Polymarket", "url": "https://polymarket.com/"}
     ]
   },
   "流动性池": {
@@ -450,10 +414,7 @@
     "summary": "Figure AI 第三代人形机器人,主打工业自动化分拣与物流作业。",
     "detail": "200 小时直播 + 25 万包裹零故障,是当前人形机器人'工厂可用性'的最强公开证据之一。",
     "links": [
-      {
-        "label": "Figure AI",
-        "url": "https://www.figure.ai/"
-      }
+      {"label": "Figure AI", "url": "https://www.figure.ai/"}
     ]
   },
   "耐力测试": {
@@ -461,81 +422,6 @@
     "category": "机器人 / 评测",
     "summary": "让机器人在真实生产环境中长时间不间断运行的测试,衡量稳定性与维护成本。",
     "detail": "从 8 小时到 24 小时再到 200 小时,Figure 03 完成了量级跨越,机器人'能用'的下限被显著抬高。",
-    "links": []
-  },
-  "Dreaming V3": {
-    "name": "Dreaming V3 (ChatGPT记忆系统)",
-    "category": "Agent / 记忆",
-    "summary": "OpenAI 升级的 ChatGPT 记忆底层架构,能自动从对话、文件和已连接应用中整理用户偏好,并随时间更新。",
-    "detail": "相比2024 年的 saved memories 和 2025 年的 Dreaming V0,V3 重点解决了记忆过时、内容准确性和大规模扩展三大问题,免费用户算力成本降至五分之一。",
-    "links": [
-      {
-        "label": "OpenAI 官方博客",
-        "url": "https://openai.com/index/chatgpt-memory-update"
-      }
-    ]
-  },
-  "Lockdown Mode": {
-    "name": "Lockdown Mode (封锁模式)",
-    "category": "AI 安全",
-    "summary": "OpenAI 新上线的可选安全设置,开启后限制实时联网、深度研究和智能体模式等能力,防止提示注入攻击带走敏感数据。",
-    "detail": "针对高安全需求场景设计,如处理机密商业数据或敏感个人信息的企业用户。开启后 ChatGPT 降级为纯离线对话模式。",
-    "links": []
-  },
-  "Super App": {
-    "name": "超级应用 (Super App)",
-    "category": "商业模式",
-    "summary": "将多种功能集成于单一入口的产品形态。OpenAI 正在将 ChatGPT 从对话机器人转型为集成编程工具、AI智能体和第三方服务的超级应用。",
-    "detail": "一位 OpenAI 高级员工表示,'聊天已死',新版 ChatGPT 将成为用户生活和工作中的全方位助手,对标微信、支付宝等超级应用的产品逻辑。",
-    "links": []
-  },
-  "Mythos": {
-    "name": "Mythos (Anthropic 网络安全受限模型)",
-    "category": "基础模型 / 安全",
-    "summary": "Anthropic 面向高级网络安全场景推出的受限 AI 模型,具备先进网络安全能力,此前主要面向受信任机构开放。",
-    "detail": "此次 Anthropic 向 NSA 提供现场工程支持,意味着政府与前沿 AI 公司的安全合作进入新阶段,是 AI军事化应用的标志性事件。",
-    "links": []
-  },
-  "数字孪生": {
-    "name": "数字孪生 (Digital Twin)",
-    "category": "基础设施 / 制造",
-    "summary": "在数字空间中构建与物理工厂1:1 还原的仿真模型,实现实时可视化、高精度仿真与全流程运营优化。",
-    "detail": "SK 海力士借助英伟达 Omniverse、OpenUSD 和 cuOpt 构建晶圆厂数字孪生,精准调度数百台 AMR 与数千台生产设备,推动工厂向自主化智能化演进。",
-    "links": []
-  },
-  "TCAD": {
-    "name": "TCAD (技术计算机辅助设计)",
-    "category": "硬件设计",
-    "summary": "半导体技术计算机辅助设计工具,用于模拟和优化芯片制造工艺流程,是芯片设计中最耗时的核心工作流之一。",
-    "detail": "SK 海力士采用英伟达 CUDA-X 加速库,将原本需要数周的 TCAD 工作流压缩至数小时,展示了 AI 赋能半导体制造的巨大潜力。",
-    "links": []
-  },
-  "GW 级 AI 云": {
-    "name": "GW 级 AI 云 (千兆瓦级 AI 云)",
-    "category": "基础设施",
-    "summary": "功率达千兆瓦(GW)级别的超大型 AI 云数据中心。SK 电讯计划 2027 年在韩建设 GW 级 AI 云,首个数据中心预计 2027 年上线。",
-    "detail": "1GW 级数据中心相当于一座核电站的输出,代表 AI 基础设施进入前所未有的规模时代。英伟达 Vera Rubin 等新一代算力平台是支撑这一规模的核心技术。",
-    "links": []
-  },
-  "诺奖级 AI": {
-    "name": "诺奖级 AI (Nobel-Level AI)",
-    "category": "AI 预测 / 治理",
-    "summary": "Anthropic CEO Dario Amodei 预测 2026-2027 年 AI 智力将达诺贝尔奖获得者在生物学、计算机科学、数学等领域的水平。",
-    "detail": "这是 AI 领域最激进的能力预测之一。若实现,意味着 AI 能在多学科达到顶尖人类专家水平,并具备长时推理和物理世界交互能力。Anthropic 同时呼吁全球 AI 实验室放慢研发速度。",
-    "links": []
-  },
-  "Anthropic 六项建议": {
-    "name": "Anthropic 六项 AI 政策建议",
-    "category": "AI 治理 / 政策",
-    "summary": "Anthropic 向美国政府提出的六项 AI 安全与发展政策建议,涵盖国家安全评估、出口管控、实验室安全、能源基础设施等领域。",
-    "detail": "这些建议代表了前沿 AI 公司对'如何安全发展超级智能'的系统性思考,包括建立 AI 模型国家安全综合评估体系、强化出口管控、提升实验室安全标准等。",
-    "links": []
-  },
-  "Scale AI 军事合作": {
-    "name": "Scale AI 军事 AI 合作",
-    "category": "AI 军事 / 安全",
-    "summary": "美国军方与 Scale AI 签署协议,将 AI 智能体引入军事规划与作战行动,联合 Anduril 和微软打造全面整合 AI 的军事运作系统。",
-    "detail": "Scale AI 的声明强调通过 AI 推动军事决策流程变革,辅助军事指挥官高效制定战略,但最后决策仍由人类掌控,确保人机协作的合理性。",
     "links": []
   }
 }
