@@ -291,9 +291,8 @@ function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp
 function normalize(news) {
   const dateStr = news.date;
   const termKeys = Object.keys(ALL_TERMS || {});
-  return {
-    ...news,
-    items: (news.items || []).map((it, i) => {
+  // 返回 items 数组(不是 news 对象) — 调用者期望 ALL_ITEMS 是数组
+  return (news.items || []).map((it, i) => {
       const id = it.id || `x${i+1}`;
       // 序号:全局序号(1-18)
       const rank = it.rank || (i + 1);
