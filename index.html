@@ -275,7 +275,7 @@ async function load() {
   document.getElementById("gen-time").textContent = news.generated_at || news.date;
   document.title = `AI Daily · ${news.date} · 全球 AI 早报`;
 
-  renderHeadlines(news.items);
+  renderHeadlines(ALL_ITEMS);
   renderTabs(news.stats.by_category);
   renderNews();
   renderSources();
