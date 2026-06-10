@@ -262,7 +262,7 @@ async function load() {
   const [newsRes, termsRes] = await Promise.all([fetch(DATA_URL), fetch(TERMS_URL)]);
   const news = await newsRes.json();
   ALL_TERMS = await termsRes.json();
-  ALL_ITEMS = news.items;
+  ALL_ITEMS = normalize(news);
 
   document.getElementById("date-pill").textContent = `${news.date} · ${news.weekday}`;
   document.getElementById("weekday-pill").textContent = `${news.weekday} 早晨`;
@@ -285,6 +285,32 @@ async function load() {
 }
 
 function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+
+// 补齐旧 news.json 缺失字段 + 给 terms.json 中存在的词条填上 terms 标签
+// 容错:tags/terms/time/rank 旧归档里可能没有
+function normalize(news) {
+  const dateStr = news.date;
+  const termKeys = Object.keys(ALL_TERMS || {});
+  return {
+    ...news,
+    items: (news.items || []).map((it, i) => {
+      const id = it.id || `x${i+1}`;
+      // 序号:全局序号(1-18)
+      const rank = it.rank || (i + 1);
+      // time:从 date + id 拼接,例:2026-06-10 #01
+      const time = it.time || (dateStr + ' #' + String(i+1).padStart(2, '0'));
+      // tags:从 heat.sources 复制前几个,加上常见分类标签
+      const sources = (it.heat && it.heat.sources) || [];
+      const tags = (it.tags && it.tags.length > 0) ? it.tags : sources.slice(0, 3);
+      // terms:扫 title+summary 找 terms.json 里出现的词
+      const blob = (it.title + ' ' + (it.summary || '')).toLowerCase();
+      const terms = (it.terms && it.terms.length > 0) ? it.terms
+        : termKeys.filter(k => blob.includes(k.toLowerCase())).slice(0, 4);
+      return { ...it, id, rank, time, tags, terms };
+    })
+  };
+}
+
 
 function bindNavToggle() {
   const btn = document.getElementById("nav-toggle");
@@ -382,7 +408,7 @@ function renderNews() {
 
     return `
       <article class="news-item ${isRising ? "is-rising" : ""}" data-id="${it.id}">
-        <div class="rank">${(it.rank || 0).toString().padStart(2, "0")}</div>
+        <div class="rank">${String(it.rank || 0).padStart(2, "0")}</div>
         <div class="meta-cell">
           <span class="cat ${isRising ? "rising" : ""}">${CATEGORY_LABELS[it.category] || it.category}</span>
           <span>${it.time}</span>

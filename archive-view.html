@@ -90,10 +90,14 @@ const content = document.getElementById("content");
 if (!date) {
   content.innerHTML = '<div class="empty">缺少 date 参数。例:archive-view.html?date=2026-06-04</div>';
 } else {
-  fetch(`data/archive/${date}.json`)
-    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-    .then(data => {
-      render(data);
+  Promise.all([
+    fetch(`data/archive/${date}.json`),
+    fetch("data/terms.json").then(r => r.ok ? r.json() : {}).catch(() => ({}))
+  ]).then(([arcRes, terms]) => {
+    if (!arcRes.ok) throw new Error(`HTTP ${arcRes.status}`);
+    return arcRes.json().then(data => render(normalize(data, terms)));
+  })
+    .then(() => {
       const btn = document.getElementById("nav-toggle");
       const nav = document.getElementById("nav");
       if (btn) {
@@ -104,6 +108,21 @@ if (!date) {
     .catch(err => {
       content.innerHTML = `<div class="empty">未找到 ${date} 的归档(可能还没生成):${err.message}</div>`;
     });
+}
+
+// 补齐旧归档缺失字段(tags/terms/time/rank)
+function normalize(data, termsDict) {
+  const dateStr = data.date || '';
+  const termKeys = Object.keys(termsDict || {});
+  data.items = (data.items || []).map((it, i) => {
+    const rank = it.rank || (i + 1);
+    const tags = (it.tags && it.tags.length > 0) ? it.tags : ((it.heat && it.heat.sources) || []).slice(0, 3);
+    const blob = (it.title + ' ' + (it.summary || '')).toLowerCase();
+    const terms = (it.terms && it.terms.length > 0) ? it.terms
+      : termKeys.filter(k => blob.includes(k.toLowerCase())).slice(0, 4);
+    return { ...it, rank, tags, terms };
+  });
+  return data;
 }
 
 function render(data) {

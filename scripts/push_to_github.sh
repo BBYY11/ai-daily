@@ -42,6 +42,8 @@ fi
 
 # 2.5 去重检查:对比本地 news.json 内容跟远端最新 news.json 是否完全相同
 # 避免 LLM session 重复触发造成同一份内容推两次(事故 #012)
+# 注:只在 news.json 跟远端完全一致时跳过该项(不全局退出)
+SKIP_NEWS=""
 if [ -f "data/news.json" ] && [ -n "$HEAD_SHA" ]; then
   echo "[push] 2.5 去重检查" >> "$LOG"
   REMOTE_NEWS=$(curl -fsS -H "$AUTH" -H "$ACCEPT" "$API/repos/$REPO/contents/data/news.json?ref=$BRANCH" 2>>"$LOG" | python3 -c "import sys,json,base64; d=json.load(sys.stdin); print(base64.b64decode(d['content']).decode('utf-8'))" 2>>"$LOG")
@@ -49,9 +51,8 @@ if [ -f "data/news.json" ] && [ -n "$HEAD_SHA" ]; then
     LOCAL_HASH=$(python3 -c "import hashlib,json; d=json.load(open('data/news.json')); s=json.dumps(d,sort_keys=True,ensure_ascii=False); print(hashlib.sha256(s.encode()).hexdigest())" 2>>"$LOG")
     REMOTE_HASH=$(python3 -c "import hashlib,json; d=json.loads('''$REMOTE_NEWS'''); s=json.dumps(d,sort_keys=True,ensure_ascii=False); print(hashlib.sha256(s.encode()).hexdigest())" 2>>"$LOG")
     if [ "$LOCAL_HASH" = "$REMOTE_HASH" ]; then
-      echo "[push] ⊘ news.json 与远端一致(同内容 sha=$LOCAL_HASH[:12]),跳过推送" >> "$LOG"
-      echo "[push] ⊘ news.json 与远端一致,跳过推送"
-      exit 0
+      SKIP_NEWS="data/news.json"
+      echo "[push] ⊘ news.json 与远端一致(同内容 sha=${LOCAL_HASH[:12]}),该文件跳过" >> "$LOG"
     fi
   fi
 fi
@@ -65,6 +66,10 @@ while IFS= read -r -d '' file; do
   case "$rel" in
     .git/*) continue ;;
   esac
+  # 跳过跟远端一致的 news.json
+  if [ "$rel" = "$SKIP_NEWS" ]; then
+    continue
+  fi
   # 排除(以 .gitignore 为准,这里手动起一份防快选)
   case "$rel" in
     assets/preview-*.png) continue ;;

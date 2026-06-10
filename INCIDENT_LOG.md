@@ -401,3 +401,43 @@
 2. push_to_github.sh 用 `author.email = "ai-daily-bot@MiniMax.ai"` 而非 token holder
 3. watchdog cron 的检查窗口从 7:00-10:30 改为 8:30-10:30(避开主 cron)
 4. 6-08 早晨应该**两次 cron 之间的间隔 ≥ 30 分钟**——主 cron 跑完,watchdog 才检查
+
+---
+
+## 2026-06-10 · #013 · 6-10 早报跑到错误的新仓库(`BBYY11/ai-daily.github.io`)
+
+**症状**
+- 用户 09:08 反馈"今天没更新 6.10 的早报"
+- 远端 `bbyy11/ai-daily` 仓库 last commit 还是 6-09 8:08 `00e97df3`
+- 主 cron `ai-daily-0800` 显示 last_result=success(2026-06-10 08:00:05 Asia/Shanghai)
+- 远端有**一个新仓库** `BBYY11/ai-daily.github.io`,创建于 2026-06-10 00:08:49 UTC,推了 14 个粗糙的占位文件
+
+**根因(深层)**
+- AI Daliy Agent 的 `system_prompt` 是空的(我创建 agent 时没设)
+- 主 cron 触发 LLM session 时,该 session 在一个新 sandbox 实例里,**`/workspace/ai-daily/` 是空的**
+- 空的 system_prompt + 不知道项目已经存在 → LLM 误以为"项目没建过",**从零创建项目结构**,用 `curl POST /user/repos` **新建了一个 `ai-daily.github.io` 仓库** + 推了 14 个粗糙的脚本
+- 真正的 `bbyy11/ai-daily` 仓库完全没动
+
+**修复**
+- ✅ 手动补 6-10 早报(18 条,validate 通过,推送 commit `52ba51c2`)
+- ✅ 补 6-09 早报归档(从 commit `00e97df3` 拉 news.json,新建 `archive/2026-06-09.json`)
+- ✅ 重建 `data/archive/index.json`(13 天,加 6-09 + 6-10)
+- ✅ 重建 `AI Daliy Agent` 的 `system_prompt`(写死"项目就是 bbyy11/ai-daily,禁止创建新仓库")
+- ✅ 删除旧 ai-daily-0800 cron(task_id 404860864389898),用 Mavis agent 重建(task_id 407416025182284)
+- ✅ 5 个 cron 全部移到 Mavis agent 下,任务在 Mavis root session (404846249198073) 跑,**不再出现在我 root session (404846249198074) 的最近任务里**
+- ✅ 修 healthcheck / watchdog 引用旧 task_id
+
+**遗留事项**
+- ⏳ `BBYY11/ai-daily.github.io` 误建仓库需要用户手动删(GitHub API 需要 admin scope,我 token 没权限)
+- ⏳ 误建仓库 14 个文件也是 6-10 早报的"备份",如果你想看 LLM 8:00 实际跑出了什么,在那个仓库
+
+**教训(类似 #011/#012 的同类隐患)**
+- **agent 的 system_prompt 必填**——空 system_prompt + 长 cron prompt = LLM 在 sandbox 失忆
+- **任何 cron 任务"任务完成后通知 root session"会造成任务列表污染**——应该 silent close
+- **跨 sandbox 状态不共享**——cron 跑的 sandbox 跟 root session 的不是同一个,项目数据全在 GitHub 仓库,**LLM 不会自动 clone**
+- **更好的方案:把项目 clone 步骤写进 cron prompt 第 0 步之前**(我现在新加的 prompt 里有"项目目录为空 → 立即告诉用户")
+
+**下次需要做的事(推荐)**
+1. 给 GitHub token 加 admin scope(或新建一个 admin token),用来清理误建仓库
+2. 验证明天 6-11 8:00 主 cron 跑成功,且 LLM session 不再"从零建项目"
+3. 写一个 GitHub Actions 工作流监控"bbyy11/ai-daily 的 news.json 是不是今天"
