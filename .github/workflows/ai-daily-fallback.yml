@@ -1,0 +1,206 @@
+name: AI Daily Fallback (OpenAI)
+
+# 当主 cron(MiniMax 引擎)失败时,这个 workflow 接管,用 OpenAI 重新生成早报
+# 触发时间:每天北京时间 8:15(= UTC 0:15,在主 cron 8:00 后 15 分钟)
+on:
+  schedule:
+    - cron: '15 0 * * *'  # UTC 0:15 = Beijing 8:15
+  workflow_dispatch:        # 手动触发(供测试)
+
+concurrency:
+  group: ai-daily-fallback
+  cancel-in-progress: false
+
+jobs:
+  fallback:
+    name: 检查 + 调用 OpenAI 生成早报
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # 1. 拉仓库
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 2. 检查 news.json 是不是今天(主 cron 是否成功)
+      - name: 检查主 cron 状态
+        id: check_main
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          if [ -f "data/news.json" ]; then
+            NEWS_DATE=$(python3 -c "import json; print(json.load(open('data/news.json')).get('date',''))")
+          else
+            NEWS_DATE=""
+          fi
+          echo "today (UTC) = $TODAY"
+          echo "news.json date = $NEWS_DATE"
+          if [ "$NEWS_DATE" = "$TODAY" ]; then
+            echo "✓ 主 cron 成功,news.json 已是今天,fallback 退出"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "⚠ 主 cron 失败或没数据,fallback 启动"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      # 3. 调用 OpenAI API 生成早报
+      - name: 用 OpenAI 生成早报
+        if: steps.check_main.outputs.skip != 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python3 << 'PYEOF'
+          import os, json, datetime, urllib.request, sys
+
+          today = datetime.date.today().isoformat()
+          dt = datetime.datetime.strptime(today, "%Y-%m-%d")
+          weekday_cn = ["周一","周二","周三","周四","周五","周六","周日"][dt.weekday()]
+
+          # ISO 周
+          iso_year, iso_week, _ = dt.isocalendar()
+
+          # 拉 7 天 archive 上下文(给 LLM 看上一周走势)
+          archive_dates = []
+          try:
+              for f in sorted(os.listdir('data/archive')):
+                  if f.endswith('.json') and f != 'index.json':
+                      archive_dates.append(f[:-5])
+              archive_dates = archive_dates[-7:]
+          except: pass
+
+          archive_context = ''
+          for d in archive_dates:
+              try:
+                  with open(f'data/archive/{d}.json', 'r') as f:
+                      a = json.load(f)
+                      titles = [it.get('title','')[:50] for it in a.get('items', [])[:5]]
+                      archive_context += f'\n[{d}] ' + ' | '.join(titles)
+              except: pass
+
+          prompt = f"""你是"AI 早报编辑"。今天是 {today} ({weekday_cn}),ISO 周 {iso_year}-W{iso_week:02d}。
+
+【上一周上下文(给 LLM 看走势,可选填入 weekly_arc)】{archive_context}
+
+【任务】生成今天全球 AI 行业 15-20 条早报,严格按下面的 JSON schema 输出,只输出 JSON 本身,不要任何解释:
+
+{{
+  "date": "{today}",
+  "weekday": "{weekday_cn}",
+  "generated_at": "{today} 08:15 (Asia/Shanghai) · GitHub Actions OpenAI Fallback",
+  "summary": "200-300 字的总览,覆盖头条+新兴+趋势",
+  "stats": {{"total_items": 18, "by_category": {{"headline": 4, "rising": 5, "company": 4, "paper": 2, "industry": 2, "social": 1}}}},
+  "items": [
+    {{
+      "id": "h001",
+      "category": "headline",
+      "title": "标题(30-50字)",
+      "summary": "150-250字事实摘要,5W1H",
+      "heat": {{
+        "score": 7500,
+        "level": "爆",
+        "sources": ["Reuters", "第一财经"],
+        "breakdown": "原因1 + 原因2 + 原因3"
+      }},
+      "rising_metrics": {{"hn_show_points": 1500, "github_stars_24h": "+1.8k"}}
+    }}
+  ],
+  "weekly_arc": {{
+    "label": "本周脉络",
+    "weeks": [
+      {{"week": "{iso_year}-W{iso_week:02d}", "date": "{today}", "week_label": "第 {iso_week} 周({dt.month}-{dt.day - dt.weekday():02d} ~ {dt.month}-{dt.day + (6 - dt.weekday()):02d})", "summary": "本周前 7 天+今早的关键事件串联"}}
+    ]
+  }},
+  "monthly_arc": {{
+    "label": "本月脉络",
+    "months": [
+      {{"month": "{today[:7]}", "month_label": "{dt.year} 年 {dt.month} 月", "summary": "本月 1-7 日主叙事线"}}
+    ]
+  }}
+}}
+
+【硬规则】
+- 18 条 items,分布 4/5/4/2/2/1
+- 5 条 rising 必带 rising_metrics 字段
+- 中文文本里禁止 ASCII 双引号嵌入(用单引号或中文引号 " " "" "")
+- heat.level 必须是 爆/热/中/新星 之一
+- 标题不能重复,source 不能重复超过 3 次
+- JSON 严格合法
+"""
+
+          print(f'[fallback] prompt length: {len(prompt)}', file=sys.stderr)
+
+          # 调 OpenAI API
+          req_body = {
+              "model": "gpt-4o-mini",
+              "messages": [
+                  {"role": "system", "content": "你是 AI 早报编辑,严格按用户要求的 JSON schema 输出,只输出 JSON 本身,不要任何解释。"},
+                  {"role": "user", "content": prompt}
+              ],
+              "temperature": 0.7,
+              "max_tokens": 8000,
+              "response_format": {"type": "json_object"}
+          }
+          req = urllib.request.Request(
+              'https://api.openai.com/v1/chat/completions',
+              data=json.dumps(req_body).encode('utf-8'),
+              headers={
+                  'Authorization': f'Bearer {os.environ["OPENAI_API_KEY"]}',
+                  'Content-Type': 'application/json'
+              }
+          )
+          with urllib.request.urlopen(req, timeout=120) as r:
+              resp = json.loads(r.read())
+          content = resp['choices'][0]['message']['content']
+          print(f'[fallback] OpenAI 返回 {len(content)} 字符', file=sys.stderr)
+
+          # 解析 + 校验
+          news = json.loads(content)
+          assert news.get('date') == today, f'date 错: {news.get("date")} != {today}'
+          assert 14 <= len(news.get('items', [])) <= 25, f'items 数量错: {len(news.get("items", []))}'
+
+          # weekly_arc.weeks[0].date == today
+          weeks = news.get('weekly_arc', {}).get('weeks', [])
+          if weeks:
+              weeks[0]['date'] = today
+
+          # 写 news.json
+          with open('data/news.json', 'w', encoding='utf-8') as f:
+              json.dump(news, f, ensure_ascii=False, indent=2)
+          print(f'[fallback] news.json 写入成功,items={len(news["items"])}', file=sys.stderr)
+          PYEOF
+
+      # 4. 跑 validate_news.py
+      - name: 验证 news.json
+        if: steps.check_main.outputs.skip != 'true'
+        run: |
+          python3 scripts/validate_news.py
+
+      # 5. 生成 feed.xml / feed.json / digest.md
+      - name: 生成 3 种订阅
+        if: steps.check_main.outputs.skip != 'true'
+        run: |
+          python3 scripts/gen_feed.py
+          python3 scripts/gen_json_feed.py
+          python3 scripts/gen_digest.py
+
+      # 6. commit + push
+      - name: 推送到 GitHub
+        if: steps.check_main.outputs.skip != 'true'
+        run: |
+          git config user.email "fallback-bot@MiniMax.ai"
+          git config user.name "AI Daily Fallback (OpenAI)"
+          git add data/news.json data/feed.xml data/feed.json digest.md
+          git commit -m "ai-daily auto-update ${{ github.event.repository.updated_at }} OpenAI Fallback"
+          git push
+
+      # 7. 不论结果都通知(可以加 Slack / Discord webhook,这里只 echo)
+      - name: 完成
+        run: |
+          echo "=== AI Daily Fallback 完成 ==="
+          if [ "${{ steps.check_main.outputs.skip }}" = "true" ]; then
+            echo "主 cron 成功,fallback 跳过"
+          else
+            echo "Fallback 已生成并推送早报"
+          fi
