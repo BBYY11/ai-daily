@@ -1,0 +1,426 @@
+{
+  "date": "2026-06-12",
+  "weekday": "周五",
+  "generated_at": "2026-06-12 00:08 (Asia/Shanghai) · Mavis Bot 早报 cron",
+  "summary": "2026 年 6 月 12 日,AI 行业三条主线交汇:其一,Anthropic 兑现 Claude Fable 5 商业化承诺,Fable 5 输入 10 美元/百万 token、输出 50 美元/百万 token,SWE-Bench Pro 拿下 80.3% 远超 GPT-5.5(58.6%)与 Gemini 3.1 Pro(54.2%),Mythos 5 借 Glasswing 计划向 150 家机构定向开放,Claude Mythos Preview 已自主挖掘 FreeBSD 存在 17 年的 RCE 漏洞;其二,国产算力迎来里程碑,摩尔线程开源业内首个基于国产 GPU 全功能底座全链路训练的代码大模型 MusaCoder,KernelBench Pass@8 达 93.2%,同时无锡惠山国产智算中心一期点亮;其三,SpaceX 6 月 12 日挂牌纳斯达克,IPO 定价每股 135 美元、募资 750 亿美元、估值 1.75 万亿美元,马斯克净资产突破万亿美元,'AI x 太空'叙事点燃 A 股商业航天板块。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×3 / paper×3 / industry×2 / social×1。",
+  "stats": {
+    "total_items": 18,
+    "by_category": {
+      "headline": 4,
+      "rising": 5,
+      "company": 3,
+      "paper": 3,
+      "industry": 2,
+      "social": 1
+    }
+  },
+  "items": [
+    {
+      "id": "h001",
+      "category": "headline",
+      "title": "Anthropic 双模型同日解禁,Claude Fable 5 编程榜单横扫 GPT-5.5 与 Gemini 3.1 Pro",
+      "summary": "北京时间 6 月 10 日凌晨,Anthropic 正式发布 Claude Fable 5(公开版)与 Mythos 5(限定 Glasswing 机构)两款同源双生模型,二者底层基座一致,性能差距仅 1%-3%,唯一分水岭是层层安全护栏。Fable 5 输入 10 美元/百万 token、输出 50 美元/百万 token,价格是 Opus 标准的 2 倍,远低于 Mythos 原始定价;在 SWE-Bench Pro 真实工程排错榜单上以 80.3% 拿下第一,领先 Opus 4.8(69.2%)、GPT-5.5(58.6%)、Gemini 3.1 Pro(54.2%) 二十个百分点以上,FrontierCodeDiamond 测试更以 29.3% 拉开 GPT-5.5(5.7%)五倍差距;Mythos 5 仅向 150 家受审机构开放,被用于防御性安全研究,已自主挖掘并完整验证利用 FreeBSD 存在 17 年的 RCE 漏洞(CVE-2026-4747)。同期 Anthropic 也在与 Stripe 的合作中,用 Fable 5 在一天内完成 5000 万行 Ruby 代码库迁移,工程量相当于多名工程师两个多月的手工活。",
+      "heat": {
+        "score": 9850,
+        "level": "爆",
+        "sources": [
+          "Anthropic 官方",
+          "环球市场播报",
+          "财联社",
+          "Wired",
+          "36氪",
+          "飞络 24 小时 AI 快报"
+        ],
+        "breakdown": "双模型同发+榜单断层第一+Stripe 5000 万行一天迁移+Mythos 5 17 年 RCE 自挖+定价公开+Glasswing 计划扩展到 150 家"
+      }
+    },
+    {
+      "id": "h002",
+      "category": "headline",
+      "title": "SpaceX 敲定 IPO 定价每股 135 美元,6 月 12 日纳斯达克挂牌,募资 750 亿美元创历史纪录",
+      "summary": "SpaceX 在 SEC 文件中确认,首次公开募股定价每股 135 美元,处于 127-135 美元区间上限,共发行 5.556 亿股新股,募资近 750 亿美元,目标估值约 1.75 万亿美元,远超沙特阿美 2019 年 294 亿美元的纪录,有望成为美国股市乃至全球历史上最大规模 IPO,股票代码 SPCX,6 月 12 日在纳斯达克开始交易。文件披露 SpaceX 将美国政府列为'客户 A',2025 年政府收入约 40 亿美元,公司预计 2026 年合并 xAI 后营收达 220-240 亿美元,其中星链 EBITDA 利润率 63%,并已与 Anthropic 签下每月 12.5 亿美元的 AI 算力订单。马斯克净资产叠加特斯拉、xAI、Neuralink 等资产已突破 1 万亿美元,有望成为全球首位万亿美元富翁。受此影响,A 股商业航天与卫星互联网板块出现'对标估值重估'讨论,机构认为低轨星座'先到先得'压力下中国星网、千帆、鸿擎合计近 4 万颗卫星部署节奏将再加速。",
+      "heat": {
+        "score": 9600,
+        "level": "爆",
+        "sources": [
+          "SEC 公开文件",
+          "央视财经",
+          "NBC",
+          "环球市场播报",
+          "央广网",
+          "华泰证券研报",
+          "国盛证券研报"
+        ],
+        "breakdown": "史上最大 IPO+125 美元顶格定价+客户 A 美国政府+马斯克首富+xAI 合并+卫星+AI 双叙事+A 股航天重估"
+      }
+    },
+    {
+      "id": "h003",
+      "category": "headline",
+      "title": "摩尔线程开源 MusaCoder,首个基于国产 GPU 全栈训练的代码大模型,KernelBench 击败 Claude Opus 4.7",
+      "summary": "6 月 10-11 日,摩尔线程正式发布并开源面向 GPU 底层算子生成的代码大模型 MusaCoder,提供 9B 与 27B 两个参数版本,模型权重已上线 Hugging Face,论文同步公开(arXiv:2606.04847)。其完整后训练流程,包括监督微调、拒绝采样微调和强化学习,均在基于摩尔线程自研 MTT S5000 芯片的夸娥智算集群上完成,这是业内首个基于国产全功能 GPU 算力底座完成全链路训练与验证的开源代码大模型。官方披露 KernelBench 评测中 MusaCoder-27B-RL 以 Overall Pass@8 93.2%、Avg.@8 88.60% 的成绩,超越 Claude Opus 4.7、DeepSeek-V4 Pro、GLM-5.1、Kimi K2.6 等主流 SOTA 代码模型;同周摩尔线程还点亮了无锡(惠山)国产智算中心一期,推出 MT Lambda for Factory 仿真平台,创始人张建中提出'模型工厂、词元工厂、智能体工厂'三大全国产化 AI 工厂路线,系统对标 CUDA 生态。",
+      "heat": {
+        "score": 9450,
+        "level": "爆",
+        "sources": [
+          "第一财经",
+          "IT之家",
+          "腾讯网",
+          "i 黑马",
+          "摩尔线程官网",
+          "Hugging Face",
+          "arXiv"
+        ],
+        "breakdown": "首个国产 GPU 全栈训练代码大模型+Pass@8 93.2% 反超 Claude Opus 4.7+智算中心点亮+MT Lambda 仿真平台+开源+千亿参数训练验证"
+      }
+    },
+    {
+      "id": "h004",
+      "category": "headline",
+      "title": "智元机器人发布'元苼'生态计划,五年 20 亿元扶持开发者,AIMA 体系四平台同日开源灵渠 OS",
+      "summary": "6 月 10 日,智元(AGIBOT)正式发布'元苼生态发展计划',2026 年先行落地 1 亿元生态扶持资金,未来五年规划投入 20 亿元专项资金,围绕科研学术创新、教育人才培养、生态伙伴发展、开发社区运营四个维度系统赋能;同日正式发布行业首个开放且完整的具身智能生态技术体系'智元 AIMA(AI Machine Architecture)',由灵渠 Link-U OS、灵创 LinkCraft、灵心 LinkSoul、精灵 Genie Studio 四大平台组成,覆盖具身智能操作系统、创意开发、智能体构建、作业训练全链条;其中灵渠 OS 1.0 将于年内开源,联合清华大学、北京大学、复旦大学等顶尖院所共建联合实验室,推出'难题揭榜计划'与部署态联合孵化政策(单场景激励上限 100 万元,2000 万元规模放量后再叠加联合实验室共建)。官方数据显示 AIMA 开放平台已覆盖 173+ 科研院校、315+ 合作伙伴、2017+ 应用开发者、33177+ 订阅使用者。",
+      "heat": {
+        "score": 9100,
+        "level": "爆",
+        "sources": [
+          "智元 AGIBOT 官网",
+          "华夏时报",
+          "财经头条",
+          "搜狐科技",
+          "OFweek"
+        ],
+        "breakdown": "五年 20 亿+今年 1 亿扶持+四平台全栈开源+灵渠 OS 开源+清华北大复旦联合实验室+部署态元年"
+      }
+    },
+    {
+      "id": "r001",
+      "category": "rising",
+      "title": "TCS 携 Anthropic 战略合作,5 万员工全员配置 Claude 加速企业 AI 落地",
+      "summary": "6 月 11 日,印度塔塔咨询服务公司(TCS,印度最大 IT 服务商)宣布与 Anthropic 达成全球战略合作,通过企业级授权在工程、财务、法务、市场营销与销售等业务线为约 5 万名员工配备 Claude 模型。TCS 将承担模型集成、定制化开发、员工培训与运维支持,Anthropic 提供企业授权的 Claude 模型与持续技术支持,项目同步建立数据安全、隐私保护与合规治理机制。机构分析认为,这是 Anthropic 在企业级 LLM 市场渗透的标志性事件,其 40% 的 Fortune 100 客户占比有望进一步提升;对国内大模型厂商而言,如何把'单一模型能力'升级为'行业化部署 + 集成 + 培训'的整体服务包,将是 2026 下半年决胜关键。",
+      "heat": {
+        "score": 7800,
+        "level": "爆",
+        "sources": [
+          "财联社",
+          "Anthropic 官方",
+          "TCS 官方",
+          "路透社"
+        ],
+        "breakdown": "全球最大 IT 服务商之一+5 万员工全员配备+企业级授权+集成+培训+合规"
+      },
+      "rising_metrics": {
+        "github_stars_24h": null,
+        "hn_points": 1842,
+        "x_mentions": 6700,
+        "weibo_views": 18500000,
+        "search_trend_delta_pct": 240,
+        "reddit_upvotes": 0
+      }
+    },
+    {
+      "id": "r002",
+      "category": "rising",
+      "title": "千问上线国内首个全周期高考志愿填报 Agent,免费向全国考生开放",
+      "summary": "6 月 10 日,千问(Qwen)发布国内首个全周期高考志愿填报 Agent,免费服务全国考生。该 Agent 基于千问高考志愿大模型与夸克 8 年高考数据经验打造,具备志愿方案生成、志愿日历、问答三大核心能力,支持分数、偏好、MBTI 性格等多维信息输入,生成带完整逻辑说明的个性化方案;百度同步推出文心助手高考志愿填报服务,引入真人专家背书机制。樊登评价'千问帮助考生家庭穿越信息迷雾,看清问题再作选择'。恰逢 2026 年高考出分与志愿填报高峰期,该 Agent 把原本需要数千元付费咨询的高考志愿规划普惠化,标志国产大模型在 C 端垂直场景的进一步落地。",
+      "heat": {
+        "score": 7450,
+        "level": "热",
+        "sources": [
+          "千问官方",
+          "速途网",
+          "樊登读书",
+          "顶端新闻",
+          "百度官方"
+        ],
+        "breakdown": "国内首个全周期志愿填报 Agent+免费+夸克 8 年数据+MBTI 维度+百度文心同步跟进"
+      },
+      "rising_metrics": {
+        "github_stars_24h": null,
+        "hn_points": 612,
+        "x_mentions": 3200,
+        "weibo_views": 42000000,
+        "search_trend_delta_pct": 480,
+        "reddit_upvotes": 0
+      }
+    },
+    {
+      "id": "r003",
+      "category": "rising",
+      "title": "智象未来 HiDream-O1-Image-1.5 跻身 Artificial Analysis 文生图榜中国第一",
+      "summary": "国内 AI 图像生成厂商智象未来的商用版图像生成模型 HiDream-O1-Image-1.5,在独立评测平台 Artificial Analysis 的文生图榜单上拿下中国第一、全球第二的成绩,评分仅次于 OpenAI,超过 Google、NVIDIA、字节跳动等厂商的多款主流模型。智象未来专注文生图底层模型研发,过去一年在可控生成、长文本渲染、人物一致性等关键能力上密集迭代。该成绩被视作国内图像生成赛道的一次标志性突破,也意味着文生图领域的'中美双极'格局进一步固化,字节豆包/即梦、阿里通义、腾讯混元等头部厂商的图像能力比拼将进入更细分的能力维度(可控编辑、视频化、3D 一致性)。",
+      "heat": {
+        "score": 6800,
+        "level": "热",
+        "sources": [
+          "Artificial Analysis 榜单",
+          "智象未来官方",
+          "站长之家",
+          "飞络 24 小时 AI 快报"
+        ],
+        "breakdown": "Artificial Analysis 中国第一+全球第二+文生图底层能力+中美双极"
+      },
+      "rising_metrics": {
+        "github_stars_24h": null,
+        "hn_points": 320,
+        "x_mentions": 1900,
+        "weibo_views": 5400000,
+        "search_trend_delta_pct": 165,
+        "reddit_upvotes": 0
+      }
+    },
+    {
+      "id": "r004",
+      "category": "rising",
+      "title": "BAAI 联合中科院信工所发布 MechVQA,机械图纸 AI 专用基准+专项模型全面超通用大模型",
+      "summary": "北京人工智能研究院(BAAI)联合中国科学院信息工程研究所、北京工业大学在 ICML 2026 发表论文(arXiv:2605.30794),推出业内首个机械工程图纸专业 AI 理解基准 MechVQA 与专项模型 MechVL。MechVQA 包含 20778 道题目,覆盖识别、推理、判断三大能力层次与 10 个子任务,简单/中等/困难三档比例约 4:3.5:2.7,以 8:1:1 划分训练/验证/测试集;基于 Qwen3-VL-4B-Instruct 两阶段训练(SFT+DAPO 强化学习),MechVL-4B-RL 以 84.85 总分位列第一,比最强开源基线 GLM-4.6V(78.91)高 5.94 分,比商业闭源最强 Gemini 3 Pro Preview(77.28)高 7.57 分,推理类子任务反超 Gemini 19.62 分,简单题准确率 94%、中等 79%、困难 75%。研究对工业图纸审核、工程教育与制造质量控制具有直接价值,也证明中等规模模型通过专项训练可显著超越大体量通用大模型。",
+      "heat": {
+        "score": 6500,
+        "level": "热",
+        "sources": [
+          "ICML 2026",
+          "arXiv",
+          "BAAI 官号",
+          "企鹅号"
+        ],
+        "breakdown": "ICML 2026 接收+arXiv 公开+首个机械图纸基准+专项模型反超 Gemini 3 Pro+4B 击败闭源"
+      },
+      "rising_metrics": {
+        "github_stars_24h": 412,
+        "hn_points": 856,
+        "x_mentions": 1500,
+        "weibo_views": 0,
+        "search_trend_delta_pct": 220,
+        "reddit_upvotes": 310
+      }
+    },
+    {
+      "id": "r005",
+      "category": "rising",
+      "title": "Nu Quantum 首次证明分布式量子计算可容忍单节点完全失效,推进模块化容错路线",
+      "summary": "6 月 10 日,英国分布式量子计算领先者 Nu Quantum 联合剑桥大学发表新研究,首次证明多节点量子网络可被设计为容忍单个量子处理器(QPU)的完全失效。研究将节点故障分为计划内换出(通过量子传态把数据比特实时迁到备用节点)与非计划节点失效(失效节点的信息可被视作空间关联错误或纠删错误,通过增加码距持续降低逻辑错误率);数值模拟显示,对于分布式环面码,即使节点失效概率高达 1/100,只要物理噪声低于 0.05%,逻辑错误率仍可被控制在极低水平,且比单片系统所需物理比特开销降低至少 6 倍。该工作被认为对实用容错量子计算(需 10⁵-10⁶ 物理比特)意义重大,Nu Quantum 已获至少 7000 万美元融资,2026 年初在剑桥启用欧洲首个工业级离子阱量子网络实验室。",
+      "heat": {
+        "score": 6100,
+        "level": "热",
+        "sources": [
+          "Nu Quantum 官网",
+          "剑桥大学",
+          "arXiv 2605.11088",
+          "企鹅号"
+        ],
+        "breakdown": "首次证明分布式容错+单节点失效可恢复+6 倍物理比特节省+欧洲首个工业级离子阱量子网络实验室"
+      },
+      "rising_metrics": {
+        "github_stars_24h": 0,
+        "hn_points": 1480,
+        "x_mentions": 2700,
+        "weibo_views": 0,
+        "search_trend_delta_pct": 85,
+        "reddit_upvotes": 540
+      }
+    },
+    {
+      "id": "c001",
+      "category": "company",
+      "title": "字节豆包专业版 6 月下旬正式上线,三档最高年费 5088 元,AI 手机硬件负责人林夕离职",
+      "summary": "6 月 11 日,字节跳动旗下 AI 产品豆包正式启动专业版付费订阅灰度测试,标准版 68 元/月、688 元/年,加强版 200 元/月、2048 元/年,专业版 500 元/月、5088 元/年,预计 6 月下旬正式上线,同期在 Force 大会公布功能更新;基础功能承诺永久免费,付费版主打软件开发、深度数据分析、专业设计、流程自动化、金融分析、科学研究等高附加值场景。但部分灰测用户吐槽'付费版与免费版差异不大',豆包客服回应称'付费不等于更好的生成质量',仅在功能上多一项,商业模式更接近'算力配额费'而非'最强模型订阅'。同日,字节 AI 硬件核心团队 Ocean 旗下豆包手机硬件产品负责人林夕(前华为终端 Pura X 折叠屏硬件负责人)已离职,这是字节自 2024 年启动 AI 手机项目以来首位出走的核心硬件管理人员,后续对豆包手机量产、供应链、研发节奏的影响仍待观察。",
+      "heat": {
+        "score": 8700,
+        "level": "爆",
+        "sources": [
+          "科创板日报",
+          "界面新闻",
+          "快科技",
+          "中国企业家",
+          "腾讯网"
+        ],
+        "breakdown": "三档付费灰测+5088 元顶格年费+灰测反馈差价感弱+豆包手机硬件负责人离职"
+      }
+    },
+    {
+      "id": "c002",
+      "category": "company",
+      "title": "苹果 Xcode 27 原生集成 Gemini,成为继 OpenAI Codex、Anthropic Claude 后的第三个内置 AI 编程智能体",
+      "summary": "苹果在 Xcode 27 Beta 版本中引入谷歌 Gemini 的原生集成,成为继 OpenAI Codex 与 Anthropic Claude Agent 之后,苹果开发者生态中第三个内置的 AI 编程智能体。开发者可在 Xcode 中直接调用 Gemini 完成代码补全、单元测试生成、错误排查等任务,显著提升编程效率与交互体验;同时苹果正在通过 Gemini API 扩展 Siri AI 多语言能力(初期仍仅美国英语),并将部分图像生成任务分流给 Gemini 端到端处理。同日谷歌宣布 Chrome 浏览器内置 Gemini 聊天机器人扩展至拉丁美洲、非洲和中东多个国家,欧盟市场再次被排除,反映全球范围内 AI 助手在合规要求与生态绑定之间的拉锯。",
+      "heat": {
+        "score": 7400,
+        "level": "热",
+        "sources": [
+          "苹果开发者官网",
+          "The Verge",
+          "站长之家",
+          "9to5Mac"
+        ],
+        "breakdown": "Xcode 27 三大内置 AI Agent+Gemini API 接入 Siri+Chrome Gemini 多地区扩展+欧盟再次缺席"
+      }
+    },
+    {
+      "id": "c003",
+      "category": "company",
+      "title": "月之暗面 Kimi 启动新一轮融资,投前估值 300 亿美元,半年涨 7 倍",
+      "summary": "据多家媒体报道,月之暗面 Kimi 已启动新一轮融资,投前估值从上月 180 亿美元跃升至 300 亿美元,较 2025 年 12 月底 43 亿美元估值半年内暴涨 7 倍,本轮计划募资最高 20 亿美元,投资方包括美团龙珠、中国移动、CPE 等;商业化方面,Kimi 搭载 K2.5 模型升级后,年度经常性收入(ARR)从 2026 年 3 月初的 1 亿美元跃升至 4 月的 2 亿美元以上,6 月 3 日发布面向知识工作者的通用型本地 Agent Kimi Work Beta,以 Kimi Code 为底层技术核心,支持多智能体协同调度。Kimi 方面表示现阶段并无上市计划,'B 轮与 C 轮融资总额已远超多数企业 IPO 募资额,短期内不将上市作为目标',此轮融资将进一步用于 K2.6 之后的下一代基座模型研发与多模态能力补齐。",
+      "heat": {
+        "score": 7100,
+        "level": "热",
+        "sources": [
+          "财联社",
+          "蓝鲸新闻",
+          "中关村在线",
+          "腾讯网",
+          "东方财富网"
+        ],
+        "breakdown": "投前估值 300 亿美元+半年涨 7 倍+ARR 4 月破 2 亿+Kimi Work 本地 Agent+不上市立场"
+      }
+    },
+    {
+      "id": "p001",
+      "category": "paper",
+      "title": "ICML 2026 论文:In-Context Routing 隐式 ICL 新方法,12 数据集平均反超少样本 2.7%",
+      "summary": "ICML 2026 接收论文提出 In-Context Routing(ICR)方法,目标是解决隐式 ICL 路线中固定 shift 向量装不下任务信息、向量加在残差流 softmax 之后(在注意力已计算完时打补丁)的两大天花板。ICR 在多领域跑显式 ICL,收集每个 prompt 最后一个 token 的 Q/K 投影做 PCA,得到逐层主 ICL 方向(PID),再用冻结的轻量模型 encode 当前 query、过轻量双分支 MLP 路由器输出 PID 加权与各注意力头门控,最后把 PID 拼起来当 Q/K 投影矩阵加到注意力 logits 上;训练只更新路由器,主干全程冻结,实现'train once, reuse everywhere'。在 5 域内 + 7 域外共 12 个数据集上,Qwen2.5-7B 上 ICR 比 SOTA 隐式基线平均高 6.5%,比少样本 prompting 还高 2.7%,向量类方法在域外任务上常崩而 ICR 不掉点,为'零样本成本 + 少样本效果'提供新范式。",
+      "heat": {
+        "score": 5900,
+        "level": "热",
+        "sources": [
+          "ICML 2026",
+          "arXivSub 论文解读",
+          "企鹅号"
+        ],
+        "breakdown": "ICML 2026 接收+域外不掉点+比少样本高 2.7%+train once reuse everywhere"
+      }
+    },
+    {
+      "id": "p002",
+      "category": "paper",
+      "title": "卡内基梅隆+多校联合:MechVQA 同源研究在图纸视觉问答的子任务消融实验给出 RL 训练最优配置",
+      "summary": "MechVQA 研究团队同步公开了完整消融实验与训练机制细节。结果显示只做监督微调(SFT)时总分 76.36,加上全数据强化学习(RL)后升至 81.95,再叠加有针对性的第二轮 RL 后达到 84.85,推理类子任务分数从 54.40 一路涨到 77.04,涨幅超 22 分;RL 算法对比上 DAPO(81.95)>GRPO(80.47)>GSPO(78.77),DAPO 在长文本推理场景优化更稳定;奖励设计实验上,去掉回答质量奖励会导致模型响应膨胀到 1300 词以上,只保留词汇重叠 F1 又会缩水到 800 词以下,完整三段奖励(准确性+格式+质量)把响应长度稳定在 1200-1250 词,体现充分推理与简洁表达的平衡。该工作把 DAPO 强化学习在专业领域垂直模型上的最佳实践系统化,为后续蛋白质、化合物、医学影像等垂类模型训练提供了可复制的方法论。",
+      "heat": {
+        "score": 4800,
+        "level": "中",
+        "sources": [
+          "ICML 2026",
+          "arXiv 2605.30794",
+          "BAAI 官号"
+        ],
+        "breakdown": "完整消融实验+DAPO 优于 GRPO/GSPO+三段奖励必要性+响应长度调控"
+      }
+    },
+    {
+      "id": "p003",
+      "category": "paper",
+      "title": "Anthropic Mythos 5 在生命科学领域 14 个靶点中拿下 9 个候选药物,基因组学论文对标 Science",
+      "summary": "Anthropic 公开 Mythos 5 生命科学能力的详细数据:在蛋白质设计环节,Mythos 5 全程自动化筛选疾病靶点、迭代设计方案、排查修正错误,14 个病症靶点中拿下 9 个高潜力候选方案,覆盖免疫、神经退行、肌肉类多种疑难病症;在基因组学实验中,Mythos 5 少有人工干预的状态下一周多自主搜集 138 个物种、数百万细胞样本数据,独立搭建并训练机器学习模型,最终成品模型体量比同期《Science》刊发的同类研究小 100 倍,性能反而实现反超,Anthropic 计划后续整理完整数据对外发布论文;另一项研究则攻克基因治疗中腺相关病毒(AAV)载体设计难题,借助 Dyno Therapeutics 的候选方案,展示 AI 预测基因修改对病毒外壳组装过程影响的能力。Anthropic 明确将生命科学作为'10 年 100 年'研究突破的核心方向,Fable 5 也已将药物设计流程中部分环节提速约 10 倍。",
+      "heat": {
+        "score": 6200,
+        "level": "热",
+        "sources": [
+          "Anthropic 官方博客",
+          "Wired",
+          "环球市场播报",
+          "企鹅号"
+        ],
+        "breakdown": "9/14 靶点候选药+基因组学小 100 倍反超 Science+AAV 病毒载体设计+Fable 5 提速 10 倍"
+      }
+    },
+    {
+      "id": "i001",
+      "category": "industry",
+      "title": "AI 概念股 6 月 11 日集体回调,达实智能跌停,机构警示'内卷式'估值过热",
+      "summary": "6 月 11 日,A 股部分 AI 概念股出现跳水走势,涉及物理 AI、AI 营销、多模态 AI 等方向,达实智能一字跌停(封单超 270 万手),天娱数科、视觉中国等跟跌;但同日电子特气、芯片材料板块逆势大涨,华特气体、和远气体、凯美特气、中巨芯(盘中涨近 20%)等多股涨停。机构观点普遍认为,A 股 AI 板块经历 4-5 月快速上涨后,出现'获利回吐'与技术性调整,需要警惕'内卷式'估值催化与基本面脱节;中信证券仍看好下半年 AI 新材料、军工新材料、固态电池、核聚变、氢能等主题,而 SemiAnalysis 最新报告指出 800VDC 与 CPO 落地节奏将延后,光模块板块出现'光速下跌'。整体来看,A 股 AI 投资正在从'概念炒作'向'业绩兑现'切换,2026 下半年具备真实订单、收入占比、现金流质量的龙头公司将更受青睐。",
+      "heat": {
+        "score": 5500,
+        "level": "热",
+        "sources": [
+          "东方财富网",
+          "中信证券研报",
+          "SemiAnalysis 报告",
+          "第一财经"
+        ],
+        "breakdown": "达实智能跌停+AI 板块集体回调+电子特气逆势+机构警示估值+业绩兑现切换"
+      }
+    },
+    {
+      "id": "i002",
+      "category": "industry",
+      "title": "智能算力军备竞赛白热化,2026 年北美四大云厂商资本开支合计将破 7000 亿美元",
+      "summary": "据多家机构最新数据,谷歌、微软、Meta、亚马逊四大北美云厂商 2026 年合计资本开支预期已突破 7000 亿美元,较 2023 年翻倍以上;全球数据中心 IT 负载从 2023 年的 49GW 增长到 2026 年的 96GW,增量中 90% 来自 AI 算力;中国智能算力规模预计 2026 年达到约 1460 EFLOPS,较 2024 年实现翻倍增长,未来三年 AI 智能算力需求复合增长率预计高达 49%。'智算中心'已成新建数据中心主流形态,CPU 通用算力正快速让位于 GPU 与 AI 加速卡集群,多家机构警告'AI 资本开支是否存在泡沫'的讨论持续升温;但从巨头态度看,2026 年内'先把算力堆起来'仍是主旋律。国内端字节豆包大模型基础设施预算已由去年 1600 亿元上调至 2000 亿元(约 300 亿美元),并计划投入最高 700 亿美元的资本支出。",
+      "heat": {
+        "score": 6000,
+        "level": "热",
+        "sources": [
+          "中信证券",
+          "摩根士丹利",
+          "字节火山引擎",
+          "财联社"
+        ],
+        "breakdown": "7000 亿美元四大云资本开支+中国 1460 EFLOPS 智算+49% 复合增速+字节 2000 亿预算"
+      }
+    },
+    {
+      "id": "s001",
+      "category": "social",
+      "title": "Karpathy 加入 Anthropic 引发社交平台刷屏,称 Fable 5 配得上'大版本号跨越式飞跃'",
+      "summary": "刚加入 Anthropic 的人工智能泰斗 Andrej Karpathy 就 Fable 5 发布发表评论,称'这次升级配得上大版本号跨越式飞跃',并以《黑客帝国》'解放你的思想'形容变革力度;Claude Code 负责人 Felix Rieseberg 直接抛出'第三个人工智能时代从 Fable 5 上线这天正式到来'的判断,'过去人类只是给 AI 下达零散任务,如今可以直接给 AI 分配完整岗位职责';陪伴 Claude 走完每一代更新的研究员 Alex Albert 直言'这是第一个让我感觉不像工具、更像协作伙伴的模型'。Every 公司 CEO 用'性能怪兽'形容 Fable 5,内部工程师标准实测中,前代顶尖模型得分徘徊 60 分,Fable 5 直接冲到 91 分。Anthropic 联合创始人、前首席科学家 Behnam Neyshabur 还在社交平台对 Fable 5 的安全过滤机制提出严厉批评,'想用 AI 研究癌症?抱歉,我帮不了你'。社交平台上'#Fable 5 编程碾压''#Mythos 5 神话''#Anthropic 第三 AI 时代'等话题持续刷屏。",
+      "heat": {
+        "score": 7200,
+        "level": "热",
+        "sources": [
+          "X/Twitter",
+          "Anthropic 官方",
+          "Reddit r/MachineLearning",
+          "Hacker News",
+          "Anthropic 内部播客"
+        ],
+        "breakdown": "Karpathy 加盟+大版本号飞跃+第三 AI 时代定调+Every 91 分+前首席科学家批评+多话题刷屏"
+      }
+    }
+  ],
+  "weekly_arc": {
+    "weeks": [
+      {
+        "iso_week": "2026-W24",
+        "date": "2026-06-12",
+        "theme": "双模型同发+国产算力破壁+AI 资本世纪 IPO",
+        "highlights": [
+          "Anthropic Claude Fable 5 公开、Mythos 5 限定,SWE-Bench Pro 80.3% 断层第一",
+          "SpaceX IPO 定价 135 美元/股,6 月 12 日挂牌纳斯达克,1.75 万亿美元估值",
+          "摩尔线程开源 MusaCoder,首个国产 GPU 全栈训练代码大模型,KernelBench 93.2%",
+          "智元发布元苼生态计划,五年 20 亿元扶持,灵渠 OS 1.0 年内开源",
+          "Apple Xcode 27 原生集成 Gemini,生态内已有 3 个 AI 编程智能体"
+        ]
+      },
+      {
+        "iso_week": "2026-W23",
+        "date": "2026-06-05",
+        "theme": "工信部+国资委具身智能万台级+Alphabet 为 Anthropic 350 亿美元担保",
+        "highlights": [
+          "工信部+国资委联合启动人形机器人实景实训专项行动",
+          "Alphabet 被曝为 Anthropic 提供 350 亿美元数据中心融资租赁担保",
+          "Anthropic Claude Fable 5 抢先发布(本周解禁主线)",
+          "OpenAI 推进与高盛、摩根士丹利的 IPO 事宜",
+          "英伟达 Blackwell 出现'一芯难求'紧张局面"
+        ]
+      },
+      {
+        "iso_week": "2026-W22",
+        "date": "2026-05-29",
+        "theme": "WWDC 2026 苹果 Siri AI+微软 MAI 七模型",
+        "highlights": [
+          "苹果 WWDC26 推出新一代 Siri AI 与 Apple Intelligence 重大升级",
+          "微软 Build 2026 一次性发布 7 款自研 MAI 模型,加速去 OpenAI 化",
+          "Anthropic Project Glasswing 扩展到约 150 家机构(早期)",
+          "OpenAI 拟将 Codex 核心能力整合进 ChatGPT",
+          "Google I/O 2026 预告 Gemini 智能眼镜秋季上市"
+        ]
+      }
+    ]
+  },
+  "monthly_arc": {
+    "month": "2026-06",
+    "themes": [
+      "具身智能从'功夫模式'迈向'作业模式',万台级量产+生态卡位",
+      "国产 GPU 从可用到好用,代码大模型与具身智能形成合力",
+      "AI 资本侧进入'万亿美元'时代,SpaceX/Anthropic/OpenAI IPO 三重奏",
+      "中国大模型 C 端付费全面提速,豆包+千问+文心三线作战",
+      "AI 安全治理从'理论讨论'进入'实战部署',Mythos 5 自挖 17 年 RCE"
+    ]
+  }
+}

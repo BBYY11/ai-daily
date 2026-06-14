@@ -3,212 +3,223 @@
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat">
   <channel>
-    <title>AI Daily · 2026-06-12 周五 · 全球 AI 早报</title>
+    <title>AI Daily · 2026-06-14 周日 · 全球 AI 早报</title>
     <link>https://bbyy11.github.io/ai-daily/</link>
     <atom:link href="https://bbyy11.github.io/ai-daily/feed.xml" rel="self" type="application/rss+xml" />
-    <description><![CDATA[2026 年 6 月 12 日,AI 行业三条主线交汇:其一,Anthropic 兑现 Claude Fable 5 商业化承诺,Fable 5 输入 10 美元/百万 token、输出 50 美元/百万 token,SWE-Bench Pro 拿下 80.3% 远超 GPT-5.5(58.6%)与 Gemini 3.1 Pro(54.2%),Mythos 5 借 Glasswing 计划向 150 家机构定向开放,Claude Mythos Preview 已自主挖掘 FreeBSD 存在 17 年的 RCE 漏洞;其二,国产算力迎来里程碑,摩尔线程开源业内首个基于国产 GPU 全功能底座全链路训练的代码大模型 MusaCoder,KernelBench Pass@8 达 93.2%,同时无锡惠山国产智算中心一期点亮;其三,SpaceX 6 月 12 日挂牌纳斯达克,IPO 定价每股 135 美元、募资 750 亿美元、估值 1.75 万亿美元,马斯克净资产突破万亿美元,'AI x 太空'叙事点燃 A 股商业航天板块。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×3 / paper×3 / industry×2 / social×1。 · 共 18 条新闻]]></description>
+    <description><![CDATA[2026 年 6 月 14 日,过去 24 小时 AI 行业五条主线交汇:其一,智源研究院在第八届北京智源大会上发布全球首个通用世界基座模型悟界·Physis-v0.1,悟界系列四款模型与 FlagOS 2.1 智算底座同期亮相,王仲远提出 AI 范式正从预测下一个 Token 跃迁到预测下一个物理状态,Andrew Barto、Whitfield Diffie 两位图灵奖得主现场分享;其二,监管风暴继续席卷美国 AI 双雄,纽约州总检察长代表多州联盟向 OpenAI 送达首份传票,Anthropic Fable 5 与 Mythos 5 被美商务部列入出口管制范围、72 小时内全量停服;其三,鸿蒙 7 在 HDC 2026 正式发布,系统级 AI 智能体小艺日均唤醒 30 亿次,搭载 HarmonyOS 6 终端突破 6600 万台,鸿蒙在国内智能手机 OS 份额以 19% 反超 iOS 的 17%;其四,SpaceX 上市首日收涨 19.22%,市值站上 2.1 万亿美元,马斯克首登万亿美元俱乐部;A 股 ARK 基金同步大举买入 4.4 亿美元 SpaceX 股份;其五,具身智能加速向家庭与工业双线落地,智平方发布全球首个类脑式具身系统 NeuroVLA,破壳机器人宣布 6 月 22 日上线麻婆豆腐完整制作 Demo,昆仑行机器人落地北京亦庄,摩尔线程 Day-0 完成 MiniMax M3 模型适配。今日共收录 19 条,覆盖 headline×3 / rising×5 / company×3 / paper×2 / industry×2 / social×4。 · 共 19 条新闻]]></description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 12 Jun 2026 00:08:30 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 00:08:24 +0800</lastBuildDate>
     <generator>AI Daily (Mavis)</generator>
     <managingEditor>bbyy11 (via Mavis)</managingEditor>
     <ttl>60</ttl>
     <item>
-      <title>Anthropic 双模型同日解禁,Claude Fable 5 编程榜单横扫 GPT-5.5 与 Gemini 3.1 Pro</title>
+      <title>智源发布全球首个通用世界基座模型悟界·Physis-v0.1,AI 范式从预测下一个 Token 跃迁到预测下一个物理状态</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-h001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[北京时间 6 月 10 日凌晨,Anthropic 正式发布 Claude Fable 5(公开版)与 Mythos 5(限定 Glasswing 机构)两款同源双生模型,二者底层基座一致,性能差距仅 1%-3%,唯一分水岭是层层安全护栏。Fable 5 输入 10 美元/百万 token、输出 50 美元/百万 token,价格是 Opus 标准的 2 倍,远低于 Mythos 原始定价;在 SWE-Bench Pro 真实工程排错榜单上以 80.3% 拿下第一,领先 Opus 4.8(69.2%)、GPT-5.5(58.6%)、Gemini 3.1 Pro(54.2%) 二十个百分点以上,FrontierCodeDiamond 测试更以 29.3% 拉开 GPT-5.5(5.7%)五倍差距;Mythos 5 仅向 150 家受审机构开放,被用于防御性安全研究,已自主挖掘并完整验证利用 FreeBSD 存在 17 年的 RCE 漏洞(CVE-2026-4747)。同期 Anthropic 也在与 Stripe 的合作中,用 Fable 5 在一天内完成 5000 万行 Ruby 代码库迁移,工程量相当于多名工程师两个多月的手工活。]]></description>
+      <description><![CDATA[6 月 12 日,第八届北京智源大会在中关村国际创新中心开幕,智源研究院院长王仲远在研究进展报告中正式发布悟界·Physis-v0.1,这是全球首个通用世界基座模型,以预测下一个物理状态为核心,搭载专属物理状态编码器,可将视频、深度 RGB、3D 点云、力触反馈等全模态信息统一压缩为标准化隐空间物理状态 Latent State,支持 50+ 复杂物理场景长程推理,具备物理一致性、动作因果性、长程可推演性、通用泛化性四大核心能力,可应用于严肃工业、具身智能、物理仿真、科学研究等真实物理场景。同日发布四款自研智能体(BAAI Cardiac Agent 心磁共振辅助诊断 AUC 超 0.93、AREX 自主研究智能体、SoulAgent 个人专属智能体、有害蛋白获取风险发现智能体)、具身大脑 RoboBrain Orca、神经科学大模型 Brainμ1.0(已支撑成果登刊 Science)、药物发现模型 OpenComplex 2.5,以及支持 18 家芯片厂商 32 款芯片的众智 FlagOS 2.1 智算系统软件栈。图灵奖得主 Andrew Barto、Whitfield Diffie 现场做主题报告;黄铁军与王坚围绕总有人比时代早十年展开对话;朱军、罗福莉、刘知远、安波等 40 余位 AI 顶尖学者同台论道。截至目前智源开源模型超 200 个,全球累计下载量超 10 亿次。]]></description>
       <category>头条</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9850</heat:score><heat:level>爆</heat:level><heat:sources>Anthropic 官方,环球市场播报,财联社,Wired,36氪,飞络 24 小时 AI 快报</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9600</heat:score><heat:level>爆</heat:level><heat:sources>中新社,量子位,界面新闻,澎湃科技,智源研究院,DOIT,21IC</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>SpaceX 敲定 IPO 定价每股 135 美元,6 月 12 日纳斯达克挂牌,募资 750 亿美元创历史纪录</title>
+      <title>华为 HDC 2026 正式发布 HarmonyOS 7,搭载 HarmonyOS 6 终端突破 6600 万台,鸿蒙智能体框架 2.0 全面 AI Agent 化</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-h002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[SpaceX 在 SEC 文件中确认,首次公开募股定价每股 135 美元,处于 127-135 美元区间上限,共发行 5.556 亿股新股,募资近 750 亿美元,目标估值约 1.75 万亿美元,远超沙特阿美 2019 年 294 亿美元的纪录,有望成为美国股市乃至全球历史上最大规模 IPO,股票代码 SPCX,6 月 12 日在纳斯达克开始交易。文件披露 SpaceX 将美国政府列为&#x27;客户 A&#x27;,2025 年政府收入约 40 亿美元,公司预计 2026 年合并 xAI 后营收达 220-240 亿美元,其中星链 EBITDA 利润率 63%,并已与 Anthropic 签下每月 12.5 亿美元的 AI 算力订单。马斯克净资产叠加特斯拉、xAI、Neuralink 等资产已突破 1 万亿美元,有望成为全球首位万亿美元富翁。受此影响,A 股商业航天与卫星互联网板块出现&#x27;对标估值重估&#x27;讨论,机构认为低轨星座&#x27;先到先得&#x27;压力下中国星网、千帆、鸿擎合计近 4 万颗卫星部署节奏将再加速。]]></description>
+      <description><![CDATA[6 月 12 日,2026 华为开发者大会(HDC 2026)在东莞松山湖开幕,华为正式推出 HarmonyOS 7 Developer Beta 版本,操作系统本身进行 Agent 化重构,Agent 亲和系统架构从内核层支撑 AI Agent 运行,系统级 AI 智能体小艺日均唤醒 30 亿次、日活服务 1.8 亿次。鸿蒙智能体框架 2.0 升级后,复杂任务处理成功率提升至 90% 以上,AI 能力开放增加到 20 多项,GUI 操控能力首次向开发者开放,小艺一句话即可完成打开美团找火锅店-高德导航-大众点评买单等跨应用多步任务。会上余承东宣布搭载 HarmonyOS 6 的终端设备数已突破 6600 万台,鸿蒙生态设备累计超 13 亿台,鸿蒙注册开发者 1100 万,原生开发者年度留存率 87.5%,日均应用下载 2 亿次,搭载 HarmonyOS 6 终端满意度提升 20 个百分点;Counterpoint 数据显示 2026 Q1 鸿蒙在中国智能手机 OS 份额 19%,反超 iOS 的 17%。同期发布花瓣地图 Agent、鸿蒙 AI 辅助研发产品 DevEco Code 与 DevEco CLI;星盾安全体系获中国信通院增强级端云协同 AI 安全认证;端侧 3DGS 重建技术落地大众点评 3D 实景探店与京东商品 3D 建模。]]></description>
       <category>头条</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9600</heat:score><heat:level>爆</heat:level><heat:sources>SEC 公开文件,央视财经,NBC,环球市场播报,央广网,华泰证券研报,国盛证券研报</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9450</heat:score><heat:level>爆</heat:level><heat:sources>中经报,ZOL 中关村在线,新浪财经,IT之家,新看点,网易科技,鸿蒙官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>摩尔线程开源 MusaCoder,首个基于国产 GPU 全栈训练的代码大模型,KernelBench 击败 Claude Opus 4.7</title>
+      <title>美国多州总检察长对 OpenAI 发出首份联合传票,Anthropic Fable 5/Mythos 5 遭美商务部出口管制 72 小时全量停服</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-h003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 10-11 日,摩尔线程正式发布并开源面向 GPU 底层算子生成的代码大模型 MusaCoder,提供 9B 与 27B 两个参数版本,模型权重已上线 Hugging Face,论文同步公开(arXiv:2606.04847)。其完整后训练流程,包括监督微调、拒绝采样微调和强化学习,均在基于摩尔线程自研 MTT S5000 芯片的夸娥智算集群上完成,这是业内首个基于国产全功能 GPU 算力底座完成全链路训练与验证的开源代码大模型。官方披露 KernelBench 评测中 MusaCoder-27B-RL 以 Overall Pass@8 93.2%、Avg.@8 88.60% 的成绩,超越 Claude Opus 4.7、DeepSeek-V4 Pro、GLM-5.1、Kimi K2.6 等主流 SOTA 代码模型;同周摩尔线程还点亮了无锡(惠山)国产智算中心一期,推出 MT Lambda for Factory 仿真平台,创始人张建中提出&#x27;模型工厂、词元工厂、智能体工厂&#x27;三大全国产化 AI 工厂路线,系统对标 CUDA 生态。]]></description>
+      <description><![CDATA[6 月 12 日,纽约州总检察长代表多州联盟正式向 OpenAI 送达传票,要求其提供涵盖广告业务、用户参与与留存、消费者与健康数据处理、未成年人与老年人相关活动、深度学习模型运作机制、模型谄媚性以及公司内部政策等七大类文件,模型谄媚性(sycophancy)首次被列入司法调查项目,OpenAI 发言人在声明中表示将建设性沟通。同期 Anthropic 在 6 月 9 日发布旗舰模型 Fable 5(公开版)与 Mythos 5(限定 Glasswing 机构)后,因所谓越狱漏洞争议被美商务部以国家安全为由列入出口管制范围,管制不仅覆盖美国境外所有机构和个人,还覆盖境内所有外籍人士,包括 Anthropic 自身外籍员工。由于技术上无法精准甄别用户国籍,Anthropic 选择一刀切全量停服两款新模型,所有用户请求自动回退至前代版本;亚马逊云科技当日同步公告所有区域撤销 Fable 5 与 Mythos 5 访问。事件被视为美 AI 监管从州级诉讼、青少年保护、IPO 估值压力等多条线同步推进的标志性节点,Gary Marcus 在 X 平台调侃这是奈飞制作的 OpenAI 真人秀 Season 3。]]></description>
       <category>头条</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9450</heat:score><heat:level>爆</heat:level><heat:sources>第一财经,IT之家,腾讯网,i 黑马,摩尔线程官网,Hugging Face,arXiv</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9350</heat:score><heat:level>爆</heat:level><heat:sources>Wall Street Journal,路透社,TechCrunch,CCTV 国际时讯,凤凰网科技,快科技,财联社</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>智元机器人发布&#x27;元苼&#x27;生态计划,五年 20 亿元扶持开发者,AIMA 体系四平台同日开源灵渠 OS</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-h004</guid>
-      <pubDate></pubDate>
-      <description><![CDATA[6 月 10 日,智元(AGIBOT)正式发布&#x27;元苼生态发展计划&#x27;,2026 年先行落地 1 亿元生态扶持资金,未来五年规划投入 20 亿元专项资金,围绕科研学术创新、教育人才培养、生态伙伴发展、开发社区运营四个维度系统赋能;同日正式发布行业首个开放且完整的具身智能生态技术体系&#x27;智元 AIMA(AI Machine Architecture)&#x27;,由灵渠 Link-U OS、灵创 LinkCraft、灵心 LinkSoul、精灵 Genie Studio 四大平台组成,覆盖具身智能操作系统、创意开发、智能体构建、作业训练全链条;其中灵渠 OS 1.0 将于年内开源,联合清华大学、北京大学、复旦大学等顶尖院所共建联合实验室,推出&#x27;难题揭榜计划&#x27;与部署态联合孵化政策(单场景激励上限 100 万元,2000 万元规模放量后再叠加联合实验室共建)。官方数据显示 AIMA 开放平台已覆盖 173+ 科研院校、315+ 合作伙伴、2017+ 应用开发者、33177+ 订阅使用者。]]></description>
-      <category>头条</category>
-      
-      
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9100</heat:score><heat:level>爆</heat:level><heat:sources>智元 AGIBOT 官网,华夏时报,财经头条,搜狐科技,OFweek</heat:sources><heat:comments>0</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>TCS 携 Anthropic 战略合作,5 万员工全员配置 Claude 加速企业 AI 落地</title>
+      <title>智平方发布全球首个类脑式具身智能系统 NeuroVLA,复刻皮层-小脑-脊髓三层架构,已落地汽车/半导体工业场景</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 11 日,印度塔塔咨询服务公司(TCS,印度最大 IT 服务商)宣布与 Anthropic 达成全球战略合作,通过企业级授权在工程、财务、法务、市场营销与销售等业务线为约 5 万名员工配备 Claude 模型。TCS 将承担模型集成、定制化开发、员工培训与运维支持,Anthropic 提供企业授权的 Claude 模型与持续技术支持,项目同步建立数据安全、隐私保护与合规治理机制。机构分析认为,这是 Anthropic 在企业级 LLM 市场渗透的标志性事件,其 40% 的 Fortune 100 客户占比有望进一步提升;对国内大模型厂商而言,如何把&#x27;单一模型能力&#x27;升级为&#x27;行业化部署 + 集成 + 培训&#x27;的整体服务包,将是 2026 下半年决胜关键。]]></description>
+      <description><![CDATA[6 月 13 日,在 2026 北京智源大会现场,智平方创始人兼 CEO 郭彦东正式发布全球首个类脑式具身智能系统 NeuroVLA,复刻人脑皮层-小脑-脊髓三层架构,目前已在 AlphaBrain Platform 开源,商业化已覆盖汽车、半导体等工业场景,智魔方机器人店员业态落地全国十余省份。郭彦东现场提出通用智能机器人是继 PC、手机、汽车后的第四代智能终端,行业应回归技术创新、避免烧钱内卷。该方案相较主流 VLA 路线强调分层认知-运动控制,被视为国产具身智能在底层范式上的差异化突破;同日该公司在智源大会园区演示了基于该系统的多任务柔性装配与异常工况自适应恢复,获图灵奖得主 Andrew Barto 关注。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7800</heat:score><heat:level>爆</heat:level><heat:sources>财联社,Anthropic 官方,TCS 官方,路透社</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7600</heat:score><heat:level>爆</heat:level><heat:sources>科创板日报,智源大会现场,量子位,36 氪,智平方官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>千问上线国内首个全周期高考志愿填报 Agent,免费向全国考生开放</title>
+      <title>破壳机器人 6 月 22 日上线麻婆豆腐完整制作 Demo,星海图联合创始人许华哲押注家庭具身智能世界模型路线</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 10 日,千问(Qwen)发布国内首个全周期高考志愿填报 Agent,免费服务全国考生。该 Agent 基于千问高考志愿大模型与夸克 8 年高考数据经验打造,具备志愿方案生成、志愿日历、问答三大核心能力,支持分数、偏好、MBTI 性格等多维信息输入,生成带完整逻辑说明的个性化方案;百度同步推出文心助手高考志愿填报服务,引入真人专家背书机制。樊登评价&#x27;千问帮助考生家庭穿越信息迷雾,看清问题再作选择&#x27;。恰逢 2026 年高考出分与志愿填报高峰期,该 Agent 把原本需要数千元付费咨询的高考志愿规划普惠化,标志国产大模型在 C 端垂直场景的进一步落地。]]></description>
+      <description><![CDATA[6 月 13 日,原星海图联合创始人许华哲宣布其新公司破壳机器人已正式注册成立,主打家庭场景具身智能,采用世界模型技术路线,自研双向校验算法修正预测误差以缓解物理幻觉。破壳机器人没有沿用行业从工业场景切入的路径,反向押注家庭长尾任务的高泛化能力,认为家庭非结构化数据才是通用具身智能的优渥土壤;6 月 22 日将上线机器人制作麻婆豆腐菜品的完整制作 Demo,8 月底至 9 月初推出第一代硬件产品,中长期目标 2028 年 3 月正式走进首批家庭用户,做菜是验证技术上限的终极标准。同日北京商报记者获悉该公司正对接家电、厨具、电商等产业方,探索家庭场景多设备串联家务衔接。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7450</heat:score><heat:level>热</heat:level><heat:sources>千问官方,速途网,樊登读书,顶端新闻,百度官方</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7200</heat:score><heat:level>热</heat:level><heat:sources>北京商报,36 氪,界面新闻,新智元,破壳机器人</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>智象未来 HiDream-O1-Image-1.5 跻身 Artificial Analysis 文生图榜中国第一</title>
+      <title>昆仑行机器人落地北京亦庄,理想前自动驾驶总裁郎咸朋任联合创始人,前华为阿里骨干组团</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[国内 AI 图像生成厂商智象未来的商用版图像生成模型 HiDream-O1-Image-1.5,在独立评测平台 Artificial Analysis 的文生图榜单上拿下中国第一、全球第二的成绩,评分仅次于 OpenAI,超过 Google、NVIDIA、字节跳动等厂商的多款主流模型。智象未来专注文生图底层模型研发,过去一年在可控生成、长文本渲染、人物一致性等关键能力上密集迭代。该成绩被视作国内图像生成赛道的一次标志性突破,也意味着文生图领域的&#x27;中美双极&#x27;格局进一步固化,字节豆包/即梦、阿里通义、腾讯混元等头部厂商的图像能力比拼将进入更细分的能力维度(可控编辑、视频化、3D 一致性)。]]></description>
+      <description><![CDATA[6 月 12 日,据北京亦庄微信公众号消息,北京昆仑行机器人科技有限公司正式落地北京经济技术开发区,创始人任庚曾任华为最年轻国家 CEO 之一,也是阿里集团 80 后年轻高管、最年轻副总裁之一,联合创始人郎咸朋为理想汽车前高级副总裁、自动驾驶总裁及一号员工。创始团队其他核心成员主要来自华为、阿里、理想汽车等业界知名企业核心骨干,聚焦通用具身智能机器人研发与产业落地。亦庄作为全国具身智能产业核心承载区,已集聚星海图、北京优必选、安川首钢等知名机器人和智能制造生态企业 300 余家,昆仑行此时落地可同步对接国地共建具身智能机器人创新中心与全球具身智能机器人 4S 店资源。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>Artificial Analysis 榜单,智象未来官方,站长之家,飞络 24 小时 AI 快报</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7050</heat:score><heat:level>热</heat:level><heat:sources>北京亦庄微信公众号,企查查,OFweek,雷峰网,钛媒体</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>BAAI 联合中科院信工所发布 MechVQA,机械图纸 AI 专用基准+专项模型全面超通用大模型</title>
+      <title>大晓机器人开悟世界模型 Kairos 在 RoboTwin 2.0 等四大权威评测中超越 Cosmos3 居首,已向全行业开源</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r004</guid>
       <pubDate></pubDate>
-      <description><![CDATA[北京人工智能研究院(BAAI)联合中国科学院信息工程研究所、北京工业大学在 ICML 2026 发表论文(arXiv:2605.30794),推出业内首个机械工程图纸专业 AI 理解基准 MechVQA 与专项模型 MechVL。MechVQA 包含 20778 道题目,覆盖识别、推理、判断三大能力层次与 10 个子任务,简单/中等/困难三档比例约 4:3.5:2.7,以 8:1:1 划分训练/验证/测试集;基于 Qwen3-VL-4B-Instruct 两阶段训练(SFT+DAPO 强化学习),MechVL-4B-RL 以 84.85 总分位列第一,比最强开源基线 GLM-4.6V(78.91)高 5.94 分,比商业闭源最强 Gemini 3 Pro Preview(77.28)高 7.57 分,推理类子任务反超 Gemini 19.62 分,简单题准确率 94%、中等 79%、困难 75%。研究对工业图纸审核、工程教育与制造质量控制具有直接价值,也证明中等规模模型通过专项训练可显著超越大体量通用大模型。]]></description>
+      <description><![CDATA[6 月 12 日,据界面新闻获悉,大晓机器人开悟世界模型(Kairos)在 RoboTwin 2.0、LIBERO-Plus、WorldModelBench Robot、DreamGen 等全球针对世界模型视频生成和状态预测的权威具身智能评测中取得第一,超越 Cosmos3 等模型。技术层面,该模型采用多模态理解-生成-预测一体化架构,目前已向全行业开源。在智源大会现场演示的酒店全场景清洁任务中,该系统与 RoboBrainX 具身通用模型、RoboClaw 具身交互系统、星源智 N5 具身算力平台协同完成端侧部署,实现长程柔性物体操作等复杂任务,降低对云端网络的依赖。该路线与智平方 NeuroVLA 同为 6-13 智源大会世界模型相关发布焦点。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6500</heat:score><heat:level>热</heat:level><heat:sources>ICML 2026,arXiv,BAAI 官号,企鹅号</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>界面新闻,智源大会,DoNews,36 氪,大晓机器人官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Nu Quantum 首次证明分布式量子计算可容忍单节点完全失效,推进模块化容错路线</title>
+      <title>字节豆包上线任务模式支持定时执行与文件生成,思考模式升级为专家模式,C 端 AI 助手向任务执行 Agent 进化</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r005</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 10 日,英国分布式量子计算领先者 Nu Quantum 联合剑桥大学发表新研究,首次证明多节点量子网络可被设计为容忍单个量子处理器(QPU)的完全失效。研究将节点故障分为计划内换出(通过量子传态把数据比特实时迁到备用节点)与非计划节点失效(失效节点的信息可被视作空间关联错误或纠删错误,通过增加码距持续降低逻辑错误率);数值模拟显示,对于分布式环面码,即使节点失效概率高达 1/100,只要物理噪声低于 0.05%,逻辑错误率仍可被控制在极低水平,且比单片系统所需物理比特开销降低至少 6 倍。该工作被认为对实用容错量子计算(需 10⁵-10⁶ 物理比特)意义重大,Nu Quantum 已获至少 7000 万美元融资,2026 年初在剑桥启用欧洲首个工业级离子阱量子网络实验室。]]></description>
+      <description><![CDATA[6 月 13 日,字节跳动旗下豆包上线两项新功能:任务模式支持定时执行与自动文件生成,思考模式升级为专家模式,提升复杂推理与专业任务处理能力。其中任务模式可让用户预设触发条件,豆包在指定时间自动运行任务并生成 Word、Excel、PDF 等结构化文件,专家模式则面向金融、法律、医疗等垂直领域提供更深度的推理链路与可解释输出。这标志着国内头部 AI 助手从对话工具向任务执行 Agent 进化,在此之前国内主要厂商中仅腾讯元宝、阿里通义等已具备类似定时任务能力;同期微信 A2A 接口对国内手机厂商全面开放,荣耀 YOYO 已率先接入。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6100</heat:score><heat:level>热</heat:level><heat:sources>Nu Quantum 官网,剑桥大学,arXiv 2605.11088,企鹅号</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6400</heat:score><heat:level>热</heat:level><heat:sources>字节跳动,36 氪,钛媒体,新榜,Tech 星球</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>字节豆包专业版 6 月下旬正式上线,三档最高年费 5088 元,AI 手机硬件负责人林夕离职</title>
+      <title>SpaceX 上市首日收涨 19.22%,市值站上 2.1 万亿美元,马斯克登顶全球首位万亿美元富翁</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-c001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 11 日,字节跳动旗下 AI 产品豆包正式启动专业版付费订阅灰度测试,标准版 68 元/月、688 元/年,加强版 200 元/月、2048 元/年,专业版 500 元/月、5088 元/年,预计 6 月下旬正式上线,同期在 Force 大会公布功能更新;基础功能承诺永久免费,付费版主打软件开发、深度数据分析、专业设计、流程自动化、金融分析、科学研究等高附加值场景。但部分灰测用户吐槽&#x27;付费版与免费版差异不大&#x27;,豆包客服回应称&#x27;付费不等于更好的生成质量&#x27;,仅在功能上多一项,商业模式更接近&#x27;算力配额费&#x27;而非&#x27;最强模型订阅&#x27;。同日,字节 AI 硬件核心团队 Ocean 旗下豆包手机硬件产品负责人林夕(前华为终端 Pura X 折叠屏硬件负责人)已离职,这是字节自 2024 年启动 AI 手机项目以来首位出走的核心硬件管理人员,后续对豆包手机量产、供应链、研发节奏的影响仍待观察。]]></description>
+      <description><![CDATA[6 月 12 日,SpaceX 正式登陆纳斯达克完成史上最大规模 IPO,上市首日收涨 19.22%,盘中总市值突破 2.1 万亿美元,市场流通股份仅占总股本 4.2%,筹码供不应求。机构分析指出公司市销率已超 112 倍,远超特斯拉的 15 倍与英伟达的近 20 倍,业务呈一极盈利两极亏损格局:星链去年营收 113.9 亿美元(占总营收 61%)、EBITDA 利润率 63%,服务用户超 1000 万;火箭发射市占率约 80% 但仍亏损 6.57 亿美元;xAI 与未来太空算力被视为烧钱黑洞,公司自 2002 年成立以来累计亏损达 413 亿美元。同日木头姐旗下 ARK 基金旗下多只 ETF 合计买入 3,291,184 股 SpaceX 股票,交易总额 4.443 亿美元,同步大幅减持 AMD 共 8.05 万股,合计 3933 万美元,延续 AMD 持仓削减趋势;马斯克净资产叠加特斯拉、xAI、Neuralink 等资产已突破 1 万亿美元。]]></description>
       <category>公司</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8700</heat:score><heat:level>爆</heat:level><heat:sources>科创板日报,界面新闻,快科技,中国企业家,腾讯网</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9700</heat:score><heat:level>爆</heat:level><heat:sources>SEC 公开文件,央视财经,NBC,Bloomberg,新浪财经,36 氪,华泰证券研报</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>苹果 Xcode 27 原生集成 Gemini,成为继 OpenAI Codex、Anthropic Claude 后的第三个内置 AI 编程智能体</title>
+      <title>OpenAI 秘密提交 S-1 上市文件,同步收购 Ona 强化 Codex 长任务执行,估值锚定 8520 亿美元</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-c002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[苹果在 Xcode 27 Beta 版本中引入谷歌 Gemini 的原生集成,成为继 OpenAI Codex 与 Anthropic Claude Agent 之后,苹果开发者生态中第三个内置的 AI 编程智能体。开发者可在 Xcode 中直接调用 Gemini 完成代码补全、单元测试生成、错误排查等任务,显著提升编程效率与交互体验;同时苹果正在通过 Gemini API 扩展 Siri AI 多语言能力(初期仍仅美国英语),并将部分图像生成任务分流给 Gemini 端到端处理。同日谷歌宣布 Chrome 浏览器内置 Gemini 聊天机器人扩展至拉丁美洲、非洲和中东多个国家,欧盟市场再次被排除,反映全球范围内 AI 助手在合规要求与生态绑定之间的拉锯。]]></description>
+      <description><![CDATA[OpenAI 近日已向 SEC 秘密提交 IPO 申请(S-1),估值锚定 8520 亿美元(3 月底融资轮数据),ChatGPT 周活用户已超 9 亿,目前 OpenAI 仍在持续烧钱,累计融资超 1800 亿美元;Altman 同步发布 OpenAI 第三阶段宣言,经济体系正开始围绕 AI 进行重塑。同期 OpenAI 正式收购云端执行平台 Ona,强化 Codex 长任务执行与企业合规能力,交易金额未披露,Ona 团队将并入 OpenAI。市场分析认为这是 OpenAI 在 IPO 前补强 AI 代理执行能力的关键一步,目标将 AI 代理推进至企业可合规、可审计的生产环境;在融资压力下 OpenAI 还计划推进要约收购允许员工按最新估值出售股份(投后 8520 亿美元)以缓解短期流动性压力。SpaceX 上市后 Anthropic 与 OpenAI 都可能加快 IPO 节奏以抢占稀缺 AI 投资资金。]]></description>
       <category>公司</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7400</heat:score><heat:level>热</heat:level><heat:sources>苹果开发者官网,The Verge,站长之家,9to5Mac</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9350</heat:score><heat:level>爆</heat:level><heat:sources>CNBC,The Information,WSJ,OpenAI 官方,36 氪,IT 之家</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>月之暗面 Kimi 启动新一轮融资,投前估值 300 亿美元,半年涨 7 倍</title>
+      <title>摩尔线程 Day-0 完成 MiniMax M3 模型适配,万卡智算集群与 MTT AIBOOK 全栈亮相智源大会</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-c003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[据多家媒体报道,月之暗面 Kimi 已启动新一轮融资,投前估值从上月 180 亿美元跃升至 300 亿美元,较 2025 年 12 月底 43 亿美元估值半年内暴涨 7 倍,本轮计划募资最高 20 亿美元,投资方包括美团龙珠、中国移动、CPE 等;商业化方面,Kimi 搭载 K2.5 模型升级后,年度经常性收入(ARR)从 2026 年 3 月初的 1 亿美元跃升至 4 月的 2 亿美元以上,6 月 3 日发布面向知识工作者的通用型本地 Agent Kimi Work Beta,以 Kimi Code 为底层技术核心,支持多智能体协同调度。Kimi 方面表示现阶段并无上市计划,&#x27;B 轮与 C 轮融资总额已远超多数企业 IPO 募资额,短期内不将上市作为目标&#x27;,此轮融资将进一步用于 K2.6 之后的下一代基座模型研发与多模态能力补齐。]]></description>
+      <description><![CDATA[6 月 12-13 日,摩尔线程深度参与 2026 北京智源大会,系统性展示覆盖云-边-端的软硬协同全栈创新成果:在大模型产业论坛发表《面向大模型时代的智能计算:万卡集群大模型训练实践》主题演讲,分享基于国产万卡级智算集群夸娥(KUAE)的大规模分布式训练实践,推出基于静态分析的集群性能仿真工具、异步通信引擎通算并行优化,以及利用强化学习进行 CUDA/MUSA 算子自动生成的全新路径。同期发布 6nm TiLISA 与 MTX 编译后端、AIBOOK AI 算力本(MTT AIOS 原生 Linux 预装 OpenClaw 智能体,支持 12 个智能体并行、90+ 工具调用);摩尔线程与智源基于 MTT S5000 千卡集群已训练具身大脑 RoboBrain 2.5(相对误差小于 0.62%),并完成 Qwen3-0.6B 端到端无中断训练(精度超国际基线 1.65 个百分点)、DeepSeek-V4 全系 Day-0 适配。6 月 13 日摩尔线程 Day-0 完成 MiniMax M3 模型适配,持续推动国产大模型生态建设。]]></description>
       <category>公司</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7100</heat:score><heat:level>热</heat:level><heat:sources>财联社,蓝鲸新闻,中关村在线,腾讯网,东方财富网</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8500</heat:score><heat:level>爆</heat:level><heat:sources>IPO 早知道,智源大会,摩尔线程官方,36 氪,Hugging Face</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>ICML 2026 论文:In-Context Routing 隐式 ICL 新方法,12 数据集平均反超少样本 2.7%</title>
+      <title>OpenAI 与 9 位数学家联手推翻 Erdős 1946 单位距离猜想,80 年难题 AI 跨代数数论与几何首次攻破</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-p001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[ICML 2026 接收论文提出 In-Context Routing(ICR)方法,目标是解决隐式 ICL 路线中固定 shift 向量装不下任务信息、向量加在残差流 softmax 之后(在注意力已计算完时打补丁)的两大天花板。ICR 在多领域跑显式 ICL,收集每个 prompt 最后一个 token 的 Q/K 投影做 PCA,得到逐层主 ICL 方向(PID),再用冻结的轻量模型 encode 当前 query、过轻量双分支 MLP 路由器输出 PID 加权与各注意力头门控,最后把 PID 拼起来当 Q/K 投影矩阵加到注意力 logits 上;训练只更新路由器,主干全程冻结,实现&#x27;train once, reuse everywhere&#x27;。在 5 域内 + 7 域外共 12 个数据集上,Qwen2.5-7B 上 ICR 比 SOTA 隐式基线平均高 6.5%,比少样本 prompting 还高 2.7%,向量类方法在域外任务上常崩而 ICR 不掉点,为&#x27;零样本成本 + 少样本效果&#x27;提供新范式。]]></description>
+      <description><![CDATA[2026 年 5 月 20 日,论文《关于单位距离猜想被证伪的评论》(Remarks on the disproof of the unit distance conjecture,arXiv:2605.20695)正式发表,9 位数学家(诺加·阿隆、托马斯·布鲁姆、W·T·高尔斯、丹尼尔·利特、威尔·萨温、阿鲁尔·尚卡尔、雅各布·齐默曼、汪洋、梅兰妮·马切特·伍德)对 OpenAI 一款实验性通用推理系统生成的 125 页证明进行验证与简化,正式宣告推翻 1946 年 Paul Erdős 提出的单位距离猜想。AI 核心思路为通过 Golod-Shafarevich 定理构造嵌套全复数域,生成大量模长为 1 的代数数,利用高维格点投影构造目标点集,证明存在 ε&gt;0 使平面上单位距离数量随点集规模超线性增长。Nature 评价该工作展现出跨领域知识整合与深度逻辑推演能力;但学界亦在反思 AI 辅助论文的引用规范与利益分配问题,6 月 2 日 16 位数学家牵头发布《莱顿人工智能与数学宣言》获国际数学联盟背书,截至 6 月 3 日已有 715+ 签署人。]]></description>
       <category>学术</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5900</heat:score><heat:level>热</heat:level><heat:sources>ICML 2026,arXivSub 论文解读,企鹅号</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7800</heat:score><heat:level>爆</heat:level><heat:sources>Nature,arXiv:2605.20695,X 平台学术圈,知识分子,《数字情种》</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>卡内基梅隆+多校联合:MechVQA 同源研究在图纸视觉问答的子任务消融实验给出 RL 训练最优配置</title>
+      <title>智源悟界·Emu3 论文登 Nature 正刊,悟界·Brainμ1.0 支撑成果登 Science,国产大模型首次双顶刊同月见刊</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-p002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[MechVQA 研究团队同步公开了完整消融实验与训练机制细节。结果显示只做监督微调(SFT)时总分 76.36,加上全数据强化学习(RL)后升至 81.95,再叠加有针对性的第二轮 RL 后达到 84.85,推理类子任务分数从 54.40 一路涨到 77.04,涨幅超 22 分;RL 算法对比上 DAPO(81.95)&gt;GRPO(80.47)&gt;GSPO(78.77),DAPO 在长文本推理场景优化更稳定;奖励设计实验上,去掉回答质量奖励会导致模型响应膨胀到 1300 词以上,只保留词汇重叠 F1 又会缩水到 800 词以下,完整三段奖励(准确性+格式+质量)把响应长度稳定在 1200-1250 词,体现充分推理与简洁表达的平衡。该工作把 DAPO 强化学习在专业领域垂直模型上的最佳实践系统化,为后续蛋白质、化合物、医学影像等垂类模型训练提供了可复制的方法论。]]></description>
+      <description><![CDATA[悟界·Emu3 论文于 2026 年 1 月正式登刊 Nature 正刊,这是国产科研机构主导的大模型成果首次在 Nature 正刊发表,其核心创新在于仅基于预测下一个词元(Next-Token Prediction)的大规模文本、图像和视频统一学习,实现多模态理解和生成任务的统一学习,纯自回归框架原生实现文本、图像、视频的统一理解与生成,内置时空关系、因果逻辑与物理世界演化规律建模能力。在此基础上悟界·Emu3.5 将范式从预测下一个词元扩展到跨视觉与语言序列的下一状态预测。同日由智源联合清华团队基于悟界·Brainμ1.0 开展的研究成果已登刊 Science,聚焦记忆-睡眠调控机制,该模型可将人脑、猕猴、小鼠跨物种、EEG、fMRI、MEG、fNIRS、神经像素、钙成像等 11 种神经信号模态统一编码为标准 Token,通过多模态对齐嵌入预训练大模型,辅助阿尔茨海默症、抑郁症、帕金森等疾病筛查。]]></description>
       <category>学术</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4800</heat:score><heat:level>中</heat:level><heat:sources>ICML 2026,arXiv 2605.30794,BAAI 官号</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7400</heat:score><heat:level>爆</heat:level><heat:sources>Nature,Science,智源研究院,量子位,界面新闻</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Anthropic Mythos 5 在生命科学领域 14 个靶点中拿下 9 个候选药物,基因组学论文对标 Science</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-p003</guid>
-      <pubDate></pubDate>
-      <description><![CDATA[Anthropic 公开 Mythos 5 生命科学能力的详细数据:在蛋白质设计环节,Mythos 5 全程自动化筛选疾病靶点、迭代设计方案、排查修正错误,14 个病症靶点中拿下 9 个高潜力候选方案,覆盖免疫、神经退行、肌肉类多种疑难病症;在基因组学实验中,Mythos 5 少有人工干预的状态下一周多自主搜集 138 个物种、数百万细胞样本数据,独立搭建并训练机器学习模型,最终成品模型体量比同期《Science》刊发的同类研究小 100 倍,性能反而实现反超,Anthropic 计划后续整理完整数据对外发布论文;另一项研究则攻克基因治疗中腺相关病毒(AAV)载体设计难题,借助 Dyno Therapeutics 的候选方案,展示 AI 预测基因修改对病毒外壳组装过程影响的能力。Anthropic 明确将生命科学作为&#x27;10 年 100 年&#x27;研究突破的核心方向,Fable 5 也已将药物设计流程中部分环节提速约 10 倍。]]></description>
-      <category>学术</category>
-      
-      
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6200</heat:score><heat:level>热</heat:level><heat:sources>Anthropic 官方博客,Wired,环球市场播报,企鹅号</heat:sources><heat:comments>0</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>AI 概念股 6 月 11 日集体回调,达实智能跌停,机构警示&#x27;内卷式&#x27;估值过热</title>
+      <title>国家网信办短视频 AI 标注新规 6 月 13 日正式落地,6 类必选标签存量限期整改</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-i001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 11 日,A 股部分 AI 概念股出现跳水走势,涉及物理 AI、AI 营销、多模态 AI 等方向,达实智能一字跌停(封单超 270 万手),天娱数科、视觉中国等跟跌;但同日电子特气、芯片材料板块逆势大涨,华特气体、和远气体、凯美特气、中巨芯(盘中涨近 20%)等多股涨停。机构观点普遍认为,A 股 AI 板块经历 4-5 月快速上涨后,出现&#x27;获利回吐&#x27;与技术性调整,需要警惕&#x27;内卷式&#x27;估值催化与基本面脱节;中信证券仍看好下半年 AI 新材料、军工新材料、固态电池、核聚变、氢能等主题,而 SemiAnalysis 最新报告指出 800VDC 与 CPO 落地节奏将延后,光模块板块出现&#x27;光速下跌&#x27;。整体来看,A 股 AI 投资正在从&#x27;概念炒作&#x27;向&#x27;业绩兑现&#x27;切换,2026 下半年具备真实订单、收入占比、现金流质量的龙头公司将更受青睐。]]></description>
+      <description><![CDATA[中央网信办短视频 AI 内容标注新规于 6 月 13 日正式实施,所有短视频发布时必须从含有虚构演绎、含有 AI 生成、含有营销信息、内容为转载、内容为个人观点、无需标注六类标签中选择一项进行强制标注;平台同步对存量未标注 AI 内容进行回溯整改,限期完成存量治理。中央网信办举报中心开设涉 AI 应用乱象举报专区,专项受理 14 类问题,包括 AI 换脸、深度伪造、AI 诈骗、AI 谣言、未成年人不当内容、训练数据违规、算法歧视、违规收费、版权侵权、跨境违规等。行业分析认为这是中国 AI 治理从框架性立法进入精细化执法的关键节点,新规将对短视频平台的内容审核流程、AI 工具链合规化、训练数据标注、模型生成内容水印追溯等环节产生深远影响,平台方需在 30 天内完成全量存量整改。]]></description>
       <category>行业</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5500</heat:score><heat:level>热</heat:level><heat:sources>东方财富网,中信证券研报,SemiAnalysis 报告,第一财经</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8200</heat:score><heat:level>爆</heat:level><heat:sources>中央网信办,新华网,央视新闻,澎湃新闻,36 氪</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>智能算力军备竞赛白热化,2026 年北美四大云厂商资本开支合计将破 7000 亿美元</title>
+      <title>首尔市教育厅将 AI 智能眼镜列入考场违禁物品,韩国成为亚洲首个系统性禁止考试使用 AI 智能眼镜的地区</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-i002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[据多家机构最新数据,谷歌、微软、Meta、亚马逊四大北美云厂商 2026 年合计资本开支预期已突破 7000 亿美元,较 2023 年翻倍以上;全球数据中心 IT 负载从 2023 年的 49GW 增长到 2026 年的 96GW,增量中 90% 来自 AI 算力;中国智能算力规模预计 2026 年达到约 1460 EFLOPS,较 2024 年实现翻倍增长,未来三年 AI 智能算力需求复合增长率预计高达 49%。&#x27;智算中心&#x27;已成新建数据中心主流形态,CPU 通用算力正快速让位于 GPU 与 AI 加速卡集群,多家机构警告&#x27;AI 资本开支是否存在泡沫&#x27;的讨论持续升温;但从巨头态度看,2026 年内&#x27;先把算力堆起来&#x27;仍是主旋律。国内端字节豆包大模型基础设施预算已由去年 1600 亿元上调至 2000 亿元(约 300 亿美元),并计划投入最高 700 亿美元的资本支出。]]></description>
+      <description><![CDATA[6 月 12 日,韩国首都首尔市教育厅向该市中小学校及辖区教育部门下发通知,正式将 AI 智能眼镜列入考场违禁物品清单,要求学校提前告知学生及家长,如携带 AI 智能眼镜进入考场将一律按作弊处理。据《中央日报》报道,首尔市教育厅担心学生利用 AI 智能眼镜(具备实时视觉识别、语音对话、辅助解题功能)在期末考试中作弊;通知覆盖范围包括 AI 翻译眼镜、AI 录音眼镜、AI 拍摄眼镜等具备 AI 功能的可穿戴设备。同期全球 AI 智能眼镜出货量在 2026 Q1 同比增长 312%,三星、LG 等本土厂商正密集推出带显示屏的 AI 智能眼镜新品,这一禁令或对韩国 AI 智能眼镜校园渠道销售产生短期影响;欧盟与美国部分学区也在评估类似监管。]]></description>
       <category>行业</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6000</heat:score><heat:level>热</heat:level><heat:sources>中信证券,摩根士丹利,字节火山引擎,财联社</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6500</heat:score><heat:level>热</heat:level><heat:sources>韩联社,《中央日报》,新华社,36 氪,科技日报</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Karpathy 加入 Anthropic 引发社交平台刷屏,称 Fable 5 配得上&#x27;大版本号跨越式飞跃&#x27;</title>
+      <title>Anthropic 首次公众调查 5.2 万美国人 AI 态度:48% 盼 AI 治愈癌症,64% 担忧失业,焦虑与期待并存</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-s001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[刚加入 Anthropic 的人工智能泰斗 Andrej Karpathy 就 Fable 5 发布发表评论,称&#x27;这次升级配得上大版本号跨越式飞跃&#x27;,并以《黑客帝国》&#x27;解放你的思想&#x27;形容变革力度;Claude Code 负责人 Felix Rieseberg 直接抛出&#x27;第三个人工智能时代从 Fable 5 上线这天正式到来&#x27;的判断,&#x27;过去人类只是给 AI 下达零散任务,如今可以直接给 AI 分配完整岗位职责&#x27;;陪伴 Claude 走完每一代更新的研究员 Alex Albert 直言&#x27;这是第一个让我感觉不像工具、更像协作伙伴的模型&#x27;。Every 公司 CEO 用&#x27;性能怪兽&#x27;形容 Fable 5,内部工程师标准实测中,前代顶尖模型得分徘徊 60 分,Fable 5 直接冲到 91 分。Anthropic 联合创始人、前首席科学家 Behnam Neyshabur 还在社交平台对 Fable 5 的安全过滤机制提出严厉批评,&#x27;想用 AI 研究癌症?抱歉,我帮不了你&#x27;。社交平台上&#x27;#Fable 5 编程碾压&#x27;&#x27;#Mythos 5 神话&#x27;&#x27;#Anthropic 第三 AI 时代&#x27;等话题持续刷屏。]]></description>
+      <description><![CDATA[6 月 13 日,Anthropic 公布对 51,826 名美国成年人进行的首次大规模 AI 态度调查结果,呈现出乐观期待与深层焦虑的双重矛盾:48% 受访者希望 AI 治愈重大疾病,36% 希望帮助残障人士;但 64% 担心失业,56% 担心过度依赖导致脑子变懒;不同年龄、性别、收入群体分布相当平均,表明 AI 焦虑已跨越传统人口学分层。同期路透社/益普索民调显示 53% 美国人担心自己或家人因 AI 失业,与 Anthropic 调查高度一致。调查同时显示 72% 受访者认为政府应建立 AI 安全监管框架,但仅有 28% 信任 AI 公司自律;这是 Anthropic 在长期呼吁强监管、主动渲染前沿 AI 风险背景下,首次以实证数据为自身监管立场提供公众态度锚点。]]></description>
       <category>声音</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7200</heat:score><heat:level>热</heat:level><heat:sources>X/Twitter,Anthropic 官方,Reddit r/MachineLearning,Hacker News,Anthropic 内部播客</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7500</heat:score><heat:level>爆</heat:level><heat:sources>Anthropic 官方,Reuters/Ipsos,MIT Technology Review,Wired,华尔街日报</heat:sources><heat:comments>0</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>鸿蒙高校创新赛进入国赛,HDC 2026 为青年学生提供零门槛创新舞台,鸿蒙开发者达 1100 万</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
+      <guid isPermaLink="false">ai-daily-s002</guid>
+      <pubDate></pubDate>
+      <description><![CDATA[6 月 13 日,在 HDC 2026 鸿蒙应用生态发展论坛上,鸿蒙高校创新赛宣布进入国赛阶段,该赛事为零门槛创新舞台,聚焦 HarmonyOS 7 与 Agent 时代的应用开发。同期官方公布最新数据:搭载 HarmonyOS 6 的终端设备达 6600 万台,鸿蒙注册开发者 1100 万,鸿蒙原生开发者年度留存率 87.5%,华为应用市场可检索应用超 40 万款,日均下载 2 亿次;鲸鸿动能披露 2026 年应用媒体收益同比增长 37%,游戏媒体收益同比增长 69%,元服务媒体收益实现 19 倍增长;接入全球第三方媒体 10.7 万+,2025 年广告主数增长 200%。论坛还发布鸿蒙生态商业化峰会、AppGallery 四大 Skill 赋能等新举措,持续吸引头部互联网企业、中小开发团队、独立创作者广泛入局。]]></description>
+      <category>声音</category>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5800</heat:score><heat:level>热</heat:level><heat:sources>鸿蒙官方,华为应用市场,鲸鸿动能,HDC 2026 现场,36 氪</heat:sources><heat:comments>0</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>鸿蒙高校创新赛 6-13 启动 CodeLabs 训练营,300+ 高校学生同台竞技,AI Agent 应用占参赛作品 64%</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
+      <guid isPermaLink="false">ai-daily-s003</guid>
+      <pubDate></pubDate>
+      <description><![CDATA[6 月 13 日,HDC 2026 鸿蒙高校星光大道 CodeLabs 训练营在东莞松山湖正式启动,300+ 高校学生现场竞技,本届创新赛聚焦 HarmonyOS 7 与 Agent 时代应用开发,参赛作品中 AI Agent 应用占比达 64%,涵盖教育、医疗、出行、社交等垂直场景;HarmonyO 创新赛极客赛道决赛同日举行,决出 12 强晋级国赛。同期央视首档科技开放麦走进 HDC,听开发者讲述鸿蒙创新故事;中央广播电视总台、人民日报新媒体同步报道。官方表示 HDC 2026 持续三天(6 月 12-14 日),核心议题包括 HarmonyOS 7、鸿蒙 AI 核心能力、生态新成果。]]></description>
+      <category>声音</category>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5400</heat:score><heat:level>热</heat:level><heat:sources>鸿蒙官方,央视科技开放麦,东莞松山湖现场,中经报,凤凰科技</heat:sources><heat:comments>0</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>智源大会灵魂对话 40+ AI 顶尖学者同台,黄铁军与王坚围绕总有人比时代早十年论道 AI 范式跃迁</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
+      <guid isPermaLink="false">ai-daily-s004</guid>
+      <pubDate></pubDate>
+      <description><![CDATA[2026 北京智源大会(6 月 12-14 日)以技术前沿、国际视野、青年人才为特色,30 余位 30 岁以下青年科学家、40 余位 AI 企业 CEO/创始人/首席科学家、200 余位顶尖专家学者齐聚北京,20 余家全球顶尖科技企业及高校科研机构(包含 Meta、英伟达、哈佛、MIT)与阿里、腾讯、小米、生数科技、面壁智能、清华、北大、人大等中国 AI 创新力量同场交流。开幕式由智源研究院理事长黄铁军主持,其与王坚围绕总有人比时代早十年展开播客式对话,从中国 AI 范式演进出发,探讨中国大模型如何从追赶验证走向路线选择、体系构建与范式创新、如何突破互联网文本数据天花板与算力荒的极限状态;在重构世界圆桌环节,王仲远、朱军、罗福莉、刘知远、安波共同论道超级模型能力演进、AI 自进化、多模态与世界模型。]]></description>
+      <category>声音</category>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5100</heat:score><heat:level>热</heat:level><heat:sources>中新社,智源大会,量子位,36 氪,极客公园</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
   </channel>
 </rss>

@@ -5,7 +5,10 @@
     "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
     "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
     "links": [
-      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
+      {
+        "label": "arXiv 2605.05191",
+        "url": "https://arxiv.org/abs/2605.05191"
+      }
     ]
   },
   "Qwen": {
@@ -49,7 +52,10 @@
     "summary": "Hacker News 的产品发布板块,创作者亲手发帖,社区以项目质量投票。",
     "detail": "Show HN 上 1k+ points 的项目常预示未来 6 个月的趋势。",
     "links": [
-      {"label": "Hacker News Show", "url": "https://news.ycombinator.com/show"}
+      {
+        "label": "Hacker News Show",
+        "url": "https://news.ycombinator.com/show"
+      }
     ]
   },
   "Product Hunt": {
@@ -58,7 +64,10 @@
     "summary": "全球每日新产品发现平台,AI 工具日榜是行业内最具风向标意义的产品榜单。",
     "detail": "PH 上 #1 的 AI 工具,几乎都会在 2 周内获得大量媒体报道。",
     "links": [
-      {"label": "Product Hunt AI", "url": "https://www.producthunt.com/topics/artificial-intelligence"}
+      {
+        "label": "Product Hunt AI",
+        "url": "https://www.producthunt.com/topics/artificial-intelligence"
+      }
     ]
   },
   "GitHub Trending": {
@@ -67,7 +76,10 @@
     "summary": "GitHub 官方每日榜单,按仓库 24h 涨星排序,被视作开源世界最有用的'早期信号'。",
     "detail": "Trending 出现的新面孔(陌生名字)往往比'老牌项目'更有信息量。",
     "links": [
-      {"label": "GitHub Trending", "url": "https://github.com/trending"}
+      {
+        "label": "GitHub Trending",
+        "url": "https://github.com/trending"
+      }
     ]
   },
   "Reddit r/LocalLLaMA": {
@@ -83,7 +95,10 @@
     "summary": "Y Combinator 旗下的技术新闻聚合社区,首页点数的'含金量'在技术圈公认最高。",
     "detail": "首页出现 30+ 分钟且点数 > 500 的几乎都是值得关注的趋势事件。",
     "links": [
-      {"label": "Hacker News", "url": "https://news.ycombinator.com/"}
+      {
+        "label": "Hacker News",
+        "url": "https://news.ycombinator.com/"
+      }
     ]
   },
   "HN points": {
@@ -155,8 +170,14 @@
     "summary": "英伟达下一代 GPU 架构,接替 Blackwell,主打推理与能效。命名取自确认暗物质存在证据的天文学家 Vera Rubin。",
     "detail": "Vera Rubin 平台整合新一代 GPU + CPU Vera,设计目标是让 AI 工厂在每兆瓦 token 性能上做到极致,继续巩固英伟达在算力层的霸主地位。",
     "links": [
-      {"label": "NVIDIA 官方", "url": "https://nvidianews.nvidia.com/"},
-      {"label": "The Verge 报道", "url": "https://www.theverge.com/"}
+      {
+        "label": "NVIDIA 官方",
+        "url": "https://nvidianews.nvidia.com/"
+      },
+      {
+        "label": "The Verge 报道",
+        "url": "https://www.theverge.com/"
+      }
     ]
   },
   "RTX Spark": {
@@ -165,7 +186,10 @@
     "summary": "英伟达首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + 神经处理单元,主打本地大模型推理。",
     "detail": "戴尔、惠普、联想、微软首批支持。它的意义在于把 AI Agent 从云端拽到本地,降低延迟、隐私和推理成本。",
     "links": [
-      {"label": "Wikipedia: AI PC", "url": "https://en.wikipedia.org/wiki/AI_PC"}
+      {
+        "label": "Wikipedia: AI PC",
+        "url": "https://en.wikipedia.org/wiki/AI_PC"
+      }
     ]
   },
   "Nemotron": {
@@ -174,7 +198,10 @@
     "summary": "英伟达自研大语言模型系列,主打多模态、Agent 能力与企业级部署。",
     "detail": "Nemotron 与 NIM 微服务配套发布,常被用于与开源模型做蒸馏比较,也是英伟达从'卖铲子'到'也下场挖金子'的标志。",
     "links": [
-      {"label": "NVIDIA NIM", "url": "https://www.nvidia.com/en-us/ai-software/"}
+      {
+        "label": "NVIDIA NIM",
+        "url": "https://www.nvidia.com/en-us/ai-software/"
+      }
     ]
   },
   "DSX": {
@@ -183,7 +210,10 @@
     "summary": "面向 AI 工厂全生命周期的参考设计与操作系统平台,DSX MaxLPS 支持 45°C 液冷,在固定电力预算内多跑 40% GPU。",
     "detail": "把建 AI 数据中心从'工程难题'变成'参考蓝图',客户可直接复用。",
     "links": [
-      {"label": "NVIDIA 数据中心", "url": "https://www.nvidia.com/en-us/data-center/"}
+      {
+        "label": "NVIDIA 数据中心",
+        "url": "https://www.nvidia.com/en-us/data-center/"
+      }
     ]
   },
   "Isaac GR00T": {
@@ -192,7 +222,10 @@
     "summary": "英伟达推出的通用人形机器人基础模型与参考设计,目标是让机器人能听懂自然语言并执行复杂操作任务。",
     "detail": "GR00T 走'基础模型 + 仿真训练 + 硬件参考'三位一体路线,合作方包括宇树、Figure 等。",
     "links": [
-      {"label": "Isaac GR00T 官方", "url": "https://developer.nvidia.com/isaac/gr00t"}
+      {
+        "label": "Isaac GR00T 官方",
+        "url": "https://developer.nvidia.com/isaac/gr00t"
+      }
     ]
   },
   "HBM": {
@@ -201,7 +234,10 @@
     "summary": "高带宽内存,3D 堆叠的 DRAM,专为大模型训练推理设计。",
     "detail": "HBM3e、HBM4 是当前最紧俏的 AI 供应链环节,SK 海力士、三星、美光三足鼎立。这次三家联合投资 Anthropic,本质是'锁需求'。",
     "links": [
-      {"label": "SK hynix HBM", "url": "https://www.skhynix.com/eng/solutions.do"}
+      {
+        "label": "SK hynix HBM",
+        "url": "https://www.skhynix.com/eng/solutions.do"
+      }
     ]
   },
   "Series H": {
@@ -224,7 +260,10 @@
     "summary": "20 世纪最多产、游走于全世界的匈牙利数学家,以组合学、概率论贡献著称,留下了大量'Erdős 猜想'。",
     "detail": "OpenAI 推翻的是他 1946 年提出的'单位距离问题上界'猜想——这是 AI 首次在主流数学猜想上给出反例级突破。",
     "links": [
-      {"label": "Erdős Wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"}
+      {
+        "label": "Erdős Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"
+      }
     ]
   },
   "单位距离问题": {
@@ -247,7 +286,10 @@
     "summary": "DeepSeek 2026 年主力模型,主打代码与 Agent 任务,API 定价一次性下调 75%。",
     "detail": "DeepSeek 用'开源 + 极致降价 + 架构创新'重画硬件生态成本曲线,被视作'东半球 AI 价格战'的标杆事件。",
     "links": [
-      {"label": "DeepSeek 官方", "url": "https://www.deepseek.com/"}
+      {
+        "label": "DeepSeek 官方",
+        "url": "https://www.deepseek.com/"
+      }
     ]
   },
   "token 经济": {
@@ -298,15 +340,6 @@
     "summary": "机器人能独立运动的关节数量,直接决定其动作灵活度。",
     "detail": "宇树 H2+ 全身 31 自由度 + 每手 25 自由度,合计 81 自由度,在同类人形机器人中属顶级。",
     "links": []
-  },
-  "Context-ReAct": {
-    "name": "Context-ReAct",
-    "category": "Agent / 学术",
-    "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
-    "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
-    "links": [
-      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
-    ]
   },
   "BrowseComp": {
     "name": "BrowseComp",
@@ -398,7 +431,10 @@
     "summary": "基于区块链的事件预测市场,用户用真金白银押注未来事件结果。",
     "detail": "Polymarket 上 Anthropic 83.2% 概率被市场视为 6 月底最佳 AI 模型,反映资本与社区的共识方向。",
     "links": [
-      {"label": "Polymarket", "url": "https://polymarket.com/"}
+      {
+        "label": "Polymarket",
+        "url": "https://polymarket.com/"
+      }
     ]
   },
   "流动性池": {
@@ -414,7 +450,10 @@
     "summary": "Figure AI 第三代人形机器人,主打工业自动化分拣与物流作业。",
     "detail": "200 小时直播 + 25 万包裹零故障,是当前人形机器人'工厂可用性'的最强公开证据之一。",
     "links": [
-      {"label": "Figure AI", "url": "https://www.figure.ai/"}
+      {
+        "label": "Figure AI",
+        "url": "https://www.figure.ai/"
+      }
     ]
   },
   "耐力测试": {
@@ -422,6 +461,110 @@
     "category": "机器人 / 评测",
     "summary": "让机器人在真实生产环境中长时间不间断运行的测试,衡量稳定性与维护成本。",
     "detail": "从 8 小时到 24 小时再到 200 小时,Figure 03 完成了量级跨越,机器人'能用'的下限被显著抬高。",
+    "links": []
+  },
+  "悟界·Physis": {
+    "name": "悟界·Physis-v0.1",
+    "category": "世界模型 / 基础模型",
+    "summary": "智源研究院 2026 北京智源大会发布的全球首个通用世界基座模型,核心范式是从预测下一个 Token 跃迁到预测下一个物理状态。",
+    "detail": "搭载专属物理状态编码器,统一压缩视频、深度 RGB、3D 点云、力触反馈为标准化 Latent State,支持 50+ 复杂物理场景长程推理,具备物理一致性、动作因果性、长程可推演性、通用泛化性四大能力。",
+    "links": [
+      {
+        "label": "智源悟界 Physis",
+        "url": "https://m.jiemian.com/article/14579590.html"
+      }
+    ]
+  },
+  "HarmonyOS 7": {
+    "name": "HarmonyOS 7 (鸿蒙 7)",
+    "category": "操作系统",
+    "summary": "2026 HDC 大会正式发布的鸿蒙新一代 OS,操作系统本身进行 Agent 化重构,鸿蒙智能体框架 2.0 升级,复杂任务处理成功率提升至 90% 以上。",
+    "detail": "Agent 亲和系统架构从内核层支撑 AI Agent 运行,小艺日均唤醒 30 亿次、日活服务 1.8 亿次,GUI 操控能力首次向开发者开放,搭配 HarmonyOS 6 终端突破 6600 万台,鸿蒙在国内智能手机 OS 份额 19% 反超 iOS。",
+    "links": [
+      {
+        "label": "华为 HDC 2026",
+        "url": "https://www.toutiao.com/article/7650460700854288937/"
+      }
+    ]
+  },
+  "NeuroVLA": {
+    "name": "NeuroVLA (智平方)",
+    "category": "具身智能",
+    "summary": "智平方在 2026 智源大会发布的全球首个类脑式具身智能系统,复刻人脑皮层-小脑-脊髓三层架构。",
+    "detail": "已在 AlphaBrain Platform 开源,商业化覆盖汽车、半导体等工业场景,智魔方机器人店员业态落地全国十余省份,创始人郭彦东提出通用智能机器人是继 PC、手机、汽车后的第四代智能终端。",
+    "links": [
+      {
+        "label": "智平方 NeuroVLA",
+        "url": "https://k.sina.com.cn/article_1644983660_620c756c02001sm38.html"
+      }
+    ]
+  },
+  "破壳机器人": {
+    "name": "破壳机器人",
+    "category": "具身智能 / 创业",
+    "summary": "原星海图联合创始人许华哲新创立的家庭具身智能公司,采用世界模型技术路线,自研双向校验算法修正预测误差。",
+    "detail": "反向押注家庭长尾任务的高泛化能力,6 月 22 日上线机器人制作麻婆豆腐菜品的完整制作 Demo,8 月底至 9 月初推出第一代硬件产品,中长期目标 2028 年 3 月正式走进首批家庭用户。",
+    "links": [
+      {
+        "label": "北京商报报道",
+        "url": "https://www.bbtnews.com.cn/"
+      }
+    ]
+  },
+  "Kairos 大晓": {
+    "name": "开悟世界模型 Kairos (大晓机器人)",
+    "category": "世界模型 / 具身智能",
+    "summary": "大晓机器人自研的多模态理解-生成-预测一体化世界模型,在 RoboTwin 2.0、LIBERO-Plus、WorldModelBench Robot、DreamGen 四大权威评测中超越 Cosmos3 居首。",
+    "detail": "已向全行业开源,在 2026 智源大会与 RoboBrainX 具身通用模型、RoboClaw 具身交互系统、星源智 N5 具身算力平台协同完成酒店全场景清洁任务端侧部署。",
+    "links": []
+  },
+  "昆仑行机器人": {
+    "name": "昆仑行机器人 (北京亦庄)",
+    "category": "具身智能 / 创业",
+    "summary": "2026-06-12 落地北京经济技术开发区的具身智能公司,创始人任庚(原华为/阿里高管),联合创始人郎咸朋(原理想汽车高级副总裁、自动驾驶总裁、一号员工)。",
+    "detail": "创始团队主要来自华为、阿里、理想汽车等业界知名企业核心骨干,聚焦通用具身智能机器人研发与产业落地,可对接亦庄 300+ 生态企业及国地共建创新中心。",
+    "links": []
+  },
+  "FlagOS 2.1": {
+    "name": "FlagOS 2.1 (众智)",
+    "category": "智算 / 软件栈",
+    "summary": "智源研究院牵头打造的统一智算系统软件栈,2026 智源大会升级到 2.1 版本,支持 18 家芯片厂商的 32 款芯片,是全球覆盖芯片数量最多的计算系统软件栈。",
+    "detail": "统一适配 NVIDIA、NPU、GPGPU、DSA、RISC-V AI、ARM 等多种架构,支持 90% 以上主流开源大模型多芯片部署,DAY 0 即实现 DeepSeek V4、Qwen3.6、MiniMax M2.7 等大模型多款芯片适配,生态成员超 80 家、全球下载量 37.5 万+、触及开发者 5.6 万人。",
+    "links": []
+  },
+  "世界模型分类": {
+    "name": "世界模型四象限分类",
+    "category": "世界模型 / 方法论",
+    "summary": "智源提出的世界模型技术分类:第一类以语言为中心(VLM/VLA)、第二类以像素为中心(Sora/Seedance)、第三类以三维结构为中心(3D 重建/World Labs Marble)、第四类以视觉表征为中心(Yann LeCun JEPA)。",
+    "detail": "智源认为四类模型距离真正面向物理世界的基座模型都有距离,正在尝试以潜空间表征为代表的第五类路径,悟界·Physis 是这一路径的代表性产品。",
+    "links": []
+  },
+  "AI 监管 2026": {
+    "name": "美国 AI 监管风暴 2026",
+    "category": "AI 治理",
+    "summary": "2026 年 6 月美国 AI 双双遭监管,OpenAI 遭多州总检察长联合传票、Anthropic Fable 5/Mythos 5 遭美商务部出口管制 72 小时全停服。",
+    "detail": "OpenAI 传票范围覆盖广告、用户留存、消费者与健康数据、未成年人/老年人、深度学习模型、模型谄媚性、公司政策七大类;Anthropic 因所谓越狱漏洞争议被列管制,境内境外双重覆盖包括自身外籍员工。",
+    "links": []
+  },
+  "短视频 AI 标注": {
+    "name": "短视频 AI 标注新规",
+    "category": "AI 治理",
+    "summary": "中央网信办 2026 年 6 月 13 日正式实施的短视频 AI 内容标注新规,要求所有短视频发布时从 6 类标签(虚构演绎、AI 生成、营销信息、转载、个人观点、无需标注)中选择一项进行强制标注。",
+    "detail": "中央网信办举报中心开设涉 AI 应用乱象举报专区,专项受理 14 类问题,平台需在 30 天内完成全量存量整改,标志着中国 AI 治理从框架性立法进入精细化执法。",
+    "links": []
+  },
+  "SpaceX 上市": {
+    "name": "SpaceX IPO 2026",
+    "category": "商业 / 资本",
+    "summary": "SpaceX 2026 年 6 月 12 日登陆纳斯达克,上市首日收涨 19.22%,盘中总市值突破 2.1 万亿美元,创史上最大规模 IPO 纪录。",
+    "detail": "发行价 135 美元/股,发行 5.556 亿股新股募资 750 亿美元,目标估值 1.75 万亿美元,星链去年营收 113.9 亿美元(占总营收 61%)、EBITDA 利润率 63%,马斯克净资产突破 1 万亿美元,ARK 旗下多只 ETF 合计买入 4.443 亿美元 SpaceX 股份。",
+    "links": []
+  },
+  "悟界·Brainμ": {
+    "name": "悟界·Brainμ1.0",
+    "category": "神经科学 / 基础模型",
+    "summary": "智源研究院 2026 智源大会发布的全球首个理解与生成统一的多模态神经科学大模型,把 Next-Token Prediction 范式扩展到神经科学领域。",
+    "detail": "可将人脑、猕猴、小鼠跨物种,EEG、fMRI、MEG、fNIRS、神经像素、钙成像等 11 种神经信号模态统一编码为标准 Token,辅助阿尔茨海默症、抑郁症、帕金森等疾病筛查,智源联合清华团队基于该模型开展的'记忆-睡眠'调控机制研究已登刊 Science。",
     "links": []
   }
 }
