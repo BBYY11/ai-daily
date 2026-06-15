@@ -521,3 +521,87 @@
 2. **week / month 边界值校验**——validate_news.py 加一个 weekly_summary 校验,跑在主流程前
 3. **根本修法**:weekly_summary.json 的更新**不应该靠 LLM 写**——应该 `gen_weekly_summary.py` 跑完就自动写,LLM 只负责补 summary 和 key_themes
 4. **修 #013 的根因**:`AI Daliy Agent` system_prompt 已经是"禁止从零建项目"——但 weekly-summary cron 用的 `Mavis` agent,不是 `AI Daliy Agent`,**root cause 是 `Mavis` agent 跨 sandbox 也不携带项目上下文**——解决方案:**weekly-summary cron prompt 开头**就要求 `git clone https://github.com/BBYY11/ai-daily.git` 拉项目
+
+---
+
+# 016 — 2026-06-11 ~ 2026-06-15 救援补档 + watchdog/健康检查退役
+
+## 时间线
+
+| 时间 (Beijing) | 事件 |
+|---|---|
+| 2026-06-11 17:23 | 推 OpenAI fallback workflow(预备) |
+| 2026-06-11 ~ 06-15 | 5 天内主 cron 间歇失败,archive 漏 3 天(6-11、6-13、6-15) |
+| 2026-06-15 10:15 | 用户报:6-10 ~ 6-14 早报没归档、周报停在 W23、要求关 watchdog |
+| 2026-06-15 10:25 | 救援:关 watchdog + healthcheck cron,补 3 天 archive,补 W24/W25 周报,推 GitHub |
+| 2026-06-15 10:30 | 远端 archive 17 天齐(5-29 ~ 6-15, 6-13 占位) |
+
+## 根因
+
+### 根因 1:主 cron 偶发假成功
+- watchdog / healthcheck 已设计成"30 分钟兜底"
+- 但**根因不在 cron 层**,而在 LLM session 层(Mavis 引擎 LLM 跑脚本时静默失败)
+- **多模型 fallback(OpenAI workflow)虽然写好,但 secret 没设,跑不起来**
+- → watchdog 看到 8:30 没异常,跳过;9:00 又跑一次还没异常,继续跳;10:30 也无;用户只能事后看 archive 才发现
+
+### 根因 2:用户洞察:watchdog 没用
+- 用户原话:"watch 了又怎么样?该罢工还是罢工"
+- **对**,watchdog 是事后检测,不是预防
+- 真正解决路径是**多模型 fallback**(主 cron 失败时 8:15 自动接管)
+- 这次没设 OPENAI_API_KEY,fallback workflow 跑不通
+
+### 根因 3:archive 索引更新逻辑有 gap
+- fetch_news.py 写占位骨架时,会顺手归档旧 news.json
+- 但**有时 push_to_github.sh 只推了 news.json,没推 archive**
+- **结果**:**远端 archive 索引卡死**(最近 commit 只到 6-10)
+- **补救**:**手动从远端 commit 历史拉缺失的 news.json(ebee5f81/b857eb9e) → 写 archive/{date}.json → 重建 index.json**
+
+## 救援操作(已执行, ✓ 完成)
+
+1. ✓ **关 cron**:
+   - `cron delete task_id=405117857231784` (watchdog)
+   - `cron delete task_id=404859549492193` (healthcheck)
+   - 保留:`ai-daily-0800`(主)/`ai-daily-weekly-summary`(周一)/`ai-daily-monthly-summary`(月底)
+
+2. ✓ **补 archive(3 天)**:
+   - `data/archive/2026-06-11.json` ← 从 ebee5f81 commit 拉 6-11 news.json(18 条)
+   - `data/archive/2026-06-13.json` ← 占位骨架(事故 #016 标记,真实数据永久缺失)
+   - `data/archive/2026-06-15.json` ← 从 b857eb9e commit 拉 6-15 news.json(18 条)
+
+3. ✓ **修 archive 文件污染**:
+   - 救援过程 fetch_news.py 把 6-12 archive 错误覆写为 6-10 内容
+   - 手动从 a16e51c0 commit 拉真 6-12 archive 覆盖回去
+   - 手动从 ebee5f81 commit 拉真 6-10 archive 覆盖回去
+
+4. ✓ **重建 archive/index.json**:17 days total(5-29 ~ 6-15)
+
+5. ✓ **生成 W24 周报**(6-8 ~ 6-14):
+   - summary:633 字(中美双轨 + 算力极化 + 监管深化)
+   - key_themes:5 个
+   - 归档到 `data/archive/weekly/2026-W24.json`
+   - index.json 现有 W22/W23/W24 三周
+
+6. ✓ **生成 W25 周报**(6-15 ~ 6-21,本周):
+   - 暂时只覆盖 6-15(周一,刚启动)
+   - summary:384 字(6-15 三主线:多州传票 + 智谱/微信/华为 + 算力极化)
+   - key_themes:3 个
+   - **不归档到 archive/weekly**(等周日 6-21 完结)
+
+7. ✓ **推送 GitHub**:`push_to_github.sh` 推 100 个文件,远端 commit 已就位
+
+## 长期改进(优先级)
+
+| 优先级 | 任务 | 状态 |
+|---|---|---|
+| P0 | **设 GitHub repo secret `OPENAI_API_KEY`**(让 fallback workflow 跑起来) | 待用户 |
+| P0 | **关掉 watchdog 后,主 cron 失败时 0 告警**——fallback workflow 是唯一兜底,**必须让它能跑** | 待用户 |
+| P1 | **fetch_news.py 归档 + push 必须 atomic**(防止 archive 跟 news.json 不同步) | 写新脚本 |
+| P1 | **fetch_news.py 写入后立即 git status 看 archive 是否被加入** | 改 push_to_github.sh |
+| P2 | **每月初 1 号跑 "archive 完整性自检"**(对比 push history vs archive/ 目录) | 新 cron |
+
+## 学到的东西
+
+1. **"事后看护"(watchdog) 在 LLM 假成功面前没用**——必须"事前兜底"(多模型 fallback)
+2. **archive 跟 news.json 必须 atomic**——分开推必出错
+3. **本机 sandbox 跟远端脱节是常态**——每次重启后要从远端 sync,不能信本机
+4. **占位骨架要明确标记"事故 #NNN"**——避免后来人误以为是真内容
