@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily · 归档 · 全部历史</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .stats {
+    display: flex;
+    gap: 24px;
+    margin: 24px 0;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .stat .v { font-family: var(--mono); font-size: 20px; color: var(--blue); font-weight: 700; }
+  .stat .l { font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+
+  .day-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); margin-top: 8px; }
+  .day-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 80px 80px 80px;
+    gap: 16px;
+    padding: 18px 16px;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.15s;
+    position: relative;
+  }
+  .day-row:hover { background: var(--bg-2); text-decoration: none; }
+  .day-row:hover .d-title { color: var(--blue); }
+  .day-row::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: transparent; transition: 0.15s; }
+  .day-row:hover::before { background: var(--blue); }
+
+  .d-date { font-family: var(--mono); font-size: 14px; color: var(--blue); font-weight: 700; }
+  .d-weekday { font-family: var(--mono); font-size: 10px; color: var(--text-mute); margin-top: 2px; }
+  .d-title { font-size: 14px; line-height: 1.5; color: var(--text-dim); }
+  .d-num { font-family: var(--mono); font-size: 14px; color: var(--text-mute); text-align: right; }
+  .d-num strong { color: var(--blue); font-size: 18px; font-weight: 700; }
+  .d-num .rising { color: var(--orange); font-weight: 600; }
+  .d-num .headline { color: var(--text); font-weight: 600; }
+  .d-num small { font-size: 10px; color: var(--text-mute); }
+
+  @media (max-width: 600px) {
+    .day-row { grid-template-columns: 80px 1fr 60px; gap: 8px; padding: 14px 8px; }
+    .day-row .d-num.rising-col, .day-row .d-num.headline-col { display: none; }
+    .d-date { font-size: 12px; }
+    .d-title { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="top-stripe"></div>
+<div class="wrap">
+  <header>
+    <a href="index.html" class="logo">
+      <span class="logo-mark">AI</span>
+      <span class="logo-text">
+        <span class="t1">AI Daily</span>
+        <span class="t2">· 归档</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">今日</a>
+      <a href="monthly.html">本月</a>
+      <a href="archive.html" class="active">归档</a>
+      <a href="feed.html" class="rss-link">⚡ 订阅</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-meta">
+      <span class="pill">ARCHIVE · 全部历史</span>
+      <span>每天 08:00 CST 存档</span>
+    </div>
+    <h1>每日<span class="hl">归档</span></h1>
+    <p class="lead">从 2026-05-29 至今,每天 08:00 自动存档到 GitHub。<a href="weekly_archive.html">查看周报归档 →</a></p>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><div class="v" id="s-days">—</div><div class="l">已存天数</div></div>
+    <div class="stat"><div class="v" id="s-items">—</div><div class="l">累计新闻</div></div>
+    <div class="stat"><div class="v" id="s-rising">—</div><div class="l">累计新兴</div></div>
+    <div class="stat"><div class="v" id="s-first">—</div><div class="l">起始日期</div></div>
+  </div>
+
+  <div class="day-list" id="day-list"></div>
+
+  <footer>© 2026 AI Daily · Generative Brief · 归档数据由 cron 任务每日 08:00 Asia/Shanghai 写入</footer>
+</div>
+
+<script>
+fetch("data/archive/index.json")
+  .then(r => r.ok ? r.json() : { days: [] })
+  .then(idx => {
+    const days = idx.days || [];
+    document.getElementById("s-days").textContent = days.length;
+    document.getElementById("s-items").textContent = days.reduce((s, d) => s + (d.total || 0), 0);
+    document.getElementById("s-rising").textContent = days.reduce((s, d) => s + (d.rising || 0), 0);
+    document.getElementById("s-first").textContent = days.length ? days[days.length - 1].date : "—";
+
+    if (!days.length) {
+      document.getElementById("day-list").innerHTML = '<div class="empty">还没有归档,等明早 8:00 自动写入</div>';
+    } else {
+      document.getElementById("day-list").innerHTML = days.map(d => `
+        <a class="day-row" href="archive-view.html?date=${d.date}">
+          <div>
+            <div class="d-date">${d.date}</div>
+            <div class="d-weekday">${d.weekday || ""}</div>
+          </div>
+          <div class="d-title">${escapeHTML(d.summary || "(无摘要)")}</div>
+          <div class="d-num"><strong>${d.total || 0}</strong><br><small>条</small></div>
+          <div class="d-num rising-col"><span class="rising">${d.rising || 0}</span><br><small>新兴</small></div>
+          <div class="d-num headline-col"><span class="headline">${d.headline || 0}</span><br><small>头条</small></div>
+        </a>
+      `).join("");
+    }
+
+    // nav toggle
+    const btn = document.getElementById("nav-toggle");
+    const nav = document.getElementById("nav");
+    if (btn) {
+      btn.addEventListener("click", () => nav.classList.toggle("open"));
+      nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+    }
+  })
+  .catch(err => {
+    document.getElementById("day-list").innerHTML = '<div class="empty">加载归档失败:' + err.message + '</div>';
+  });
+
+function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+</script>
+</body>
+</html>

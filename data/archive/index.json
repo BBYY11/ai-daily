@@ -1,28 +1,60 @@
 {
   "days": [
     {
+      "date": "2026-06-15",
+      "weekday": "周一",
+      "summary": "2026 年 6 月 15 日,过去 24 小时 AI 行业迎来 W25 开局,五条主线集中爆发:其一,美国 AI 监管风暴在周末持续发酵,OpenAI 收到纽约州总检察长代表多州联盟送达的首份联合传票,覆盖广告、用户留存、健康数据、模型谄媚性等七大类文件,Anthropic Fable 5/Mythos 5 因所谓越狱漏洞被美商务部列入出口管制 72 小时全量停服,亚马逊云科技同步全球撤销访问;其二,智谱 GLM-5.2 于 6 月 13 日 17:21 面向 GLM Coding Plan 全量用户开放,支持 1M 上下文与长程 Coding 任务,下周 API 上线并以 MIT 协议全量开源,在 Anthropic 旗舰停服窗口期打出可商用、可修改、可离线部署的安全感牌;其三,微信 AI 生态开放内测进入实操,京东、美团、滴滴、携程、肯德基、得物等十余家首批接入,覆盖电商、本地生活、出行、潮流消费多个高频场景,微信 13 亿月活成为元宝之后又一个超级 AI 入口;其四,大模型企业 IPO 节奏全面提速,OpenAI 秘密递交 S-1 估值锚定 1 万亿美元,Anthropic 秘密递表估值 9650 亿美元反超 OpenAI,SpaceX 上市首日总市值站上 2.1 万亿美元,马斯克登顶全球首位万亿美元富翁,木头姐旗下 ARK 基金同步建仓 4.4 亿美元;其五,具身智能与 AI Coding 商业化双线落地,智平方 NeuroVLA、破壳机器人 6-22 麻婆豆腐 Demo、众擎机器人保密申请港股 IPO 估值 400 亿元逼近宇树,摩尔线程 Day-0 完成 MiniMax M3 适配与 Qwen3-0.6B 端到端训练精度超国际基线 1.65 个百分点。今日共收录 18 条,覆盖 headline×3 / rising×5 / company×3 / paper×2 / industry×2 / social×3。",
+      "total": 18,
+      "rising": 5,
+      "headline": 3
+    },
+    {
+      "date": "2026-06-13",
+      "weekday": "周六",
+      "summary": "🚧 2026 年 6 月 13 日 AI 早报数据缺失。当天主 cron(ai-daily-0800)未生成 news.json,未推送到 GitHub。补记事故 #016(主 cron 偶发失败 — 根因排查待跟进)。本周 W24 已扣除该日数据。",
+      "total": 0,
+      "rising": 0,
+      "headline": 0
+    },
+    {
+      "date": "2026-06-12",
+      "weekday": "周五",
+      "summary": "2026 年 6 月 12 日,AI 行业三条主线交汇:其一,Anthropic 兑现 Claude Fable 5 商业化承诺,Fable 5 输入 10 美元/百万 token、输出 50 美元/百万 token,SWE-Bench Pro 拿下 80.3% 远超 GPT-5.5(58.6%)与 Gemini 3.1 Pro(54.2%),Mythos 5 借 Glasswing 计划向 150 家机构定向开放,Claude Mythos Preview 已自主挖掘 FreeBSD 存在 17 年的 RCE 漏洞;其二,国产算力迎来里程碑,摩尔线程开源业内首个基于国产 GPU 全功能底座全链路训练的代码大模型 MusaCoder,KernelBench Pass@8 达 93.2%,同时无锡惠山国产智算中心一期点亮;其三,SpaceX 6 月 12 日挂牌纳斯达克,IPO 定价每股 135 美元、募资 750 亿美元、估值 1.75 万亿美元,马斯克净资产突破万亿美元,'AI x 太空'叙事点燃 A 股商业航天板块。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×3 / paper×3 / industry×2 / social×1。",
+      "total": 18,
+      "rising": 5,
+      "headline": 4
+    },
+    {
+      "date": "2026-06-11",
+      "weekday": "周四",
+      "summary": "2026 年 6 月 11 日,AI 行业进入「巨头加速 + 生态分化」新阶段:Anthropic Claude Fable 5 深夜发布并启动分层订阅,OpenAI 同期在内部信中确认 IPO 与新模型时间表,两大头部估值合计突破 1.8 万亿美元;博通联合阿波罗、黑石推出 350 亿美元 AI XPV 平台押注 Anthropic 算力,英伟达则在 Computex 用 N1X 杀入 AI PC 端。国产侧,智元 AIMA 五年 20 亿「元苼」计划正式启动、优必选人形机器人 8 天小订破 3000 台、DeepSeek 等国产模型连续六周领跑 OpenRouter。学术侧,多伦多大学自复制 AI 蠕虫用本地 LLM 在 7 天攻陷 62% 节点,英伟达 Cosmos 3 全模态物理 AI 全栈开源。监管与产业侧,工信部发布 2026-2028 三年 AI + 信息通信路线图,摩根士丹利上调 2026 年 AI 相关债券发行至 5700 亿美元。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。",
+      "total": 18,
+      "rising": 5,
+      "headline": 4
+    },
+    {
+      "date": "2026-06-10",
+      "weekday": "周三",
+      "summary": "2026 年 6 月 10 日,AI 与具身智能迎来两条国家级主线:中国工信部、国资委联合启动 2026 年度人形机器人与具身智能实景实训专项行动,目标 2026 年底万台级落地,从'功夫模式'迈向'作业模式';谷歌母公司 Alphabet 被曝为 Anthropic 提供 350 亿美元数据中心融资租赁担保,博通+谷歌+Anthropic 形成 AI 算力'铁三角',AI 巨头竞速 IPO 升级为'算力绑定 + 安全焦虑'叙事战。监管与资本侧,Anthropic Claude Fable 5 发布,OpenAI 与高盛、摩根士丹利推进 IPO 事宜,折叠屏 iPhone 在 iOS 27 测试版发现隐藏代码,英伟达 Blackwell 出现'一芯难求'紧张局面。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。",
+      "total": 18,
+      "rising": 5,
+      "headline": 4
+    },
+    {
       "date": "2026-06-09",
       "weekday": "周二",
       "summary": "2026 年 6 月 9 日 AI 圈呈现'资本合纵连横'主叙事:英伟达黄仁勋出访韩国,与 SK 海力士/Naver/LG/现代等多家企业签署 AI 合作协议,涵盖下一代 HBM 内存、AI 云与物理 AI 机器人;英伟达同步与 SK 海力士官宣多年期技术合作,联合研发面向 AI 工厂的下一代存储产品;OpenAI 正在将 ChatGPT 改造为集成 Codex编程工具与 AI 智能体的'超级应用',备战 IPO;Anthropic CEO Dario Amodei 发布长文,预测 2026-2027 年 AI 智力将达诺奖级,同时罕见呼吁全球 AI 实验室'集体刹车',并向白宫提出六项安全建议;英国多地警方叫停 AI 起草法庭陈述。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。",
       "total": 18,
-      "headline": 4,
       "rising": 5,
-      "company": 4,
-      "paper": 2,
-      "industry": 2,
-      "social": 1
+      "headline": 4
     },
     {
       "date": "2026-06-08",
       "weekday": "周一",
       "summary": "2026 年 6 月 8 日,AI 行业迎来多线重磅消息:OpenAI 宣布 ChatGPT 将转型为超级应用,整合编程工具 Codex 与 AI 智能体,全力筹备 IPO;Anthropic 罕见发布长文警告 AI 递归自我改进风险,同时秘密递交 S-1 招股书、估值达 9650 亿美元;苹果 WWDC26 今夜开幕,库克谢幕演出,Siri 将接入 Gemini 实现重大升级;Meta 被曝搭建帐篷式临时数据中心应对算力短缺,并考虑股票募资数百亿美元。美股 AI 板块周五大幅回调,纳指暴跌超 4%。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。",
       "total": 18,
-      "headline": 4,
       "rising": 5,
-      "company": 4,
-      "paper": 2,
-      "industry": 2,
-      "social": 1
+      "headline": 4
     },
     {
       "date": "2026-06-07",

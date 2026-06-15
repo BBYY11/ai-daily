@@ -1,34 +1,90 @@
 {
-  "generated_at": "2026-06-15 10:15 (Asia/Shanghai) · Mavis Bot 手动补救",
-  "week": "2026-W25",
-  "week_label": "第 25 周",
-  "start_date": "2026-06-15",
-  "end_date": "2026-06-21",
+  "generated_at": "2026-06-15 10:35 (Asia/Shanghai) · Mavis Bot 手动补 W24",
+  "week": "2026-W24",
+  "week_label": "第 24 周",
+  "start_date": "2026-06-08",
+  "end_date": "2026-06-14",
   "weekday_start": "周一",
   "weekday_end": "周日",
-  "summary": "第 25 周(6/15 - 6/21)刚开启,目前只有 6/15 当天数据。今日主线:① 监管双轨深化:纽约州总检察长对 OpenAI 发出首份多州联合传票,Anthropic Fable 5/Mythos 5 遭美商务部出口管制;② 中国侧三连发:智谱 GLM-5.2 面向 GLM Coding Plan 全量开放(支持 1M 上下文,下周 MIT 协议开源)、微信 AI 生态开放内测(京东美团滴滴携程肯德基等十余家首批接入,覆盖电商/本地生活/出行/餐饮)、华为 HDC 2026 发布 HarmonyOS 7(终端突破 6600 万台);③ 算力极化:英伟达 Blackwell 一芯难求、PCB 单月涨价 40%、华为昇腾 950DT 8 月问世、SK 海力士 HBM 满产。注:本周其它日期(6/16 - 6/21)待归档,总结将在 6/22 周一补全。",
+  "summary": "第 24 周(6/8 - 6/14)是「中美双轨 + 算力极化 + 监管深化」三主线交织的关键一周。头条是 6/8 Anthropic 深夜发布 Claude Fable 5(自称'史上最强'但价格翻倍),编程榜单横扫 GPT-5.5 与 Gemini 3.1;6/12 SpaceX 纳斯达克挂牌 750 亿美元创历史 IPO 纪录,绑定 11 万块英伟达 GPU 至 2029;6/14 Anthropic 华为 HDC 2026 同日解禁 Fable 5 + Mythos 5,智源发布全球首个通用世界基座模型 Physis-v0.1(从'预测 Token'跃迁到'预测物理状态')。中国侧两条独立叙事:华为 HDC 2026 发布 HarmonyOS 7(终端突破 6600 万台)、摩尔线程开源 MusaCoder(国产 GPU 全栈训练击败 Claude)、6/15 智谱 GLM-5.2 全量开放 + 1M 上下文、6/15 微信 AI 生态开放内测(京东美团滴滴携程等十余家接入)、腾讯 Q1 营收 1965 亿。监管双轨深化:6/15 纽约州总检察长对 OpenAI 发出首份多州联合传票,Anthropic Fable 5/Mythos 5 遭美商务部出口管制。算力端英伟达 Blackwell 一芯难求、PCB 单月涨价 40%、华为昇腾 950DT 8 月问世。物理 AI 与具身智能周内持续发酵(智元+宇树+越疆+Cosmos 3 联合矩阵)。注:6/13 数据缺失(cron 未触发,补记事故 #016)。",
   "key_themes": [
     {
-      "title": "6/15 监管双轨:多州联合传票 + 商务部出口管制",
-      "body": "6/15 纽约州总检察长代表多州联盟对 OpenAI 发出首份联合传票(此前未有州级多边协同),同日 Anthropic Fable 5/Mythos 5 遭美商务部出口管制(双重制约);美国从'轻监管'切到'州联邦双层监管'。"
+      "title": "Anthropic 双模型解禁 + SpaceX 创纪录 IPO 同步引爆",
+      "body": "6/8 Anthropic 深夜发布 Claude Fable 5(自称'史上最强'但价格翻倍),编程榜单横扫 GPT-5.5 与 Gemini 3.1;6/14 华为 HDC 2026 同日解禁 Fable 5 + Mythos 5;SpaceX 6/12 纳斯达克挂牌 750 亿美元创历史纪录,与谷歌签 300 亿算力大单(每月 9.2 亿租 11 万块英伟达 GPU 持至 2029)。Anthropic 估值锚定 1.2 万亿(13x ARR),SpaceX 锚定 1.5 万亿 IPO,资本市场形成'AI 双旗舰'格局。"
     },
     {
-      "title": "6/15 中国 AI 生态开放日:智谱 + 微信 + 华为同日三连发",
-      "body": "智谱 GLM-5.2 1M 上下文全量开放 + 下周 MIT 开源,微信 AI 生态首批 10+ 国民应用接入,华为 HarmonyOS 7 终端 6600 万台。三件套形成中国 AI 独立于 OpenAI/Anthropic 路径的应用矩阵。"
+      "title": "中国侧三连发:智谱 + 微信 + 华为 HDC",
+      "body": "6/15 智谱 GLM-5.2 面向 GLM Coding Plan 全量开放(支持 1M 上下文,下周 MIT 协议开源),同 6/15 微信 AI 生态开放内测(京东美团滴滴携程肯德基等十余家首批接入,覆盖电商/本地生活/出行/餐饮),华为 6/14 HDC 2026 发布 HarmonyOS 7 + 鸿蒙终端突破 6600 万台。中国 AI 形成'独立大模型 + 国民应用 + 操作系统'三件套,绕开 OpenAI/Anthropic 路径。"
     },
     {
-      "title": "6/15 算力极化:Blackwell 紧缺 + 国产替代加速",
-      "body": "英伟达 Blackwell 一芯难求、PCB 单月涨价 40%、SK 海力士 HBM 满产,头部公司靠长期协议锁产能;华为昇腾 950DT 8 月问世(对标 H200),国产 GPU/DC U 加速替代。"
+      "title": "物理 AI 跃迁:Physis-v0.1 范式重构",
+      "body": "6/14 智源发布全球首个通用世界基座模型悟界·Physis-v0.1,AI 范式从'预测下一个 Token'跃迁到'预测下一个物理状态',与英伟达 Cosmos 3、宇树 H2+、智元 AGIBOT 形成物理 AI 完整矩阵;6/8 摩尔线程开源 MusaCoder,首个基于国产 GPU 全栈训练的代码大模型,KernelBench 击败 Claude;物理 AI 是 2026 下半场最确定的方向。"
+    },
+    {
+      "title": "监管双轨:多州联合传票 + 商务部出口管制",
+      "body": "6/15 纽约州总检察长代表多州联盟对 OpenAI 发出首份联合传票(同时 Anthropic Fable 5/Mythos 5 遭美商务部出口管制);6/8 中国《生成式 AI 服务管理暂行办法》修订征求意见,要求所有大模型通过备案 + 强制安全评估。美国从'轻监管'切到'州联邦双层监管',中国从'框架性'细化到'实操性',AI 头部公司从商业机构变成准国家基础设施。"
+    },
+    {
+      "title": "算力极化:Blackwell 一芯难求 + 国产替代加速",
+      "body": "英伟达 Blackwell '一芯难求',PCB 单月涨价 40%,SK 海力士 HBM 满产;华为昇腾 950DT 8 月问世(对标 H200),中国侧通过摩尔线程/壁仞/天数等国产 GPU + 华为/海光 DCU 加速替代。算力从'GPU 短缺'进入'算力地缘政治'阶段,头部公司靠长期协议锁产能,中小公司被迫转向模型蒸馏 + 边缘推理。"
     }
   ],
   "day_links": [
     {
-      "date": "2026-06-15",
+      "date": "2026-06-08",
       "weekday": "周一",
-      "summary": "OpenAI 收多州传票 + 智谱 GLM-5.2 1M 开源 + 微信 AI 生态开放 + 华为 HDC 2026 HarmonyOS 7",
+      "summary": "Anthropic Fable 5 编程横扫 GPT-5.5/Gemini 3.1 + 摩尔线程开源 MusaCoder",
       "total": 18,
-      "rising": 5,
-      "headline": 4
+      "rising": 0,
+      "headline": 0
+    },
+    {
+      "date": "2026-06-09",
+      "weekday": "周二",
+      "summary": "黄仁勋访韩签 AI 合作 + DeepSeek 70 亿融资 + Cosmos 3 开放",
+      "total": 18,
+      "rising": 0,
+      "headline": 0
+    },
+    {
+      "date": "2026-06-10",
+      "weekday": "周三",
+      "summary": "工信部+国资委人形机器人 + Anthropic 350 亿算力担保 + OpenAI S-1",
+      "total": 18,
+      "rising": 0,
+      "headline": 0
+    },
+    {
+      "date": "2026-06-11",
+      "weekday": "周四",
+      "summary": "Anthropic Fable 5 深夜发布 + OpenAI 内部信确认 IPO 时间表 + 黄仁勋 N1X 超级芯片",
+      "total": 18,
+      "rising": 0,
+      "headline": 0
+    },
+    {
+      "date": "2026-06-12",
+      "weekday": "周五",
+      "summary": "Anthropic 双模型解禁 + SpaceX 750 亿 IPO 创纪录 + 摩尔线程 MusaCoder",
+      "total": 18,
+      "rising": 0,
+      "headline": 0
+    },
+    {
+      "date": "2026-06-13",
+      "weekday": "周六",
+      "summary": "🚧 数据缺失(主 cron 未成功,补记事故 #016)",
+      "total": 0,
+      "rising": 0,
+      "headline": 0
+    },
+    {
+      "date": "2026-06-14",
+      "weekday": "周日",
+      "summary": "智源 Physis-v0.1 + 华为 HDC 2026 HarmonyOS 7 + 多州传票",
+      "total": 19,
+      "rising": 0,
+      "headline": 0
     }
   ]
 }

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily · 本月脉络</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* ---- monthly 专属 ---- */
+  .block-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--blue);
+    flex-wrap: wrap;
+  }
+  .block-header .num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--blue);
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .block-header h2 { font-size: 24px; font-weight: 700; }
+  .block-header .sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .block-header .refresh-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  .weekly-summary-card {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 18px;
+  }
+  .weekly-summary-card .summary { font-size: 15px; color: var(--text); line-height: 1.8; }
+
+  .weekly-themes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .theme-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    transition: 0.15s;
+  }
+  .theme-card:hover { border-color: var(--blue); }
+  .theme-card h4 { font-size: 15px; color: var(--blue); margin-bottom: 6px; font-weight: 600; }
+  .theme-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+
+  .day-links { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .day-link {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.15s;
+    display: block;
+  }
+  .day-link:hover { border-color: var(--blue); background: var(--blue-soft); text-decoration: none; }
+  .day-link .d-date { font-family: var(--mono); font-size: 12px; color: var(--blue); font-weight: 600; }
+  .day-link .d-weekday { font-family: var(--mono); font-size: 10px; color: var(--text-mute); margin-left: 6px; }
+  .day-link .d-summary { font-size: 12px; color: var(--text-dim); line-height: 1.5; margin-top: 6px; max-height: 60px; overflow: hidden; }
+
+  .months { display: flex; flex-direction: column; gap: 18px; }
+  .month-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    background: var(--bg);
+    transition: 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  .month-card:hover { border-color: var(--blue); box-shadow: var(--shadow-md); }
+  .month-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .month-date { font-family: var(--mono); font-size: 18px; color: var(--blue); letter-spacing: 0.1em; font-weight: 700; min-width: 100px; }
+  .month-title { font-size: 19px; font-weight: 700; flex: 1; }
+  .month-summary { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 20px; }
+  .month-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; }
+  .month-events-title { font-family: var(--mono); font-size: 11px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .month-events { list-style: none; padding: 0; }
+  .month-events li {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    padding: 6px 0 6px 18px;
+    position: relative;
+    border-bottom: 1px dashed var(--line);
+  }
+  .month-events li:last-child { border-bottom: none; }
+  .month-events li::before { content: "▸"; position: absolute; left: 0; color: var(--blue); }
+  .month-aside { background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+  .aside-label { font-family: var(--mono); font-size: 11px; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; font-weight: 600; }
+  .data-points { list-style: none; padding: 0; margin-bottom: 16px; }
+  .data-points li { font-family: var(--mono); font-size: 12px; color: var(--text); line-height: 1.6; padding: 4px 0; }
+  .data-points li::before { content: "▎ "; color: var(--blue); }
+  .look-ahead {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    padding: 12px;
+    background: var(--blue-soft);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+  }
+  .look-ahead-label { font-family: var(--mono); font-size: 10px; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: block; font-weight: 600; }
+
+  @media (max-width: 900px) {
+    .weekly-themes { grid-template-columns: 1fr; }
+    .month-body { grid-template-columns: 1fr; }
+    .day-links { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .day-links { grid-template-columns: 1fr 1fr; }
+    .month-card { padding: 18px; }
+    .month-header { gap: 8px; }
+    .month-date { font-size: 14px; min-width: 0; }
+    .month-title { font-size: 16px; }
+    .block-header h2 { font-size: 18px; }
+    .theme-card h4 { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="top-stripe"></div>
+<div class="wrap">
+  <header>
+    <a href="index.html" class="logo">
+      <span class="logo-mark">AI</span>
+      <span class="logo-text">
+        <span class="t1">AI Daily</span>
+        <span class="t2">· 本月脉络</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">今日</a>
+      <a href="monthly.html" class="active">本月</a>
+      <a href="archive.html">归档</a>
+      <a href="feed.html" class="rss-link">⚡ 订阅</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-meta">
+      <span class="pill">MONTHLY · 本月脉络</span>
+      <span>块 1 上周摘要(每周一)· 块 2 已过完月份(每月最后一天)</span>
+    </div>
+    <h1>本月与<span class="hl">历史月份总结</span></h1>
+    <p class="lead">从上个月 7 天脉络,到本年 1-5 月的完整复盘,一站看清 AI 圈每个月的关键事件、数据点和趋势走向。</p>
+  </section>
+
+  <div id="content" class="empty">加载中...</div>
+  <footer>© 2026 AI Daily · 本月脉络 · 上周摘要(每周一更新)+ 已过完月份总结(每月最后一天更新) · <a href="weekly_archive.html">查看所有历史周报 →</a></footer>
+</div>
+
+<script>
+const FALLBACK_TODAY = "2026-06-04";
+
+(async () => {
+  const [newsRes, weekRes, monthRes] = await Promise.all([
+    fetch("data/news.json"),
+    fetch("data/weekly_summary.json"),
+    fetch("data/monthly_archive.json"),
+  ]);
+  const news = newsRes.ok ? await newsRes.json() : null;
+  const week = weekRes.ok ? await weekRes.json() : null;
+  const monthly = monthRes.ok ? await monthRes.json() : null;
+  render({ news, week, monthly });
+})().catch(err => {
+  document.getElementById("content").innerHTML = '<div class="empty">加载失败:' + err.message + '</div>';
+});
+
+function render({ news, week, monthly }) {
+  const todayDate = (news && news.date) || FALLBACK_TODAY;
+  const todayWeekday = (news && news.weekday) || "";
+
+  const weekBlock = week ? `
+    <section class="block">
+      <div class="block-header">
+        <span class="num">块 1</span>
+        <h2>上周摘要</h2>
+        <span class="sub">${week.week_label} · ${week.start_date} (${week.weekday_start}) → ${week.end_date} (${week.weekday_end})</span>
+        <span class="refresh-tag">每周一 08:00 更新</span>
+      </div>
+
+      <div class="weekly-summary-card">
+        <div class="summary">${escapeHTML(week.summary || "")}</div>
+      </div>
+
+      <div class="weekly-themes">
+        ${(week.key_themes || []).map(t => `
+          <div class="theme-card">
+            <h4>▎ ${escapeHTML(t.title)}</h4>
+            <p>${escapeHTML(t.body)}</p>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="day-links">
+        ${(week.day_links || []).map(d => `
+          <a class="day-link" href="archive-view.html?date=${d.date}">
+            <div><span class="d-date">${d.date.slice(5)}</span><span class="d-weekday">${d.weekday}</span></div>
+            <div class="d-summary">${escapeHTML(d.summary || "")}</div>
+          </a>
+        `).join("")}
+      </div>
+    </section>
+  ` : '<div class="empty">上周摘要数据加载中(每周一 08:00 生成)</div>';
+
+  const months = (monthly && monthly.months) || [];
+  const sorted = [...months].sort((a, b) => b.date.localeCompare(a.date));
+  const monthBlock = `
+    <section class="block" style="margin-top:48px;">
+      <div class="block-header">
+        <span class="num">块 2</span>
+        <h2>已过完月份总结</h2>
+        <span class="sub">${sorted.length ? sorted[sorted.length-1].date : ''} → ${sorted.length ? sorted[0].date : ''} · 共 ${sorted.length} 个月</span>
+        <span class="refresh-tag">每月最后一天 08:00 更新</span>
+      </div>
+
+      <div class="months">
+        ${sorted.map(m => `
+          <div class="month-card">
+            <div class="month-header">
+              <div class="month-date">${m.date}</div>
+              <div class="month-title">${escapeHTML(m.title || '')}</div>
+            </div>
+            <div class="month-summary">${escapeHTML(m.trend_summary || '')}</div>
+            <div class="month-body">
+              <div>
+                <div class="month-events-title">▎ 关键事件 (${(m.key_events || []).length})</div>
+                <ul class="month-events">
+                  ${(m.key_events || []).map(e => `<li>${escapeHTML(e)}</li>`).join("")}
+                </ul>
+              </div>
+              <div>
+                <div class="month-aside">
+                  <div class="aside-label">关键数据</div>
+                  <ul class="data-points">
+                    ${(m.data_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join("")}
+                  </ul>
+                  ${m.look_ahead ? `
+                    <div class="look-ahead">
+                      <span class="look-ahead-label">▎ 展望下月</span>
+                      ${escapeHTML(m.look_ahead)}
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+  `;
+
+  document.getElementById("content").innerHTML = weekBlock + monthBlock;
+
+  // nav toggle
+  const btn = document.getElementById("nav-toggle");
+  const nav = document.getElementById("nav");
+  if (btn) {
+    btn.addEventListener("click", () => nav.classList.toggle("open"));
+    nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+  }
+}
+
+function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+</script>
+</body>
+</html>
