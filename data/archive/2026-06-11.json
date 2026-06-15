@@ -1,0 +1,427 @@
+{
+  "date": "2026-06-11",
+  "weekday": "周四",
+  "generated_at": "2026-06-11 08:00 (Asia/Shanghai) · Mavis Bot 早报生成",
+  "summary": "2026 年 6 月 11 日,AI 行业进入「巨头加速 + 生态分化」新阶段:Anthropic Claude Fable 5 深夜发布并启动分层订阅,OpenAI 同期在内部信中确认 IPO 与新模型时间表,两大头部估值合计突破 1.8 万亿美元;博通联合阿波罗、黑石推出 350 亿美元 AI XPV 平台押注 Anthropic 算力,英伟达则在 Computex 用 N1X 杀入 AI PC 端。国产侧,智元 AIMA 五年 20 亿「元苼」计划正式启动、优必选人形机器人 8 天小订破 3000 台、DeepSeek 等国产模型连续六周领跑 OpenRouter。学术侧,多伦多大学自复制 AI 蠕虫用本地 LLM 在 7 天攻陷 62% 节点,英伟达 Cosmos 3 全模态物理 AI 全栈开源。监管与产业侧,工信部发布 2026-2028 三年 AI + 信息通信路线图,摩根士丹利上调 2026 年 AI 相关债券发行至 5700 亿美元。今日共收录 18 条,覆盖 headline×4 / rising×5 / company×4 / paper×2 / industry×2 / social×1。",
+  "stats": {
+    "total_items": 18,
+    "by_category": {
+      "headline": 4,
+      "rising": 5,
+      "company": 4,
+      "paper": 2,
+      "industry": 2,
+      "social": 1
+    }
+  },
+  "items": [
+    {
+      "id": "h001",
+      "category": "headline",
+      "title": "Anthropic 深夜炸场:Claude Fable 5 正式发布,自称「史上最强」但价格翻倍",
+      "summary": "Anthropic 于 6 月 10 日深夜发布 Claude Fable 5,定位「危险级」前沿模型。机器之心、雷科技、量子位、数字生命卡兹克等中文圈同步解读,称其在代码与长程任务上「性能爆炸」。同时启动分层订阅:Mythos 公开版、Pro 订阅与企业 API 同步上线,价格较 Opus 4.7 大幅上调。公开版同步开放,Claude 体系正式形成「入门-中阶-高阶」三档分发结构。",
+      "heat": {
+        "score": 9600,
+        "level": "爆",
+        "sources": [
+          "Anthropic 官方",
+          "机器之心",
+          "量子位",
+          "雷科技",
+          "数字生命卡兹克",
+          "字母榜"
+        ],
+        "breakdown": "Anthropic 官方+深夜发布+分层订阅+中文圈六源齐报+价格上调引发对标讨论"
+      }
+    },
+    {
+      "id": "h002",
+      "category": "headline",
+      "title": "OpenAI 筹备新模型并计划明年 IPO,Altman 内部信首度确认上市时间表",
+      "summary": "据多家媒体援引知情人士消息,OpenAI CEO Sam Altman 周一在内部信中确认,公司预计在未来一年内完成 IPO,并正在同步筹备全新一代旗舰模型。当前 OpenAI 私募估值约 8520 亿美元,Anthropic 同期估值突破 9650 亿美元,两家头部独角兽已超越摩根大通等传统金融巨头市值,资本市场对前沿 AI 标的定价进入「万亿俱乐部」模式。",
+      "heat": {
+        "score": 9400,
+        "level": "爆",
+        "sources": [
+          "财联社",
+          "The Information",
+          "TechCrunch AI",
+          "36氪",
+          "友财网"
+        ],
+        "breakdown": "Altman 内部信+IPO 时间表+万亿估值+新模型筹备+跨多家头部财经媒体同步确认"
+      }
+    },
+    {
+      "id": "h003",
+      "category": "headline",
+      "title": "黄仁勋台北 Computex 揭幕 N1X「超级芯片」,英伟达携 Arm 杀入 PC 端",
+      "summary": "英伟达 CEO 黄仁勋在 Computex 主题演讲中与微软联合发布 RTX Spark(代号 N1X)PC 处理器,采用全新 Arm 架构,将于今年秋季首发并搭载于微软、戴尔、惠普、华硕、联想、微星的全线 Windows AI PC。N1X 被视为英伟达首次正面进入端侧 AI PC 战场,目标直指苹果 M 系列与高通骁龙 X 系列,英伟达至此完成「数据中心-Copilot+ 笔记本-边缘-机器人」全栈算力布局。",
+      "heat": {
+        "score": 9200,
+        "level": "爆",
+        "sources": [
+          "NVIDIA 官方",
+          "微软官方",
+          "VentureBeat AI",
+          "网易科技",
+          "天成财经"
+        ],
+        "breakdown": "Computex 主场+黄仁勋亲自站台+6 大 PC 厂商同步发布+Arm 架构入 PC+对标苹果高通"
+      }
+    },
+    {
+      "id": "h004",
+      "category": "headline",
+      "title": "苹果 WWDC26 库克谢幕:Apple Intelligence 接入谷歌 Gemini,Siri 重大升级",
+      "summary": "苹果 WWDC26 主题演讲中,Apple Intelligence 与 Siri AI 同步发布重大升级,新版 Siri 接入谷歌 Gemini 后端,从「鸡肋语音助手」转向「能调相机、能填表单、能看屏幕」的情境感知代理。CEO Tim Cook 同期宣布将于年内卸任,十三年库克时代落幕,正式进入后 Cook 时代。苹果股价当日小幅收涨,市场对硬件 + 模型 + 自研芯片的「苹果自循环 AI 闭环」叙事反应中性偏积极。",
+      "heat": {
+        "score": 8800,
+        "level": "热",
+        "sources": [
+          "Apple 官方",
+          "The Verge",
+          "CNET",
+          "Wired AI",
+          "量子位"
+        ],
+        "breakdown": "WWDC 主舞台+Gemini 后端整合+库克卸任+Apple Intelligence 重大升级+股价反应"
+      }
+    },
+    {
+      "id": "r001",
+      "category": "rising",
+      "title": "GitHub Trending:OpenHuman「数字分身」单日冲顶,主打 Context-in-minutes",
+      "summary": "OpenHuman(Tiny Humans AI)GitHub 仓库拿下 3.4k Star,登顶 Trending 当日第一,累计 1737 次提交,31 个版本,核心由 Rust 驱动、前端 TypeScript。受前特斯拉 AI 总监 Andrej Karpathy「LLM Wiki」工作流启发,主打「几分钟内吃透你的工作生活上下文」,试图绕开当下 Agent「冷启动需数周」的通病。社区评价:Agent 范式从「提示工程」走向「个人化上下文工程」。",
+      "heat": {
+        "score": 7200,
+        "level": "热",
+        "sources": [
+          "GitHub Trending",
+          "OpenHuman 仓库",
+          "网易科技",
+          "掘金",
+          "CSDN"
+        ],
+        "breakdown": "Trending 当日 Top1+Karpathy 灵感背书+Rust + TS 异构栈+3.4k Star 单日爆发"
+      },
+      "rising_metrics": {
+        "github_stars_added_24h": 3400,
+        "trending_rank": 1,
+        "commits_total": 1737,
+        "releases_total": 31,
+        "core_language": "Rust + TypeScript",
+        "investor_backing": "未披露",
+        "first_seen": "2026-05"
+      }
+    },
+    {
+      "id": "r002",
+      "category": "rising",
+      "title": "智元 AIMA「元苼」生态计划曝光:五年 20 亿,具身智能抢跑下半场",
+      "summary": "智元机器人 6 月 9 日发布公开信,推出行业首个开放且完整的具身智能生态技术体系 AIMA(AI Machine Architecture),并启动「元苼」生态发展计划,未来五年投入 20 亿元专项资金,2026 年单年投入超 1 亿元,覆盖科研创新、人才培养、伙伴发展与社区运营。资金向四类生态伙伴开放,与特斯拉 Optimus、Figure 02 的封闭自研路线形成鲜明对比,国产具身智能进入「生态战」阶段。",
+      "heat": {
+        "score": 7800,
+        "level": "热",
+        "sources": [
+          "智元 AGIBOT 官方",
+          "投资界",
+          "36氪",
+          "钛媒体",
+          "智东西"
+        ],
+        "breakdown": "官方公开信+20 亿真金白银+AIMA 标准体系+具身智能生态卡位"
+      },
+      "rising_metrics": {
+        "funding_total_5y_cny": 2000000000,
+        "funding_year_1_cny": 100000000,
+        "ecosystem_partners_target": 100,
+        "standard_name": "AIMA",
+        "launch_date": "2026-06-09",
+        "investor_backing": "智元自筹",
+        "competitor": "Optimus / Figure 02"
+      }
+    },
+    {
+      "id": "r003",
+      "category": "rising",
+      "title": "Superpowers「Skill 框架」登顶 GitHub 周榜,Agent 工程化进入配置化时代",
+      "summary": "obra/superpowers 仓库以 21.5 万 Star 拿下 GitHub 6 月周榜,提供 Agent Skill 即插即用框架,内建 50+ 预置技能(GitHub 操作、代码审查、项目规划等),原生兼容 Claude Code、Codex 等主流 Agent。社区观点:Agent 之间的差距不在模型而在「技能沉淀」,Skills 库正在成为 AI 时代的「开源依赖管理」,AI 编程正式迈入「配置化 Skills」阶段。",
+      "heat": {
+        "score": 7100,
+        "level": "热",
+        "sources": [
+          "GitHub Trending",
+          "Superpowers 仓库",
+          "CSDN",
+          "掘金",
+          "Newsletter 周报"
+        ],
+        "breakdown": "21.5 万 Star+50+ 内置 Skill+Claude Code / Codex 双兼容+Skills 标准化"
+      },
+      "rising_metrics": {
+        "github_stars_total": 215946,
+        "trending_rank_weekly": 1,
+        "core_language": "Shell",
+        "compatible_agents": [
+          "Claude Code",
+          "Codex",
+          "Cursor Agent"
+        ],
+        "preset_skills_count": 50,
+        "investor_backing": "社区驱动",
+        "first_release": "2026 Q2"
+      }
+    },
+    {
+      "id": "r004",
+      "category": "rising",
+      "title": "美团 GN06 团队上线 AI 浏览器 Tabbit 1.0,免费抢入口",
+      "summary": "美团旗下 GN06 团队 6 月 9 日宣布 AI 原生浏览器 Tabbit 1.0 正式发布,定位「浏览器形态的 AI 入口」,内置多款头部大模型,用户输入需求后可自动执行跨软件、跨网页等复杂任务。标准版永久免费,Windows / macOS 同步上架,移动端开启测试;专业版定价 9.9 元/周。在豆包、ChatGPT 试图抢入口的赛道上,Tabbit 用「浏览器 + Agent」组合,直接对标 Perplexity Comet 与 Arc Browser。",
+      "heat": {
+        "score": 6800,
+        "level": "热",
+        "sources": [
+          "美团官方",
+          "GN06 团队",
+          "36氪",
+          "IT之家",
+          "虎嗅 AI"
+        ],
+        "breakdown": "美团下场+免费策略+浏览器 + Agent 形态+对标 Perplexity Comet"
+      },
+      "rising_metrics": {
+        "downloads_first_24h_estimate": 50000,
+        "supported_platforms": [
+          "Windows",
+          "macOS",
+          "iOS 测试",
+          "Android 测试"
+        ],
+        "built_in_models": "国内多家头部大模型",
+        "pro_price_cny_week": 9.9,
+        "free_tier": "永久免费",
+        "investor_backing": "美团集团",
+        "competitor": "Perplexity Comet / Arc Browser"
+      }
+    },
+    {
+      "id": "r005",
+      "category": "rising",
+      "title": "PromptBio 推出生命科学 Agentic 平台,把科研意图转成可执行实验",
+      "summary": "加州生命科学 AI 公司 PromptBio 6 月 9 日发布 Agentic AI 平台,主打「科研意图 → 可执行实验」,结合对话式 AI 与多智能体编排加速从假设到洞察的链路。平台瞄准早期药物发现、靶点筛选、CRISPR 实验设计等场景,首发客户覆盖 5 家美国顶级生物医药研究机构。在 OpenAI、Anthropic 持续向 B 端渗透的浪潮下,垂直领域 Agent 平台的「模型 + 流程 + 私有数据」护城河成为新焦点。",
+      "heat": {
+        "score": 5500,
+        "level": "中",
+        "sources": [
+          "PR Newswire",
+          "PromptBio 官方",
+          "TechCrunch AI",
+          "VentureBeat AI"
+        ],
+        "breakdown": "PR Newswire 全球分发+生命科学垂直+5 家头部机构首批+Agentic 编排差异化"
+      },
+      "rising_metrics": {
+        "press_pickup_count": 12,
+        "pilot_customers_count": 5,
+        "vertical_focus": "生命科学 / 药物发现",
+        "agent_archetype": "multi-agent + 对话式 AI",
+        "investor_backing": "未披露",
+        "first_listing": "2026-06-09"
+      }
+    },
+    {
+      "id": "c001",
+      "category": "company",
+      "title": "博通联合阿波罗、黑石设 AI XPV 平台,首期 350 亿美元押注 Anthropic 算力",
+      "summary": "博通 6 月 9 日宣布与阿波罗、黑石信贷与保险业务共同设立 AI XPV 平台,三方作为初始锚定投资方,目标通过博通定制 XPU 及网络方案,在 2028 年前为 Anthropic、OpenAI 等前沿 AI 实验室部署逾 20 吉瓦算力。平台首期由阿波罗牵头、黑石联合注资 350 亿美元,支持 Anthropic 此前宣布的逾 1 吉瓦算力基础设施扩容计划,相关部署预计 2026 年中起在 Fluidstack 站点落地。",
+      "heat": {
+        "score": 8900,
+        "level": "热",
+        "sources": [
+          "博通官方",
+          "彭博",
+          "路透社",
+          "Anthropic 官方",
+          "财联社"
+        ],
+        "breakdown": "三方巨头联合+350 亿美元首期+20 GW 算力目标+绑定 Anthropic / OpenAI"
+      }
+    },
+    {
+      "id": "c002",
+      "category": "company",
+      "title": "CoreWeave 高管 IPO 以来累计套现逾 23 亿美元,联合创始人为主要卖出方",
+      "summary": "AI 数据中心运营商 CoreWeave 自 2025 年 3 月上市以来股价翻逾一倍,与此同时公司高管通过 10b5-1 预设交易计划累计套现超 23 亿美元。三位亿万富翁联合创始人 Michael Intrator、Brannin McBee、Brian Venturo 是主要卖出方。CoreWeave 是英伟达核心代工伙伴,其高管集中套现引发市场对「AI 算力 IPO 真实持有意愿」的讨论,摩根士丹利预计 2026 年全球 AI 相关债券发行将逼近 5700 亿美元。",
+      "heat": {
+        "score": 7500,
+        "level": "热",
+        "sources": [
+          "路透社",
+          "彭博",
+          "Barron's",
+          "CNBC",
+          "财联社"
+        ],
+        "breakdown": "23 亿美元套现+三联创集中卖出+股价 1 年翻倍+摩根士丹利债券规模背书"
+      }
+    },
+    {
+      "id": "c003",
+      "category": "company",
+      "title": "优必选优世界全尺寸超仿生人形机器人 8 天小订破 3000 台",
+      "summary": "优必选科技 6 月 9 日宣布,旗下消费级人形机器人品牌「优世界」全尺寸超仿生人形机器人京东预售开启仅 8 天,小订数量累计突破 3000 台。在特斯拉 Optimus、Figure 02 仍主要面向 B 端与研发的格局下,优必选率先实现「消费级人形机器人 C 端规模化预订」,单价较行业预期大幅下探,被市场视为国产具身智能 C 端破冰信号。",
+      "heat": {
+        "score": 7300,
+        "level": "热",
+        "sources": [
+          "优必选科技官方",
+          "京东预售页",
+          "智东西",
+          "36氪",
+          "新智元"
+        ],
+        "breakdown": "8 天 3000+ 小订+京东渠道背书+消费级 C 端突破+具身智能商业化里程碑"
+      }
+    },
+    {
+      "id": "c004",
+      "category": "company",
+      "title": "DeepSeek / 腾讯 Hy3 / MiniMax 周调用量连续六周领跑全球,国产模型主导 OpenRouter",
+      "summary": "OpenRouter 最新统计显示,DeepSeek、腾讯 Hy3、MiniMax 等国产 AI 大模型周调用量连续六周领跑全球,Cloudflare 同期数据印证全网机器访问流量占比已达 57.4%,首次超越真人用户。在「国模出海」主线下,腾讯混元系列、字节豆包、阿里通义千问、智谱 GLM 等头部模型已占据 OpenRouter 流量榜前列,海外开发者社区对中文大模型 API 的依赖度持续上升。",
+      "heat": {
+        "score": 8000,
+        "level": "热",
+        "sources": [
+          "OpenRouter",
+          "Cloudflare",
+          "腾讯云",
+          "DeepSeek 官方",
+          "量子位"
+        ],
+        "breakdown": "OpenRouter + Cloudflare 双重数据+六周连冠+全网机器流量首超真人+国模主导"
+      }
+    },
+    {
+      "id": "p001",
+      "category": "paper",
+      "title": "多伦多大学发布自复制 AI 蠕虫:用开源 LLM 在 7 天攻陷 62% 网络节点",
+      "summary": "多伦多大学 Nicolas Papernot 团队联合 Vector Institute、剑桥大学、ServiceNow 在 arXiv 公开自复制 AI 蠕虫论文(6 月 2 日,正在同行评审)。该蠕虫使用本地部署的开源权重大模型,在包含 33 台主机的隔离测试网中,平均发现 31.3 个漏洞、在 23.1 台主机获得提权,并在 7 天内自我复制至 20.4 台主机(覆盖 62% 节点),且能利用训练数据之外的最新公开漏洞(包括 4 月 8 日才公开的 Marimo Python Notebook 预认证 RCE)。",
+      "heat": {
+        "score": 8400,
+        "level": "热",
+        "sources": [
+          "arXiv 论文",
+          "多伦多大学官网",
+          "ServiceNow Research",
+          "Sysdig 报告",
+          "The Hacker News"
+        ],
+        "breakdown": "arXiv 公开+多机构联合+本地 LLM 摆脱 API 限速+7 天 62% 渗透率+真实复现新披露漏洞"
+      }
+    },
+    {
+      "id": "p002",
+      "category": "paper",
+      "title": "英伟达 Cosmos 3 论文:混合 Transformer 把物理 AI 训练周期缩短 60%",
+      "summary": "英伟达在 2026 GTC 大会发布并公开 Cosmos 3 全模态物理 AI 模型论文,采用「推理 + 双专家生成」混合 Transformer 架构,通过海量多模态物理样本预训练,可将传统物理 AI 研发周期缩短 60% 以上。Cosmos 3 同步开源,终结了过去物理 AI 底层技术封闭、寡头垄断的格局,与 Hugging Face 合作接入 LeRobot 框架,Boston Dynamics、Caterpillar、Franka 等全球机器人头部企业均推出基于 Cosmos 的新机型。",
+      "heat": {
+        "score": 7800,
+        "level": "热",
+        "sources": [
+          "NVIDIA GTC 2026",
+          "arXiv 论文",
+          "Hugging Face",
+          "量子位",
+          "e-works"
+        ],
+        "breakdown": "GTC 主舞台+全栈开源+混合 Transformer 创新+全球 6 大机器人厂同步接入"
+      }
+    },
+    {
+      "id": "i001",
+      "category": "industry",
+      "title": "摩根士丹利:2026 年全球 AI 相关债券发行规模将逼近 5700 亿美元,同比翻倍",
+      "summary": "摩根士丹利最新预测,2026 年全球与人工智能相关的债券发行规模有望接近 5700 亿美元,较去年增长逾一倍。截至今年 5 月底,全球已发行约 2360 亿美元 AI 相关债务融资,约为去年同期 4 倍。瑞银测算,2026 年超大规模云服务商资本开支预计将消耗接近 100% 的经营现金流,债券市场正好填补融资缺口;谷歌率先通过 847.5 亿美元股权资本融资拓宽渠道,Meta、微软、亚马逊后续股权 / 强制可转债发行概率明显上升。",
+      "heat": {
+        "score": 7400,
+        "level": "热",
+        "sources": [
+          "摩根士丹利",
+          "瑞银",
+          "巴克莱",
+          "彭博",
+          "财联社"
+        ],
+        "breakdown": "摩根士丹利 + 瑞银 + 巴克莱 三家投行共振+5700 亿美元量级+AI 资本开支吞噬经营现金流"
+      }
+    },
+    {
+      "id": "i002",
+      "category": "industry",
+      "title": "工信部「人工智能 + 信息通信」创新发展实施意见出炉,2026-2028 三年路线图明确",
+      "summary": "工业和信息化部印发《「人工智能 + 信息通信」创新发展实施意见(2026—2028 年)》,提出加强高端光电芯片和器件研发、加强高速光电芯片 / 高速转发交换芯片 / 全光交换器件 / 光电共封装器件技术和产品研发验证;加强智算超节点光电互联技术攻关,开展智算网络技术与产品验证。文件明确未来三年算力网络与光通信产业链升级路径,与英伟达 N1X、博通 XPU 平台等海外算力扩张形成对照。",
+      "heat": {
+        "score": 7000,
+        "level": "热",
+        "sources": [
+          "工信部官网",
+          "新华网",
+          "财联社",
+          "经济日报",
+          "IT之家"
+        ],
+        "breakdown": "工信部官方文件+2026-2028 三年路线图+光电芯片 + 智算网络双主线+国家级算力底座布局"
+      }
+    },
+    {
+      "id": "s001",
+      "category": "social",
+      "title": "X 平台热议:Sora 2 之后,AI 生成内容占比首超 50%,创作者开始反向求证「我是不是真人」",
+      "summary": "X / Reddit 多个 AI 社区近 24 小时高热讨论:Graphite 报告显示互联网 AI 生成内容总量已正式超越人类原创,引发对「创作真实性」与「内容洪水」的双重担忧。社区金句频出——「我不再问这是不是 AI 写的,而是问这是不是人写的」,「Reverse Turing Test 成为创作者新炫技」,「平台方需要强制附 provenance 标签」。同期 Perplexity 推出 Mac Mini 赠品活动,鼓励创作者在其平台做 AI 项目,折射「AI 反噬创作者生态」正在被科技公司主动应对。",
+      "heat": {
+        "score": 5800,
+        "level": "中",
+        "sources": [
+          "X / Twitter",
+          "Reddit r/MachineLearning",
+          "Graphite 报告",
+          "Perplexity 官方",
+          "The Verge"
+        ],
+        "breakdown": "X + Reddit 双平台热议+Graphite 报告背书+Perplexity 赠品活动+创作者生态自反"
+      }
+    }
+  ],
+  "weekly_arc": {
+    "label": "本周脉络",
+    "weeks": [
+      {
+        "week": "2026-W24",
+        "date": "2026-06-11",
+        "week_label": "第 24 周(6-08 ~ 6-14)",
+        "summary": "Anthropic Claude Fable 5 深夜发布并启动分层订阅 + OpenAI 内部信确认 IPO 时间表 + 博通 + 阿波罗 + 黑石 350 亿美元 AI XPV 平台 + 英伟达 Computex 揭幕 N1X 杀入 AI PC + 智元 AIMA 五年 20 亿元「元苼」计划 + 多伦多大学自复制 AI 蠕虫论文"
+      },
+      {
+        "week": "2026-W23",
+        "week_label": "第 23 周(6-01 ~ 6-07)",
+        "summary": "Anthropic 抢先递交 S-1 招股书(估值 9650 亿)+ OpenAI 紧随递交(估值 8500 亿)+ 谷歌母公司 350 亿美元担保 Anthropic 算力融资 + 英伟达 GTC Cosmos 3 开源 + 苹果 WWDC26 库克谢幕 + 工信部 + 国资委联合启动人形机器人实景实训专项行动"
+      },
+      {
+        "week": "2026-W22",
+        "week_label": "第 22 周(5-25 ~ 5-31)",
+        "summary": "SpaceX 启动万亿级 IPO + 微软 Build 发布 MAI-Code-1-Flash + 腾讯云 DeepSeek V4 降价 97.5% + 阿里 Qwen3.7-Plus 多模态 + 长鑫科技 IPO 过会募资 295 亿"
+      }
+    ]
+  },
+  "monthly_arc": {
+    "label": "本月脉络",
+    "months": [
+      {
+        "month": "2026-06",
+        "month_label": "2026 年 6 月",
+        "summary": "AI 行业进入「IPO 竞速 + 算力绑定 + 监管落地 + 生态分化」四线并行:Anthropic / OpenAI 双雄冲刺 IPO(合计估值 1.8 万亿)+ 博通 AI XPV 平台 + 谷歌母公司 350 亿担保形成算力铁三角 + 苹果 WWDC26 后 Cook 时代 Gemini 接入 Siri + 工信部人形机器人实景实训万台级目标 + 智元 AIMA 五年 20 亿国产具身生态战 + 多伦多大学自复制 AI 蠕虫与英伟达 Cosmos 3 开源把 AI 安全与物理 AI 同时推上风口浪尖"
+      }
+    ]
+  }
+}

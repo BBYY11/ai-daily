@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-13",
+  "weekday": "周六",
+  "generated_at": "2026-06-13 08:00 (Asia/Shanghai) · 缺失占位(主 cron 未成功,补记事故 #016)",
+  "summary": "🚧 2026 年 6 月 13 日 AI 早报数据缺失。当天主 cron(ai-daily-0800)未生成 news.json,未推送到 GitHub。补记事故 #016(主 cron 偶发失败 — 根因排查待跟进)。本周 W24 已扣除该日数据。",
+  "stats": {
+    "total_items": 0,
+    "by_category": {}
+  },
+  "items": [],
+  "weekly_arc": {
+    "label": "本周脉络",
+    "weeks": [
+      {
+        "week": "2026-W24",
+        "date": "2026-06-13",
+        "week_label": "第 24 周",
+        "summary": "🚧 6-13 数据缺失"
+      }
+    ]
+  },
+  "monthly_arc": {
+    "label": "本月脉络",
+    "months": [
+      {
+        "month": "2026-06",
+        "month_label": "2026 年 6 月",
+        "summary": "6-13 早报数据缺失,其他日期正常归档"
+      }
+    ]
+  }
+}

@@ -1,74 +1,34 @@
 {
-  "generated_at": "2026-06-08 00:02 (Asia/Shanghai)",
-  "week": "2026-W23",
-  "week_label": "第 23 周",
-  "start_date": "2026-06-01",
-  "end_date": "2026-06-07",
+  "generated_at": "2026-06-15 10:15 (Asia/Shanghai) · Mavis Bot 手动补救",
+  "week": "2026-W25",
+  "week_label": "第 25 周",
+  "start_date": "2026-06-15",
+  "end_date": "2026-06-21",
   "weekday_start": "周一",
   "weekday_end": "周日",
-  "summary": "第 23 周(6/1 - 6/7)是「资本 + 算力 + 监管」三主线共振的一周。头条是 Anthropic IPO 全链路打通:6/1 秘密递表、6/2 收 650 亿美元 H 轮估值 9650 亿首超 OpenAI、6/5 正式递交 S-1,一周内四登头条。SpaceX 同步启动 750 亿美元 IPO 并与谷歌签 300 亿算力大单(11 万块 GPU 租至 2029),博通预测 2026 财年 AI 芯片 560 亿,英伟达 GTC Taipei 双发 Vera Rubin + RTX Spark。美国监管收紧:特朗普 30 天通报行政令、政府拟入股 AI 公司、众议院 269 页《伟大美国 AI 法案》草案。中国侧融资潮与生态开放并行:DeepSeek 传 70 亿美元首轮、MiniMax M3 1M 上下文编程 SOTA、千问 APP 全开放 Skill。物理 AI 集中爆发:Cosmos 3 全开放、宇树 H2+、越疆 WAM、比亚迪入局人形,AI 进入「物理时代」。注:6/7 归档缺失,周末趋势以 6/6 数据为准。",
+  "summary": "第 25 周(6/15 - 6/21)刚开启,目前只有 6/15 当天数据。今日主线:① 监管双轨深化:纽约州总检察长对 OpenAI 发出首份多州联合传票,Anthropic Fable 5/Mythos 5 遭美商务部出口管制;② 中国侧三连发:智谱 GLM-5.2 面向 GLM Coding Plan 全量开放(支持 1M 上下文,下周 MIT 协议开源)、微信 AI 生态开放内测(京东美团滴滴携程肯德基等十余家首批接入,覆盖电商/本地生活/出行/餐饮)、华为 HDC 2026 发布 HarmonyOS 7(终端突破 6600 万台);③ 算力极化:英伟达 Blackwell 一芯难求、PCB 单月涨价 40%、华为昇腾 950DT 8 月问世、SK 海力士 HBM 满产。注:本周其它日期(6/16 - 6/21)待归档,总结将在 6/22 周一补全。",
   "key_themes": [
     {
-      "title": "Anthropic 全链路登顶:估值、融资、IPO 三连跳",
-      "body": "6/1 秘密递交 IPO 招股书(估值近 1 万亿),6/2 完成 650 亿美元 H 轮(估值 9650 亿首超 OpenAI),6/5 正式递交 S-1 完成 IPO 全链路。从 2025 年 3 月 615 亿到本周末 9650 亿,15 个月涨 15.7 倍。一周内 4 次登头条,资本市场重新评估 AI 公司估值锚:Anthropic 锚定企业软件确定性(13x ARR),OpenAI 仍靠终局想象(35x ARR)。"
+      "title": "6/15 监管双轨:多州联合传票 + 商务部出口管制",
+      "body": "6/15 纽约州总检察长代表多州联盟对 OpenAI 发出首份联合传票(此前未有州级多边协同),同日 Anthropic Fable 5/Mythos 5 遭美商务部出口管制(双重制约);美国从'轻监管'切到'州联邦双层监管'。"
     },
     {
-      "title": "算力狂飙:SpaceX×谷歌 300 亿、博通 560 亿、GTC 双发",
-      "body": "SpaceX 与谷歌签 300 亿美元算力大单(每月 9.2 亿租 11 万块英伟达 GPU,持至 2029);博通预测 2026 财年 AI 芯片销售 560 亿美元,联手 Apollo/黑石建 AI XPV 平台 2028 部署 20+ GW;英伟达 GTC Taipei 双发 Vera Rubin 架构(推理成本降 10 倍)与 RTX Spark N1X PC 芯片(ARM+3nm)。算力从 GPU 短缺进入「算力即地缘政治」阶段,头部公司靠长期协议锁产能。"
+      "title": "6/15 中国 AI 生态开放日:智谱 + 微信 + 华为同日三连发",
+      "body": "智谱 GLM-5.2 1M 上下文全量开放 + 下周 MIT 开源,微信 AI 生态首批 10+ 国民应用接入,华为 HarmonyOS 7 终端 6600 万台。三件套形成中国 AI 独立于 OpenAI/Anthropic 路径的应用矩阵。"
     },
     {
-      "title": "监管双轨:30 天通报 + 国家入股 + 269 页法案",
-      "body": "特朗普 6/3 签 AI 行政令,强能力模型公开发布前 30 天须通报政府;6/6 拟最快下周与 OpenAI 等高管会谈入股方案;同 6/6 众议院公布 269 页《伟大美国 AI 法案》草案,年收入 5 亿美元以上大模型公司每半年审计。美国从「轻监管」切到「强监管 + 国家入股」双轨,AI 头部公司从商业机构变成准国家基础设施。"
-    },
-    {
-      "title": "中国力量:DeepSeek 70 亿融资 + MiniMax M3 + 千问 Skill 开放",
-      "body": "DeepSeek 传首轮 70 亿美元融资(腾讯/宁德时代领投,估值 590 亿),V4-Pro API 永久降价 75%;MiniMax M3 发布 1M 上下文 + 编程超 GPT-5.5 + 启动 A 股 IPO 辅导;阿里 Qwen3.7-Plus 多模态智能体;千问 APP 全面向第三方 Agent/Skill 开放,瑞幸/肯德基/蜜雪冰城/东航首批接入。中国 AI 形成「独立融资 + 开源模型 + 应用生态」三件套,绕开 OpenAI/Anthropic 路径。"
-    },
-    {
-      "title": "物理 AI 周:Cosmos 3 开放 + 宇树 H2+ + 智元 AGIBOT",
-      "body": "英伟达 6/5 发布 Cosmos 3,全球首款完全开放的全模态物理 AI 模型;同 6/5 与宇树科技 H2+ 75 自由度人形机器人参考设计;越疆 6/3 发布空弈 WAM 具身大模型 LIBERO 评测 99.25%;智元 6/4 开源 AGIBOT WORLD 2026 主题二——行业首个聚焦物理交互的开源具身数据集;比亚迪 6/4 官宣入局人形机器人(经销商网络可售卖)。AI 从数字世界进入物理世界,具身智能是 2026 下半场最确定的方向之一。"
+      "title": "6/15 算力极化:Blackwell 紧缺 + 国产替代加速",
+      "body": "英伟达 Blackwell 一芯难求、PCB 单月涨价 40%、SK 海力士 HBM 满产,头部公司靠长期协议锁产能;华为昇腾 950DT 8 月问世(对标 H200),国产 GPU/DC U 加速替代。"
     }
   ],
-  "data_highlights": {
-    "total_events": 97,
-    "key_funding_total": "约 1100 亿美元(Anthropic 650 亿 H 轮 + SpaceX 300 亿算力 + DeepSeek 70 亿 + SpaceX IPO 750 亿目标)",
-    "biggest_news": "Anthropic 正式递交 S-1,9650 亿估值登顶全球 AI 公司榜首,完成 IPO 全链路"
-  },
   "day_links": [
     {
-      "date": "2026-06-01",
+      "date": "2026-06-15",
       "weekday": "周一",
-      "summary": "GTC Taipei 2026 开幕:Vera Rubin 架构 + RTX Spark(N1X)双; Anthropic 秘密递交 IPO 招股书,估值近 1 万亿美元,首次领先 OpenAI; 国产 MiniMax M3 发布:1M 上下文 + 编程超 GPT-5.5,启动 A 股 IPO 辅"
-    },
-    {
-      "date": "2026-06-02",
-      "weekday": "周二",
-      "summary": "英伟达 GTC Taipei 2026:发布 Vera Rubin 架构,RTX Spark 杀入 ; Anthropic 完成 650 亿美元 H 轮融资,估值 9650 亿首超 OpenAI; OpenAI 声称 AI 攻克 80 年数学难题,推翻 Erdős 1946 猜想"
-    },
-    {
-      "date": "2026-06-03",
-      "weekday": "周三",
-      "summary": "微软 Build 2026:发布 MAI-Code-1-Flash 自研编程模型,降低对 OpenA; 特朗普签 AI 行政令:强能力模型公开发布前 30 天须通报政府; SpaceX 启动 IPO 进程,目标本月 750 亿美元,创历史最大规模"
-    },
-    {
-      "date": "2026-06-04",
-      "weekday": "周四",
-      "summary": "博通预测 2026 财年 AI 芯片销售 560 亿美元,联手 Apollo/黑石建 AI XPV ; DeepSeek 传首轮融资 70 亿美元,估值 590 亿美元,腾讯/宁德时代领投; ChatGPT 全球月活突破 10 亿,创 App 史上最快 10 亿记录"
-    },
-    {
-      "date": "2026-06-05",
-      "weekday": "周五",
-      "summary": "Anthropic 正式递交 S-1,9650 亿美元估值登顶全球 AI 公司榜首; 36氪独家:字节 2026 AI 四个关键命题,世界模型年底对标 Google Genie 3; 英伟达台北 GTC 发布 Cosmos 3,全球首款完全开放的全模态物理 AI 模型"
-    },
-    {
-      "date": "2026-06-06",
-      "weekday": "周六",
-      "summary": "SpaceX × 谷歌签署 300 亿美元算力大单:每月 9.2 亿租 11 万块英伟达 GPU,持; 特朗普政府拟入股顶尖 AI 公司,最快下周与高管会谈,OpenAI 推动方案; 美国众议院公布 269 页《伟大美国 AI 法案》草案:年收入 5 亿美元以上大模型公司每半年审计"
-    },
-    {
-      "date": "2026-06-07",
-      "weekday": "周日",
-      "summary": "(无归档)"
+      "summary": "OpenAI 收多州传票 + 智谱 GLM-5.2 1M 开源 + 微信 AI 生态开放 + 华为 HDC 2026 HarmonyOS 7",
+      "total": 18,
+      "rising": 5,
+      "headline": 4
     }
   ]
 }

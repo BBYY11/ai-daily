@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-06-15 02:21 (Asia/Shanghai)",
+  "week": "2026-W24",
+  "week_label": "第 24 周",
+  "start_date": "2026-06-08",
+  "end_date": "2026-06-14",
+  "weekday_start": "周一",
+  "weekday_end": "周日",
+  "summary": "第 24 周(2026-06-08 - 2026-06-14)AI 圈共 6 天有归档,共 90 条新闻。详细主题待 cron 任务上层 agent 提炼。",
+  "key_themes": [
+    {
+      "title": "(待生成)",
+      "body": "待上层 agent 提炼,基于上周 daily items 的 high-heat 条目聚类"
+    },
+    {
+      "title": "(待生成)",
+      "body": ""
+    },
+    {
+      "title": "(待生成)",
+      "body": ""
+    },
+    {
+      "title": "(待生成)",
+      "body": ""
+    },
+    {
+      "title": "(待生成)",
+      "body": ""
+    }
+  ],
+  "data_highlights": {
+    "total_events": 90,
+    "key_funding_total": "—",
+    "biggest_news": "—"
+  },
+  "day_links": [
+    {
+      "date": "2026-06-08",
+      "weekday": "周一",
+      "summary": "OpenAI 宣布 ChatGPT 转型超级应用,Codex 整合加速 IPO筹备; Anthropic 发布长文警告:AI 递归自我改进风险,Claude Code 80% 代码已由 ; 苹果 WWDC26 今夜开幕:库克谢幕,Siri 接入 Gemini 实现重大升级"
+    },
+    {
+      "date": "2026-06-09",
+      "weekday": "周二",
+      "summary": "英伟达黄仁勋访韩：连签六家韩企，AI 合作全覆盖; 英伟达与 SK 海力士官宣多年技术合作：共研 AI 工厂下一代存储; OpenAI 正在将 ChatGPT 改造为'超级应用'，集成 Codex 与 AI 智能体"
+    },
+    {
+      "date": "2026-06-10",
+      "weekday": "周三",
+      "summary": "工信部+国资委启动人形机器人实景实训,目标 2026 年底万台级落地; 谷歌母公司为 Anthropic 提供 350 亿美元算力融资担保,博通+谷歌+Anthropic ; OpenAI 秘密递交 S-1 招股书,估值 8500 亿美元,最快 Q4 上市"
+    },
+    {
+      "date": "2026-06-11",
+      "weekday": "周四",
+      "summary": "Anthropic 深夜炸场:Claude Fable 5 正式发布,自称「史上最强」但价格翻倍; OpenAI 筹备新模型并计划明年 IPO,Altman 内部信首度确认上市时间表; 黄仁勋台北 Computex 揭幕 N1X「超级芯片」,英伟达携 Arm 杀入 PC 端"
+    },
+    {
+      "date": "2026-06-12",
+      "weekday": "周五",
+      "summary": "Anthropic 双模型同日解禁,Claude Fable 5 编程榜单横扫 GPT-5.5 与 ; SpaceX 敲定 IPO 定价每股 135 美元,6 月 12 日纳斯达克挂牌,募资 750 亿美; 摩尔线程开源 MusaCoder,首个基于国产 GPU 全栈训练的代码大模型,KernelBench"
+    },
+    {
+      "date": "2026-06-13",
+      "weekday": "周六",
+      "summary": "🚧 2026 年 6 月 13 日 AI 早报数据缺失。当天主 cron(ai-daily-0800)未生成 news.json,未推送到 GitHub。补记事故 #016(主 cron 偶发失败 — 根因排查待跟进)。本周 W24 已扣除该日数据。"
+    },
+    {
+      "date": "2026-06-14",
+      "weekday": "周日",
+      "summary": "(无归档)"
+    }
+  ]
+}
