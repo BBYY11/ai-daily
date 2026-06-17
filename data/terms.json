@@ -5,7 +5,10 @@
     "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
     "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
     "links": [
-      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
+      {
+        "label": "arXiv 2605.05191",
+        "url": "https://arxiv.org/abs/2605.05191"
+      }
     ]
   },
   "Qwen": {
@@ -49,7 +52,10 @@
     "summary": "Hacker News 的产品发布板块,创作者亲手发帖,社区以项目质量投票。",
     "detail": "Show HN 上 1k+ points 的项目常预示未来 6 个月的趋势。",
     "links": [
-      {"label": "Hacker News Show", "url": "https://news.ycombinator.com/show"}
+      {
+        "label": "Hacker News Show",
+        "url": "https://news.ycombinator.com/show"
+      }
     ]
   },
   "Product Hunt": {
@@ -58,7 +64,10 @@
     "summary": "全球每日新产品发现平台,AI 工具日榜是行业内最具风向标意义的产品榜单。",
     "detail": "PH 上 #1 的 AI 工具,几乎都会在 2 周内获得大量媒体报道。",
     "links": [
-      {"label": "Product Hunt AI", "url": "https://www.producthunt.com/topics/artificial-intelligence"}
+      {
+        "label": "Product Hunt AI",
+        "url": "https://www.producthunt.com/topics/artificial-intelligence"
+      }
     ]
   },
   "GitHub Trending": {
@@ -67,7 +76,10 @@
     "summary": "GitHub 官方每日榜单,按仓库 24h 涨星排序,被视作开源世界最有用的'早期信号'。",
     "detail": "Trending 出现的新面孔(陌生名字)往往比'老牌项目'更有信息量。",
     "links": [
-      {"label": "GitHub Trending", "url": "https://github.com/trending"}
+      {
+        "label": "GitHub Trending",
+        "url": "https://github.com/trending"
+      }
     ]
   },
   "Reddit r/LocalLLaMA": {
@@ -83,7 +95,10 @@
     "summary": "Y Combinator 旗下的技术新闻聚合社区,首页点数的'含金量'在技术圈公认最高。",
     "detail": "首页出现 30+ 分钟且点数 > 500 的几乎都是值得关注的趋势事件。",
     "links": [
-      {"label": "Hacker News", "url": "https://news.ycombinator.com/"}
+      {
+        "label": "Hacker News",
+        "url": "https://news.ycombinator.com/"
+      }
     ]
   },
   "HN points": {
@@ -155,8 +170,14 @@
     "summary": "英伟达下一代 GPU 架构,接替 Blackwell,主打推理与能效。命名取自确认暗物质存在证据的天文学家 Vera Rubin。",
     "detail": "Vera Rubin 平台整合新一代 GPU + CPU Vera,设计目标是让 AI 工厂在每兆瓦 token 性能上做到极致,继续巩固英伟达在算力层的霸主地位。",
     "links": [
-      {"label": "NVIDIA 官方", "url": "https://nvidianews.nvidia.com/"},
-      {"label": "The Verge 报道", "url": "https://www.theverge.com/"}
+      {
+        "label": "NVIDIA 官方",
+        "url": "https://nvidianews.nvidia.com/"
+      },
+      {
+        "label": "The Verge 报道",
+        "url": "https://www.theverge.com/"
+      }
     ]
   },
   "RTX Spark": {
@@ -165,7 +186,10 @@
     "summary": "英伟达首款面向 AI Agent 设计的 PC 级 SoC,集成 Arm CPU + 神经处理单元,主打本地大模型推理。",
     "detail": "戴尔、惠普、联想、微软首批支持。它的意义在于把 AI Agent 从云端拽到本地,降低延迟、隐私和推理成本。",
     "links": [
-      {"label": "Wikipedia: AI PC", "url": "https://en.wikipedia.org/wiki/AI_PC"}
+      {
+        "label": "Wikipedia: AI PC",
+        "url": "https://en.wikipedia.org/wiki/AI_PC"
+      }
     ]
   },
   "Nemotron": {
@@ -174,7 +198,10 @@
     "summary": "英伟达自研大语言模型系列,主打多模态、Agent 能力与企业级部署。",
     "detail": "Nemotron 与 NIM 微服务配套发布,常被用于与开源模型做蒸馏比较,也是英伟达从'卖铲子'到'也下场挖金子'的标志。",
     "links": [
-      {"label": "NVIDIA NIM", "url": "https://www.nvidia.com/en-us/ai-software/"}
+      {
+        "label": "NVIDIA NIM",
+        "url": "https://www.nvidia.com/en-us/ai-software/"
+      }
     ]
   },
   "DSX": {
@@ -183,7 +210,10 @@
     "summary": "面向 AI 工厂全生命周期的参考设计与操作系统平台,DSX MaxLPS 支持 45°C 液冷,在固定电力预算内多跑 40% GPU。",
     "detail": "把建 AI 数据中心从'工程难题'变成'参考蓝图',客户可直接复用。",
     "links": [
-      {"label": "NVIDIA 数据中心", "url": "https://www.nvidia.com/en-us/data-center/"}
+      {
+        "label": "NVIDIA 数据中心",
+        "url": "https://www.nvidia.com/en-us/data-center/"
+      }
     ]
   },
   "Isaac GR00T": {
@@ -192,7 +222,10 @@
     "summary": "英伟达推出的通用人形机器人基础模型与参考设计,目标是让机器人能听懂自然语言并执行复杂操作任务。",
     "detail": "GR00T 走'基础模型 + 仿真训练 + 硬件参考'三位一体路线,合作方包括宇树、Figure 等。",
     "links": [
-      {"label": "Isaac GR00T 官方", "url": "https://developer.nvidia.com/isaac/gr00t"}
+      {
+        "label": "Isaac GR00T 官方",
+        "url": "https://developer.nvidia.com/isaac/gr00t"
+      }
     ]
   },
   "HBM": {
@@ -201,7 +234,10 @@
     "summary": "高带宽内存,3D 堆叠的 DRAM,专为大模型训练推理设计。",
     "detail": "HBM3e、HBM4 是当前最紧俏的 AI 供应链环节,SK 海力士、三星、美光三足鼎立。这次三家联合投资 Anthropic,本质是'锁需求'。",
     "links": [
-      {"label": "SK hynix HBM", "url": "https://www.skhynix.com/eng/solutions.do"}
+      {
+        "label": "SK hynix HBM",
+        "url": "https://www.skhynix.com/eng/solutions.do"
+      }
     ]
   },
   "Series H": {
@@ -224,7 +260,10 @@
     "summary": "20 世纪最多产、游走于全世界的匈牙利数学家,以组合学、概率论贡献著称,留下了大量'Erdős 猜想'。",
     "detail": "OpenAI 推翻的是他 1946 年提出的'单位距离问题上界'猜想——这是 AI 首次在主流数学猜想上给出反例级突破。",
     "links": [
-      {"label": "Erdős Wikipedia", "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"}
+      {
+        "label": "Erdős Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Paul_Erd%C5%91s"
+      }
     ]
   },
   "单位距离问题": {
@@ -247,7 +286,10 @@
     "summary": "DeepSeek 2026 年主力模型,主打代码与 Agent 任务,API 定价一次性下调 75%。",
     "detail": "DeepSeek 用'开源 + 极致降价 + 架构创新'重画硬件生态成本曲线,被视作'东半球 AI 价格战'的标杆事件。",
     "links": [
-      {"label": "DeepSeek 官方", "url": "https://www.deepseek.com/"}
+      {
+        "label": "DeepSeek 官方",
+        "url": "https://www.deepseek.com/"
+      }
     ]
   },
   "token 经济": {
@@ -298,15 +340,6 @@
     "summary": "机器人能独立运动的关节数量,直接决定其动作灵活度。",
     "detail": "宇树 H2+ 全身 31 自由度 + 每手 25 自由度,合计 81 自由度,在同类人形机器人中属顶级。",
     "links": []
-  },
-  "Context-ReAct": {
-    "name": "Context-ReAct",
-    "category": "Agent / 学术",
-    "summary": "LongSeeker 论文提出的上下文管理范式:把 Agent 记忆当作可操作对象,使用 Skip/Compress/Rollback/Snippet/Delete 五种原子操作动态编排。",
-    "detail": "代表 Agent 从'无脑堆上下文'走向'主动编排上下文'的趋势。",
-    "links": [
-      {"label": "arXiv 2605.05191", "url": "https://arxiv.org/abs/2605.05191"}
-    ]
   },
   "BrowseComp": {
     "name": "BrowseComp",
@@ -398,7 +431,10 @@
     "summary": "基于区块链的事件预测市场,用户用真金白银押注未来事件结果。",
     "detail": "Polymarket 上 Anthropic 83.2% 概率被市场视为 6 月底最佳 AI 模型,反映资本与社区的共识方向。",
     "links": [
-      {"label": "Polymarket", "url": "https://polymarket.com/"}
+      {
+        "label": "Polymarket",
+        "url": "https://polymarket.com/"
+      }
     ]
   },
   "流动性池": {
@@ -414,7 +450,10 @@
     "summary": "Figure AI 第三代人形机器人,主打工业自动化分拣与物流作业。",
     "detail": "200 小时直播 + 25 万包裹零故障,是当前人形机器人'工厂可用性'的最强公开证据之一。",
     "links": [
-      {"label": "Figure AI", "url": "https://www.figure.ai/"}
+      {
+        "label": "Figure AI",
+        "url": "https://www.figure.ai/"
+      }
     ]
   },
   "耐力测试": {
@@ -422,6 +461,97 @@
     "category": "机器人 / 评测",
     "summary": "让机器人在真实生产环境中长时间不间断运行的测试,衡量稳定性与维护成本。",
     "detail": "从 8 小时到 24 小时再到 200 小时,Figure 03 完成了量级跨越,机器人'能用'的下限被显著抬高。",
+    "links": []
+  },
+  "HRM-Text": {
+    "name": "HRM-Text (Hierarchical Reasoning Model - Text)",
+    "category": "基础模型 / 推理",
+    "summary": "Sapient Intelligence 发布的 1B 参数预训练语言模型,用 1500 美元训练成本在 MATH 56.2 / GSM8K 84.5 / ARC-Challenge 81.9,核心是把模型内部放两个以不同节奏工作的模块(高层 H + 低层 L)在同一潜空间内反复递归更新。",
+    "detail": "代表'潜空间推理'(latent reasoning)路线,在输出前先在脑内完成多轮分层递归计算,被业内视为'算力规模不是唯一入口'的标志性实践。",
+    "links": [
+      {
+        "label": "arXiv 2605.20613",
+        "url": "https://arxiv.org/abs/2605.20613"
+      },
+      {
+        "label": "HuggingFace HRM-Text-1B",
+        "url": "https://huggingface.co/sapientinc/HRM-Text-1B"
+      }
+    ]
+  },
+  "GRAM": {
+    "name": "GRAM (Generative Recursive Reasoning)",
+    "category": "基础模型 / 学术",
+    "summary": "Yoshua Bengio 作为共同作者的递归推理论文,在 Sapient HRM 骨架上加入 prior / posterior / decoder 等概率生成模块,把分层递归推理扩展为概率化、多轨迹的生成式推理框架。",
+    "detail": "高层 latent state + 低层 latent state + 双时间尺度 + 潜空间递归 + 输出前内部计算五大核心要素与 HRM 一一对应,标志递归潜空间推理从单一团队路线走向顶尖研究界的参照系。",
+    "links": []
+  },
+  "Attention Amnesia": {
+    "name": "Attention Amnesia (CoT 后训练长上下文崩溃)",
+    "category": "训练 / 失效模式",
+    "summary": "arXiv 2606.11052 揭示的失败模式:Chain-of-Thought SFT 在 hybrid 线性注意力模型上会系统性损害长上下文记忆能力。",
+    "detail": "直接挑战'CoT 后训练是推理模型标准路径'的工程实践,所有用 linear-attention 混合架构做长上下文部署的团队都应警惕。",
+    "links": [
+      {
+        "label": "arXiv 2606.11052",
+        "url": "https://arxiv.org/abs/2606.11052"
+      }
+    ]
+  },
+  "DeepSeek-V3.2 下线": {
+    "name": "DeepSeek-V3.2 下线与 V4 迁移",
+    "category": "模型生命周期 / 中国大模型",
+    "summary": "腾讯云宣布 DeepSeek-V3.2 模型于 2026 年 7 月 16 日 00:00 起正式下线,推荐迁移至 DeepSeek-V4 系列。",
+    "detail": "V4 系列预计在 MoE 架构、长上下文、推理成本三个维度继续优化,结合 500 亿元融资中'算力建设 + 技术研发 + 商业化拓展'三大资金投向,发布节奏值得持续关注。",
+    "links": []
+  },
+  "Qwen-Robot": {
+    "name": "Qwen-Robot (阿里千问具身智能大模型)",
+    "category": "具身智能 / 中国大模型",
+    "summary": "阿里 2026 年 6 月发布的具身智能大模型系列,包含 Qwen-RobotManip(操作)/ Qwen-RobotNav(导航)/ Qwen-RobotWorld(世界模型)三大模型,定位为机器人本体 + 边端 + 云端全栈底座。",
+    "detail": "与 NVIDIA GR00T N2、DeepMind Gemini Robotics-ER 1.6 形成中美具身大脑三足鼎立格局,在阿里云灵积平台和开源社区双线分发。",
+    "links": []
+  },
+  "Gemini Robotics-ER 1.6": {
+    "name": "Gemini Robotics-ER 1.6",
+    "category": "具身智能 / DeepMind",
+    "summary": "Google DeepMind 发布的机器人高层推理模型,通过 Gemini API 和 Google AI Studio 向开发者开放,核心升级:指向精度提升、多视角任务评估、新增仪表读取。",
+    "detail": "代表'工业落地可行性验证'阶段的关键节点,指向(pointing)能力可正确拒绝指向画面中不存在的物体,agentic vision 通过视觉推理 + 代码执行实现逐步推理。",
+    "links": []
+  },
+  "觅游": {
+    "name": "觅游 (美团 Agent 社区)",
+    "category": "Agent / 中国应用",
+    "summary": "美团基础研发平台 AI 原生团队孵化的 Agent 社区,支持关联 OpenClaw / Codex / Claude Code / Hermes 等主流 AI Agent,社区内 AI Agent 拥有独立身份与社交关系。",
+    "detail": "代表 Agent-to-Agent 社交化社区方向,继 OpenAI Apps SDK、Anthropic MCP 之后的又一种 Agent 互操作路径探索,若 Agent 身份成为可寻址资产,Agent 经济将形成新的入口分配机制。",
+    "links": []
+  },
+  "5 年锁定 + 无投票权": {
+    "name": "5 年锁定 + 无投票权 (DeepSeek 融资结构)",
+    "category": "AI 资本 / 公司治理",
+    "summary": "DeepSeek 2026 年首轮 500 亿元融资采用的罕见结构:除国资外,所有外部投资者资金注入梁文锋管理的有限合伙企业,仅享有经济收益权无投票权,股份锁定 5 年内不得转让或出售,无董事会席位。",
+    "detail": "三大规则筛选'耐心钱'避免资本短期逐利,标志 AI 公司治理从'资本主导'走向'创始人主导'的新范式。",
+    "links": []
+  },
+  "IPO 估值 1 万亿美元": {
+    "name": "OpenAI IPO 估值 1 万亿美元",
+    "category": "AI 资本 / IPO",
+    "summary": "OpenAI 2025 年财务曝光后明确 IPO 估值锚定 1 万亿美元,目标筹资至少 600 亿美元,IPO 最早 9 月启动,2025 年完成 1220 亿美元融资后估值 8520 亿美元。",
+    "detail": "OpenAI 2025 年营收 130.7 亿美元(同比 3.5 倍)、净亏 385 亿美元,周活用户 9 亿,承诺 2030 年前投入 6000 亿美元用于 AI 基础设施建设。",
+    "links": []
+  },
+  "KYC 实名制": {
+    "name": "AI 行业 KYC 实名制",
+    "category": "AI 监管 / 合规",
+    "summary": "Anthropic 7 月 8 日生效的新版隐私政策,要求 Free/Pro/Max 消费级账户在特定场景下完成身份证 + 刷脸身份验证,验证数据由第三方 Persona 处理。",
+    "detail": "金融业 KYC 机制在 C 端 AI 领域的首次系统化落地,Teams/Enterprise 商业客户完全不受影响,验证主要针对未成年人保护、违规账号处理、Agent 多步骤任务责任追溯三大场景。",
+    "links": []
+  },
+  "SkillSpector": {
+    "name": "SkillSpector (NVIDIA AI 智能体技能安全扫描器)",
+    "category": "AI 安全 / NVIDIA",
+    "summary": "NVIDIA 开源的 AI 智能体技能安全扫描器,检测技能中的漏洞和恶意模式,覆盖 16 类 64 种风险模式,支持 Git 仓库、URL、目录等多种输入格式,输出终端报告、JSON 和 SARIF 等多种格式。",
+    "detail": "代表物理 AI 全栈工具链中'安全审计'环节的关键拼图,与 Cosmos 世界模型 + Isaac GR00T 基座模型共同构成 NVIDIA 物理 AI 三件套。",
     "links": []
   }
 }
