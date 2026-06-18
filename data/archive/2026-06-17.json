@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-17",
+  "weekday": "周三",
+  "generated_at": "2026-06-17 08:00 (Asia/Shanghai) · 🚧 缺失占位(主 cron 间歇失败,补记事故 #017)",
+  "summary": "🚧 2026-06-17 早报数据缺失。主 cron 间歇性失败未推送,补记事故 #017(连续多天 0 commit,LLM session 假成功)。请参看 6-15 与 6-18 早报理解本周脉络。",
+  "stats": {
+    "total_items": 0,
+    "by_category": {}
+  },
+  "items": [],
+  "weekly_arc": {
+    "label": "本周脉络",
+    "weeks": [
+      {
+        "week": "2026-W25",
+        "date": "2026-06-17",
+        "week_label": "第 25 周",
+        "summary": "🚧 2026-06-17 数据缺失"
+      }
+    ]
+  },
+  "monthly_arc": {
+    "label": "本月脉络",
+    "months": [
+      {
+        "month": "2026-06",
+        "month_label": "2026 年 6 月",
+        "summary": "2026-06-17 数据缺失"
+      }
+    ]
+  }
+}
