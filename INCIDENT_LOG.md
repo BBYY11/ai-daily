@@ -605,3 +605,80 @@
 2. **archive 跟 news.json 必须 atomic**——分开推必出错
 3. **本机 sandbox 跟远端脱节是常态**——每次重启后要从远端 sync,不能信本机
 4. **占位骨架要明确标记"事故 #NNN"**——避免后来人误以为是真内容
+
+---
+
+# 017 — 2026-06-16、6-17、6-18 主 cron 连续 3 天间歇失败 + 用户报"没更新"
+
+## 时间线
+
+| 时间 (Beijing) | 事件 |
+|---|---|
+| 2026-06-15 10:30 | 上一轮救援完成,关 watchdog + healthcheck,留主 cron + 周月报 cron |
+| 2026-06-15 10:43 | 6-15 早报推送(W24 周报) |
+| 2026-06-16 全天 | **主 cron 0 commit,早报缺失** (本日根因待查) |
+| 2026-06-17 08:19 | 主 cron 跑了一次,但 **archive/2026-06-16.json 没推**,只推了 news.json + index.json + 订阅 |
+| 2026-06-18 09:27 | **用户报"没更新"**(已连续 3 天 0 commit 或 archive 缺失) |
+| 2026-06-18 09:35 | 救援完成,6-18 早报手写(18 条) + 6-16/6-17 占位 + 6-18 archive 写入 + 推送 |
+
+## 根因(跟事故 #016 同一类)
+
+**主 cron 间歇性失败**——Mavis 引擎 cron 调 LLM session 跑 fetch_news.py + 整理早报 + 推送,LLM session 层"假成功":
+
+| 日期 | 主 cron 状态 | 结果 |
+|---|---|---|
+| 6-15 10:43 | success | 推了 news.json + index.json + W24 周报 |
+| 6-16 | **未触发** | 完全没 commit(根因待查) |
+| 6-17 08:19 | success | 推了 news.json(6-17) + index.json + 订阅,**但 archive/2026-06-16.json 没生成**(LLM session 漏步骤) |
+| 6-18 09:27 之前 | 未触发 | 8:00 主 cron 应该在今天跑,但跑到 9:27 还没 commit |
+
+**根因诊断**:
+1. 跟事故 #016 一样,是 LLM session 假成功(Mavis 引擎层)
+2. watchdog / healthcheck 已删,**主 cron 失败时 0 告警**——必须 fallback workflow 接管
+3. **fallback workflow 已写好,但 secret OPENAI_API_KEY 没设**,跑起来会 exit 1
+
+## 救援操作(已执行, ✓ 完成)
+
+1. ✓ **手写 6-18 早报**(18 条):
+   - 主线:监管深化(Anthropic 出口管制) + 资本消耗(OpenAI 一季度烧钱 37 亿) + 算力扩张(英伟达高意厂区 4 倍) + 中国三连发(智谱 GLM-5.2 开源 + 微信 AI 专属卡 + 启元机器人亚洲首店)
+   - 通过 web_search 拉今日 AI 资讯,人工整理 18 条 items(4 headline + 5 rising + 3 company + 2 paper + 2 industry + 2 social)
+   - JSON 走 validate_news.py 通过
+
+2. ✓ **补 6-16、6-17 archive 占位**:
+   - 6-16 那天主 cron 0 commit,数据永久缺失 → 占位骨架
+   - 6-17 主 cron 漏推 archive/2026-06-16.json,间接导致 6-16 缺失 → 占位骨架
+   - 两个占位都标 "事故 #017"
+
+3. ✓ **写 6-18 archive**:`cp data/news.json data/archive/2026-06-18.json`
+
+4. ✓ **重建 archive/index.json**:20 days total(5-29 ~ 6-18, 6-13/6-16/6-17 占位)
+
+5. ✓ **跑 validate + gen 3 feeds**:成功
+
+6. ✓ **推送 GitHub**:100+ 文件已推,远端 news.json = 6-18 / 20 天 archive
+
+## 改进方向(P0 紧急)
+
+**设 GitHub repo secret `OPENAI_API_KEY`**——让 fallback workflow 在主 cron 失败时 8:15 自动接管。这是 watchdog 删了之后唯一的兜底。
+
+**不设的话**:
+- 主 cron 间歇失败 → 当天 archive 缺失(本次 6-16、6-17)
+- 主 cron 整天不跑 → 当天连 news.json 都没有(本次 6-18 早上)
+- 只能等用户报"没更新"才人工补
+
+## 改进方向(P1 长期)
+
+| 优先级 | 任务 |
+|---|---|
+| P1 | **fetch_news.py 写 news.json 之前必须先把旧 news.json 归档到 archive/{old_date}.json**——目前是 news.json 写完再 archive,但 fetch_news.py 路径会被 LLM session 漏掉 |
+| P1 | **push_to_github.sh 推 news.json 之前必须先 ls data/archive/ 看新一天的 archive 是否存在**——不存在就强制报警,不允许推 news.json |
+| P1 | **fetch_news.py 写完所有文件后,直接调 `git add data/ + git commit` 不走 push_to_github.sh**——保证 news + archive + index 一次性推 |
+| P2 | **每周日 18:00 跑"主 cron 验证 cron"**:检查 news.json + 7 个 archive 是否齐,缺则告警 |
+| P2 | **每月 1 号跑"事故汇总 cron"**:读 INCIDENT_LOG.md,生成月度事故报告 |
+
+## 学到的东西
+
+1. **主 cron + fallback 必须独立**——fallback 不能复用主 cron 的任何代码路径
+2. **archive + news.json 必须 atomic**——不能分开推(本次 6-17 commit 推了 news.json 没推 archive,造成 6-16 永久缺失)
+3. **Mavis Bot(我)手写早报 5-10 分钟就能跑通**——但**不解决根本问题**,根本是 fallback workflow
+4. **关 watchdog 后,用户是最后一道防线**——接受不了得设 secret
