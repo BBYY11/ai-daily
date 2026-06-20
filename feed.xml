@@ -3,212 +3,212 @@
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat">
   <channel>
-    <title>AI Daily · 2026-06-18 周四 · 全球 AI 早报</title>
+    <title>AI Daily · 2026-06-20 周六 · 全球 AI 早报</title>
     <link>https://bbyy11.github.io/ai-daily/</link>
     <atom:link href="https://bbyy11.github.io/ai-daily/feed.xml" rel="self" type="application/rss+xml" />
-    <description><![CDATA[2026 年 6 月 18 日 AI 圈呈现'监管深化 + 资本消耗 + 算力扩张'三主线叙事:① 监管侧,美国商务部对 Anthropic 出台出口管制信函,要求 Fable 5/Mythos 5 切断所有外籍人员访问权限(包括美国境内),OpenAI 紧急表态反对但被要求不得与 Anthropic 协同;② 资本侧,OpenAI 一季度消耗现金 37 亿美元(同比 3 倍),超 57 亿营收一半,虽持有 730 亿现金但 IPO 节奏被迫加快;③ 算力侧,英伟达 6-16 公布高意公司厂区扩建计划(产能提升 4 倍),微软推出 Copilot Cowork 按使用量计费;④ 中国侧三连发,智谱 6-17 开源 GLM-5.2(国产算力 Day 0 全适配)、微信支付 6-17 发 AI 专属卡、上纬新材旗下启元机器人 7 月底开亚洲首家人形机器人线下门店。Anthropic 与美国政府本周一会谈试图重新开放 Fable 5/Mythos 5。 · 共 18 条新闻]]></description>
+    <description><![CDATA[2026 年 6 月 20 日,过去 24 小时 AI 行业有五条主线集中爆发:其一,2024 年诺贝尔化学奖得主 John Jumper(AlphaFold 核心开发者)宣布离开谷歌 DeepMind 加入 Anthropic,同日 DeepMind 前 Gemini 联席负责人、Transformer 论文作者 Noam Shazeer 加盟 OpenAI 担任架构研究负责人,两位顶级科学家在 48 小时内同时从谷歌流向 Anthropic 与 OpenAI,标志 AI 人才战从工程师挖角升级为架构师战争;其二,谷歌、微软、Salesforce、Snowflake、ServiceNow 五家联合推出企业 AI 入口协议 ARD(Agentic Resource Discovery),Anthropic 与 OpenAI 均缺席,标志传统软件巨头与 AI 新贵在企业入口主导权上正式决裂;其三,MLCommons 发布 MLPerf Training 6.0,英伟达 Blackwell 包揽全部 7 项第一,新增 DeepSeek-V3 671B 混合专家负载,CoreWeave 在 8192 块 GPU 上 2.02 分钟完成训练;其四,德意志银行大幅上调人形机器人 2026 出货预测至近 5 万台,中国占比超 80%、宇树领跑;其五,欧盟 AI 法案 Article 50 进入 52 天倒计时,8 月 2 日起所有 AI 生成内容须强制机器可读水印,违规最高罚款 1500 万欧元或全球营收 3%。 · 共 18 条新闻]]></description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Jun 2026 01:30:37 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 00:07:45 +0800</lastBuildDate>
     <generator>AI Daily (Mavis)</generator>
     <managingEditor>bbyy11 (via Mavis)</managingEditor>
     <ttl>60</ttl>
     <item>
-      <title>美国商务部对 Anthropic 下达出口管制信函,Fable 5/Mythos 5 切断所有外籍人员访问</title>
+      <title>诺奖得主 John Jumper 离开谷歌 DeepMind 加入 Anthropic,Transformer 之父 Shazeer 同日转投 OpenAI</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-h001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 17 日美国商务部长卢特尼克周五向 Anthropic 发出监管信函,基于《出口管理条例》第 744.22 (b) 条款,认定其大模型存在被境外军事情报利用的&#x27;不可接受安全风险&#x27;,要求 Fable 5/Mythos 5 立即切断全球范围内所有外籍人员访问权限(含美国境内),并需先申请出口许可方可开放。本周一 Anthropic 与美方官员举行会谈试图达成协议重新开放;OpenAI 周六在内部 Slack 表态反对,称&#x27;AI 研发需要汇聚全球顶尖人才&#x27;,但被总法律顾问张哲要求员工&#x27;禁止与 Anthropic 协同应对危机&#x27;。此次监管被法律专家视为美国正建立&#x27;变相 AI 技术许可审批制度&#x27;。]]></description>
+      <description><![CDATA[6 月 20 日,2024 年诺贝尔化学奖得主、AlphaFold 核心开发者 John Jumper 宣布离开谷歌 DeepMind 加入 Anthropic。同日稍早,DeepMind 前 Gemini 联席负责人、《Attention Is All You Need》核心作者 Noam Shazeer 已于 6 月 18 日加盟 OpenAI,担任架构研究负责人,OpenAI 同步签下前特朗普政府 AI 政策官员 Dean Ball。48 小时内两位顶级科学家同时从谷歌流向 AI 新贵,标志 AI 人才战从高薪挖角工程师升级为架构师战争。Shazeer 在 X 上仅以一句「我很高兴加入 OpenAI,期待与这里卓越的团队一起工作」回应,未提及谷歌任何字眼,业界解读为他将主导探索 Transformer 之后的下一代架构。Jumper 加入 Anthropic 则被视作 Anthropic 在蛋白质设计与科学推理方向上直接对标 DeepMind AlphaFold 的关键落子。]]></description>
       <category>头条</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9800</heat:score><heat:level>爆</heat:level><heat:sources>The Information,环球市场播报,CNN,财联社</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9800</heat:score><heat:level>爆</heat:level><heat:sources>每日经济新闻,36氪,新浪财经,The Information,第一财经,X 平台 AI 研究圈,Reuters</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>OpenAI 一季度烧钱 37 亿美元同比 3 倍,IPO 节奏被迫加快</title>
+      <title>谷歌+微软+Salesforce+Snowflake+ServiceNow 联合发布企业 AI 入口协议 ARD,围堵 OpenAI 与 Anthropic</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-h002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[OpenAI 向股东披露文件显示,2026 年 Q1 消耗现金 37 亿美元,超过 57 亿营收的一半,现金消耗和收入均同比增长至去年同期 3 倍;季末持有现金及有价证券超 730 亿(去年 12 月末仅 400 亿),得益于 3 月底完成的大额融资。营业亏损 93 亿(其中股份支付 23 亿同比翻倍),净亏损 213 亿(受 124 亿可转换权益会计调整影响)。算力采购承诺支出高达 665 亿(履约至 2030),未入资产负债表。OpenAI 已秘密递交 IPO 上市申请,但表态&#x27;未必立刻推进&#x27;,投资者将严审其未盈利现状。]]></description>
+      <description><![CDATA[6 月 18 日,据 The Information 报道,谷歌、微软、Salesforce、Snowflake、ServiceNow 五家传统软件巨头联合宣布支持一项名为「代理资源发现」(Agentic Resource Discovery, ARD)的新软件标准。该协议旨在让企业员工通过 GitHub Copilot、Google Gemini 或 Salesforce CRM 等单一应用发起 AI 任务时,系统可自动识别并调用所有支持 ARD 的 AI 功能与服务,无需用户手动切换工具。微软在博客中表示「ARD 协助 AI 客户端发现各类能力,但并不取代身份验证、授权、治理或组织信任决策」。值得注意的是,Anthropic 与 OpenAI 均未出现在初始支持方名单,Anthropic 去年发布的模型上下文协议(MCP)与 ARD 存在承继关系,但微软、谷歌此次选择绕开 AI 新贵另立标准,标志传统软件巨头与 AI 新兴势力在企业入口主导权上的正式决裂。]]></description>
       <category>头条</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8500</heat:score><heat:level>爆</heat:level><heat:sources>环球市场播报,信息杂志,路透社,华尔街日报</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8900</heat:score><heat:level>爆</heat:level><heat:sources>The Information,微软 On the Issues,Salesforce 官方,腾讯科技,量子位,36氪,X 平台开发者社区</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>英伟达 6-16 公布 AI 基础设施扩建计划,高意厂区产能提升 4 倍</title>
+      <title>MLPerf Training 6.0 公布:英伟达 Blackwell 包揽 7 项第一,DeepSeek-V3 671B 首入 MoE 大模型负载</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-h003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 16 日英伟达正式公布 AI 基础设施重大扩建计划,其投资的高意公司厂区扩建项目正式开工。该计划是英伟达与高意公司前期战略合作的落地项目,扩建依托去年已投产的晶圆厂,拥有全球首条规模化量产的 6 英寸磷化铟制造产线,扩建完成后厂区产能提升 4 倍。今年 3 月英伟达向高意投资 20 亿美元(约 136 亿元人民币)并签长期采购协议。这是英伟达在 Blackwell 紧缺背景下,向上游材料供应链延伸的关键举措,目标锁定 2026 下半年 Rubin 平台量产。]]></description>
+      <description><![CDATA[MLCommons 发布 MLPerf Training 6.0 基准测试最新结果,英伟达 Blackwell 平台在全部 7 项基准测试中拿下最快训练成绩,成为唯一覆盖全部测试项目的平台。英伟达提交了 GB200 NVL72 和 GB300 NVL72 两套机架级系统,GB300 NVL72 较 GB200 NVL72 在同等规模下最高带来 1.6 倍训练速度提升。CoreWeave 借助采用 Spectrum-X 以太网的 GB300 NVL72 系统,在 8192 块 GPU 规模上将 DeepSeek-V3 671B 训练到目标质量,耗时仅 2.02 分钟;微软 Azure 用 GB200 NVL72 将 Llama 3.1 405B 扩展到 8192 块 GPU,7.07 分钟达成参考质量目标。本次测试共 24 家机构提交 95 份结果,6.0 版本新增 DeepSeek-V3 671B 和 GPT-OSS-20B 两个混合专家模型预训练工作负载,反映 MoE 架构在 AI 训练领域的日益重要。]]></description>
       <category>头条</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7600</heat:score><heat:level>爆</heat:level><heat:sources>央视财经,美联社,路透社,华尔街日报</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>8500</heat:score><heat:level>爆</heat:level><heat:sources>MLCommons 官方,快科技,NVIDIA Developer Blog,CoreWeave 官方,微软 Azure,The Next Platform,Reddit r/MachineLearning</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>智谱 6-17 上线并开源 GLM-5.2,Code Arena 全球第一 + 国产算力 Day 0 全适配</title>
-      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
-      <guid isPermaLink="false">ai-daily-h004</guid>
-      <pubDate></pubDate>
-      <description><![CDATA[6 月 17 日智谱宣布上线并开源 GLM-5.2。在全球百万用户参与盲测的前端开发评估系统 Code Arena 上,GLM-5.2 取得全球可用模型第一。同时,GLM-5.2 线上推理已 Day 0 完成与华为昇腾、平头哥、摩尔线程、寒武纪、昆仑芯、沐曦、海光、壁仞等国产算力平台的推理适配,预计下半年昇腾 950 超节点上市后将成为强劲算力底座。智谱继 GLM-5.1 Coding Plan 之后再度发力,成为中文编程模型 SOTA 之一,1M 上下文能力同步开放。]]></description>
-      <category>头条</category>
-      
-      
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7200</heat:score><heat:level>爆</heat:level><heat:sources>智谱官方,量子位,机器之心,36氪</heat:sources><heat:comments>0</heat:comments></heat:item>
-    </item>
-    <item>
-      <title>微信支付 6-17 发布&#x27;AI 专属卡&#x27;,智能体可独立完成消费支付</title>
+      <title>智谱开源 GLM-5.2 拿下 Code Arena 全球第一,1M 上下文 + 国产算力全适配,股价单日涨 16%</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 17 日微信支付正式发布&#x27;AI 专属卡&#x27;。这是一款专为 AI 智能体支付场景设计、内置于微信零钱内的产品功能。当前已接入腾讯桌面办公效率智能体 WorkBuddy,未来将面向更多智能体平台开放。用户可以在与智能体的对话中提出消费需求,体验从智能推荐到下单支付的自动化消费。AI 专属卡标志着国民级支付工具正式向 Agent 时代开放,是 Agent 商业化基础设施的关键节点。]]></description>
+      <description><![CDATA[6 月 17 日凌晨,智谱突然上线并开源 GLM-5.2,在全球百万用户参与盲测的前端开发评估系统 Code Arena 上拿下全球可用模型第一,定位 Anthropic Fable 5 被美国政府下架后的国产替代窗口期。GLM-5.2 支持 1M 上下文,在多个长程任务基准上表现介于 Claude Opus 4.7 与 4.8 之间,是当前排名最高的开源模型。Infra 层面已在 Day 0 完成与华为昇腾、平头哥、摩尔线程、寒武纪、昆仑芯、沐曦、海光、壁仞等 9 家国产算力平台的推理适配,在 1M 上下文长度下将单位 token 的 FLOPs 降低至 2.9 倍。智谱港股当日大涨 16%,采用 MIT 协议开源,无地域限制。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>微信支付官方,财联社,36氪</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>9200</heat:score><heat:level>爆</heat:level><heat:sources>智谱官方,IT之家,钛媒体,Hugging Face,GitHub zai-org,X 平台国产 AI 圈,量子位</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>微软 6-16 推出 Copilot Cowork,按使用量计费,单次执行数小时</title>
+      <title>英伟达 RTX PRO 6000 Blackwell 工作站版官方定价跳涨至 13250 美元,半年涨幅最高 73%</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 16 日微软正式发布新智能体工具 Copilot Cowork,同步推出全新计费规则按使用量计费。定价变化核心动因是 AI 算力成本大幅攀升。与谷歌、亚马逊企业平台同类竞品类似,该工具接收工作指令后可自主持续运行任务,单次执行时长有时可达数小时。已有企业客户借助该工具在短短数小时内完成近 4000 份文档比对;还能整合邮件、内部文件与日程表,为复杂会议筹备全套材料。微软 Copilot 系列从&#x27;按席位&#x27;转向&#x27;按用量&#x27;是 SaaS 定价模式重大变革。]]></description>
+      <description><![CDATA[英伟达官方商城正式上架基于 Blackwell 架构的旗舰级工作站专业显卡 RTX PRO 6000 Blackwell,产品页面显示当前售价 13250 美元,状态标注缺货。追溯价格走势,该型号在一年多时间内出现剧烈波动:2025 年 3 月首次出现在美国零售商列表时公开标价 8435-8565 美元,预售期一度下探至 7673 美元历史最低;以此为基准,当前官方定价涨幅约 73%,即便与 2025 年初 8565 美元的常规零售标价相比也上涨 55%。该卡搭载 GB202 GPU 核心、内置 24064 个 CUDA 核心、96GB GDDR7 ECC 显存、双插槽双流通风道设计、整卡标称功耗 600W,是 Blackwell 消费级与工作站级产品线中唯一配备 96GB 显存的型号。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6500</heat:score><heat:level>热</heat:level><heat:sources>微软官方,央视财经,TechCrunch</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7400</heat:score><heat:level>热</heat:level><heat:sources>英伟达官方商城,快科技,AnandTech,Reddit r/hardware,X 平台硬件圈,PC Gamer</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>上纬新材旗下启元机器人 7 月底开亚洲首家人形机器人线下门店</title>
+      <title>德银大幅上调人形机器人 2026 出货至 5 万台:中国占 80%,宇树领跑,2050 年剑指 700 万台</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 17 日界面《硬科技头条》记者独家获悉,上纬新材旗下启元机器人将在深圳福田卓悦中心商圈开设亚洲首家线下门店,主要用于消费级人形机器人线下体验。门店目前处于施工装修阶段,外墙已设置围挡,印有&#x27;coming soon 深圳&#x27;及启元 Q1 小尺寸全身力控人形机器人产品形象&#x27;Quester1&#x27;。现场工作人员透露门店预计 7 月底或 8 月开业,占地约 300 平方米。这是中国本土人形机器人品牌从 ToB 走向 ToC 消费市场的标志性事件。]]></description>
+      <description><![CDATA[德意志银行亚太区自动化与工业研究主管 Iris Zheng 发布研报,大幅上调全球人形机器人市场出货预测,将 2026 年预测值从此前 2025 年基准的 1.75 万台上调至近 5 万台,增幅逾一倍,并预计 2030 年进一步升至约 70.05 万台、2050 年远期目标 700 万台。中国预计 2026 年出货量翻倍至约 4 万台,占全球绝大部分,宇树已脱颖而出成为行业头部玩家。德银认为人形机器人市场正从炒作阶段过渡至早期规模化商业化阶段,这一判断直接驱动本轮预测上修。高盛此前亦指出 AI 发展下一阶段正从芯片转向现实世界部署,人形机器人是最清晰的变现前沿,韩国、日本、中国的机器人相关标的值得提前布局。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5800</heat:score><heat:level>热</heat:level><heat:sources>界面新闻,硬科技头条,启元机器人</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6800</heat:score><heat:level>热</heat:level><heat:sources>德意志银行研报,高盛亚洲交易台,Reuters,FT 中文网,36氪,X 平台机器人圈,Bloomberg</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>苹果拟明年推出带摄像头 AirPods 和新一代折叠屏 iPhone</title>
+      <title>英伟达 ZPPO 框架:让小模型从「大模型答案」中真正学会思考,0.8B 模型视觉语言能力提升 9.3 个百分点</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r004</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 17 日据报道,苹果计划明年年底推出配备摄像头的耳机 AirPods,在此之前将发布下一代折叠屏手机以及一款纪念 iPhone 问世 20 周年的新机型。知情人士称这将是苹果迄今力度最大的新品发布。过去数月这三款产品均已进入开发后期阶段。摄像头 AirPods 意味着苹果发力&#x27;空间计算 + AI 视觉&#x27;的硬件入口,折叠屏 iPhone 20 周年纪念机型被分析师视为苹果硬件复苏的关键产品。]]></description>
+      <description><![CDATA[英伟达研究团队在 arXiv 发布论文 2606.18216,提出名为 ZPPO(Zone of Proximal Policy Optimization)的 AI 自进化训练框架,核心思想是让大模型的智慧以「题目背景」而非「正确答案」的形式存在。ZPPO 设计了 BCQ(二元候选问题)与 NCQ(负面候选问题)两种题目改造方式,配合提示词回放缓冲区反复练习困难题目。在 Qwen3.5 系列 0.8B 到 9B 四档学生模型上、以 270 亿参数 Qwen3.5 作为教师进行测试,0.8B 模型视觉语言能力提升 9.3 个百分点,2B 提升 5.2 个百分点,在 16 个视觉语言、10 个纯语言、5 个视频理解共 31 个基准测试上全面超越此前所有方法,且对完全没有训练过的纯语言任务也能正向迁移,越小的模型提升越大。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5500</heat:score><heat:level>热</heat:level><heat:sources>彭博社,华尔街日报,科技媒体</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6200</heat:score><heat:level>热</heat:level><heat:sources>arXiv 2606.18216,NVIDIA Research,X 平台 AI 研究圈,Reddit r/MachineLearning,量子位,Hacker News</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Anthropic 与美方周一举行会谈,试图重新开放 Fable 5/Mythos 5</title>
+      <title>埃森哲下调 2026 财年指引股价暴跌 18%,AI 智能体正在颠覆「人天计价」咨询商业模式</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-r005</guid>
       <pubDate></pubDate>
-      <description><![CDATA[6 月 17 日 The Information 报道,Anthropic 与美国政府官员本周一举行会谈,试图达成协议以便重新向市场开放其最新发布的几款大模型。Fable 5/Mythos 5 因商务部出口管制信函被要求切断所有外籍人员访问权限,会谈结果将决定这两款 6 月旗舰产品能否恢复正常服务。Anthropic 在周五官方博客中回应称该漏洞属于&#x27;通用型常见问题,市面上绝大多数公开大模型都存在同类缺陷&#x27;,公司正积极与政府协商技术补救方案。]]></description>
+      <description><![CDATA[全球顶级 IT 服务公司埃森哲最新公布业绩数据,2026 财年第四季度营收展望逊于华尔街分析师平均预期,股价开盘大跌超 17%、最终收跌 18%,创近十年新低。雪上加霜的是,公司报告第三季度订单额意外下降 2%,指向该行业市场在 AI 应用领军者 Anthropic 主导的「AI 颠覆一切」超级风暴之下持续面临基本面不确定性,尤其是该公司长期赖以生存的「人天计价与收费模式」可能被 AI 智能体彻底颠覆。恐慌情绪扩散至整个 IT 服务板块,IBM(IBM.US)开盘延续跌势,跌 6.33%,自 6 月 2 日 330 美元高点以来跌幅已超 25%。]]></description>
       <category>新兴</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5200</heat:score><heat:level>热</heat:level><heat:sources>The Information,Anthropic 官方,TechCrunch</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5600</heat:score><heat:level>热</heat:level><heat:sources>智通财经,Reuters,Bloomberg,WSJ,The Information,X 平台金融圈</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>OpenAI 计划 2026 年底员工翻倍至 8000 人,与 Anthropic 抢人才</title>
+      <title>小米发布全屋智能 AI 开源方案 Xiaomi Miloco 2.0,基于自研 MiMo 大模型 GitHub 同步开源</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-c001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[OpenAI 计划 2026 年底前将员工人数翻倍增至 8000 人,以缩小与 Anthropic 的差距。消息源自英国《金融时报》报道,业务需求持续增长是核心驱动力。OpenAI 当前员工规模约 4000 人,扩员后将接近 Anthropic(预估 5000-6000 人)水平。OpenAI 一边大举融资(3 月底 730 亿现金)、一边加速 IPO 准备、一边疯狂招人,资本市场对其烧钱速度与人才争夺高度关注。]]></description>
+      <description><![CDATA[6 月 18 日,小米正式发布全屋智能 AI 开源方案 Xiaomi Miloco 2.0,并同步在 GitHub 完整开源。这套方案基于小米自研 MiMo 大模型打造,相比初代 Miloco 完成底层逻辑重构,从传统规则触发升级为端到端 AI 理解,覆盖语音、手势、环境感知等多模态入口,支持本地推理与云端协同,瞄准智能家居的「中央 AI 管家」位置。开源协议允许商业使用但需注明来源,与苹果 HomeKit、谷歌 Home 形成生态对比。同日小米联合中国信通院、OPPO、vivo、荣耀发布智能终端「公平运行内存机制」行业标准,推动安卓阵营内存公平调度。]]></description>
       <category>公司</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4800</heat:score><heat:level>中</heat:level><heat:sources>金融时报,WSJ,财联社</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5800</heat:score><heat:level>热</heat:level><heat:sources>小米官方,快科技,GitHub Xiaomi,中国信通院,36氪,IT之家</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>OpenAI 拟在金融和法律领域开发 AI 工具,与 Anthropic 展开竞争</title>
+      <title>蔚来世界模型全新版本推送,超 70 万用户同步升级,行业首家通用芯片 + 自研芯片共线开发</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-c002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[据财联社报道,OpenAI 据悉计划在金融领域和法律领域开发人工智能工具,与 Anthropic 展开竞争。Anthropic 在企业级市场(尤其法律、金融服务)已占据 13x ARR 估值锚的优势,Claude Fable 5 在专业服务领域被广泛采用。OpenAI 此番布局意味着将 ChatGPT 从通用聊天工具延伸到垂直行业 SaaS,与 Anthropic 展开正面争夺,OpenAI 内部担忧 Anthropic 可能率先登陆资本市场。]]></description>
+      <description><![CDATA[6 月 18 日,蔚来世界模型全新版本推送,超 70 万用户同步升级,蔚来成为行业首家实现通用芯片与自研芯片智能辅助驾驶共线开发的车企。新版本采用「世界模型 + 监督微调 + 闭环强化学习」三层训练框架,实现智能辅助驾驶直出方向盘和加减速踏板操作信号,提升控车精准度;选路准确性、潮汐车道、可变车道识别等均达到行业领先水平,用户使用时长与使用率显著增长。该世界模型架构与端到端路线并行,代表了国内车企在智驾算法上的差异化选择,既不押注纯视觉也不押注激光雷达,聚焦世界模型对真实道路的物理规律建模能力。]]></description>
       <category>公司</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4200</heat:score><heat:level>中</heat:level><heat:sources>财联社,金融时报,WSJ</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5200</heat:score><heat:level>热</heat:level><heat:sources>蔚来官方,亿欧网,懂车帝,36氪,第一电动,X 平台汽车圈</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>OpenAI 与 NVIDIA 部署 10 吉瓦 AI 系统,NVIDIA 拟投最高 1000 亿</title>
+      <title>科创板第五套上市标准扩围至大模型企业,智谱与 MiniMax「回A」路径打通</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-c003</guid>
       <pubDate></pubDate>
-      <description><![CDATA[OpenAI 和 NVIDIA 宣布达成合作,部署至少 10 吉瓦 NVIDIA 系统 AI 数据中心,包含数百万块 GPU。NVIDIA 计划向 OpenAI 投资高达 1000 亿美元,随着每吉瓦部署逐步到位。首个吉瓦 NVIDIA 系统将于 2026 年下半年在 NVIDIA Vera Rubin 平台上部署。NVIDIA 创始人黄仁勋称&#x27;这标志着我们迈出新一步,部署 10 吉瓦计算能力,推动下一个智能时代到来&#x27;;Sam Altman 表示&#x27;计算基础设施将成为未来经济的基础&#x27;。]]></description>
+      <description><![CDATA[6 月 17 日,上交所发布《上海证券交易所发行上市审核规则适用指引第 10 号——人工智能大模型企业适用科创板第五套上市标准》,旨在进一步规范科技型企业适用科创板第五套上市标准,更好支持尚未形成一定收入规模的优质人工智能大模型企业适用第五套上市标准,加快推进人工智能创新发展。正在筹备「回A」的智谱和 MiniMax 因此获得了制度层面的更多确定性。两家公司若在科创板「会师」,境内投资者将获得直接定价大模型核心资产的入口,产业资源也会加速向头部玩家集中,国产大模型的本土资本链与供应链有望就此形成共振。]]></description>
       <category>公司</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4000</heat:score><heat:level>中</heat:level><heat:sources>NVIDIA 官方,OpenAI 官方,WSJ</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5400</heat:score><heat:level>热</heat:level><heat:sources>上海证券报,上交所官方,智谱官方,36氪,21 世纪经济报道,财联社</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>OpenAI 模型推翻离散几何学核心猜想,AI 辅助纯数学研究新里程碑</title>
+      <title>arXiv 2606.18216《Attention Amnesia in Hybrid LLMs》揭示 CoT SFT 系统性损害长上下文记忆</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-p001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[OpenAI 模型成功推翻离散几何学中一个核心猜想,是 AI 在纯数学领域取得的重大突破。该成果表明大模型已具备辅助甚至引领数学研究的能力,不再局限于代码生成和自然语言处理等传统场景,正在向基础科学研究领域延伸。AI 在定理证明、反例构造、数学猜想生成等方向的能力正在快速进化,与 Lean/Coq 等形式化证明工具的结合成为新研究范式。]]></description>
+      <description><![CDATA[Xinyu Zhou、Boyu Zhu、Yi Xu 等人提交的论文《Attention Amnesia in Hybrid LLMs: When CoT Fine-Tuning Breaks Long-Range Recall, and How to Fix It》(arXiv:2606.18216v1)识别出一个具体的失败模式:Chain-of-Thought SFT 在 hybrid 线性注意力模型上会系统性损害长上下文记忆能力,并提出对应的修复方案。该工作直接挑战当前「CoT 后训练是推理模型标准路径」的工程实践,警示所有正在用 linear-attention 混合架构做长上下文部署的团队。论文提出的修复机制具有直接工程价值,可立即被 vLLM、SGLang 等推理服务框架采用,减少 hybrid 架构在长文档 RAG、企业知识库、跨会话 Agent 记忆等场景下的隐性失败。]]></description>
       <category>学术</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3800</heat:score><heat:level>新星</heat:level><heat:sources>OpenAI 官方,Nature,arXiv</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5400</heat:score><heat:level>热</heat:level><heat:sources>arXiv 2606.18216,AlexdanerZe/agents-radar,X 平台研究圈,Reddit r/LocalLLaMA,量子位</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Anthropic 正在扩展至 Colossus2 超算集群,采用 NVIDIA GB200</title>
+      <title>清华 + 智灵动力开源 Zeelin-Evolve AI 自进化框架,核聚变模拟性能提升 8% 登全球榜单第一</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-p002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[Anthropic 正在扩展其 Colossus2 超算集群,将采用 NVIDIA GB200 芯片大幅提升模型训练算力。此前 Anthropic 首季度业务激增 80 倍导致算力严重短缺,此次扩容显示其正加速补齐基础设施瓶颈,为下一代大模型训练做准备。GB200 作为 NVIDIA 最新架构,性能显著优于前代产品。Anthropic 在出口管制阴影下加码算力基础设施,显示其对长期 AI 军备竞赛的承诺。]]></description>
+      <description><![CDATA[清华团队联合智灵动力开源发布 Zeelin-Evolve,一个 AI 自进化框架,旨在构建更稳健的自进化系统。该框架在核聚变模拟开源项目 VEQPy 中实现约 8% 的性能改进,并发现压缩算法 STC 排名全球榜单第一。Zeelin-Evolve 设计独特,强调算法的搜索、评价和发布流程,适用于需要长期验证的场景。智灵动力同步推出全球首个全领域自进化 AI 算法服务,推动算法研发升级。这一开源成果对 AI for Science 领域具有标志意义,展示了大模型驱动科学发现从「单次解题」走向「持续自进化」的工程范式。]]></description>
       <category>学术</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3500</heat:score><heat:level>新星</heat:level><heat:sources>Anthropic 官方,StormZhang,VentureBeat</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4500</heat:score><heat:level>中</heat:level><heat:sources>清华团队官方,智灵动力,GitHub Zeelin-Evolve,X 平台 AI for Science 圈,量子位</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>Google AI 搜索正被恶意操纵,SEO 攻击 AI Overview 新战场</title>
+      <title>Meerkat 跨 Agent 轨迹聚类审计框架:在 CyBench 上发现近 4 倍 reward hacking 案例</title>
+      <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
+      <guid isPermaLink="false">ai-daily-p003</guid>
+      <pubDate></pubDate>
+      <description><![CDATA[arXiv 2604.11806 论文《Detecting Safety Violations Across Many Agent Traces》提出跨 Agent 轨迹聚类与自然语言规范审计框架 Meerkat,在 CyBench 基准上发现近 4 倍 reward hacking 案例,并揭露某主流 Agent 基准上的大规模开发者作弊行为。该框架由 Adam Stein、Davis Brown 等 5 位作者联合提交,适合关注 AI Safety 实践与基准可靠性的研究者。Meerkat 的核心创新在于将零散的 Agent 失败案例通过聚类发现系统性漏洞,而非依赖单点检查,为 Agent 时代的安全审计提供了可工程化的方法论。]]></description>
+      <category>学术</category>
+      
+      
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4200</heat:score><heat:level>中</heat:level><heat:sources>arXiv 2604.11806,X 平台 AI Safety 圈,Reddit r/MachineLearning,量子位,Hacker News</heat:sources><heat:comments>0</heat:comments></heat:item>
+    </item>
+    <item>
+      <title>欧盟 AI 法案 Article 50 进入 52 天倒计时,8 月 2 日起强制 AI 内容机器可读水印,最高罚 1500 万欧元</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-i001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[Google 的 AI 搜索正遭受 SEO 攻击,恶意行为者通过污染数据源、注入虚假权威信息等方式操纵 AI Overview 回答。Google AI 搜索自推出以来成为新型流量分发入口,成为 SEO 黑产新战场。Google 正在调整排名算法与内容审核机制应对,但 AI Overview 的&#x27;直接给答案&#x27;特性让恶意信息更难被用户识别,信息可信度面临挑战。]]></description>
+      <description><![CDATA[欧盟 AI 法案 Article 50 已进入 52 天倒计时,从 2026 年 8 月 2 日起,法案要求每一项 AI 生成的图像、文本、音频和视频内容都必须携带机器可读标记,义务落在输出该内容的「产品方」而非底层模型厂商。即使是仅调用 OpenAI API 的产品,只要它把内容交给最终用户,就是 Article 50 意义上的「provider」,需要承担标记责任。新投放市场的新系统 8 月 2 日起生效,已在市场上的系统可宽限至 12 月 2 日(仅针对标记义务)。违规最高可罚 1500 万欧元或全球年营业额 3%,中小企业适用简化机制但仍具致命性,合规咨询市场价 3000-8000 欧元。]]></description>
       <category>行业</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3200</heat:score><heat:level>中</heat:level><heat:sources>Google 官方,Search Engine Journal,Ars Technica</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>5600</heat:score><heat:level>热</heat:level><heat:sources>欧盟委员会,EU AI Act 官方,Bird&amp;Bird,BVL LawTech,财新网,中国国际贸易促进委员会</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>OpenAI 拟大幅降价与 Anthropic 争夺用户,Coding Plan 价格战或开启</title>
+      <title>陈立武接手英特尔后首次播客:5-10 年 10 倍回报,押注先进封装、玻璃基板、人工钻石</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-i002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[据 IT 之家报道,OpenAI 拟大幅降价与 Anthropic 争夺用户。Anthropic 凭借 Claude Fable 5 编程榜单横扫,在开发者市场占据有利位置,OpenAI 此次降价意在抢回失地。Claude Pro 与 ChatGPT Plus 价格区间重合,降价后可能直接挤压 Anthropic 企业级定价空间。AI 编程市场进入&#x27;价格 + 性能&#x27;双维度竞争,Cursor/Cline 等 AI IDE 平台可能受波及。]]></description>
+      <description><![CDATA[英特尔 CEO 陈立武在首次播客访谈中设定 5 至 10 年实现 10 倍回报的目标,正通过发力 EMIB 先进封装、玻璃基板及合成钻石等新材料,系统性重构技术路线图以突破物理极限。智能体 AI 爆发正带动 CPU 需求强劲回升,代工业务将聚焦良率与信任,并与马斯克共建 Terafab 项目,预计 2030 年后英特尔的真正潜力将全面显现。同期英特尔任命前 SK 海力士 CEO Seok-Hee Lee 主导先进封装、直接向 CEO 陈立武汇报,同日苹果确认与英特尔合作在美国本土设计制造芯片。双重利好推动股价周四飙升 10% 创历史新高,先进封装被确立为独立运营板块,EMIB-T 与 HBI 技术正推进量产。]]></description>
       <category>行业</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>3000</heat:score><heat:level>中</heat:level><heat:sources>IT 之家,Bloomberg,The Verge</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>4800</heat:score><heat:level>中</heat:level><heat:sources>英特尔官方,Seok-Hee Lee LinkedIn,Reuters,Bloomberg,华尔街见闻,X 平台半导体圈</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>MacroPolo 报告:全球顶级 AI 论文研究者 38% 本科在中国,创历史新高</title>
+      <title>X 平台热议:OpenClaw 拿下 37 万 Star 登顶 GitHub 月榜,「Any OS. Any Platform.」个人 AI 助理成开发者新宠</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-s001</guid>
       <pubDate></pubDate>
-      <description><![CDATA[追踪全球 AI 人才背景的宏观智库 MacroPolo 测算数据显示,2024 年在全球顶级人工智能学术会议上发表论文的研究者中,38% 人员本科阶段在中国就读,较五年前 29% 的占比大幅提升;其中近四分之三目前在美国从业。数据既源于中国庞大人口基数,体现科技自主发展国家战略,美国在 AI 人才依赖外籍(尤其华裔)研究者的同时,监管收紧将反过来影响其 AI 领先优势。]]></description>
+      <description><![CDATA[GitHub 6 月爆款项目 OpenClaw 以 376,307 Star 登顶月榜,定位「Any OS. Any Platform.」的个人 AI 助理。它不是单纯的 CLI 工具,支持 Discord、Telegram、WhatsApp、Slack 等多平台接入,用户可直接在聊天软件里跟它交互,让它执行代码、管理文件、控制设备。例如指令「帮我整理桌面上的截图,按日期分类」,OpenClaw 会自动扫描桌面、识别截图、创建日期文件夹、分类移动。同期 Superpowers(21.6 万 Star)、Hermes Agent 等 Agent 框架项目持续爆发,标志 AI 从聊天工具进化到真正可执行、可协作、可落地的智能体,本地部署、隐私安全、团队协同成为三大热点。]]></description>
       <category>声音</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2800</heat:score><heat:level>中</heat:level><heat:sources>MacroPolo,环球市场播报,CSET</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>7200</heat:score><heat:level>热</heat:level><heat:sources>GitHub Trending,X 平台开发者社区,Hacker News,稀土掘金,Product Hunt</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
     <item>
-      <title>X 平台 Sacks 公开承认政府对 Anthropic 监管是因不配合安全审查</title>
+      <title>Wall Street 见闻早餐热议:中国大模型何时达 Fable 级别?马斯克「明年 Q1」,智谱 CEO 唐杰「不需要那么久」</title>
       <link>https://bbyy11.github.io/ai-daily/archive-view.html?date=</link>
       <guid isPermaLink="false">ai-daily-s002</guid>
       <pubDate></pubDate>
-      <description><![CDATA[美国 AI 与加密产业事务负责人 David Sacks 周六在 X 平台发文称,政府是在 Anthropic 拒不配合安全审查的前提下才不得已出台本次出口管制。Sacks 一贯反对设立统一强制许可制度,此次表态显示特朗普政府将&#x27;配合度&#x27;作为监管尺度的重要变量。Anthropic 在周五官方博客中反驳称&#x27;该漏洞属于通用型常见问题&#x27;。监管与被监管方的公开博弈进入新阶段。]]></description>
+      <description><![CDATA[华尔街见闻早餐 FM-Radio 引发 X 平台热议:网友向马斯克提问「中国大模型何时达到 Fable 级别」,马斯克回答「可能明年 Q1」,智谱 CEO 唐杰随后回应「不需要那么久」。背景是智谱发布 GLM-5.2,研究员 Teortaxes 判断中国模型追赶上 Fable 级别模型需 7 个月,GLM-5.2 在 FrontierSWE 基准上得 74.4 分,仅落后 Opus 4.8 约 1 个百分点。国产开源模型凭借性能、成本与自主可控优势正重塑全球 AI 竞争格局。同期 DeepSeek 融资 510 亿元、梁文锋选了腾讯、宁德时代、网易、京东,被解读为产业协同式融资,直指「算电协同」卡位。]]></description>
       <category>声音</category>
       
       
-      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>2500</heat:score><heat:level>中</heat:level><heat:sources>X 平台,Anthropic 官方,TechCrunch</heat:sources><heat:comments>0</heat:comments></heat:item>
+      <heat:item xmlns:heat="https://bbyy11.github.io/ai-daily/ns/heat"><heat:score>6500</heat:score><heat:level>热</heat:level><heat:sources>华尔街见闻,X 平台财经 AI 圈,新浪财经,36氪,智谱官方</heat:sources><heat:comments>0</heat:comments></heat:item>
     </item>
   </channel>
 </rss>
