@@ -1,6 +1,14 @@
 {
   "days": [
     {
+      "date": "2026-06-20",
+      "weekday": "周六",
+      "summary": "2026 年 6 月 20 日,过去 24 小时 AI 行业有五条主线集中爆发:其一,2024 年诺贝尔化学奖得主 John Jumper(AlphaFold 核心开发者)宣布离开谷歌 DeepMind 加入 Anthropic,同日 DeepMind 前 Gemini 联席负责人、Transformer 论文作者 Noam Shazeer 加盟 OpenAI 担任架构研究负责人,两位顶级科学家在 48 小时内同时从谷歌流向 Anthropic 与 OpenAI,标志 AI 人才战从工程师挖角升级为架构师战争;其二,谷歌、微软、Salesforce、Snowflake、ServiceNow 五家联合推出企业 AI 入口协议 ARD(Agentic Resource Discovery),Anthropic 与 OpenAI 均缺席,标志传统软件巨头与 AI 新贵在企业入口主导权上正式决裂;其三,MLCommons 发布 MLPerf Training 6.0,英伟达 Blackwell 包揽全部 7 项第一,新增 DeepSeek-V3 671B 混合专家负载,CoreWeave 在 8192 块 GPU 上 2.02 分钟完成训练;其四,德意志银行大幅上调人形机器人 2026 出货预测至近 5 万台,中国占比超 80%、宇树领跑;其五,欧盟 AI 法案 Article 50 进入 52 天倒计时,8 月 2 日起所有 AI 生成内容须强制机器可读水印,违规最高罚款 1500 万欧元或全球营收 3%。",
+      "total": 18,
+      "rising": 5,
+      "headline": 3
+    },
+    {
       "date": "2026-06-18",
       "weekday": "周四",
       "summary": "2026 年 6 月 18 日 AI 圈呈现'监管深化 + 资本消耗 + 算力扩张'三主线叙事:① 监管侧,美国商务部对 Anthropic 出台出口管制信函,要求 Fable 5/Mythos 5 切断所有外籍人员访问权限(包括美国境内),OpenAI 紧急表态反对但被要求不得与 Anthropic 协同;② 资本侧,OpenAI 一季度消耗现金 37 亿美元(同比 3 倍),超 57 亿营收一半,虽持有 730 亿现金但 IPO 节奏被迫加快;③ 算力侧,英伟达 6-16 公布高意公司厂区扩建计划(产能提升 4 倍),微软推出 Copilot Cowork 按使用量计费;④ 中国侧三连发,智谱 6-17 开源 GLM-5.2(国产算力 Day 0 全适配)、微信支付 6-17 发 AI 专属卡、上纬新材旗下启元机器人 7 月底开亚洲首家人形机器人线下门店。Anthropic 与美国政府本周一会谈试图重新开放 Fable 5/Mythos 5。",
