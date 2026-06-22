@@ -1,6 +1,14 @@
 {
   "days": [
     {
+      "date": "2026-06-21",
+      "weekday": "周日",
+      "summary": "2026 年 6 月 21 日,过去 24 小时 AI 行业有五条主线集中爆发:其一,2024 年诺贝尔化学奖得主、AlphaFold 核心开发者 John Jumper 于 6 月 20 日宣布离开工作近 9 年的谷歌 DeepMind 加入 Anthropic,距 Transformer 之父 Noam Shazeer 转投 OpenAI 仅 48 小时,谷歌 27 亿美元请回的人才战略宣告部分失败,OpenAI 与 Anthropic 同步收获诺奖 + 架构师双料王牌;其二,特朗普 6 月 19 日在《阿克西奥斯秀》中公开表态不再视 Anthropic 为国家安全威胁,Anthropic 与美国政府的监管拉锯出现破冰信号;其三,特朗普 6 月 18 日在 Truth Social 官宣苹果与英特尔达成芯片制造合作,英特尔单日暴涨 10.64%,AI 驱动的先进制程军备竞赛开始反向回流美国本土;其四,马斯克 6 月 20 日公开预判「中国 AI 明年 Q1 追上 Anthropic」,智谱 CEO 唐杰随即回怼「不用那么久」,中美大模型时间差辩论再度升温;其五,Anthropic 2026 秋季 IPO 估值逼近万亿美元,Q2 收入预计翻倍至 109 亿美元、首次实现季度营业利润,OpenAI 与 Anthropic 争夺首家上市大型 AI 模型开发商进入白热化。",
+      "total": 18,
+      "rising": 5,
+      "headline": 4
+    },
+    {
       "date": "2026-06-20",
       "weekday": "周六",
       "summary": "2026 年 6 月 20 日,过去 24 小时 AI 行业有五条主线集中爆发:其一,2024 年诺贝尔化学奖得主 John Jumper(AlphaFold 核心开发者)宣布离开谷歌 DeepMind 加入 Anthropic,同日 DeepMind 前 Gemini 联席负责人、Transformer 论文作者 Noam Shazeer 加盟 OpenAI 担任架构研究负责人,两位顶级科学家在 48 小时内同时从谷歌流向 Anthropic 与 OpenAI,标志 AI 人才战从工程师挖角升级为架构师战争;其二,谷歌、微软、Salesforce、Snowflake、ServiceNow 五家联合推出企业 AI 入口协议 ARD(Agentic Resource Discovery),Anthropic 与 OpenAI 均缺席,标志传统软件巨头与 AI 新贵在企业入口主导权上正式决裂;其三,MLCommons 发布 MLPerf Training 6.0,英伟达 Blackwell 包揽全部 7 项第一,新增 DeepSeek-V3 671B 混合专家负载,CoreWeave 在 8192 块 GPU 上 2.02 分钟完成训练;其四,德意志银行大幅上调人形机器人 2026 出货预测至近 5 万台,中国占比超 80%、宇树领跑;其五,欧盟 AI 法案 Article 50 进入 52 天倒计时,8 月 2 日起所有 AI 生成内容须强制机器可读水印,违规最高罚款 1500 万欧元或全球营收 3%。",
