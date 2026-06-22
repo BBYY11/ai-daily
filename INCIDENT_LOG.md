@@ -682,3 +682,76 @@
 2. **archive + news.json 必须 atomic**——不能分开推(本次 6-17 commit 推了 news.json 没推 archive,造成 6-16 永久缺失)
 3. **Mavis Bot(我)手写早报 5-10 分钟就能跑通**——但**不解决根本问题**,根本是 fallback workflow
 4. **关 watchdog 后,用户是最后一道防线**——接受不了得设 secret
+
+---
+
+# 018 — 2026-06-22 用户决定停更 + mavis tool 删不了 cron
+
+## 时间线
+
+| 时间 (Beijing) | 事件 |
+|---|---|
+| 2026-06-15 ~ 06-22 | 主 cron 间歇失败又恢复(6-19 漏,6-20/6-21/6-22 成功) |
+| 2026-06-22 09:30 | 用户决定停止所有自动更新 + 关所有 cron |
+| 2026-06-22 09:36 | 救援尝试:删 3 个 cron 任务 |
+
+## 用户意图
+
+**完全停止 ai-daily 的自动运行**——不要每天 8:00 自动更新,不要每周一自动生成周报,不要每月自动生成月报。
+
+## 操作尝试(部分失败)
+
+### ✓ 成功
+- 删除 `.github/workflows/ai-daily-fallback.yml`(OpenAI 兜底 workflow) + `FALLBACK_README.md`
+- 把 `.github/workflows/healthcheck.yml` 改成 noop(保留文件作为历史记录)
+- 推送 GitHub 成功
+
+### ✗ 失败 - mavis cron delete/update 工具类型校验死锁
+
+**根因**:Mavis tool 的 cron 命令要求 `task_id` 是 string,但调用时 `task_id: 407416025182284`(12 位数字)被工具解析成 number,工具 schema 校验失败。
+
+**错误信息**:
+```
+task_id: Expected string, received number
+```
+
+**历史对比**:
+- 2026-06-15 10:30 同一工具成功删了 `405117857231784` 和 `404859549492193`(也是 12 位)
+- 2026-06-22 9:36 同样 12 位 task_id 失败
+
+**推测**:Mavis tool 底层 JSON parser 在两次调用之间行为不一致,可能是 type coercion 变化。
+
+**试过的方案**:
+1. ✗ 加引号 `"407416025182284"` → server 报 `Mismatch type int64 with value string`
+2. ✗ 加 `\"` 转义 → 同样 server 报错
+3. ✗ 加额外字段干扰 → 类型校验先报
+4. ✗ 直接 HTTP 调 archon-server → server 地址不可达
+
+**未尝试的方案**:
+- 找 daemon 本地 CLI(不在 PATH)
+- 让用户去 mavis web UI 手动 delete
+
+## 当前状态
+
+| 任务 | 状态 |
+|---|---|
+| 主 cron `ai-daily-0800` | **仍在跑**(明天 8:00 会触发) |
+| weekly cron `ai-daily-weekly-summary` | 仍在跑(下周一 8:00) |
+| monthly cron `ai-daily-monthly-summary` | 仍在跑(月底 8:00) |
+| GitHub Actions healthcheck | ✓ 已禁(noop) |
+| GitHub Actions fallback | ✓ 已删 |
+
+## 用户下一步(两条路)
+
+**路 A**:用户去 mavis daemon 网页 UI 手动 delete 3 个 cron:
+- task_id `407416025182284`(主)
+- task_id `405116951241538`(weekly)
+- task_id `405117857231745`(monthly)
+
+**路 B**:用户接受 cron 继续跑,但不再查看 https://bbyy11.github.io/ai-daily/
+
+## 学到的东西
+
+1. **mavis tool 不能保证 cron 删除**——不同调用之间可能不可用,必须有 fallback 路径
+2. **cron 删不掉 = 不能停更**——Mavis 引擎里 cron 一旦创建,要靠工具或 UI 删
+3. **GitHub Actions workflow 是用户能控制的**——cron 是平台控制的(用户不能直接 disable)
