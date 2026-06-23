@@ -1,86 +1,81 @@
 #!/usr/bin/env python3
-"""合并 2026-06-22 高频词条到 terms.json,保留已有项,新增 10 个。"""
+"""合并 2026-06-23 高频词条到 terms.json,保留已有项,新增 10 个。"""
 import json
 
 with open("data/terms.json", "r", encoding="utf-8") as f:
     existing = json.load(f)
 
 new_terms = {
-    "autoarxiv": {
-        "name": "autoarxiv",
-        "category": "工具 / 产品",
-        "summary": "alphaXiv 2026 年 6 月推出的 arXiv 论文自动复现功能,改 URL 即可让 AI 智能体自主 clone 代码仓库、修复环境、运行最小化复现并估算完整算力。",
-        "detail": "演示中智能体把原本需要 4 张 H100、15 分钟完成的实验压缩到单卡 LoRA 40 步即可跑通,标志 AI 读论文从「总结」走向「跑通」的下一阶段。",
+    "AstraBrain-WBC 0.5": {
+        "name": "AstraBrain-WBC 0.5",
+        "category": "学术 / 论文",
+        "summary": "银河通用联合研究团队 2026 年 6 月在 CVPR 2026 发布的人形机器人通用小脑 GPT 基座大模型,20 亿帧人类行为数据、80.4M 参数,真机零样本泛化成功率 92.58%。",
+        "detail": "论文 arXiv:2606.03985 已开源,首次在人形运动控制领域验证 Scaling Law 真实存在,在 MPJPE、MPJVE 等指标上全面超越 SONIC、TWIST、Any2Track,终结 MLP 时代,标志人形机器人运控进入 GPT 时刻。",
+        "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2606.03985"}
+        ]
+    },
+    "NVIDIA Halos for Robotics": {
+        "name": "NVIDIA Halos for Robotics",
+        "category": "硬件 / 平台",
+        "summary": "英伟达 2026 年 6 月 22 日发布的业界首套全栈机器人安全系统,覆盖 AI 算力、系统软件、传感器数据、安全应用、检验认证全流程。",
+        "detail": "三大模块:IGX Thor + Holoscan Sensor Bridge(硬件)、Halos OS(含 Halos Core + 外部感知安全蓝图,GitHub 开源)、Halos AI 系统检验实验室(全球首个获 ANSI 认可的功能安全 + AI 安全项目)。Agility 率先采用。",
         "links": []
     },
-    "Slackbot AI Agent": {
-        "name": "Slackbot AI Agent",
+    "Claude Fable 5": {
+        "name": "Claude Fable 5",
+        "category": "基础模型",
+        "summary": "Anthropic 2026 年 6 月 9 日发布的旗舰模型,与 Mythos 5 共享底层架构但面向不同用户,Fable 5 公开、内置动态风险控制自动切换 Opus 4.8。",
+        "detail": "SWE-Bench Pro 评测 80.3%(比 GPT-5.5 的 58.6% 高 22 个百分点),ExploitBench 78.0%,Humanity's Last Exam(带工具调用)64.5%。内部测试 24 小时迁移 5000 万行 Ruby 代码。定价输入 10 美元、输出 50 美元/百万 token。",
+        "links": []
+    },
+    "微信 AI 小微": {
+        "name": "微信 AI 助手小微",
         "category": "产品 / 发布",
-        "summary": "Salesforce 2026 年 6 月 21 日发布的企业级工作流智能体,自动处理消息优先级、安排会议、起草文档,与 Agentforce 生态无缝衔接。",
-        "detail": "同日 Salesforce 宣布 2026 年向 Anthropic 采购 3 亿美元 Claude Token,贝尼奥夫称「这些编码代理太棒了」。",
+        "summary": "微信团队内测的原生 AI 助手,2026 年 6 月小范围灰度上线,主界面左上角出现小眼睛图标入口,主模型采用微信自研 WeLM 并调用 DeepSeek。",
+        "detail": "支持文字或语音对话操作微信原生功能、调起小程序,可帮助用户发送消息、查询朋友圈、预约服务。这是微信首次在 13 亿月活生态内置原生 AI 入口,从工具型助手向对话即服务演进。",
         "links": []
     },
-    "Databricks": {
-        "name": "Databricks",
+    "Manifold AI 流形空间": {
+        "name": "Manifold AI 流形空间",
         "category": "公司 / 资本",
-        "summary": "2026 年 6 月 21 日铅笔道披露,Databricks 启动新一轮融资,目标估值最高 1750 亿美元,有望成为一级市场最后一家活跃的巨型 AI 独角兽。",
-        "detail": "公司核心业务是企业级数据湖与 AI 模型训练基础设施,被视为企业 AI 数据层隐形冠军。",
+        "summary": "由前商汤高管武伟博士创立的国内第一家自研世界模型作为具身基础模型的创业公司,2025 年 5 月底成立,1 年完成 6 轮融资。",
+        "detail": "6 月 22 日宣布完成新一轮数亿元融资,本轮投资方包括国新基金、淡马锡毅峰资本、北汽产投、芯能创投。PreA 轮融资总金额近 10 亿,跃升世界模型独角兽,也是业内首家同时覆盖室外/室内/空域 world model 的企业。",
         "links": []
     },
-    "AI+消费": {
+    "支付宝 AI 钱包": {
+        "name": "支付宝 AI 钱包",
+        "category": "产品 / 发布",
+        "summary": "支付宝 2026 年 5 月 26 日正式推出的 AI 钱包,用户可在支付前、支付中对 Agent 任务进行实时管理,也能进行支付后的 Agent 账单查询。",
+        "detail": "加上此前落地的 AI 付、AI 收两大核心产品,以及中国首个智能体商业信任协议和智能安全系统打造的可信可溯交易底座,支付宝正加速推进 AI 与支付的深度融合。ACT 协议 4 月升级至 2.0 版。",
+        "links": []
+    },
+    "DeepSeek-V4-Flash": {
+        "name": "DeepSeek-V4-Flash",
+        "category": "基础模型",
+        "summary": "DeepSeek 旗下轻量级模型,2026 年 6 月 15-21 日周调用量达 4.94 万亿 Token,连续五周位居 OpenRouter 全球第一。",
+        "detail": "DeepSeek 旗下模型周调用总量达 8.65 万亿 Token,占全球总调用量 18.5%,连续六周位居第一。中国 AI 大模型周调用量 18.81 万亿 Token,连续八周超过美国稳居全球首位。",
+        "links": []
+    },
+    "AMD 锐龙 AI Max+ 395": {
+        "name": "AMD 锐龙 AI Max+ 395",
+        "category": "硬件 / 芯片",
+        "summary": "AMD 旗舰级 AI 处理器,Zen 5 架构、4nm 制程、16 核 32 线程、最高 5.1GHz,集成 Radeon 8060S 显卡 + XDNA 2 NPU(50 TOPS),128GB LPDDR5x 高频内存。",
+        "detail": "联想百应 AI 主机 300 搭载,统一内存架构下最高分配 96GB 给显存,在 LM Studio 实测 GPT-OSS 120B 模型生成速度达 38.67 tok/s,延迟 0.47 秒,打破超大模型无法在本地流畅部署的瓶颈。",
+        "links": []
+    },
+    "HPE Juniper QFX5252": {
+        "name": "HPE Juniper Networking QFX5252",
+        "category": "硬件 / 网络",
+        "summary": "慧与科技(HPE)在 HPE Discover 2026 发布的全新 AI 网络交换机托盘,专为 AMD Helios 机架级 AI 平台设计。",
+        "detail": "减少因等待数据导致 GPU 空转的网络延迟,与 QFX5140 推理集群交换机、Marvis 自动驾驶网络能力、Aruba Central 集成共同构成 HPE 整合 Juniper 后的 AI 网络产品组合,瞄准 AI 数据中心规模扩张的连接瓶颈。",
+        "links": []
+    },
+    "AI+消费实施意见": {
         "name": "AI+消费 实施意见",
         "category": "政策 / 监管",
-        "summary": "商务部联合发改委、工信部等八部门 2026 年 6 月联合印发的《关于加快「人工智能+消费」发展的实施意见》,推动 AI 手机、AI PC、智能眼镜、智能汽车等终端加快迭代。",
-        "detail": "国金证券看好 AI+消费级 3D 打印、AI+眼镜两个细分方向,认为「AI+消费」是当下赔率较好的应用赛道。",
-        "links": []
-    },
-    "OpenClaw": {
-        "name": "OpenClaw",
-        "category": "开源项目",
-        "summary": "GitHub 6 月霸榜月榜项目,Star 数 376,307,定位「Any OS. Any Platform.」个人 AI 助理,支持 Discord、Telegram、WhatsApp、Slack 多平台接入。",
-        "detail": "可在聊天软件中执行代码、管理文件、控制设备,代表 Agent 生态从「写代码」进化到「自主完成任务」的标志。",
-        "links": []
-    },
-    "Superpowers": {
-        "name": "Superpowers",
-        "category": "开源项目",
-        "summary": "obra/superpowers,GitHub Star 数 215,946,定位 Agent Skill 即插即用框架,提供 50+ 预置技能。",
-        "detail": "原生支持 Claude Code、Codex 等主流 Agent,提供 Skill 标准格式与社区贡献机制。",
-        "links": []
-    },
-    "Hermes Agent": {
-        "name": "Hermes Agent",
-        "category": "开源项目",
-        "summary": "NousResearch 出品的多模态 AI Agent 框架,GitHub Trending 6 月榜第三名。",
-        "detail": "依托 NousResearch 在 Hermes 系列模型上的积累,定位多模态 Agent 框架,与 OpenClaw、Superpowers 共同构成 Agent 生态三大基础设施。",
-        "links": []
-    },
-    "mem0": {
-        "name": "mem0 (Memory Layer)",
-        "category": "开源项目",
-        "summary": "mem0ai/mem0,定位 AI Agent 的通用记忆层,2026 年 4 月新算法 BEAM 1M 64.1、LongMemEval 94.8,GitHub 当日登顶。",
-        "detail": "核心升级:单次 ADD-only 提取 + 实体链接 + 多信号(语义/BM25/实体)检索融合 + 时序推理。同步上线 agent 自主注册 API Key、Sign up as an agent 工作流与 skills 标准集成。",
-        "links": []
-    },
-    "DAAAM": {
-        "name": "DAAAM 时空记忆框架",
-        "category": "训练方法 / 学术",
-        "summary": "MIT 团队 2026 年 6 月发布于 arXiv:2512.00565 的机器人长期记忆框架,层次化 4D 场景图 + 双步优化提速 10 倍。",
-        "detail": "在 OC-NaVQA 基准测试中,DAAAM 比 SOTA 在问题回答准确率上提升 53.6%,位置误差降低 21.9%,时间误差降低 21.6%。",
-        "links": []
-    },
-    "神经形态软体机器人基准": {
-        "name": "软体身体 + 神经形态大脑",
-        "category": "训练方法 / 学术",
-        "summary": "苏黎世联邦理工 Elisa Donati 团队 2026 年 6 月在 Nature Machine Intelligence 发表的具身智能新范式,软体身体+神经形态计算结合。",
-        "detail": "同步开源模块化物理机器人基准测试框架,评估指标聚焦适应能力、稳健性、能源效率与人机协作安全性。",
-        "links": []
-    },
-    "HBM ASP": {
-        "name": "HBM (High Bandwidth Memory) ASP",
-        "category": "硬件 / 芯片",
-        "summary": "高带宽内存平均售价,摩根士丹利预测 2027 财年同比有望 +50%,2026/2027/2028 财年 HBM 市场总规模将分别达 560 亿/1160 亿/1680 亿美元。",
-        "detail": "TrendForce 预计 26Q2 通用 DRAM 合约价上涨 58-63%,NAND 合约价上涨 70-75%,英伟达 Vera CPU 内存减配印证 AI 生态关键瓶颈。",
+        "summary": "商务部联合发改委、工信部等八部门 2026 年 6 月联合印发的《关于加快人工智能+消费发展的实施意见》,推动 AI 手机、AI PC、智能眼镜、智能汽车等终端加快迭代。",
+        "detail": "工信部联合国资委开展 2026 年度人形机器人与具身智能实景实训专项行动(工信厅联科函〔2026〕256 号)。工信部同步发布《智能网联汽车自动驾驶系统安全要求》强制性国家标准,要求 ADS 在风险场景下降低事故伤害,引入安全档案制度。",
         "links": []
     }
 }

@@ -1,6 +1,14 @@
 {
   "days": [
     {
+      "date": "2026-06-22",
+      "weekday": "周一",
+      "summary": "2026 年 6 月 22 日 AI 行业有八条主线集中爆发:其一,The Information 披露 Salesforce 成 OpenAI/Anthropic 最大人才血库,2026 上半年累计被挖近 100 人,Anthropic 单家拿下 45 人、OpenAI 招 40 人,贝尼奥夫同期宣布 3 亿美元采购 Claude Token;其二,OpenAI 在对齐研究博客发表「强化学习实现有益性格塑造」论文,六项特质跨域泛化、对抗 prompt 也难击穿,被视为 AI 安全从「打补丁」走向「造地基」的范式转折;其三,Databricks 启动新一轮融资目标估值 1750 亿美元,成为 SpaceX、OpenAI、Anthropic 之后一级市场最后一家巨型 AI 独角兽;其四,商务部等八部门联合印发《关于加快「人工智能+消费」发展的实施意见》,AI 手机/PC/眼镜/汽车成重点,端侧 AI 行情引爆,A 股 AI 眼镜单日成交放大 112%;其五,alphaXiv 推出 autoarxiv 功能,改 URL 一键让 AI 智能体复现 arXiv 论文,单卡也能跑,标志读论文从「总结」走向「跑通」的下一阶段;其六,GitHub 6 月 AI 项目榜出炉,OpenClaw 以 376k Star 继续霸榜月榜,Superpowers 215k、Hermes Agent 多模态紧随其后,Agent 生态从「写代码」进化到「自主完成任务」;其七,存储现货价加速上行,TrendForce 预计 26Q2 通用 DRAM 合约价涨 58-63%,英伟达 Vera CPU 内存减配印证 AI 生态关键瓶颈,摩根士丹利预测存储短缺将持续至 2028 年;其八,Nature 本周连续刊发单神经元语言解码与软体身体+神经形态大脑基准两篇重磅论文,AI for Science 与具身智能前沿再下一城。",
+      "total": 19,
+      "rising": 5,
+      "headline": 4
+    },
+    {
       "date": "2026-06-21",
       "weekday": "周日",
       "summary": "2026 年 6 月 21 日,过去 24 小时 AI 行业有五条主线集中爆发:其一,2024 年诺贝尔化学奖得主、AlphaFold 核心开发者 John Jumper 于 6 月 20 日宣布离开工作近 9 年的谷歌 DeepMind 加入 Anthropic,距 Transformer 之父 Noam Shazeer 转投 OpenAI 仅 48 小时,谷歌 27 亿美元请回的人才战略宣告部分失败,OpenAI 与 Anthropic 同步收获诺奖 + 架构师双料王牌;其二,特朗普 6 月 19 日在《阿克西奥斯秀》中公开表态不再视 Anthropic 为国家安全威胁,Anthropic 与美国政府的监管拉锯出现破冰信号;其三,特朗普 6 月 18 日在 Truth Social 官宣苹果与英特尔达成芯片制造合作,英特尔单日暴涨 10.64%,AI 驱动的先进制程军备竞赛开始反向回流美国本土;其四,马斯克 6 月 20 日公开预判「中国 AI 明年 Q1 追上 Anthropic」,智谱 CEO 唐杰随即回怼「不用那么久」,中美大模型时间差辩论再度升温;其五,Anthropic 2026 秋季 IPO 估值逼近万亿美元,Q2 收入预计翻倍至 109 亿美元、首次实现季度营业利润,OpenAI 与 Anthropic 争夺首家上市大型 AI 模型开发商进入白热化。",

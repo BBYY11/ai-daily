@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-03 12:14 (Asia/Shanghai)",
-  "period_label": "2026 上半年已过完月份总结",
-  "period_summary": "2026 上半年是 AI 行业从技术军备竞赛转向商业兑现的关键半年。Anthropic 估值从 1 月 3500 亿一路飙升至 5 月 9650 亿首次反超 OpenAI,谷歌 / 亚马逊 / 微软 / 软银累计向头部 AI 公司投入超 4000 亿美元;OpenAI 完成史上最大单笔 1220 亿融资;NVIDIA Vera Rubin 架构落地,算力进入新纪元;中美双线齐发:OpenAI 估值霸权失守,Anthropic + Cursor 企业路径崛起,国产 DeepSeek/MiniMax/Qwen 从追赶到局部反超。AI 监管、IPO 兑现、Agent 工程化是下半年三大主线。6 月还没过完,等 6 月 30 日 8 点 cron 跑完再加入。",
+  "generated_at": "2026-06-03 11:40 (Asia/Shanghai)",
+  "period_label": "2026 上半年 AI 圈主线",
+  "period_summary": "2026 上半年是 AI 行业从技术军备竞赛转向商业兑现的关键半年。Anthropic 估值从 1 月 3500 亿一路飙升至 6 月 9650 亿首次反超 OpenAI,谷歌 / 亚马逊 / 微软 / 软银累计向头部 AI 公司投入超 4000 亿美元;OpenAI 完成史上最大单笔 1220 亿融资;NVIDIA Vera Rubin 架构落地,算力进入新纪元;中美双线齐发:OpenAI 估值霸权失守,Anthropic + Cursor 企业路径崛起,国产 DeepSeek/MiniMax/Qwen 从追赶到局部反超。AI 监管、IPO 兑现、Agent 工程化是下半年三大主线。",
   "months": [
     {
       "date": "2026-01",
@@ -124,6 +124,37 @@
         "AI 岗位同比涨 12 倍,平均月薪 6 万"
       ],
       "look_ahead": "6 月英伟达 GTC Taipei 重新定义 AI PC 边界,Anthropic 秘密递交 IPO 文件,SpaceX 启动万亿级 IPO 进程——Q2 末将出现 AI 巨头集中上市的资本兑现期"
+    },
+    {
+      "date": "2026-06",
+      "title": "Q2 收官 + 算力新纪元:英伟达 GTC Taipei / Anthropic IPO / 微软去 OpenAI 化",
+      "trend_summary": "6 月是 Q2 收官的标志性月份,三线同时加速。算力线:英伟达 GTC Taipei 2026 发布 Vera Rubin 架构 + RTX Spark(N1X)杀入 PC 端,与微软合作 ARM 架构 + 台积电 3nm 工艺,正式打破 Intel 在 PC 芯片领域的垄断;宇树 H2+ 人形机器人(75 自由度)与英伟达 Isaac GR00T 系统集成;宇树单款人形机器人累计下线 11000 台。资本线:Anthropic 秘密向 SEC 递交 Form S-1 注册声明(估值近 1 万亿),OpenAI 紧随其后目标秋季,SpaceX 启动 750 亿美元 IPO 进程(估值 1.75 万亿)。产品线:微软 Build 2026 发布 MAI-Code-1-Flash 自研编程模型(去 OpenAI 化),阿里 Qwen3.7-Plus 多模态,腾讯云 DeepSeek-V4 降价 97.5%,国产 MiniMax M3 编程超 GPT-5.5(SWE-Bench Pro 接近 Claude Opus 4.7),国产 1.6 万亿参数 DeepSeek-V4-Pro 用昇腾 910C 全流程训练完成。监管线:特朗普签 AI 行政令(强能力模型公开发布前 30 天须通报),佛州起诉 OpenAI,中美 AI 治理同步加码。本月主题:算力新纪元 + 中美双线并进 + 头部 IPO 冲刺。",
+      "key_events": [
+        "GTC Taipei:Vera Rubin 架构 + RTX Spark(N1X)发布(6/1)",
+        "Anthropic 秘密递交 IPO 招股书,估值近 1 万亿(6/1)",
+        "国产 MiniMax M3 发布,编程超 GPT-5.5,启动 A 股 IPO(6/1)",
+        "软银宣布 450 亿欧元首期投资法国 AI 基础设施(6/1)",
+        "英伟达 × 宇树 H2+ 人形机器人 75 自由度(6/1)",
+        "COMPUTEX 2026 开幕,AI Together 主题(6/1)",
+        "微软 Build 2026:MAI-Code-1-Flash 自研编程模型(6/3)",
+        "特朗普签 AI 行政令:30 天通报(6/3)",
+        "SpaceX 启动 750 亿美元 IPO 进程(6/3)",
+        "阿里 Qwen3.7-Plus 多模态智能体(6/2)",
+        "腾讯云 DeepSeek-V4 降价 97.5%(6/3)",
+        "越疆 DobotWAM 具身大模型 99.25% 成功率(6/2)",
+        "OpenAI 组建机器人事业部(6/1)",
+        "中国电信联合清华完成抗量子芯片试验(6/1)",
+        "佛州起诉 OpenAI(6/2)"
+      ],
+      "data_points": [
+        "Vera Rubin 推理成本降低 10 倍 vs Blackwell",
+        "Anthropic 估值:9650 亿美元(IPO 预期近 1 万亿)",
+        "SpaceX 估值:1.75 万亿美元",
+        "DeepSeek-V4 训练:1.6 万亿参数 / 国产昇腾 910C",
+        "DeepSeek-V4 降价:最高 97.5%",
+        "宇树单款人形量产:11000 台"
+      ],
+      "look_ahead": "Q3 核心看点:Anthropic / OpenAI / SpaceX 三大头部集中上市,AI 巨头正式进入公开市场审视期;OpenAI 估值溢价(35x ARR)能否被公开市场接受?Anthropic 的清晰商业化路径(13x ARR)会成为负责任的 AI 投资标杆;Cursor / Perplexity 等垂直应用层可能涌现 100 亿+ 美元独角兽;中美 AI 双线持续镜像式竞争"
     }
   ]
 }
