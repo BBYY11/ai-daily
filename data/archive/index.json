@@ -1,6 +1,14 @@
 {
   "days": [
     {
+      "date": "2026-06-23",
+      "weekday": "周二",
+      "summary": "2026 年 6 月 23 日 AI 行业有七条主线集中爆发:其一,谷歌母公司 Alphabet 股价周一收盘下跌约 5%,创一年多以来最大单日跌幅,导火索是两位顶级研究人员 48 小时内先后离巢——Gemini 联合负责人 Noam Shazeer 转投 OpenAI、AlphaFold 核心开发者、2024 诺贝尔化学奖得主 John Jumper 跳槽 Anthropic,AI 人才战争从工程师层面升级到架构师层面;其二,银河通用联合研究团队在 CVPR 2026 发布全球首个人形机器人通用小脑 GPT 基座大模型 AstraBrain-WBC 0.5,20 亿帧人类行为数据、80.4M 参数、零样本泛化成功率 92.58%,在 MPJPE、MPJVE 等多项指标上全面超越 SONIC、TWIST、Any2Track,首次在运控领域验证 Scaling Law 真实存在;其三,英伟达正式发布业界首套全栈机器人安全系统 NVIDIA Halos for Robotics,Agility 率先采用,覆盖 AI 算力、传感器融合、安全应用、检验认证全流程,Halos AI 系统检验实验室成为全球首个获 ANSI 国家认可的功能安全 + AI 安全项目;其四,第四届中国国际供应链促进博览会 6 月 22 日至 26 日在北京举办,首次设立人工智能专区,\"数字科技链\"升级为\"数智科技链\",支付宝正式推出 AI 钱包,Agent 支付从\"对话即交易\"走向可信可溯;其五,Anthropic 6 月 9 日发布的 Claude Fable 5 在 SWE-Bench Pro 评测拿到 80.3% 得分,比 GPT-5.5 的 58.6% 高出近 22 个百分点,内部测试中 24 小时迁移 5000 万行 Ruby 代码;其六,微信 AI 助手\"小微\"小范围灰度上线,主模型采用微信团队自研 WeLM 并调用 DeepSeek,DeepSeek 旗下模型周调用量达 8.65 万亿 Token,占全球总调用量 18.5%,连续六周位居第一;其七,人民日报报道商务部等八部门联合印发《关于加快\"人工智能+消费\"发展的实施意见》,AI 手机、PC、眼镜、汽车成重点,工信部联合国资委开展 2026 年度人形机器人与具身智能实景实训专项行动,国产 AI 眼镜单日成交放大 112%、具身智能进入\"作业模式\"。",
+      "total": 17,
+      "rising": 5,
+      "headline": 4
+    },
+    {
       "date": "2026-06-22",
       "weekday": "周一",
       "summary": "2026 年 6 月 22 日 AI 行业有八条主线集中爆发:其一,The Information 披露 Salesforce 成 OpenAI/Anthropic 最大人才血库,2026 上半年累计被挖近 100 人,Anthropic 单家拿下 45 人、OpenAI 招 40 人,贝尼奥夫同期宣布 3 亿美元采购 Claude Token;其二,OpenAI 在对齐研究博客发表「强化学习实现有益性格塑造」论文,六项特质跨域泛化、对抗 prompt 也难击穿,被视为 AI 安全从「打补丁」走向「造地基」的范式转折;其三,Databricks 启动新一轮融资目标估值 1750 亿美元,成为 SpaceX、OpenAI、Anthropic 之后一级市场最后一家巨型 AI 独角兽;其四,商务部等八部门联合印发《关于加快「人工智能+消费」发展的实施意见》,AI 手机/PC/眼镜/汽车成重点,端侧 AI 行情引爆,A 股 AI 眼镜单日成交放大 112%;其五,alphaXiv 推出 autoarxiv 功能,改 URL 一键让 AI 智能体复现 arXiv 论文,单卡也能跑,标志读论文从「总结」走向「跑通」的下一阶段;其六,GitHub 6 月 AI 项目榜出炉,OpenClaw 以 376k Star 继续霸榜月榜,Superpowers 215k、Hermes Agent 多模态紧随其后,Agent 生态从「写代码」进化到「自主完成任务」;其七,存储现货价加速上行,TrendForce 预计 26Q2 通用 DRAM 合约价涨 58-63%,英伟达 Vera CPU 内存减配印证 AI 生态关键瓶颈,摩根士丹利预测存储短缺将持续至 2028 年;其八,Nature 本周连续刊发单神经元语言解码与软体身体+神经形态大脑基准两篇重磅论文,AI for Science 与具身智能前沿再下一城。",

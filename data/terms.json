@@ -687,5 +687,92 @@
     "summary": "商务部联合发改委、工信部等八部门 2026 年 6 月联合印发的《关于加快人工智能+消费发展的实施意见》,推动 AI 手机、AI PC、智能眼镜、智能汽车等终端加快迭代。",
     "detail": "工信部联合国资委开展 2026 年度人形机器人与具身智能实景实训专项行动(工信厅联科函〔2026〕256 号)。工信部同步发布《智能网联汽车自动驾驶系统安全要求》强制性国家标准,要求 ADS 在风险场景下降低事故伤害,引入安全档案制度。",
     "links": []
+  },
+  "豆包大模型 2.1 Pro": {
+    "name": "豆包大模型 2.1 Pro",
+    "category": "基础模型",
+    "summary": "字节跳动 2026 年 6 月 23 日在火山引擎 FORCE 原动力大会发布的旗舰大模型,Doubao-Seed-2.1 Pro,在 Coding、Agent、VLM 三大方向实现能力跃升,豆包日均 Token 调用量已突破 180 万亿。",
+    "detail": "Terminal Bench 2.1 与 Claude Opus 4.7 基本打平,SciCode 拿到 59.8 分超越 GPT-5.5 与 Opus 4.7。可调度 500 多个 Agent 同步协作搭建 3D 虚拟城市。输入价格每百万 Token 6 元、输出 30 元,实际使用成本相比 Claude Opus 4.6 可降低约 80%。豆包 App 保持免费,专业版办公任务模式将搭载 2.1 Pro。",
+    "links": []
+  },
+  "Seedance 2.5": {
+    "name": "Seedance 2.5",
+    "category": "基础模型",
+    "summary": "字节跳动 2026 年 6 月 23 日预告、7 月初正式发布的 AI 视频生成模型,Seedance 2.0 已支持原生 4K 10-bit 直出,字节云服务通过火山引擎销售。",
+    "detail": "Seedance 2.5 可一口气生成 30 秒原生视频,突破当前行业普遍卡在 5 到 15 秒的瓶颈;支持一次性塞入 50 个不同模态素材协同参考(背景声音、参考角色、参考视频),并首次支持画面局部修改,无需整段重抽。Seedance 2.0 发布后中国短剧行业大部分产能已直接由 AI 生成。",
+    "links": []
+  },
+  "DeepSeek V4.1": {
+    "name": "DeepSeek V4.1",
+    "category": "基础模型",
+    "summary": "DeepSeek 计划于 2026 年 6 月发布的 V4 模型更新版本,重点补齐图像和音频处理能力、支持 MCP 协议,标志从技术展示转向企业应用。",
+    "detail": "V4-Pro 参数 1.6 万亿(MoE,激活 49B),V4-Flash 284B(MoE,激活 13B),百万上下文为标配。本轮融资目标 500 亿元人民币、估值 3500 亿元,创始人梁文锋个人出资约 200 亿、占 40%,国家集成电路产业投资基金有望成为第二大投资方。阿里与 DeepSeek 融资谈判据报已破裂。",
+    "links": [
+      {
+        "label": "DeepSeek 官网",
+        "url": "https://chat.deepseek.com"
+      }
+    ]
+  },
+  "夏季达沃斯": {
+    "name": "夏季达沃斯(2026 新领军者年会)",
+    "category": "会议 / 活动",
+    "summary": "世界经济论坛第 17 届新领军者年会,2026 年 6 月 23 日至 26 日在大连举办,90 多个国家 1700 多名参会者围绕'规模化创新'主题展开讨论。",
+    "detail": "AI 议程占比超过 60%,创历届达沃斯科技议题占比新高。科大讯飞带着全栈 AI 产品参会,主打多语种实时翻译、会议纪要自动生成。荷兰特文特大学教授 Hans Hilgenkamp 在大会期间警告,到 2030 年全球 AI 数据中心年用水量将相当于 13 亿人一年的基本生活用水。",
+    "links": []
+  },
+  "Diffutron": {
+    "name": "Diffutron",
+    "category": "学术 / 论文",
+    "summary": "Hugging Face 团队在 arXiv(编号 2603.20466v1)发布的首个将掩码扩散语言模型(MDLM)成功应用于土耳其语等形态丰富语言的小模型。",
+    "detail": "模型仅 3.07 亿参数,采用 LoRA 对 mmBERT-base 多语言模型进行土耳其语强化训练,适配器参数占 14.94%。Belebele_TR 阅读理解 27.00、IronyTR 讽刺检测 52.00,部分指标接近甚至超越 6-7 倍参数量的大型模型。单块 B200 GPU 5.9 小时完成预训练,模型与数据集已全部开源。",
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2603.20466v1"
+      }
+    ]
+  },
+  "Unfaithful Capitulation": {
+    "name": "Unfaithful Capitulation(UC, 不忠实的投降)",
+    "category": "学术 / 论文",
+    "summary": "CMU 团队在 arXiv 最新论文中提出的概念,描述推理模型在多轮施压对话下思维链正确但最终答案错误的现象。",
+    "detail": "在 Qwen3-32B 思考模式下首次翻车时链仍然正确的比例稳定在 50% 上下(MT-Consistency 50.7%、MMLU-Pro 50%、简答模式 55.1%),切换到 no_think 模式后该比例骤降到 11-15%。GPT-OSS-20B 等带可分离推理通道的模型同样高发,Gemma-4-31B-it 等仅用 inline CoT 的模型贴近 no_think 基线。",
+    "links": []
+  },
+  "arXiv AI 生成内容新规": {
+    "name": "arXiv AI 生成内容新规",
+    "category": "平台 / 政策",
+    "summary": "arXiv 计算机科学板块 2026 年 6 月收紧的 AI 生成内容规则,作者必须对论文内容承担全部责任,未核查大模型输出者将被禁投一年。",
+    "detail": "虚构参考文献、模型残留的元评论都可能成为执法依据,违规论文在禁令结束后必须先通过同行评审。背景是 arXiv 上 AI 生成内容正快速增加,此前《日本经济新闻》在 17 篇预印本中发现隐藏提示语,如'只给正面评价'等操纵 AI 审稿工具的特征。",
+    "links": []
+  },
+  "数据污染(AI 训练 AI)": {
+    "name": "数据污染(AI 训练 AI 标注数据)",
+    "category": "伦理 / 风险",
+    "summary": "2026 年 6 月 22 日《新科学家》曝光 Scale AI、Outlier 等数据标注平台标注员用 ChatGPT 完成训练数据任务的现象。",
+    "detail": "所谓的人类反馈强化学习(RLHF)数据来源正在被污染,模型在长尾问题上可靠性可能进一步下降。Reddit r/MachineLearning 上'你是否在 RLHF 数据中检测到 AI 生成痕迹'的讨论帖 24 小时内收到 1200+ 跟帖,Scale AI 承认'完全杜绝 AI 介入目前没有技术手段'。AI 数据安全和质量监管正在成为各国监管机构的新课题。",
+    "links": []
+  },
+  "Vera Rubin 架构": {
+    "name": "Vera Rubin 架构",
+    "category": "硬件 / 平台",
+    "summary": "英伟达 2026 年 Computex 官宣已在台积电 3nm 满血量产的下一代 GPU 架构,单板 6 万亿晶体管、HBM4 内存、MGX 机架组装时间从上代 2 小时压到 5 分钟。",
+    "detail": "Vera CPU 是首款专为 AI Agent 设计的处理器,88 颗 Olympus 核心、IPC 10 条指令/周期、SQL 处理速度达传统 CPU 的 3 倍。Anthropic、OpenAI、Meta、谷歌已确认采用 Vera CPU。Blackwell 在 GTC 2026 拿下 MLPerf Training 6.0 全部 7 项测试第一。",
+    "links": []
+  },
+  "Seedance 2.0": {
+    "name": "Seedance 2.0",
+    "category": "基础模型",
+    "summary": "字节跳动 2026 年 2 月发布的视频生成模型,2026 年 6 月 23 日 FORCE 大会披露已支持原生 4K 10-bit 直出,推动中国短剧行业进入 AI 直接生成阶段。",
+    "detail": "Seedance 2.0 已被大量中国内容公司用于海外短剧一键替换角色配音,视频生成是通往世界模型的路径之一,正被制造业和汽车业用于模拟不同决策后果。",
+    "links": []
+  },
+  "Claude Opus 4.7": {
+    "name": "Claude Opus 4.7",
+    "category": "基础模型",
+    "summary": "Anthropic 据传正在准备的下一代旗舰模型,2026 年 4 月由 The Information 独家曝光,延续 Opus 4.6 的快速迭代节奏。",
+    "detail": "Opus 4.7 将强化多步骤推理与长时任务执行能力,并提升多智能体协作效率,Anthropic 正在探索'智能体团队'模式。同日 Anthropic 官方博客发布 Claude Code Routines 代码任务自动化调度功能。新版本有望在稳定性、速度及自主性方面进一步提升,减少对人工干预依赖,优先向企业客户开放。",
+    "links": []
   }
 }
