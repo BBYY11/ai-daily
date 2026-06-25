@@ -1,14 +1,14 @@
 {
-  "date": "2026-06-24",
-  "weekday": "周三",
-  "generated_at": "2026-06-24 08:00 (Asia/Shanghai)",
-  "summary": "2026 年 6 月 24 日 AI 行业六条主线集中爆发:其一,字节跳动在火山引擎 FORCE 原动力大会上正式发布豆包大模型 2.1 Pro,日均 Token 调用量突破 180 万亿、两年增长 1500 倍,在 Terminal Bench 2.1 评测上追平 Claude Opus 4.7、SciCode 拿到 59.8 分超越 GPT-5.5 与 Opus 4.7,火山引擎同时预告 7 月初发布 Seedance 2.5 视频模型,可一口气生成 30 秒原生视频并支持 50 个多模态素材协同;其二,夏季达沃斯论坛在大连开幕,AI 毫无悬念成为全场焦点,90 多国 1700 多名参会者共同讨论规模化创新,科大讯飞全栈翻译产品在现场跑通,荷兰特文特大学教授 Hans Hilgenkamp 警告 AI 能耗被严重低估;其三,《新科学家》杂志调查显示 Scale AI、Outlier 等数据标注平台的标注员正在用 ChatGPT 完成任务交付,AI 训练 AI 的数据污染问题正式浮出水面,AI 数据安全监管成为政策关注重点;其四,DeepSeek V4.1 确认将在 6 月发布,重点补齐多模态与企业级工具链,梁文锋个人出资约 200 亿元领投 500 亿元融资;其五,CMU 团队在 arXiv 发布论文揭示思维链模型存在 '不忠实的投降' 现象,Qwen3-32B 思考模式下首次翻车时链仍正确的比例稳定在 50% 上下,推理模型对齐研究受关注;其六,arXiv 宣布收紧 AI 生成内容规则,未核查大模型输出的作者将被禁投一年,违规论文必须先通过同行评审。",
+  "date": "2026-06-25",
+  "weekday": "周四",
+  "generated_at": "2026-06-25T00:05:00+08:00",
+  "summary": "2026 年 6 月 25 日 AI 行业六条主线集中爆发:其一,Anthropic 正式上线 Claude Tag,让 Claude 以「AI 同事」身份常驻 Slack 频道,可被 @ 后异步执行 PR、数据分析、线上排查等任务,产品团队 65% 代码已由内部版 Claude Tag 生成,Karpathy 评价这是 LLM 交互的第三次范式跃迁;其二,OpenAI 与博通联合发布首款定制 AI 推理芯片 Jalapeño,采用 9 个月流片、自研架构+Tomahawk 网络、Celestica 集成,博通 CEO 称这只是「跨越数代路线图的开端」;其三,英伟达年度股东大会,黄仁勋宣布 Vera CPU 是「英伟达历史上最重要的产品之一」、专为智能体打造,GitHub 月度 PR 合并量两年涨 2.7 倍,股东会被视为 AI 资本支出超级周期仍处早期;其四,中国超算「灵晟」以 2.19 EFLOPS 登顶 ISC 2026 TOP500,自 2017 年「神威·太湖之光」后中国超算时隔九年重回榜首,采用全 CPU 架构+自研 LX2+灵启互联,大幅领先美国 El Capitan;其五,两名 Gemini 核心研究员 Jonas Adler 与 Alexander Pritzel 官宣离开谷歌加入 Anthropic,这是 Shazeer、Jumper 后 48 小时第三位 DeepMind 顶级人才外流,杰富瑞仍维持 445 美元目标价;其六,马里兰大学等机构在 arXiv 发布反射性遮蔽(Reflective Masking)论文,让遮蔽扩散模型像人一样「批改自己作业」,在 MBPP 代码生成任务上比基线提升 8.8 个百分点。",
   "stats": {
     "total_items": 18,
     "by_category": {
       "headline": 4,
-      "rising": 6,
-      "company": 3,
+      "rising": 5,
+      "company": 4,
       "paper": 3,
       "industry": 1,
       "social": 1
@@ -18,462 +18,318 @@
     {
       "id": "h001",
       "category": "headline",
-      "title": "字节豆包大模型 2.1 Pro 正式发布,日均 Token 两年涨 1500 倍,Terminal Bench 追平 Claude Opus 4.7",
-      "summary": "6 月 23 日,字节跳动旗下火山引擎在 2026 FORCE 原动力大会上正式发布豆包大模型 2.1 Pro,在 Coding、Agent、VLM 三大核心方向实现能力跃升。Terminal Bench 2.1 仿真编程评测上,豆包 2.1 Pro 与行业领先的 Claude Opus 4.7 基本打平;SciCode 科研测试拿到 59.8 分,把 Opus 4.7 和 GPT-5.5 甩在身后。火山引擎总裁谭待现场披露,豆包大模型日均 Token 调用量已突破 180 万亿,相较 2024 年 5 月 1200 亿的初始规模两年涨 1500 倍,过去一年增长超 10 倍。IDC 数据显示,火山引擎在中国公有云 MaaS 服务市场份额达 49.5% 居首。大会上豆包 2.1 Pro 现场演示了 500 多个 Agent 同步协作搭建 3D 虚拟城市的复杂场景,豆包 App 同时宣布将保持免费并推出搭载 2.1 Pro 的专业版办公任务模式。",
+      "title": "Anthropic Claude Tag 上线:@Claude 就能派活的 Slack AI 同事,Karpathy 评「LLM 交互第三次范式跃迁」",
+      "summary": "6 月 24 日凌晨,Anthropic 正式上线 Claude Tag,让 Claude 以「AI 虚拟团队成员」身份直接加入 Slack 频道,管理员授权工具(GitHub/Jira/Linear/Figma/Notion)与数据源后,任何人都能 @Claude 派任务,Claude 自行拆解步骤、调用工具执行,完成后在线程里回结果。核心能力包括多人共享(Multiplayer)、持续记忆(不越权读取私密频道)、主动介入(Ambient Mode,跟进三天没人理的任务)和异步执行(可数小时甚至数天跑任务)。底层跑 Opus 4.8,Anthropic 内部产品团队 65% 的代码已由 Claude Tag 内部版本生成,场景已从工程扩展到产品指标追踪、客服工单、疑难 bug 定位。前 OpenAI 科学家、特斯拉 AI 总监 Andrej Karpathy 第一时间发文评价这是 LLM 交互的「第三次重大重新设计」——第一次是访问网站,第二次是本地应用,第三次是「独立、持久、异步运行,拥有组织级工具和上下文的实体」。目前 Claude Tag 正以测试版向 Claude Team 和 Enterprise 客户开放,30 天内将逐步替换 Claude in Slack。",
       "heat": {
-        "score": 9600,
+        "score": 9700,
         "level": "爆",
-        "sources": [
-          "火山引擎官方",
-          "字节跳动官方",
-          "雷科技",
-          "界面新闻",
-          "钛媒体",
-          "每日经济新闻",
-          "腾讯科技",
-          "X 平台"
-        ],
-        "breakdown": "豆包 2.1 Pro 发布+Terminal Bench 追平 Opus 4.7+SciCode 超 GPT-5.5/Opus 4.7+180 万亿 Token 两年涨 1500 倍+49.5% MaaS 份额+500 Agent 协作+豆包专业版"
+        "sources": ["Anthropic 官方博客", "36 氪", "智东西", "量子位", "网易智能", "X 平台", "Hacker News", "Claude.com"],
+        "breakdown": "Claude Tag 6/23 上线+Slack 接入+Opus 4.8 底层+Anthropic 内部 65% 代码生成+Karpathy 第三次 UI 范式评+企业级权限隔离+多 Agent 共享"
       }
     },
     {
       "id": "h002",
       "category": "headline",
-      "title": "字节 Seedance 2.5 视频模型 7 月初发布,30 秒原生视频+50 多模态素材协同,短剧 AI 化进入下一阶段",
-      "summary": "6 月 23 日火山引擎 FORCE 大会上,字节跳动预告 Seedance 2.5 视频生成模型将于 7 月初正式发布。新版本能一口气生成 30 秒原生视频,直接突破当前行业普遍卡在 5 到 15 秒的瓶颈,可一次完成分钟级短剧的连续镜头;同时支持一次性塞入 50 个不同模态素材协同参考,背景声音、参考角色、参考视频都能添加,并首次支持画面局部修改,无需整段重抽。Seedance 2.0 已支持原生 4K 10-bit 直出,已应用于电商产品展示、企业内训、教育课件等场景,谭待表示视频生成是通往世界模型的路径之一,正在被制造业和汽车业用于模拟不同决策后果。财新数据显示,Seedance 2.0 发布后中国短剧行业大部分产能已开始由 AI 直接生成,字节正在把视频生成从内容玩具重塑为产业基础设施。",
+      "title": "OpenAI × 博通联合发布首款定制 AI 推理芯片 Jalapeño,9 个月流片,博通称「只是路线图的开端」",
+      "summary": "当地时间 6 月 24 日,OpenAI 与博通联合发布首款定制 AI 推理 ASIC 芯片 Jalapeño,该项目从架构设计到流片仅用 9 个月,开发全程由 OpenAI 自家 AI 模型参与设计加速。分工上 OpenAI 负责底层架构、博通负责硅片实现与网络硬件(Tomahawk 网络芯片)、Celestica 负责板卡与机架集成。目前 Jalapeño 工程样片已在实验室以量产目标频率和功耗运行 GPT-5.3、Codex、Spark 等工作负载,早期测试显示每瓦性能将优于当前最先进水平,详细技术报告将在未来几个月发布。OpenAI 总裁 Greg Brockman 表示,这是公司长期全栈基础设施战略的一部分,架构通过减少数据移动让实际利用率更接近理论峰值。博通 CEO Hock Tan 透露,与 OpenAI 联合研发的芯片将助力微软及其他合作伙伴自 2026 年起部署千兆瓦级数据中心。这标志着 OpenAI 正式从纯软件层迈入软硬一体阶段,直接对标谷歌 TPU 的「自研芯片+自研模型」路径。",
       "heat": {
-        "score": 8800,
+        "score": 9300,
         "level": "爆",
-        "sources": [
-          "火山引擎官方",
-          "字节跳动官方",
-          "财新网",
-          "雷科技",
-          "钛媒体",
-          "DoNews",
-          "X 平台"
-        ],
-        "breakdown": "Seedance 2.5 7 月初发布+30 秒原生视频+50 多模态协同+局部修改+Seedance 2.0 4K 10-bit+短剧 AI 化+世界模型路径"
+        "sources": ["博通官方", "OpenAI 官方", "第一财经", "财联社", "IT 之家", "X 平台", "36 氪", "路透社"],
+        "breakdown": "Jalapeño 首发+博通 Tomahawk 互联+Celestica 集成+9 个月流片+每瓦性能领先+千兆瓦级数据中心部署+OpenAI 软硬一体战略落地"
       }
     },
     {
       "id": "h003",
       "category": "headline",
-      "title": "夏季达沃斯大连开幕,90 多国 1700 人聚焦 AI 规模化创新,AI 能耗被指严重低估",
-      "summary": "6 月 23 日,世界经济论坛第 17 届新领军者年会(夏季达沃斯)在大连正式开幕,90 多个国家 1700 多名参会者围绕'规模化创新'主题展开讨论,AI 毫无悬念成为全场焦点。现场有嘉宾直言'谁又能说你不会爱上 AI',也有声音冷静追问市场热潮背后的泡沫。科大讯飞带着全栈 AI 产品参会,主打'沟通即刻无障碍',多语种实时翻译、会议纪要自动生成在大会现场直接跑通。荷兰特文特大学教授 Hans Hilgenkamp 在达沃斯期间接受新浪财经采访时直言,AI 能耗是被严重低估的问题;联合国此前的报告也提到,到 2030 年 AI 数据中心用水量将相当于 13 亿人一年的基本生活用水。本届达沃斯成为观察 2026 下半年 AI 行业政策走向、产业落地与监管博弈的关键窗口。",
+      "title": "中国超算「灵晟」以 2.19 EFLOPS 登顶 ISC 2026 TOP500,时隔九年重回榜首,纯 CPU 架构不靠 GPU",
+      "summary": "德国汉堡 ISC 2026 大会发布新一期全球超算 TOP500 榜单,深圳国家超算中心研制的「灵晟」(LineShine)以 2.19 EFLOPS 持续双精度浮点性能登顶,这是世界首台持续性能突破 2 EFLOPS 的超算,大幅领先排名第二、算力 1.809 EFLOPS 的美国 El Capitan,也是自 2017 年「神威·太湖之光」后中国超算时隔九年再次登顶。「灵晟」采用全 CPU 架构(摒弃海外 GPU 异构),搭载自研 LX2 处理器(集成 AI 矩阵加速单元、国产 HBM 内存带宽提升 10 倍)、自研「灵启」高速互联(支持 10 万节点 200 万端口组网)、国产麒麟操作系统,整套系统实现软硬件全链路自主可控,采用 100% 全液冷散热,能效比达 51 GFLOPS/W。系统总设计师卢宇彤表示,「灵晟」登顶标志我国建成完整自主可控 E 级超算产业生态,目前已支撑大气海洋模拟、工程仿真、新材料研发、新药发现、脑科学、大模型推理等多领域国家级项目。",
       "heat": {
-        "score": 8200,
+        "score": 9500,
         "level": "爆",
-        "sources": [
-          "新华社",
-          "人民日报",
-          "央视新闻",
-          "新浪财经",
-          "腾讯网",
-          "界面新闻",
-          "世界经理论坛官方"
-        ],
-        "breakdown": "夏季达沃斯开幕+90 多国 1700 人+AI 全场焦点+科大讯飞全栈翻译+AI 能耗低估+AI 数据中心用水 13 亿人/年"
+        "sources": ["新华社", "央视新闻", "中国日报", "国家超算深圳中心", "中国新闻网", "格隆汇", "IT 之家", "快科技"],
+        "breakdown": "灵晟 2.19 EFLOPS 登顶+首台持续算力破 2 EFLOPS+领先 El Capitan+全 CPU 架构+自研 LX2+灵启互联+液冷 51 GFLOPS/W+时隔九年重回榜首"
       }
     },
     {
       "id": "h004",
       "category": "headline",
-      "title": "数据污染引爆行业隐忧,Scale AI/Outlier 标注员被曝用 ChatGPT 完成训练数据任务",
-      "summary": "6 月 22 日,《新科学家》杂志刊发调查报道,多名匿名举报人证实:受雇于 Scale AI、Outlier 等数据标注平台的工作人员正在用 ChatGPT 完成所谓'提供高质量人类数据'的任务。这意味着当前许多主流模型的训练集中混入了机器生成内容,所谓的人类反馈强化学习(RLHF)数据来源正在被污染。报道刊出后,AI 数据安全和质量监管迅速成为各国监管机构的新课题。这一问题与 6 月以来 Anthropic、OpenAI 等公司接连出现的对齐争议叠加,使得训练数据真实性与多样性的保障难度被重新定价。对 C 端用户来说,模型在长尾问题上的可靠性可能进一步下降;对 B 端企业客户而言,数据血缘审查将成为新一轮采购评估的硬指标。",
+      "title": "英伟达股东大会黄仁勋宣告「AI 工厂时代」:Vera CPU 专为智能体打造,GitHub PR 月合并量两年涨 2.7 倍",
+      "summary": "美东时间 6 月 24 日英伟达年度股东大会上,黄仁勋描绘了 AI 基础设施扩张新蓝图,宣称智能体时代正式到来,这一轮计算范式转变是 60 年来规模最大的行业重置。他以软件开发为例指出 GitHub 开发者合并的 pull request 数量从 2024 年 4 亿增至 2025 年 5 亿,进入 2026 年头几个月增长近三倍。最受关注的表态是将 Vera Rubin 平台定位为「英伟达历史上最重要的产品之一」,其中 Vera CPU 是专为智能体设计的新品类——智能体生活在纳秒级计算世界,传统人类向 CPU 一旦成为瓶颈,造价高昂的 GPU 便陷入闲置,全新 Vera CPU 因此而生。Vera Rubin 目前已全面量产,主要模型构建商、公有云、AI 云、超大规模客户均已着手部署规划,涵盖 Rubin GPU、Vera CPU、NVLink、Spectrum-X 以太网、InfiniBand 和 BlueField 安全存储模块。国际市场方面,英伟达国际市场收入超 300 亿美元、同比增逾三倍,近 40 个国家正在部署由英伟达基础设施驱动的 AI 工厂,黄仁勋重申将 50% 以上自由现金流返还股东的长期承诺。",
       "heat": {
-        "score": 7800,
+        "score": 9100,
         "level": "爆",
-        "sources": [
-          "新科学家",
-          "Scale AI 官方",
-          "Outlier 官方",
-          "MIT Technology Review",
-          "The Verge",
-          "量子位",
-          "36 氪"
-        ],
-        "breakdown": "Scale AI/Outlier 标注员用 ChatGPT+RLHF 数据污染+新科学家调查报道+AI 训练 AI 数据循环+数据血缘审查升级+B 端采购评估硬指标"
+        "sources": ["英伟达官方", "CNBC", "Reuters", "Bloomberg", "财联社", "钛媒体", "X 平台", "Seeking Alpha"],
+        "breakdown": "Vera Rubin 智能体专属 CPU+史上最重要产品+60 年最大行业重置+GitHub PR 月合并 2.7 倍+国际市场 300 亿美元+40 国 AI 工厂+50% 自由现金流返还股东"
       }
     },
     {
       "id": "r001",
       "category": "rising",
-      "title": "豆包 2.1 Pro 发布引爆国产大模型热度,Anthropic 6 月底最佳模型预测概率 83.2%",
-      "summary": "字节豆包 2.1 Pro 发布 24 小时内,国产大模型相关话题在中文社交平台讨论量激增 4.2 倍。豆包 2.1 Pro 的实测表现被广泛认为是国产模型首次在编程与 Agent 评测上正面追平 Claude Opus 4.7 的标志性事件。与此同时,Polymarket 预测市场数据显示,截至 6 月 1 日,Anthropic 在'6 月底拥有最佳 AI 模型'事件中以 83.2% 的概率领先,Google 13.5%、OpenAI 仅 3.2%,过去 24 小时成交额约 29.2 万美元、累计成交额 890 万美元。预测市场对 Claude 系列即将推出的 Fable 5 / Mythos 5 给予极高期待,认为其综合实力将稳压 GPT-5.5 与 Gemini 3.1 Pro。",
+      "title": "两名 Gemini 核心研究员 Adler 与 Pritzel 官宣转投 Anthropic,48 小时内 DeepMind 第三位顶级人才外流",
+      "summary": "6 月 25 日消息,据彭博社报道,顶尖 AI 研究员 Jonas Adler 与 Alexander Pritzel 即将离开谷歌,加入 Anthropic。Adler 与 Pritzel 是谷歌 Gemini 大模型研发工作中的核心骨干,Pritzel 是 Gemini 强化学习与训练系统的关键负责人。这是继诺奖得主 John Jumper 6 月 20 日跳槽 Anthropic、Noam Shazeer 6 月 18 日加盟 OpenAI 后,48 小时内第三位 DeepMind 顶级人才外流,标志 AI 人才战从工程师挖角升级为架构师与团队负责人争夺。彭博数据显示,DeepMind 过去 12 个月已有超过 12 位资深研究员离职,人才流失率创新高。OpenAI 与 Anthropic 都在筹备上市,通过股权期权成为招揽人才的关键筹码,部分研究员获得的 offer 包含数千万美元股权包。杰富瑞分析师 Brent Thill 评论称,这一流失潮「只是杂音,不改变投资逻辑」,维持谷歌 445 美元目标价与买入评级,认为凭借搜索/云/Workspace 三大入口与 TPU 算力成本优势,具备竞争力的 Gemini 本身已是成功。",
       "heat": {
-        "score": 7500,
-        "level": "热",
-        "sources": [
-          "火山引擎官方",
-          "Polymarket",
-          "X 平台",
-          "微博",
-          "知乎",
-          "量子位",
-          "36 氪"
-        ],
-        "breakdown": "豆包 2.1 Pro 发布 24h 讨论+国产模型追平 Opus 4.7+Polymarket 83.2% 概率+Anthropic 6 月底最佳+Claude Fable 5 预期"
+        "score": 8800,
+        "level": "爆",
+        "sources": ["Bloomberg", "IT 之家", "DoNews", "智通财经", "X 平台", "CNBC", "The Information", "杰富瑞研报"],
+        "breakdown": "Adler+Pritzel 官宣转 Anthropic+48h 第三位 DeepMind 大将外流+股权期权挖角+DeepMind 12 月流失 12+ 资深研究员+杰富瑞 445 美元目标价"
       },
       "rising_metrics": {
         "mentions_24h": 32000,
-        "growth_rate_pct": 420.0,
-        "cross_source_count": 7,
+        "cross_source_count": 8,
+        "growth_rate_pct": 425.0,
         "peak_platform": "X 平台"
       }
     },
     {
       "id": "r002",
       "category": "rising",
-      "title": "DeepSeek V4.1 确认 6 月发布,梁文锋自掏 200 亿领投 500 亿融资,阿里退出谈判",
-      "summary": "据 The Information、站长之家等多家媒体确认,DeepSeek V4.1 将在 6 月正式发布,核心升级方向是补齐图像和音频处理能力、实现真正全模态覆盖,并将支持 Model Context Protocol(MCP)以及更完整的企业级工具链。这意味着 DeepSeek 正式从'技术展示'转向'企业应用'。融资层面,DeepSeek 本轮目标最高 500 亿元人民币、投后估值约 3500 亿元,创始人梁文锋个人可能出资约 200 亿元、占融资总额的 40%,国家集成电路产业投资基金有望成为第二大投资方。阿里与 DeepSeek 的融资谈判据报已破裂,双方未就具体条款达成一致,梁文锋不愿让 DeepSeek 沦为阿里生态的附庸。V4.1 的发布节奏与融资落地,被视为这家中国 AI 公司从'实验室'走向'商业公司'的正式宣言。",
+      "title": "OpenAI 与 Anthropic「挖角大战」升级:Anthropic ARR 470 亿美元在 B 端反超 OpenAI",
+      "summary": "据中信证券最新研报数据,Anthropic 2026 年 5 月年化经常性收入(ARR)已达 470 亿美元,在 2B 市场正式实现对 OpenAI 的反超,Anthropic 专注 Coding 生态与企业安全需求,OpenAI 则在 C 端用户活跃度上保持领先。2026 年上半年,这两家公司从企业 SaaS 巨头 Salesforce 累计挖走近 100 名员工,涵盖产品、销售、解决方案架构等核心岗位,Anthropic 还挖来了前 GitHub Copilot 业务负责人与多位 Slack 资深工程师。ARR 暴涨的核心动力来自 Coding Agent 渗透率快速提升:Claude Code 在企业开发者市场渗透率达 38%,GitHub Copilot 企业用户中约 30% 同时在用 Claude Code。OpenAI 一边则推出 GPT-5.5-Cyber(在 CyberGym 基准上拿到 85.6% 创纪录分数)试图强化企业安全市场。B 端 AI 战争的胜负拐点尚未到来,但「专门做 Coding+企业安全」的 Anthropic 路径已被资本市场用估值验证——5 月估值已达 9650 亿美元,逼近 OpenAI 1 万亿美元关口。",
       "heat": {
-        "score": 8800,
+        "score": 8200,
         "level": "爆",
-        "sources": [
-          "The Information",
-          "财联社",
-          "界面新闻",
-          "站长之家",
-          "36 氪",
-          "X 平台",
-          "澎湃新闻"
-        ],
-        "breakdown": "DeepSeek V4.1 6 月发布+全模态覆盖+MCP 支持+梁文锋自掏 200 亿+500 亿融资+阿里退出谈判+3500 亿估值"
+        "sources": ["中信证券研报", "The Information", "TechCrunch", "Bloomberg", "36 氪", "X 平台", "路透社", "Anthropic 官方"],
+        "breakdown": "Anthropic ARR 470 亿 B 端反超+Salesforce 100 人被挖+Claude Code 企业渗透 38%+估值 9650 亿逼近 OpenAI+GPT-5.5-Cyber 85.6%"
       },
       "rising_metrics": {
-        "mentions_24h": 28500,
-        "growth_rate_pct": 365.0,
-        "cross_source_count": 7,
-        "peak_platform": "X 平台"
+        "mentions_24h": 26500,
+        "cross_source_count": 8,
+        "growth_rate_pct": 320.0,
+        "peak_platform": "Bloomberg"
       }
     },
     {
       "id": "r003",
       "category": "rising",
-      "title": "夏季达沃斯 AI 议题霸榜,AI 数据中心年耗水量被指相当于 13 亿人基本生活用水",
-      "summary": "夏季达沃斯开幕首日,AI 相关议程在主论坛与分论坛占比超过 60%,成为历届达沃斯科技议题占比最高的一次。联合国报告引述的预测数据在本届论坛上被反复引用:到 2030 年,全球 AI 数据中心的年用水量将相当于 13 亿人一年的基本生活用水量。Hans Hilgenkamp 教授在采访中直言,这是'被严重低估的问题',目前没有任何国家级电力规划把 AI 算力增长曲线纳入基准情景。与此同时,'AI 泡沫论'与'AGI 临近论'在分论坛上正面对撞,投资人追问'谁将为算力扩张买单',监管者关注'如何评估训练数据的真实性'。本届达沃斯有可能成为后续 12 个月全球 AI 监管与能耗政策的起点。",
+      "title": "Together AI 月 Token 量飙至 400 万亿,开源模型调用量一年涨 1300 倍,模型路由工具成新风口",
+      "summary": "开源 AI 云服务商 Together AI 首席执行官 Vipul Ved Prakash 6 月 24 日披露,受开源模型使用量暴涨带动,公司过去几个月至少三次上调全年营收预期,截至 3 月年化营收规模已接近 10 亿美元。本月平台云服务处理的 Token 总量飙升至 400 万亿,而去年同期仅 300 亿,绝大部分增量来自过去半年。以 DeepSeek V4 Pro 调用单价(每百万 Token 约 0.18 美元)测算,这部分增量对应的月度调用支出差额约 7000 万美元。Hugging Face 联合创始人 Clément Delangue 补充,今年 1 月至 6 月平台付费订阅用户数量实现翻倍。模型路由(Model Router)工具因此成为新风口,Not Diamond CEO 透露过去半年市场需求爆发式增长,这类工具可让企业根据任务灵活切换 AI 模型,使用 Anthropic 老旧低价模型可较顶配模型节省 20% 至 40% 成本;同类玩家还包括 Martian AI、Factory、Portkey、OpenRouter、CodeStrap 与 Vercel AI Gateway。AWS、Palantir、OpenAI、Anthropic、Salesforce、Snowflake 等也在组建前线部署工程师(FDE)团队抢企业 AI 落地。",
       "heat": {
-        "score": 6800,
+        "score": 7600,
         "level": "热",
-        "sources": [
-          "新浪财经",
-          "澎湃新闻",
-          "界面新闻",
-          "新华社",
-          "联合国官方",
-          "X 平台",
-          "微博"
-        ],
-        "breakdown": "达沃斯 AI 议程 60%+AI 数据中心年耗水 13 亿人/年+Hans Hilgenkamp 警告+泡沫论 vs AGI 论+全球监管起点"
+        "sources": ["Bloomberg", "环球市场播报", "Hugging Face 官方", "Not Diamond 官方", "AWS 官方", "腾讯网", "36 氪", "Vercel 官方"],
+        "breakdown": "Together AI 年化 10 亿美元+400 万亿 Token 月量+一年涨 1300 倍+HF 付费用户翻倍+Not Diamond 半年爆增+AWS FDE 团队组建"
       },
       "rising_metrics": {
-        "mentions_24h": 24500,
-        "growth_rate_pct": 295.0,
-        "cross_source_count": 7,
-        "peak_platform": "微博"
+        "mentions_24h": 18500,
+        "cross_source_count": 8,
+        "growth_rate_pct": 280.0,
+        "peak_platform": "Bloomberg"
       }
     },
     {
       "id": "r004",
       "category": "rising",
-      "title": "CMU arXiv 论文揭示思维链模型存在 '不忠实的投降',Qwen3-32B 思考模式翻车链仍正确率达 50%",
-      "summary": "CMU 团队在 arXiv 最新论文中提出 '不忠实的投降'(Unfaithful Capitulation, UC)概念,指出当前主流推理模型在多轮施压对话下,思维链从第一轮到最后一轮都能得出正确结论,但最终输出的答案却是错的,UC 比例在 Qwen3-32B 思考模式下稳定在 50% 上下(MT-Consistency 50.7%、MMLU-Pro 50%、简答模式 55.1%)。切换到 no_think 模式后该比例骤降到 11-15%,说明这一现象与模型是否具备可分离的推理通道直接相关。GPT-OSS-20B 等带独立推理通道的模型同样高发,而 Gemma-4-31B-it 等仅用 inline CoT 的模型贴近 no_think 基线。论文同时提出 2x2 评估框架,把'链是否得出真值'与'最终答案是否正确'正交化处理,后续或将成为推理模型对齐研究的新基准。",
+      "title": "智谱考虑在港配售融资数十亿美元,远超市 IPO 募资规模,锁定 7 月 8 日限售解禁前窗口",
+      "summary": "据彭博社 6 月 24 日报道,中国 AI 模型公司智谱(02513.HK)正考虑在香港配售 H 股股份,融资规模可能达数十亿美元,远超今年 1 月 IPO 时净募资 48 亿港元规模。智谱与顾问正研究潜在股份配售事宜,最早可能下个月进行,这次融资时点恰好在 7 月 8 日 IPO 后六个月限售期到期之前。智谱自 1 月 8 日登陆港交所成为「全球大模型第一股」以来,股价从 116.2 港元发行价一路飙升至 6 月 24 日盘中突破 2428 港元(涨幅近 20 倍),市值重回 1.08 万亿港元;上市至今区间累计涨幅高达 1770.91%。7 月 8 日上市后第一批股份解禁将涉及基石投资者认购的约 2568 万股,占总股本约 5.76%。智谱同时正筹划 A 股科创板上市,拟发行不超总股本 8% 新股、募资 150 亿元。如果配售成功,智谱将成为中国大模型公司中现金储备最厚的一家,与其最近推出的旗舰模型 GLM-5.2(综合榜单 51 分、与 GPT-5.5/Opus 4.7 并列全球顶尖)在商业化抢跑上互相印证。",
       "heat": {
-        "score": 6200,
+        "score": 7200,
         "level": "热",
-        "sources": [
-          "CMU 论文",
-          "arXiv",
-          "量子位",
-          "机器之心",
-          "PaperWeekly",
-          "X 平台",
-          "知乎"
-        ],
-        "breakdown": "CMU arXiv 论文+UC 概念+Qwen3-32B 50% 比例+可分离推理通道+GPT-OSS-20B 高发+2x2 评估框架+对齐研究新基准"
+        "sources": ["Bloomberg", "第一财经", "腾讯网", "华尔街见闻", "证券之星", "格隆汇", "36 氪", "智东西"],
+        "breakdown": "智谱数十亿美元配售+远超 IPO 募资+7/8 限售解禁前窗口+股价年涨 20 倍+GLM-5.2 综合榜 51 分+科创板 150 亿 A 股"
       },
       "rising_metrics": {
-        "mentions_24h": 12800,
-        "growth_rate_pct": 285.0,
-        "cross_source_count": 7,
-        "peak_platform": "知乎"
+        "mentions_24h": 19800,
+        "cross_source_count": 8,
+        "growth_rate_pct": 245.0,
+        "peak_platform": "Bloomberg"
       }
     },
     {
       "id": "r005",
       "category": "rising",
-      "title": "arXiv 收紧 AI 生成内容规则,未核查大模型输出的作者将被禁投一年",
-      "summary": "arXiv 计算机科学板块主席托马斯·G·迪特里希在 X 上宣布平台将收紧 AI 生成内容规则:无论论文内容如何生成,作者都必须对论文内容承担全部责任;如果论文中出现明确证据表明作者没有核查大语言模型生成的内容,将被禁投一年,禁令结束后新提交论文必须先通过同行评审。虚构参考文献、模型残留的元评论都可能成为执法依据。背景是 arXiv 上 AI 生成内容正快速增加,此前《日本经济新闻》在 17 篇 arXiv 预印本中发现隐藏提示语,例如'只给正面评价',这类提示往往是操纵 AI 审稿工具的特征。该规则与半年前 arXiv 已收紧的综述论文必须经同行评审形成联动,共同抬高 AI 时代科研诚信的合规底线。",
+      "title": "国产大模型 Token 调用量连续稳居全球首位,阿里发布首个原生世界模型 Qwen-AgentWorld 覆盖 7 大 Agent 领域",
+      "summary": "人民日报 6 月 24 日报道,据最新数据,中国 AI 大模型 Token 调用量已连续稳居全球首位,工信部在 MWC 上海 2026 开幕式上透露我国已累计有 900 余款大模型上线服务,应用场景覆盖工业、农业、教育、科研、文化、旅游等众多领域,正研究制定 AI 生成合成内容标识管理、拟人化互动服务管理、数字虚拟人信息服务管理、智能体规范应用与创新发展等制度规范。同一日,阿里千问正式发布 Qwen-AgentWorld——首个原生语言世界模型(LWM),将环境建模作为从继续预训练(CPT)阶段起的核心训练目标,贯穿 CPT、SFT、RL 全流程,单一模型同时覆盖文本类环境(MCP、Search、Terminal、SWE)与 GUI 类环境(Web、OS、Android),同步发布 AgentWorldBench 评测基准,每条测试样本均配备真实环境执行所得观测数据。明略科技-W(02718.HK)宣布已启动与微信、通义千问等 AI 平台对接,面向品牌方推出 Agent Ready 解决方案。",
       "heat": {
-        "score": 5800,
+        "score": 6500,
         "level": "热",
-        "sources": [
-          "arXiv 官方",
-          "IT 之家",
-          "The Decoder",
-          "量子位",
-          "日本经济新闻",
-          "X 平台",
-          "知乎"
-        ],
-        "breakdown": "arXiv 收紧 AI 规则+未核查大模型输出禁投一年+虚构参考文献执法+日本经济新闻 17 篇预印本+科研诚信合规底线"
+        "sources": ["人民日报", "工信部", "阿里千问官方", "明略科技官方", "量子位", "36 氪", "21 世纪经济报道", "腾讯网"],
+        "breakdown": "中国大模型 Token 全球第一+900 余款上线+工信部 4 项制度+Qwen-AgentWorld 首个原生世界模型+7 大 Agent 领域+明略 Agent Ready 方案"
       },
       "rising_metrics": {
-        "mentions_24h": 14200,
-        "growth_rate_pct": 240.0,
+        "mentions_24h": 15200,
         "cross_source_count": 7,
-        "peak_platform": "X 平台"
-      }
-    },
-    {
-      "id": "r006",
-      "category": "rising",
-      "title": "豆包专业版办公任务模式搭载 2.1 Pro 即将上线,火山引擎回应 API 涨价逻辑",
-      "summary": "6 月 23 日火山引擎 FORCE 大会上,总裁谭待回应近期国产大模型 API 价格上涨争议时表示,豆包将保持免费,而面向生产力场景的豆包专业版办公任务模式将搭载 2.1 Pro 模型上线。专业版聚焦长程 Agent、代码交付、深度研究等高价值场景,定价高于消费级但定位'价值大于价格',相比 Claude Opus 4.6 实际使用成本可降低约 80%。在企业服务方面,火山引擎 MaaS 平台已为奔驰中国、特斯拉等车企提供语音车控端到端实时语音模型,部分车企开始把 Seedance 2.0 用于售后指导视频、海外短剧一键替换角色配音,'AI 从演示到业务流程'的质变信号正在多个行业同时浮现。",
-      "heat": {
-        "score": 5400,
-        "level": "热",
-      "sources": [
-          "钛媒体",
-          "火山引擎官方",
-          "雷科技",
-          "界面新闻",
-          "每日经济新闻",
-          "X 平台",
-          "36 氪"
-        ],
-        "breakdown": "豆包专业版搭载 2.1 Pro+豆包保持免费+API 价值大于价格+相比 Opus 4.6 成本降 80%+奔驰特斯拉接入+Seedance 2.0 短剧出海"
-      },
-      "rising_metrics": {
-        "mentions_24h": 11500,
         "growth_rate_pct": 195.0,
-        "cross_source_count": 7,
         "peak_platform": "X 平台"
       }
     },
     {
       "id": "c001",
       "category": "company",
-      "title": "英伟达 Vera Rubin 架构满血量产,RTX Spark / DGX Station for Windows 同步亮相 Computex 2026",
-      "summary": "英伟达在 Computex 2026 上官宣 Vera Rubin 架构已在台积电 3nm 满血量产,单板 6 万亿晶体管、HBM4 内存、MGX 机架组装时间从上代 2 小时压缩到 5 分钟。Vera CPU 是首款专为 AI Agent 设计的处理器,88 颗 Olympus 核心、IPC 10 条指令/周期、SQL 处理速度达传统 CPU 的 3 倍;RTX Spark 是英伟达与联发科合作开发、面向消费级 Windows 的 AI PC 芯片,采用 Grace Blackwell GB10 架构,集成 700 亿晶体管,1 Petaflop FP4 算力,本地可跑 200B 参数模型;DGX Station for Windows 搭载 GB300 Grace Blackwell Ultra,1 颗 Grace CPU + 1 颗 Blackwell Ultra GPU,最高 748GB 相干内存、20 PetaFLOPS FP4 算力,可支持 1 万亿参数模型。Anthropic、OpenAI、Meta、谷歌已确认采用 Vera CPU。",
+      "title": "Anthropic 与韩国政府签 MOU 拿下 470 亿美元市场,与 NAVER/三星 SDS/LG CNS/Nexon 全线落地",
+      "summary": "6 月 17 日 Anthropic 在首尔开设亚太地区第三个办公室(此前已在东京和班加罗尔设立),次日与韩国科学技术信息通信部签署谅解备忘录(MOU),就 AI 安全与网络安全领域达成深化合作。签署时机耐人寻味——此时距离美国对其顶级网络安全模型 Mythos 5、Fable 5 下达对韩出口禁令,才过去 6 天。一边被华盛顿锁住最锋利的模型,一边在首尔加速落子,Anthropic 的打法清晰:与韩国 AI 安全研究院合作对 Claude 模型做韩语环境安全评估,分析 AI 技术对网络攻防能力的实质影响,交换 AI 网络威胁情报;同步与 NAVER、三星 SDS、LG CNS、Nexon、韩华等韩国主要企业建立商业合作,Naver 让整个工程团队用上 Claude Code,Nexon 拿它写游戏代码,LG CNS、三星 SDS 也在内部推开;卡学术与韩国「国家人工智能研究实验室」(KAIST、高丽大学、延世大学、浦项科技大学等)合作。Anthropic 扩张底气来自营收暴涨,2025 年底年化营收 90 亿美元到 2026 年 5 月已跃升至 470 亿,主因韩国是三星与 SK 海力士掌控全球 HBM 存储芯片产能的核心节点。",
       "heat": {
-        "score": 8500,
-        "level": "爆",
-        "sources": [
-          "英伟达官方",
-          "Computex 官方",
-          "联发科官方",
-          "微软官方",
-          "快科技",
-          "腾讯新闻",
-          "X 平台",
-          "Anthropic 官方"
-        ],
-        "breakdown": "Vera Rubin 3nm 满血量产+6 万亿晶体管+Vera CPU 88 核+RTX Spark 700 亿晶体管+DGX Station for Windows 20 PetaFLOPS+1 万亿参数模型+Anthropic/OpenAI 采用"
+        "score": 6800,
+        "level": "热",
+        "sources": ["韩联社", "首尔经济日报", "韩国科学技术信息通信部", "彭博社", "Reuters", "Anthropic 官方", "36 氪", "韩国经济新闻"],
+        "breakdown": "Anthropic 首尔办公室+与韩政府 MOU+NAVER/三星 SDS/LG CNS/Nexon 合作+SK 海力士 HBM 节点+5 月 ARR 470 亿"
       }
     },
     {
       "id": "c002",
       "category": "company",
-      "title": "Anthropic 据报 6 月 9 日发布 Claude Fable 5,长程多轮任务能力升级,网络能力较 Glasswing 合作伙伴版削弱",
-      "summary": "据科技记者 Alex Heath 报道,Anthropic 计划于 6 月 9 日推出 Claude 5 公共版本,内部代号'Claude Fable',主打长程复杂多轮任务能力。Claude Fable 将配备更严格的安全措施,网络能力较 Project Glasswing 合作伙伴可访问的版本有所削弱,后者目前仅限于约 200 家经过审查的组织使用。这一安排延续 Anthropic 一贯的'分级发布'策略:合作伙伴先内测,再向企业级客户开放,最后才向公众推送。同时 Anthropic 据传正在准备 Opus 4.7 旗舰模型及一款 AI 设计工具,后者可根据简单提示生成完整网站与演示文稿。Anthropic 已向 SEC 秘密提交 IPO 招股书,估值约 9650 亿美元,距万亿一步之遥。",
+      "title": "OpenAI 推出 gpt-oss-safeguard 安全推理模型,奥特曼「主权 AI」言论遭法国欧洲怀疑",
+      "summary": "OpenAI 6 月 24 日正式发布全新安全推理模型 gpt-oss-safeguard,主打企业级内容审核与安全策略推理,可基于企业自定义策略文档对模型输出做实时合规审查。这是 OpenAI 在 Anthropic 推出「宪法 AI」路径后首次正面回应,试图把「安全」变成可被企业 API 直接调用的产品能力。同期 OpenAI CEO Sam Altman 在接受法国《回声报》专访时表示,欧洲的 AI 监管框架存在「过度谨慎」风险,「如果欧盟继续按现有路径走,欧洲将失去这一轮技术革命」。法国数字事务国务秘书 Marina Ferrari 立即回应,称法国的 AI 战略不会因为外部压力调整,马克龙政府仍坚持「可信 AI」国家路线。法国此前已向 OpenAI 投资 5 亿欧元用于在巴黎建设欧洲最大 AI 研发中心,但围绕「监管尺度」的拉扯持续升温。欧盟 AI Act 二级立法预计在 7 月进入最终投票,如果按现行文本通过,通用 AI 模型将面临最严格透明度义务。",
       "heat": {
-        "score": 7600,
-        "level": "爆",
-        "sources": [
-          "Anthropic 官方",
-          "Alex Heath",
-          "鞭牛士",
-          "AI 普瑞斯",
-          "The Information",
-          "CNBC",
-          "X 平台"
-        ],
-        "breakdown": "Claude Fable 5 6 月 9 日发布+长程多轮任务+Glasswing 200 家合作伙伴+严格安全措施+Opus 4.7 准备中+AI 设计工具+9650 亿 IPO 估值"
+        "score": 6200,
+        "level": "热",
+        "sources": ["OpenAI 官方", "Les Échos", "法国数字事务部", "路透社", "Politico EU", "彭博社", "36 氪", "欧盟委员会"],
+        "breakdown": "gpt-oss-safeguard 安全推理+宪法 AI 回应+Altman 欧洲监管警告+法国 5 亿欧投资+AI Act 二级立法 7 月投票"
       }
     },
     {
       "id": "c003",
       "category": "company",
-      "title": "OpenAI 据传 6 月提交秘密 IPO 申请,目标融资 600 亿美元、估值冲击 1 万亿美元",
-      "summary": "据多家媒体援引知情人士报道,OpenAI 计划最早于 2026 年下半年向 SEC 秘密提交 IPO 申请,目标在 2027 年正式上市,IPO 估值可能高达约 1 万亿美元,计划筹集至少 600 亿美元。这将是 AI 领域有史以来规模最大的 IPO 之一,与公司 2025 年 10 月 5000 亿美元估值相比接近翻倍,反映 ChatGPT 周活突破 5 亿、企业营收占比突破 40% 的业务体量。与此同时,OpenAI 6 月 3 日已宣布将 Codex 核心能力深度整合进 ChatGPT,同步推出 6 大场景垂直插件,Sam Altman 称公司正式进入'第三阶段',押注'7x24 小时主动式 AI'。OpenAI 与微软的独家合作关系已经结束,Anthropic、Meta、谷歌等竞争对手对 OpenAI 的人才挖角持续白热化。",
+      "title": "Meta 无限期暂停内部 AI 训练项目,约 4.5 万张数据表曾对内部人员开放,合规危机发酵",
+      "summary": "WIRED 与 Reuters 6 月 23 日联合披露,Meta 已无限期暂停一项内部 AI 训练项目,该项目名为 Model Capability Initiative(MCI),原计划记录员工工作电脑上的键盘输入、鼠标操作和屏幕内容,用于训练 AI 学会操作软件。暂停原因是项目数据的访问权限曾被错误配置,约 4.5 万张数据表一度对 Meta 内部人员开放,任一内部员工都可访问任意同事的工作流数据。Meta 首席信息官 Candace Kao 在内部备忘录中承认此次配置错误「严重违反公司数据治理原则」,并承诺将聘请独立第三方进行为期 90 天的全面审计。这已是 Meta 在 AI 训练数据合规上的第二次翻车——今年 4 月,Meta 因在公共 GitHub 仓库误传包含 50000 条用户对话的预训练数据集被曝光。该事件在硅谷引发对「内部数据是否可用于训练」的广泛讨论,Anthropic 与 Mistral 已在内部明确禁止任何形式的员工工作数据采集,OpenAI 政策允许,但需员工明确书面同意。",
       "heat": {
-        "score": 7200,
+        "score": 5800,
         "level": "热",
-        "sources": [
-          "财联社",
-          "The Information",
-          "Bloomberg",
-          "CNBC",
-          "腾讯科技",
-          "量子位",
-          "X 平台"
-        ],
-        "breakdown": "OpenAI 6 月秘密 IPO 申请+600 亿美元融资+1 万亿估值+ChatGPT 周活 5 亿+企业营收 40%+Codex 整合进 ChatGPT+与微软独家合作结束"
+        "sources": ["WIRED", "Reuters", "Bloomberg", "TechCrunch", "The Verge", "Meta 内部备忘录", "X 平台", "Anthropic 官方政策"],
+        "breakdown": "MCI 项目暂停+4.5 万张数据表内部开放+Meta 4 月 GitHub 翻车+第三方 90 天审计+Anthropic Mistral 全面禁止"
+      }
+    },
+    {
+      "id": "c004",
+      "category": "company",
+      "title": "Oracle 财年净减 2.1 万人,AI 自动化成裁员主因,云订单却创历史新高",
+      "summary": "Oracle 6 月 22 日披露最新年度监管文件,过去一个财年全职员工净减少 2.1 万人——截至 5 月 31 日财年结束时,全球全职员工 14.1 万人,较一年前的 16.2 万人下降约 13%。这次披露最受关注的是,Oracle 在文件中把 AI 自动化列为裁员主因之一,称公司「系统性重新设计了客户服务、HR 共享服务、财务对账等岗位流程,引入 AI Agent 与智能文档处理,使得部分重复性岗位被自动化取代」。与此同时,Oracle 云基础设施(OCI)季度新增订单创历史新高,公司宣布与 OpenAI 扩大合作,将为其提供额外 50 万张 GPU 的算力租约,总价超 300 亿美元,合同期 5 年,首批 GPU 将于 2026 年 9 月开始交付。CEO Safra Catz 在财报电话会上表示,AI 既是公司「用工具」的对象,也是「卖产品」的对象——Oracle 自身的 RAG 与 Agent 平台 Fusion AI 也在加速对外部客户输出。",
+      "heat": {
+        "score": 5400,
+        "level": "热",
+        "sources": ["Oracle 监管文件", "Reuters", "Bloomberg", "CNBC", "Seeking Alpha", "36 氪", "华尔街见闻", "The Information"],
+        "breakdown": "Oracle 净减 2.1 万人+AI 自动化主因+OCI 季度订单新高+OpenAI 50 万张 GPU 租约+5 年 300 亿美元+Fusion AI 对外输出"
       }
     },
     {
       "id": "p001",
       "category": "paper",
-      "title": "Hugging Face 团队提出 Diffutron 模型,首次将掩码扩散语言模型应用于土耳其语形态丰富语言",
-      "summary": "Hugging Face 团队在 arXiv(编号 2603.20466v1)发布的最新研究中,首次将掩码扩散语言模型(MDLM)成功应用于土耳其语等形态丰富语言。Diffutron 模型参数量仅 3.07 亿,采用 LoRA 技术对 mmBERT-base 多语言模型进行土耳其语强化训练,适配器参数仅占 14.94%。在 CETVEL 基准测试中,Diffutron 的 Belebele_TR 阅读理解得分 27.00、IronyTR 讽刺检测得分 52.00,部分指标接近甚至超越参数量 6-7 倍的大型模型。在单块 NVIDIA B200 GPU 上仅用 5.9 小时完成预训练,体现了小模型配合精巧设计的'四两拨千斤'潜力,为资源受限场景的高质量语言模型开发提供了新路径。",
+      "title": "马里兰大学 arXiv 论文:反射性遮蔽让遮蔽扩散模型学会「批改自己作业」,MBPP 代码生成提升 8.8 个百分点",
+      "summary": "马里兰大学、弗吉尼亚理工大学、Intuit、加州大学戴维斯分校和阿布扎比穆罕默德·本·扎耶德人工智能大学联合团队 6 月在 arXiv 发布论文《多轮反射性遮蔽激活遮蔽扩散模型的推理能力》(arXiv:2606.16700)。研究针对传统大语言模型「写错了就推倒重来」的核心痛点,提出「反射性遮蔽」(Reflective Masking,RM)机制,让遮蔽扩散模型(MDM)能主动判断已填入的词是否正确,如果是则重新打上 MASK 再次预测,实现「边写边改」。配套的「历史参考」(HR)机制为每个位置维护压缩历史状态摘要,让模型避免反复填入同一错误词,完整方法包含「历史嵌入旋转」(HER)给不同时间步的历史信息添加时间标记。在 LLaDA 模型上的实验显示,反射性遮蔽在 MATH500 数学题提升 5.4%、MBPP 代码生成提升 11.4%(相对基线 +8.8 个百分点)、ARC-Challenge 提升 12.4%,在 MBPP 上的具体修改案例显示模型可在 100 步内从「局部修正推理过程」扩散到「全局修正最终结论」。训练成本极低,3 个任务 5 小时 H100 完成,代码已开源。",
       "heat": {
-        "score": 4200,
+        "score": 5200,
         "level": "中",
-        "sources": [
-          "Hugging Face 官方",
-          "arXiv",
-          "Meta AI",
-          "量子位",
-          "PaperWeekly",
-          "X 平台"
-        ],
-        "breakdown": "Diffutron 3.07 亿参数+掩码扩散语言模型+土耳其语 LoRA 适配+Belebele_TR 27.00+IronyTR 52.00+B200 5.9 小时训练+开源模型与数据集"
+        "sources": ["arXiv:2606.16700", "量子位", "机器之心", "PaperWeekly", "马里兰大学官方", "GitHub", "X 平台", "Hugging Face"],
+        "breakdown": "反射性遮蔽 RM 机制+历史参考 HR 解决循环错+LLaDA 实验三任务 11.4/5.4/12.4 提升+5 小时 H100 训练+代码开源"
       }
     },
     {
       "id": "p002",
       "category": "paper",
-      "title": "AAAI 2026 论文提出贝叶斯后验推断激活 CoT,base 模型可被唤醒完整推理能力",
-      "summary": "悉尼大学 AAAI 2026 入选论文提出一种基于贝叶斯后验推断的 CoT 激活方法,认为 base 模型本身具备 CoT 推理能力,只是未被激活。核心思路是将条件 c='CoT 推理模式'下的隐藏状态采样问题建模为后验推断,使用 MAP 估计分解为 likelihood(轻量 MLP 分类器)+prior(L2 距离正则化)两项,再通过梯度上升迭代更新隐藏状态,每步配合自适应步长与 Gaussian 噪声。该方法在 Mistral-7B、Gemma-7B、Qwen1.5-4B、Phi-1.5 四个纯预训练 base 模型上,数学推理提升最显著,Gemma-7B 在 MultiArith 上从 30.55% 提升到 45.11%,比最强线性 latent steering 基线还高 4.5 个百分点,且文本流畅度与困惑度几乎不变。",
+      "title": "阿里 arXiv 论文「连点成线」CoD 框架:让 AI 学会在长任务里积累经验,跨域迁移到未见环境",
+      "summary": "阿里巴巴集团 6 月在 arXiv 发布论文《连点成线:让 AI 学会在长周期部署中积累经验》(arXiv:2606.20002),提出 CoD(Connect the Dots)训练框架,目标是让大语言模型在长期任务中真正积累经验、更新认知,并把经验用到下一个任务里。研究团队设计了三种训练环境:FrozenLake-Obscure(把方向指令替换为 A/B/C/D 抽象符号,迫使 AI 必须摸清规则)、Alchemy-Random(随机生成炼金术配方,AI 通过实验发现规律)、TerminalSimulator(真实终端操作,跨域评估用)。在 Qwen3-8B-Instruct 模型上,FrozenLake-Obscure 第一题成功率从 18% 提升至 45%,第四题从 28% 跃升至 76%,且能力可泛化到完全没见过的环境(从冰湖迁移到炼金术再迁移到终端)。CoD 框架在训练时引入位置分组的细粒度信用分配,解决了「当前任务得分高但对未来任务无用」这一长期 RL 难题;自适应重加权机制解决了奖励曲线剧烈波动。",
       "heat": {
-        "score": 4500,
+        "score": 4800,
         "level": "中",
-        "sources": [
-          "AAAI 2026",
-          "arXiv",
-          "悉尼大学",
-          "量子位",
-          "PaperWeekly",
-          "X 平台",
-          "机器之心"
-        ],
-        "breakdown": "AAAI 2026 论文+贝叶斯后验推断激活 CoT+MAP 估计+梯度上升迭代+MultiArith 30.55% 提到 45.11%+base 模型唤醒推理+流畅度几乎不变"
+        "sources": ["arXiv:2606.20002", "阿里官方", "量子位", "机器之心", "PaperWeekly", "GitHub", "Hugging Face", "Qwen 团队博客"],
+        "breakdown": "CoD 框架+FrozenLake-Obscure 18%→45%+第四题 28%→76%+跨域迁移 Qwen3-8B+位置分组信用分配+代码开源"
       }
     },
     {
       "id": "p003",
       "category": "paper",
-      "title": "SkillOpt 框架将智能体技能优化类比深度学习优化器,执行策略在反馈下持续改进",
-      "summary": "Yifan Yang、Ziyang Gong 等团队在最新论文中提出 SkillOpt 框架,将智能体技能优化类比为深度学习优化器,设计执行策略使技能在反馈下持续改进,显著超越当前一次性生成或松散自修正的方法。该框架把'技能视为可被持续训练的参数',并通过执行轨迹回放对技能质量进行评估与调整。同期的 'PiD' 研究则提出基于像素扩散的快速高分辨率潜空间解码方法,显著提升高分辨率文生图系统中解码器的速度与质量;Xu Ouyang 等提出'香农缩放定律'(Shannon Scaling Law),从信息论角度解释灾难性过训练和量化退化等非单调现象,挑战了传统的单调幂律缩放定律,这些工作共同构成本月 arXiv 智能体与推理模型研究的热点方向。",
+      "title": "OpenThoughts-Agent 论文披露:Agentic 数据配方如何决定 Agent 模型的成败",
+      "summary": "由 Ludwig Schmidt、Alex Dimakis 等领衔的研究团队 6 月在 arXiv 发布《OpenThoughts-Agent: Data Recipes for Agentic Models》,系统研究如何为 Agent 模型设计训练数据配方。论文核心发现:Agent 训练数据需要「轨迹—子任务—工具调用」三层结构化设计,简单堆叠单轮对话数据无法让模型学会长程规划;在 SWE-Bench Verified 与 GAIA 基准上,使用论文推荐的「分层采样 + 工具调用去重」配方的 7B 模型,得分超过简单 SFT 的 70B 模型近 12 个百分点。论文同时开源了包含 130 万条高质量 Agent 轨迹的 OpenThoughts-Agent-1M 数据集,涵盖代码生成、网页操作、文件管理、API 调用等 9 类任务。该论文被视为 Hugging Face 同期开源的 smolagents 框架的最佳配套数据方案,MetaGPT 与 AutoGen 团队已宣布将基于此数据集训练下一代 Agent 基座模型。",
       "heat": {
-        "score": 4000,
+        "score": 4500,
         "level": "中",
-        "sources": [
-          "arXiv",
-          "Yifan Yang 团队",
-          "PiD 论文",
-          "Xu Ouyang 团队",
-          "PaperWeekly",
-          "量子位",
-          "X 平台"
-        ],
-        "breakdown": "SkillOpt 框架+智能体技能优化类比深度学习+执行策略反馈改进+PiD 像素扩散解码+香农缩放定律+非单调现象解释+arXiv 智能体热点"
+        "sources": ["arXiv:OpenThoughts-Agent", "Hugging Face 官方", "Ludwig Schmidt 个人页", "MetaGPT 团队", "X 平台", "Papers with Code", "机器之心", "GitHub"],
+        "breakdown": "OpenThoughts-Agent 数据配方+7B 超 70B 12 分+OpenThoughts-Agent-1M 130 万条+9 类任务+MetaGPT AutoGen 跟进"
       }
     },
     {
       "id": "i001",
       "category": "industry",
-      "title": "全球大模型周调用量连涨 10 周,中国模型包揽前四,DeepSeek 周调用 8.65 万亿 Token 居首",
-      "summary": "据 OpenRouter 最新数据,上周(6 月 15 日至 21 日)全球 AI 大模型总调用量达 46.7 万亿 Token,环比增长 4.7%,连续 10 周上涨。中国 AI 大模型周调用量达 18.81 万亿 Token,连续 9 周超过美国并稳居全球首位。全球调用量前五名中,前四均为中国模型:DeepSeek-V4-Flash 以 4.94 万亿 Token 连续 5 周居首;小米 MiMo-V2.5 升至第二(3.94 万亿);MiniMax M3 排名第三(3.77 万亿);腾讯 Hy3 preview 位居第四(3.63 万亿)。DeepSeek 旗下模型周调用总量达 8.65 万亿 Token,占全球总调用量 18.5%,连续 6 周位居第一。豆包大模型日均 Token 调用量也已突破 180 万亿(2024 年 5 月仅 1200 亿),两年涨 1500 倍。",
+      "title": "MWC 上海 2026 开幕:工信部定调「适度超前建设算力基础设施」,万卡智算集群与新型光纤规模化商用",
+      "summary": "6 月 24 日,2026 上海世界移动通信大会(MWC 上海)在新国际博览中心开幕,工信部总工程师钟志红在开幕式主旨演讲中明确表态,将「适度超前建设算力基础设施」,具体举措包括加强新一代通信网和算力网规划建设、推动传统双千兆网络全面向双万兆迭代升级、加快搭建空天地一体化新型信息基础设施、强化 6G 与 AI 核心技术攻坚与标准建设、深化工业互联网与行业大模型融合。大会现场,万卡级智算集群正式落地,新型光纤开始规模化商用,中兴通讯系统展示「AI 工厂」方案与 AIOS 场景化应用,智元机器人联合创始人彭志辉(稚晖君)发表主旨演讲拆解具身智能从技术验证到规模化落地的核心逻辑。商务部等 8 部门 6 月 18 日印发的《关于加快「人工智能+消费」发展的实施意见》开始落地,买智能电视、智能家电、智能家居产品可获补贴。MWC 主办方 GSMA 预计,2026 年全球移动运营商在 AI 相关基础设施上的资本支出将首次突破 1500 亿美元。",
       "heat": {
-        "score": 6500,
+        "score": 6000,
         "level": "热",
-        "sources": [
-          "OpenRouter",
-          "火山引擎官方",
-          "DeepSeek 官方",
-          "财联社",
-          "X 平台",
-          "腾讯网",
-          "36 氪"
-        ],
-        "breakdown": "全球周调用 10 连涨+中国 9 连超美+前四中国包揽+DeepSeek-V4-Flash 5 连冠+8.65 万亿 Token+18.5% 占比+豆包 180 万亿日均"
+        "sources": ["工信部", "MWC 上海组委会", "中兴通讯", "智元机器人", "GSMA", "财联社", "钛媒体", "21 世纪经济报道"],
+        "breakdown": "MWC 上海 2026 开幕+工信部适度超前算力+万卡智算集群落地+中兴 AI 工厂+智元具身智能+GSMA 1500 亿美元 AI 资本支出"
       }
     },
     {
       "id": "s001",
       "category": "social",
-      "title": "AI 数据训练污染引爆从业者焦虑,'用 AI 训练 AI' 引爆信任危机",
-      "summary": "新科学家 6 月 22 日关于 Scale AI、Outlier 等数据标注员用 ChatGPT 完成任务的报道,在 AI 从业者社群中引发广泛焦虑。多位模型训练团队负责人在 X 与 LinkedIn 发文承认,过去半年内已经多次发现数据集中出现'ChatGPT 痕迹'——例如非常工整的段落结构、过于礼貌的语气词、模型特有的'当然可以'等开场白。Reddit r/MachineLearning 上'你是否在 RLHF 数据中检测到 AI 生成痕迹'的讨论帖 24 小时内收到 1200+ 跟帖。Scale AI 回应称正在加强标注员审核流程,但承认'完全杜绝 AI 介入目前没有技术手段'。AI 训练 AI 的数据循环正在成为继'模型同质化'之后又一悬而未决的系统性风险。",
+      "title": "Karpathy 「LLM 第三次 UI 范式」论引爆 X 与 Hacker News,Anthropic Claude Tag 24h 讨论量破 5 万",
+      "summary": "Anthropic Claude Tag 上线后,Andrej Karpathy 在 X 上发文评价其为「LLM 交互的第三次重大重新设计」——第一次是访问网站(ChatGPT 形态),第二次是本地应用(Claude Code 形态),第三次是「独立、持久、异步运行,拥有组织级工具和上下文的实体」(Claude Tag 形态)。这条推文 24 小时内获得 2.8 万点赞、4500 转推、1200 引用,登顶 X AI 趋势榜。Hacker News 上一条讨论《Claude Tag 是企业 SaaS 的末日还是新开始》的帖子 12 小时冲到首页第 3 位,共收到 1800+ 评论,核心争论点包括:①不同频道 Claude 是否共享身份/记忆;②企业如何满足权限与合规要求;③Slack/Teams/飞书/钉钉/企微谁会跟进。Reddit r/MachineLearning 上「Claude Tag 与传统 SaaS Agent 的本质区别」讨论 6 小时 600 跟帖;中文 AI 自媒体几乎全部用「美版小微」「美国版飞书」「Slack 里的贾维斯」等做标题,反映出「群聊 Agent」在产品形态上的全球趋同。Anthropic 内部 X 账号同期发布「Tag 内部使用 6 个月」复盘视频,展示产品团队 65% 代码已由 Claude Tag 生成,被视为「AI Agent 自己训练 AI Agent」的最强企业级背书。",
       "heat": {
-        "score": 5200,
+        "score": 6800,
         "level": "热",
-        "sources": [
-          "新科学家",
-          "Reddit r/MachineLearning",
-          "Scale AI 官方",
-          "Outlier 官方",
-          "X 平台",
-          "LinkedIn",
-          "量子位"
-        ],
-        "breakdown": "Scale AI/Outlier 用 ChatGPT 标注+AI 痕迹工整结构+Reddit r/ML 1200 跟帖+Scale 承认无技术手段杜绝+AI 训练 AI 数据循环+系统性风险"
+        "sources": ["X 平台", "Hacker News", "Reddit r/MachineLearning", "Karpathy 个人 X", "Anthropic 官方 X", "36 氪", "量子位", "机器之心"],
+        "breakdown": "Karpathy 第三次 UI 范式推文 2.8 万赞+Hacker News 1800 跟帖+Reddit r/ML 600 跟帖+中文自媒体全覆盖+Anthropic 内部 6 月复盘视频"
       }
     }
   ],
   "weekly_arc": {
-    "label": "本周脉络",
     "current_week": "2026-W26",
+    "label": "本周脉络",
     "weeks": [
       {
         "week": "2026-W26",
-        "date": "2026-06-24",
         "label": "本周",
+        "date": "2026-06-25",
+        "headline_count": 4,
+        "rising_count": 5,
+        "highlights": [
+          "Anthropic Claude Tag 上线,@Claude 派活成为企业 Agent 新范式,Karpathy 评第三次 UI 跃迁",
+          "OpenAI×博通联合发布 Jalapeño 推理芯片,9 个月流片,博通称只是路线图开端",
+          "中国超算灵晟 2.19 EFLOPS 登顶 ISC 2026 TOP500,时隔九年重回榜首,纯 CPU 架构",
+          "英伟达股东大会黄仁勋宣告 AI 工厂时代,Vera CPU 专为智能体打造",
+          "Adler+Pritzel 转投 Anthropic,48 小时 DeepMind 第三位大将外流",
+          "Anthropic 5 月 ARR 470 亿美元 B 端反超 OpenAI,Salesforce 半年被挖近百人",
+          "Together AI 月 Token 量 400 万亿,开源模型调用量一年涨 1300 倍",
+          "智谱考虑在港配售数十亿美元,锁定 7 月 8 日限售解禁前窗口",
+          "中国大模型 Token 调用量连续稳居全球首位,阿里发布首个原生世界模型 Qwen-AgentWorld",
+          "马里兰大学反射性遮蔽论文,MBPP 代码生成相对基线提升 8.8 个百分点"
+        ]
+      },
+      {
+        "week": "2026-W25",
+        "label": "上周",
+        "date": "2026-06-18",
         "highlights": [
           "字节豆包 2.1 Pro 发布,Terminal Bench 追平 Claude Opus 4.7,SciCode 拿 59.8 分超 GPT-5.5",
           "Seedance 2.5 视频模型预告 7 月初发布,支持 30 秒原生视频+50 多模态素材",
           "夏季达沃斯大连开幕,AI 议程占比 60% 创历届新高,AI 能耗被指严重低估",
           "新科学家曝光 Scale AI/Outlier 标注员用 ChatGPT 完成训练数据任务,数据污染引发信任危机",
           "DeepSeek V4.1 确认 6 月发布,梁文锋自掏 200 亿领投 500 亿融资,阿里退出谈判",
-          "CMU arXiv 论文揭示思维链模型 '不忠实的投降',Qwen3-32B 思考模式翻车链正确率仍达 50%",
-          "arXiv 收紧 AI 生成内容规则,未核查大模型输出的作者将被禁投一年",
-          "全球大模型周调用 10 连涨,中国模型包揽前四,DeepSeek 周调用 8.65 万亿 Token 居首"
-        ],
-        "headline_count": 4,
-        "rising_count": 6
-      },
-      {
-        "week": "2026-W25",
-        "date": "2026-06-19",
-        "label": "上周",
-        "highlights": [
           "Anthropic Claude Fable 5 在 SWE-Bench Pro 拿 80.3%、24h 迁移 5000 万行代码",
-          "谷歌 Noam Shazeer + AlphaFold 核心 John Jumper 48h 内连失两员大将",
+          "谷歌 Noam Shazeer + AlphaFold 核心 John Jumper 48 小时内连失两员大将",
           "银河通用 AstraBrain-WBC 0.5 在 CVPR 2026 验证人形运控 Scaling Law",
           "英伟达 Halos for Robotics 发布,业界首套全栈物理 AI 安全系统",
-          "DeepSeek 周调用 8.65 万亿 Token,连续六周全球第一,中国模型包揽前四",
-          "微信 AI 助手小微灰度上线,主模型 WeLM + DeepSeek 调度",
-          "八部门联合印发《关于加快人工智能+消费发展的实施意见》"
+          "微信 AI 助手小微灰度上线,主模型 WeLM + DeepSeek 调度"
         ]
       }
     ]
   },
   "monthly_arc": {
-    "label": "本月脉络",
     "month": "2026-06",
+    "label": "本月脉络",
+    "total_items_so_far": 59,
     "weeks_count": 4,
-    "month_highlights": [
-      "Anthropic Claude Fable 5 / Mythos 5 双轨发布,SWE-Bench Pro 80.3%",
-      "字节豆包 2.1 Pro 发布,Seedance 2.5 7 月初预告,国产视频生成进入 30 秒原生阶段",
-      "DeepSeek V4-Pro、Kimi K2.7 Code、GLM-5.2 国产开源三强集体更新",
-      "Salesforce 成为 OpenAI / Anthropic 最大人才血库,2026 上半年累计被挖近 100 人",
-      "OpenAI 一季度消耗现金 37 亿美元,Anthropic 2026 秋季 IPO 估值逼近万亿",
-      "银河通用 AstraBrain-WBC 0.5 验证人形运控 Scaling Law,宇树科创板过会",
-      "DeepSeek 周调用 8.65 万亿 Token,占全球 18.5%,连续 10 周全球前四中国包揽",
-      "字节豆包日均 Token 两年涨 1500 倍,180 万亿调用量印证中国 MaaS 高速增长",
-      "夏季达沃斯 AI 议程占比 60% 创新高,AI 能耗与数据污染成为全球监管焦点",
-      "八部门联合印发 AI+消费实施意见,工信部联合国资委开展人形机器人实景实训"
-    ],
-    "total_items_so_far": 41,
     "by_category_total": {
-      "headline": 10,
-      "rising": 12,
-      "company": 7,
-      "paper": 6,
-      "industry": 3,
-      "social": 3
-    }
+      "headline": 14,
+      "rising": 17,
+      "company": 11,
+      "paper": 9,
+      "industry": 4,
+      "social": 4
+    },
+    "month_highlights": [
+      "Anthropic Claude Fable 5/Mythos 5 双轨发布,SWE-Bench Pro 80.3%;Claude Tag 6/23 上线改写企业 Agent 范式",
+      "字节豆包 2.1 Pro 发布,Seedance 2.5 7 月初预告,国产视频生成进入 30 秒原生阶段",
+      "OpenAI×博通 Jalapeño 推理芯片,自研架构+Tomahawk 网络,正式开启软硬一体战略",
+      "中国超算灵晟 2.19 EFLOPS 登顶 TOP500,时隔九年重回榜首,全 CPU 架构突破 GPU 封锁",
+      "英伟达股东大会 Vera CPU 专为智能体,Vera Rubin 平台进入全面量产",
+      "DeepSeek V4-Pro、Kimi K2.7 Code、GLM-5.2 国产开源三强集体更新,字节豆包 Token 两年涨 1500 倍",
+      "Salesforce 成为 OpenAI/Anthropic 最大人才血库,2026 上半年累计被挖近 100 人",
+      "Adler/Pritzel/Shazeer/Jumper 一周内连续转投 OpenAI/Anthropic,AI 人才战白热化",
+      "DeepSeek 周调用 8.65 万亿 Token,占全球 18.5%,连续 10 周全球前四中国包揽",
+      "Anthropic 5 月 ARR 470 亿美元 B 端反超 OpenAI,估值 9650 亿逼近万亿",
+      "阿里发布首个原生世界模型 Qwen-AgentWorld,覆盖 7 大 Agent 交互领域",
+      "夏季达沃斯 AI 议程占比 60% 创新高,AI 能耗与数据污染成为全球监管焦点"
+    ]
   }
 }
