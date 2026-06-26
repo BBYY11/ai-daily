@@ -48,15 +48,10 @@
   },
   "反射性遮蔽 (RM)": {
     "name": "反射性遮蔽 (Reflective Masking)",
-    "category": "训练方法 / 学术",
-    "summary": "马里兰大学等 6 机构 2026 年 6 月在 arXiv(2606.16700)发布的论文,让遮蔽扩散模型(MDM)能主动判断已填入的词是否正确并重新打 MASK 预测,实现「边写边改」。",
-    "detail": "配套的「历史参考」(HR)机制维护每个位置压缩历史状态摘要,完整方法包含「历史嵌入旋转」(HER)给不同时间步的历史信息添加时间标记;在 LLaDA 上 MBPP 代码生成提升 11.4%(相对基线 +8.8 个百分点),3 个任务 5 小时 H100 训练完成,代码已开源。",
-    "links": [
-      {
-        "label": "arXiv",
-        "url": "https://arxiv.org/abs/2606.16700"
-      }
-    ]
+    "category": "论文",
+    "summary": "马里兰大学等机构 2026 年 6 月 arXiv 论文,核心思想是让遮蔽扩散模型像人一样「批改自己作业」,在推理阶段识别低置信度区域并主动重新遮蔽与生成。",
+    "detail": "在 MBPP 代码生成任务上较基线提升 8.8 个百分点;扩散语言模型持续走强,与 OpenAI GPT-5.5 Instant 走自回归路线形成路径分叉;论文同步开源训练代码与预训练权重。",
+    "links": []
   },
   "CoD 训练框架": {
     "name": "CoD (Connect the Dots)",
@@ -72,9 +67,9 @@
   },
   "Qwen-AgentWorld": {
     "name": "Qwen-AgentWorld",
-    "category": "基础模型",
-    "summary": "阿里千问 2026 年 6 月 24 日发布的首个原生语言世界模型(LWM),将环境建模作为从 CPT 阶段起的核心训练目标,覆盖文本类与 GUI 类共 7 大 Agent 交互领域。",
-    "detail": "单一模型同时覆盖文本类环境(MCP、Search、Terminal、SWE)与 GUI 类环境(Web、OS、Android),同步发布 AgentWorldBench 评测基准,每条测试样本均配备真实环境执行所得观测数据;为 Agent RL 训练提供统一可扩展的世界模型。",
+    "category": "产品",
+    "summary": "阿里通义实验室 2026 年 6 月 25 日开源的 397B 参数语言世界模型,基于超 1000 万条真实交互轨迹三阶段训练,自称首个原生语言世界模型。",
+    "detail": "Agent 可在语言世界里「先预测、再行动」,覆盖 MCP/Search/Terminal 等 7 大高频开发场景;官方称在 AgentWorldBench 上超越 GPT-5.4 和 Claude Opus 4.8,模型与基准同步开源。",
     "links": []
   },
   "MXFP 路由": {
@@ -865,6 +860,62 @@
     "category": "基础模型",
     "summary": "Anthropic 据传正在准备的下一代旗舰模型,2026 年 4 月由 The Information 独家曝光,延续 Opus 4.6 的快速迭代节奏。",
     "detail": "Opus 4.7 将强化多步骤推理与长时任务执行能力,并提升多智能体协作效率,Anthropic 正在探索'智能体团队'模式。同日 Anthropic 官方博客发布 Claude Code Routines 代码任务自动化调度功能。新版本有望在稳定性、速度及自主性方面进一步提升,减少对人工干预依赖,优先向企业客户开放。",
+    "links": []
+  },
+  "高通 Dragonfly C1000": {
+    "name": "高通 Dragonfly C1000",
+    "category": "硬件",
+    "summary": "高通 2026 年投资者日发布的服务器 CPU,基于自研 Oryon 核心(250+ 核配置),专为智能体 AI 设计,Meta 已确认在其基础设施中部署,2028 年量产。",
+    "detail": "高通将手机/PC/汽车/数据中心四条产品线的核心设计模块化复用,Dragonfly C1000 采用 250+ 核 Oryon 配置,是高通从单一移动芯片公司向「全栈 AI 解决方案公司」转型的标志性产品。",
+    "links": []
+  },
+  "高通 HBC 架构": {
+    "name": "HBC (High Bandwidth Compute)",
+    "category": "硬件",
+    "summary": "高通数据中心 AI 芯片的核心架构,通过 3D 堆叠计算单元直接贴在 LPDDR 内存下方,无需硅中介层,主打每瓦 token 数领先。",
+    "detail": "在高吞吐工作负载下每瓦带宽是竞品 HBM 方案的 6 倍;搭载 HBC Gen 1 的 AI250 单卡有效内存带宽设计指标 133 TB/s,较上一代 AI200 提升 18 倍;搭载 HBC Gen 2 的 AI300 提升 54 倍。微软采用基于 HBC 的新一代 AI 芯片。",
+    "links": []
+  },
+  "Modular Inc.": {
+    "name": "Modular Inc.",
+    "category": "公司",
+    "summary": "由 LLVM 与 Swift 编程语言之父 Chris Lattner 联合创立的 AI 软件公司,提供跨硬件统一 AI 推理运行时 MAX 引擎,高通 6 月 24 日宣布以约 39 亿美元股票收购。",
+    "detail": "Modular 的 MAX 推理引擎能让开发者写一次代码,从 IoT 芯片到数据中心服务器都能跑,在第三方硬件上执行 AI 推理工作负载时速度最高可提升 50%;补齐高通在数据中心市场的软件栈短板。",
+    "links": []
+  },
+  "GPT-5.5 Instant": {
+    "name": "GPT-5.5 Instant",
+    "category": "产品",
+    "summary": "OpenAI 2026 年 6 月 25 日上线的 ChatGPT 全平台默认模型,全面接替 GPT-5.3 Instant,医疗/法律/金融事实错误率下降 52.5%,AIME 2025 拿 81.2%。",
+    "detail": "6 月 26 日向免费用户全面推送;内置智能任务路由,常规查询毫秒级响应,复杂任务自动后台推理,用户可手动切换「深度思考」模式覆盖;这是 ChatGPT 默认模型三年来最大一次可靠性跃迁。",
+    "links": []
+  },
+  "Bidi 1 语音模型": {
+    "name": "Bidi 1 (OpenAI 全双工语音)",
+    "category": "产品",
+    "summary": "OpenAI 2026 年 6 月 24-25 日灰度上线的双向实时语音模型,挂载 GPT-5.5 架构下语音分支,用户与 AI 可同时说话、随时打断接话。",
+    "detail": "标志 AI 语音交互从「半双工对讲机模式」正式迈入「全双工真人对话」时代,核心难点在打断检测与语义切分;对 Siri、Alexa 等传统语音助手构成降维打击。",
+    "links": []
+  },
+  "阿里模型蒸馏指控": {
+    "name": "Anthropic 对阿里蒸馏指控",
+    "category": "事件",
+    "summary": "Anthropic 2026 年 6 月向美国国会提交信函,指控阿里通过约 2.5 万个虚假账户对其 Claude 模型发动「迄今最大规模模型蒸馏攻击」,4 月 22 日至 6 月 5 日累计交互 2880 万次。",
+    "detail": "主要针对 Claude 的软件工程与代理推理能力;这是 Anthropic 继 2 月指控 DeepSeek/月之暗面/MiniMax 后的第二次,指控规模较 2 月提升约 80%;阿里官方截至发稿未公开置评。",
+    "links": []
+  },
+  "Meta 50% AI 审核": {
+    "name": "Meta AI 内容审核替代",
+    "category": "事件",
+    "summary": "据《金融时报》2026 年 6 月 25 日报道,Meta 已用大语言模型取代约 50% 人工内容审核请求,某些类别年底前人工比例或降至 10% 以下,每年节省数十亿美元。",
+    "detail": "Meta 长期采用「自动化 + 人工审核员」双轨模式,叠加扎克伯格数十亿美元加码「个人超级智能」基础设施投入,AI 替代人力审核走向规模化;同一天 Meta 与依视路陆逊梯卡合作推出 299 美元起 AI 智能眼镜,搭载 Muse Spark 多模态推理模型。",
+    "links": []
+  },
+  "Tokens per Watt": {
+    "name": "Tokens per Watt",
+    "category": "概念",
+    "summary": "高通数据中心负责人 Tony Pialis 2026 年投资者日提出的新评价标准,认为 AI 推理时代数据中心芯片应从 FLOPs 转向每瓦电能产出多少 token。",
+    "detail": "呼应 Karpathy 早前提出的「Token 经济学取代 FLOPs」论;背后是电力供应日益成为数据中心硬约束的行业共识,把 AI 推理从「算力堆叠」拉回到「单位能耗下的智能产出」。",
     "links": []
   }
 }
