@@ -917,5 +917,125 @@
     "summary": "高通数据中心负责人 Tony Pialis 2026 年投资者日提出的新评价标准,认为 AI 推理时代数据中心芯片应从 FLOPs 转向每瓦电能产出多少 token。",
     "detail": "呼应 Karpathy 早前提出的「Token 经济学取代 FLOPs」论;背后是电力供应日益成为数据中心硬约束的行业共识,把 AI 推理从「算力堆叠」拉回到「单位能耗下的智能产出」。",
     "links": []
+  },
+  "GPT-5.6": {
+    "name": "GPT-5.6",
+    "category": "基础模型",
+    "summary": "OpenAI 于 2026 年 6 月 27 日发布的旗舰系列,三档:Sol/Terra/Luna。",
+    "detail": "应美方要求首批仅向可信合作方预览,7 月通过 Cerebras 上线 Sol。",
+    "links": [
+      {
+        "label": "OpenAI 公告",
+        "url": "https://openai.com"
+      }
+    ]
+  },
+  "Sol/Terra/Luna": {
+    "name": "GPT-5.6 三档模型",
+    "category": "基础模型",
+    "summary": "旗舰 Sol、均衡 Terra、速度成本 Luna,对应 5/30、2.5/15、1/6 美元/百万 token 定价。",
+    "detail": "引入 Max 推理强度 + Ultra 子智能体模式,Terminal-Bench 2.1 标准模式 88.8% 超过 Claude Mythos 5。",
+    "links": [
+      {
+        "label": "OpenAI 公告",
+        "url": "https://openai.com"
+      }
+    ]
+  },
+  "context-mode": {
+    "name": "context-mode",
+    "category": "AI 工具",
+    "summary": "GitHub 登顶 Hacker News 的 AI 编程上下文优化 MCP 插件。",
+    "detail": "虚拟沙盒+Think in Code+存档点机制,token 成本降 98%,连续编程 30 分钟拉到 3 小时。",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/mert-koseoglu/context-mode"
+      }
+    ]
+  },
+  "Cerebras 推理加速": {
+    "name": "Cerebras",
+    "category": "AI 基础设施",
+    "summary": "AI 推理专用晶圆级芯片厂商,OpenAI 计划 7 月在其上托管 GPT-5.6 Sol。",
+    "detail": "Sol 初期仅向部分客户开放,峰值速度可达每秒 750 token。",
+    "links": [
+      {
+        "label": "Cerebras",
+        "url": "https://cerebras.net"
+      }
+    ]
+  },
+  "MWC26 上海": {
+    "name": "MWC 上海 2026",
+    "category": "行业事件",
+    "summary": "2026 年 6 月 24-26 日上海新国际博览中心,以「众智启新」为主题,400 余家展商。",
+    "detail": "中国 5G-A 商用 330 余城、用户突破 3000 万;首次人形机器人点球大战;荣耀闪电半马冠军亮相。",
+    "links": [
+      {
+        "label": "GSMA",
+        "url": "https://www.gsma.com"
+      }
+    ]
+  },
+  "Quartet II": {
+    "name": "Quartet II",
+    "category": "算法/训练",
+    "summary": "IST-DASLab 提出的 NVFP4 全量化预训练线性层方案。",
+    "detail": "MS-EDEN 微缩格式量化误差不到 SR 一半,Blackwell GPU 上比 BF16 加速 4.2 倍。",
+    "links": [
+      {
+        "label": "arXiv 2601.22813",
+        "url": "https://arxiv.org/abs/2601.22813"
+      }
+    ]
+  },
+  "BenchX": {
+    "name": "BenchX",
+    "category": "AI 评测",
+    "summary": "约翰霍普金斯等 9 机构联合的肿瘤检测 AI 模型基准。",
+    "detail": "85,355 次 CT 扫描评估 12 个模型,揭示罕见亚组性能塌陷。",
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2606.xxxxx"
+      }
+    ]
+  },
+  "InSight": {
+    "name": "InSight (VLA 自引导)",
+    "category": "AI 研究",
+    "summary": "斯坦福+普林斯顿联合发布,让 VLA 模型自引导技能获取。",
+    "detail": "通过 VLM 计划分解自动分割基本动作,实现无需人类演示即可学习新任务。",
+    "links": [
+      {
+        "label": "arXiv 2606.24884",
+        "url": "https://arxiv.org/abs/2606.24884"
+      }
+    ]
+  },
+  "Qwen3.7-Max": {
+    "name": "Qwen3.7-Max",
+    "category": "基础模型",
+    "summary": "阿里 2026 年 5 月 20 日发布的通义千问最新旗舰,登顶 Arena 全球盲测总榜。",
+    "detail": "MoE 架构,在代码、长上下文理解、中文知识密度上显著提升,超越 Kimi-K2.6、DeepSeek-v4-pro、GLM-5.1。",
+    "links": [
+      {
+        "label": "阿里云",
+        "url": "https://qwen.ai"
+      }
+    ]
+  },
+  "Modular (AI 软件)": {
+    "name": "Modular",
+    "category": "AI 基础设施",
+    "summary": "为 AI XPU 提供高效软件堆栈的初创公司,核心产品 MAX 推理引擎。",
+    "detail": "2026 年 6 月被高通以约 39.2 亿美元收购,估值从 16 亿跃至 39.2 亿。",
+    "links": [
+      {
+        "label": "Modular",
+        "url": "https://modular.com"
+      }
+    ]
   }
 }
