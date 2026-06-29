@@ -1037,5 +1037,106 @@
         "url": "https://modular.com"
       }
     ]
+  },
+  "GPT-5.6 Sol/Terra/Luna": {
+    "name": "GPT-5.6",
+    "category": "模型",
+    "summary": "OpenAI 2026 年 6 月 27 日凌晨正式发布的旗舰模型三档分级,旗舰 Sol、均衡 Terra、速度 Luna。",
+    "detail": "应美方要求仅向可信合作方预览,7 月通过 Cerebras 上线 Sol,峰值 750 token/s;Terminal-Bench 2.1 上 Sol 标准 88.8% / Ultra 91.9% 超 Claude Mythos 5 的 88.0%。",
+    "links": [
+      {
+        "label": "OpenAI 公告",
+        "url": "https://openai.com/blog/"
+      }
+    ]
+  },
+  "Claude Mythos 5": {
+    "name": "Claude Mythos 5",
+    "category": "模型",
+    "summary": "Anthropic 6 月发布的 Mythos 系列旗舰,6 月 12 日因安全漏洞被美国政府出口管制,目前已对 100+ 获批企业开放。",
+    "detail": "获批企业包括大量《财富》500 强,外国籍雇员及 Anthropic 外国籍员工同样适用豁免;与同期发布的 Fable 5 命运不同,后者仍待国防部与国安局放行。",
+    "links": []
+  },
+  "DSpark": {
+    "name": "DSpark",
+    "category": "框架",
+    "summary": "DeepSeek 联合北大 2026 年 6 月 27 日开源的推测解码推理加速框架,创始人梁文锋署名。",
+    "detail": "采用半自回归生成架构 + 置信度调度验证双机制;已部署到 DeepSeek-V4-Flash/Pro 线上服务,生成速度较 MTP-1 基线提升 60%-85%,Qwen3/Gemma 跨模型泛化。",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf"
+      }
+    ]
+  },
+  "DeepSpec": {
+    "name": "DeepSpec",
+    "category": "代码库",
+    "summary": "DeepSeek 随 DSpark 一同开源的推测解码训练与评估代码仓库,MIT 许可,内置 DSpark/DFlash/Eagle3 三种实现。",
+    "detail": "包含数据准备工具、草稿模型实现、训练代码、评估脚本全栈;为缺乏底层算法团队的中小厂商提供「零研发」接入路径,降低大模型私有化部署门槛。",
+    "links": []
+  },
+  "Tulongfeng": {
+    "name": "Tulongfeng",
+    "category": "产品",
+    "summary": "360 公司在 Anthropic 出口禁令窗口期推出的对标 Claude Mythos 5 的国产大模型。",
+    "detail": "TechCrunch 报道,360 趁 Mythos 5 与 Fable 5 因出口禁令被全球下架的真空期,直接对标 Mythos 抢占市场份额,同步东京初创 Sakana AI 也发布 Fugu 河豚前沿模型,亚洲厂商正在迅速填满禁令真空。",
+    "links": []
+  },
+  "MotiClaw": {
+    "name": "MotiClaw",
+    "category": "产品",
+    "summary": "量子位走访报道的 OPC(One Person Company)代表案例,一个人 + 一群 Agent 维护,两周发布 20+ 版本。",
+    "detail": "人站在顶层指挥多个 Agent,自己只负责提问、分配和验收;当 AI 承担 30%-90% 工作后,「一人公司」从极客玩具走向可行商业模式,X 与小红书话题阅读破千万。",
+    "links": []
+  },
+  "Sakana AI Fugu": {
+    "name": "Fugu",
+    "category": "模型",
+    "summary": "东京初创 Sakana AI 2026 年 6 月发布的前沿大模型,以河豚命名,意指「强大但需要小心使用」。",
+    "detail": "与 360 的 Tulongfeng 同期发布,共同填补 Anthropic Mythos 5 / Fable 5 因出口禁令被全球下架后的亚洲市场真空期。",
+    "links": []
+  },
+  "Fable 5": {
+    "name": "Claude Fable 5",
+    "category": "模型",
+    "summary": "Anthropic 6 月发布的 Mythos 系列另一旗舰,与 Mythos 5 同期因安全漏洞被美国政府出口管制。",
+    "detail": "Mythos 5 已对 100+ 获批企业开放,Fable 5 仍待美国国防部和国家安全局批准,最快一周内可能解禁;Fable 5 配备更严格安全措施,网络能力较 Project Glasswing 合作伙伴版有所削弱。",
+    "links": []
+  },
+  "Muse Spark": {
+    "name": "Muse Spark",
+    "category": "模型",
+    "summary": "Meta 在谷歌限制 Gemini API 使用后主推的内部自研大模型,定位为 Gemini 的直接替代。",
+    "detail": "Meta 内部开始优先推广该模型,认为其性能已能与 Gemini 相抗衡,有助于降低对外部模型依赖;Zuckerberg 承诺到 2028 年在美国累计投资 6000 亿美元自建数据中心体系。",
+    "links": []
+  },
+  "Karpathy 内部 Claude.md": {
+    "name": "Karpathy 内部 CLAUDE.md",
+    "category": "工具",
+    "summary": "Andrej Karpathy 入职 Anthropic 仅 5 周,团队内部实战版 CLAUDE.md 配置文件意外流出,由四条社区版规则升级为十条学术论文格式的硬规则。",
+    "detail": "标题《Field Notes on Getting a Language Model to Write Code You Will Not Rewrite》;X 平台与开发者社群 6 月 28 日迅速传播,被评价「比 GitHub 18.3 万 Star 的社区版狠了一倍还多」。",
+    "links": []
+  },
+  "VLX-Flow/Seek/Go": {
+    "name": "VLX 三件套",
+    "category": "模型",
+    "summary": "Om AI 团队 2026 年 6 月发布的端侧多模态模型组合,VLX-Flow 实时流式感知、VLX-Seek 精准定位、VLX-Go 行动决策。",
+    "detail": "原生端侧设计让模型能跑进手机和无人机;Om AI 团队去年凭 VLM-R1 斩获 6000+ GitHub Star,2026 年端侧 AI 加速落地标志。",
+    "links": []
+  },
+  "GPT-5.6 预览窗口": {
+    "name": "GPT-5.6 Preview Window",
+    "category": "事件",
+    "summary": "OpenAI 应美方要求为 GPT-5.6 设置的「可信合作方预览」机制,标志前沿模型发布走向政企共治。",
+    "detail": "5 年多以来 OpenAI 首次在新模型发布前主动与美国政府做能力与发布节奏沟通,商务部长卢特尼克在信函中确认「安全保障措施已到位」,但强调是临时措施而非长期规则。",
+    "links": []
+  },
+  "Cerebras 750 token/s": {
+    "name": "Cerebras 推理加速",
+    "category": "硬件",
+    "summary": "OpenAI 计划 7 月通过 Cerebras WSE 推理芯片上线 GPT-5.6 Sol,峰值速度可达 750 token/s。",
+    "detail": "这一速度远超传统 H100 推理服务的 80-120 token/s;意味着 OpenAI 在自研 Jalapeño 推理芯片之外,正在构建多硬件栈推理能力,降低对英伟达的单一依赖。",
+    "links": []
   }
 }
