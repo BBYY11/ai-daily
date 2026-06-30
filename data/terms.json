@@ -1138,5 +1138,125 @@
     "summary": "OpenAI 计划 7 月通过 Cerebras WSE 推理芯片上线 GPT-5.6 Sol,峰值速度可达 750 token/s。",
     "detail": "这一速度远超传统 H100 推理服务的 80-120 token/s;意味着 OpenAI 在自研 Jalapeño 推理芯片之外,正在构建多硬件栈推理能力,降低对英伟达的单一依赖。",
     "links": []
+  },
+  "GPT-5.6 系列 (Sol/Terra/Luna)": {
+    "name": "GPT-5.6 系列 (Sol/Terra/Luna)",
+    "category": "基础模型",
+    "summary": "OpenAI 2026 年 6 月 27 日正式发布的三档旗舰模型,数字代表代际、Sol/Terra/Luna 为固定能力档位,可按独立节奏迭代升级。",
+    "detail": "Sol(旗舰,5/30 美元)Terminal-Bench 2.1 标准 88.8%、Ultra 91.9%,超 Claude Mythos 5;Terra(均衡,2.5/15 美元)性能持平 GPT-5.5、价格减半;Luna(轻量,1/6 美元)主打高吞吐。Sol 新增 Max 深度推理与 Ultra 多子智能体协同模式,7 月登陆 Cerebras 峰值 750 token/s。应美国政府要求本轮仅向可信合作方预览,OpenAI 罕见表态「政府介入不应成为长期默认」。",
+    "links": [
+      {
+        "label": "OpenAI 公告",
+        "url": "https://openai.com/index/introducing-gpt-5-6"
+      }
+    ]
+  },
+  "Claude Opus 4.8": {
+    "name": "Claude Opus 4.8",
+    "category": "基础模型",
+    "summary": "Anthropic 旗舰模型 Opus 4.7 的迭代版,2026 年 5 月 28 日发布,SWE-Bench 从 ~65% 提升至 69.2%,诚实度提升约 4 倍,定价不变 5/25 美元。",
+    "detail": "上下文从 2M 降至 1M 但 token 利用率提升;最大输出从 64K 提升到 128K;新增 Effort Control(默认 high,可上调 extra/max)与 Dynamic Workflows(单 session 内运行数百并行子 agent)。6.30 全面上线微软 Azure Foundry,搭载英伟达 Blackwell Ultra GB300 GPU。Anthropic 内部约 65% 产品代码已由 Claude Tag(Opus 4.8)生成。",
+    "links": [
+      {
+        "label": "Anthropic 公告",
+        "url": "https://www.anthropic.com/news/claude-opus-4-8"
+      }
+    ]
+  },
+  "Nano Banana (Gemini 2.5 Flash Image)": {
+    "name": "Nano Banana (Gemini 2.5 Flash Image)",
+    "category": "产品 / 发布",
+    "summary": "谷歌 2026 年推出的高性能 AI 图像生成与编辑模型,官方名称 Gemini 2.5 Flash Image,前身为匿名测试版本在 LMArena 走红。",
+    "detail": "2026 年 6 月 30 日凌晨,Nano Banana 驱动的 Gemini 个性化图像生成功能向全美免费用户开放,不再仅限 Plus/Pro/Ultra 订阅用户;可直读 Gmail/相册/YouTube/搜索偏好,无需手动上传照片即可生成个性化图像。Gemini 月活跃用户已突破 7.5 亿,Imagen 模型 6 月 24 日全面停服,迁移至 Nano Banana。",
+    "links": [
+      {
+        "label": "Firebase 文档",
+        "url": "https://firebase.google.cn/docs/ai-logic/imagen-models-migration"
+      }
+    ]
+  },
+  "DeepSeek V4": {
+    "name": "DeepSeek V4",
+    "category": "基础模型",
+    "summary": "DeepSeek 旗下第四代旗舰模型,4 月 24 日上线预览版并开源,7 月中旬将上线正式版并同步引入峰谷定价机制。",
+    "detail": "V4 预览版已具备百万字超长上下文,在 Agent 能力、世界知识、推理性能多维度实现国内与开源领先,按大小分两版本。峰谷定价:每日 9:00-12:00、14:00-18:00 高峰时段 API 价格为平时 2 倍,引导用户错峰使用、缓解服务器压力。配合 6 月 27 日联合北大发布的 DSpark 推测解码框架,V4-Flash 生成速度提升 60%-85%。",
+    "links": [
+      {
+        "label": "DeepSpec GitHub",
+        "url": "https://github.com/deepseek-ai/DeepSpec"
+      }
+    ]
+  },
+  "xAI Grok 4.5 (V9)": {
+    "name": "xAI Grok 4.5",
+    "category": "基础模型",
+    "summary": "xAI 最新大语言模型,2026 年 6 月 28 日宣布在 SpaceX 与特斯拉内部 Beta 测试,基于自研 1.5 万亿参数 V9 基础模型 + Cursor 数据补充训练。",
+    "detail": "早期评测性能接近甚至有望超越 Anthropic Claude Opus,强化学习仍在持续大幅提升能力,Grok Build 工具链每日迭代优化。马斯克同步宣布 SpaceX 计划今年剩余时间每月推出一款「完全从零训练」的全新模型,意味着未来版本可能经由全新训练过程构建基础模型、技术跨度更大。",
+    "links": [
+      {
+        "label": "xAI 官方",
+        "url": "https://x.ai/news/grok-4-5"
+      }
+    ]
+  },
+  "Mistral OCR 4": {
+    "name": "Mistral OCR 4",
+    "category": "基础模型",
+    "summary": "法国 Mistral AI 2026 年 6 月 23 日发布的新一代文档识别模型,覆盖 10 语族 170 种语言,OmniDocBench 评分 93.07。",
+    "detail": "输出同步返回文本边框坐标、文档区域分类、识别置信度三类结构化数据,可区分标题、正文、图表、注释等板块;原生支持 RAG 语义分块、智能体结构化基本单元、连接器结构化内容输出等下游工作负载。基础 API 4 美元/千页、批处理 50% 优惠、文档人工智能定价 5 美元/千页;在主观评测中文本流畅度与排版还原效果优于 GPT 5.5 Pro、Gemini 3.1 Pro Preview。",
+    "links": [
+      {
+        "label": "Mistral AI 官方",
+        "url": "https://mistral.ai/news/mistral-ocr-4"
+      }
+    ]
+  },
+  "360 图龙锋 (Tulongfeng)": {
+    "name": "360 图龙锋",
+    "category": "产品 / 发布",
+    "summary": "360 集团 2026 年 6 月 24 日在 ISC.AI 2026 发布的漏洞自动化挖掘智能体,对标美国 Anthropic Mythos 模型的漏洞自动发掘能力。",
+    "detail": "采用智能体蜂群架构:第一重 360 沉淀 20 年的实战攻防数据与漏洞知识库;第二重 Harness 调度管控平台为中等基座模型配套记忆、工具管控、流程约束、多轮校验,能力提升 10-20%;第三重多智能体蜂群协同分工完成威胁建模、代码审计、沙箱仿真、漏洞复现。已累计挖出 3000+ 漏洞(监管确认 105 个),挖出潜伏 5 年 Windows 内核漏洞、8 年 Office 底层漏洞、OpenClaw 体系 23 个核心组件缺陷。",
+    "links": [
+      {
+        "label": "360 官方",
+        "url": "https://www.360.cn/isc-ai-2026"
+      }
+    ]
+  },
+  "《人工智能智能体互联》7 项国家标准": {
+    "name": "智能体互联 7 项国标",
+    "category": "政策 / 监管",
+    "summary": "国家市场监督管理总局 2026 年 6 月 26 日发布的智能体互联系列国家标准,涵盖总体架构、身份码、身份管理、智能体描述、智能体发现、智能体交互、智能体工具调用。",
+    "detail": "系统性搭建起「身份标识—能力描述—供需发现—协同交互—工具调用」全覆盖、闭环式标准规范体系,有效补齐智能体领域国家标准空白。小米、联想、火山引擎、快手等百余家企业参与《智能体协议共建共享联合倡议》,50 多家企业开展试点应用,标志中国 AI 治理从「模型备案制」向「智能体协议互通」演进。",
+    "links": [
+      {
+        "label": "市场监管总局",
+        "url": "https://www.samr.gov.cn"
+      }
+    ]
+  },
+  "微信支付 AI 专属卡": {
+    "name": "微信支付 AI 专属卡",
+    "category": "产品 / 发布",
+    "summary": "微信支付 2026 年 6 月 29 日正式发布的 Agent 原生支付工具,目前已支持在腾讯 WorkBuddy 中使用,可在对话窗口内完成智能推荐与下单支付全流程。",
+    "detail": "用户向 Agent 描述需求后,Agent 可直接调用支付接口完成交易,流程闭环在聊天窗口内一次性完成。这是国内首个由头部支付平台推出的 Agent 原生支付工具,微信支付场景下 14 亿月活用户的消费决策路径可能被重新定义;同时带来 Agent 扣款授权/可逆性/未成年人/跨境合规等新治理挑战。",
+    "links": [
+      {
+        "label": "微信支付",
+        "url": "https://pay.weixin.qq.com"
+      }
+    ]
+  },
+  "英伟达 Blackwell Ultra GB300": {
+    "name": "英伟达 Blackwell Ultra GB300",
+    "category": "硬件 / 芯片",
+    "summary": "英伟达 2026 年发布的最新一代数据中心 GPU,作为 GB300 NVL72 系统的核心组件,为 Anthropic Claude Opus 4.8 + Haiku 4 在 Azure 上的全面可用提供底层算力。",
+    "detail": "配合 Quantum-X800 InfiniBand 网络,企业可在 Azure Foundry 上构建跨业务域运行的自主智能体架构;通过英伟达认证的 agent skills 与安全智能体工作区参考设计(NVIDIA Secure Agent Workspace Reference Design),把身份认证、网络访问、凭证管理与运行时策略的控制权统一下沉至基础设施层面,直接对标 AMD MI400、谷歌 TPU v6 等下一代加速器。",
+    "links": [
+      {
+        "label": "NVIDIA 官方",
+        "url": "https://www.nvidia.com/en-us/data-center/gb300"
+      }
+    ]
   }
 }

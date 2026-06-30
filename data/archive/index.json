@@ -1,6 +1,14 @@
 {
   "days": [
     {
+      "date": "2026-06-29",
+      "weekday": "周一",
+      "summary": "2026 年 6 月 29 日 AI 早报五条主线集中爆发:其一,OpenAI 正式发布 GPT-5.6 系列旗舰 Sol/Terra/Luna 三档分级,应美方要求仅向可信合作方预览,7 月通过 Cerebras 上线 Sol,峰值 750 token/s;其二,Karpathy 入职 Anthropic 五周内部 CLAUDE.md「十条军规」流出,GitHub 社区版 18.3 万 Star、PR #164 把规则同步到 Codex/Claude Code/Cursor 三端;其三,DeepSeek 联合北大开源 DSpark 推理加速框架,创始人梁文锋署名,V4-Flash 端到端生成速度提升 60%-85%,Qwen3/Gemma 跨模型泛化;其四,特朗普政府拟一周内解除 Anthropic Fable 5 限制,Mythos 5 已对 100+ 获批企业开放;其五,谷歌对 Meta 实施 Gemini API 使用上限,云合同积压近 4600 亿美元,SpaceX 月 9.2 亿美元算力租赁救急。",
+      "total": 18,
+      "rising": 5,
+      "headline": 4
+    },
+    {
       "date": "2026-06-27",
       "weekday": "周六",
       "summary": "2026 年 6 月 27 日 AI 早报六条主线集中爆发:其一,OpenAI 正式发布 GPT-5.6 系列旗舰 Sol/Terra/Luna 三档分级,应美方要求仅向可信合作方预览,7 月将通过 Cerebras 上线 Sol;其二,DeepSeek 启动「所有部门规模翻倍」大规模招聘,510 亿 A 轮融资到账,从「技术理想主义实验室」全面转向「完整商业化公司」;其三,MWC 上海 2026 闭幕,400 余家展商聚焦「众智启新」,中国 5G-A 用户突破 3000 万,人形机器人点球大战成为焦点;其四,Anthropic 正式向美国国会指控阿里发动「迄今最大规模模型蒸馏攻击」,2.5 万账号、2880 万次交互;其五,context-mode 登顶 GitHub Hacker News,AI 编程上下文优化 MCP 插件把 token 成本降 98%;其六,OpenAI Sam Altman 内部信确认一年内启动 IPO,员工要约价 687.69 美元/股。",
