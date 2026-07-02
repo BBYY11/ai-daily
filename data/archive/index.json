@@ -1,6 +1,14 @@
 {
   "days": [
     {
+      "date": "2026-06-30",
+      "weekday": "周二",
+      "summary": "2026 年 6 月 30 日 AI 早报五条主线集中爆发:其一,谷歌 Gemini 个性化 Nano Banana 生图功能 6 月 30 日凌晨向全美免费用户开放,MAU 突破 7.5 亿;其二,OpenAI 6 月 27 日正式发布 GPT-5.6 系列三档旗舰 Sol/Terra/Luna,旗舰版 Sol 定价仅为 Claude Fable 5 一半,7 月登陆 Cerebras 峰值 750 token/s,应美政府要求首轮仅向可信合作方预览;其三,Anthropic 6 月 29 日宣布 Claude Opus 4.8 + Haiku 4 全面上线微软 Azure,搭载英伟达 Blackwell Ultra GB300 GPU,三方合作从框架协议正式转为可交付商业产品;其四,Anthropic 6 月 10 日向美国国会正式指控阿里 Qwen 实验室发动「迄今最大规模模型蒸馏攻击」—— 2880 万次 Claude 交互、2.5 万虚假账户,中美 AI 知识产权战全面升级;其五,马斯克 6 月 28 日宣布 xAI Grok 4.5 已在 SpaceX 和特斯拉内部 Beta 测试,基于 1.5 万亿参数 V9 基础模型 + Cursor 数据微调,性能接近 Opus,承诺今年剩余时间每月发布一个「完全从零训练」的全新模型。",
+      "total": 18,
+      "rising": 5,
+      "headline": 4
+    },
+    {
       "date": "2026-06-29",
       "weekday": "周一",
       "summary": "2026 年 6 月 29 日 AI 早报五条主线集中爆发:其一,OpenAI 正式发布 GPT-5.6 系列旗舰 Sol/Terra/Luna 三档分级,应美方要求仅向可信合作方预览,7 月通过 Cerebras 上线 Sol,峰值 750 token/s;其二,Karpathy 入职 Anthropic 五周内部 CLAUDE.md「十条军规」流出,GitHub 社区版 18.3 万 Star、PR #164 把规则同步到 Codex/Claude Code/Cursor 三端;其三,DeepSeek 联合北大开源 DSpark 推理加速框架,创始人梁文锋署名,V4-Flash 端到端生成速度提升 60%-85%,Qwen3/Gemma 跨模型泛化;其四,特朗普政府拟一周内解除 Anthropic Fable 5 限制,Mythos 5 已对 100+ 获批企业开放;其五,谷歌对 Meta 实施 Gemini API 使用上限,云合同积压近 4600 亿美元,SpaceX 月 9.2 亿美元算力租赁救急。",

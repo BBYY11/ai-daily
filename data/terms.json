@@ -1258,5 +1258,92 @@
         "url": "https://www.nvidia.com/en-us/data-center/gb300"
       }
     ]
+  },
+  "Claude Sonnet 5": {
+    "name": "Claude Sonnet 5",
+    "category": "模型",
+    "summary": "Anthropic 2026 年 7 月 1 日发布的中端主力模型,号称「Sonnet 系列最强 Agent」,编程/工具调用/搜索能力逼近旗舰 Opus 4.8,API 价格仅 Opus 4.8 的 60%。",
+    "detail": "SWE-bench Pro 63.2%(Sonnet 4.6 仅 58.1%)、Humanity's Last Exam 开工具后 57.4%(Opus 4.8 为 49.8%)、OSWorld-Verified 81.2%。发布期至 8 月 31 日尝鲜价:输入 2 美元/输出 10 美元(每百万 token),之后恢复 3/15 美元;同期浏览器提示注入攻击成功率仅 0.93%,显著低于 Opus 4.8 的 31.5%。",
+    "links": [
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-sonnet-5-system-card"
+    ]
+  },
+  "Fable 5 解禁": {
+    "name": "Fable 5 / Mythos 5 解除出口管制",
+    "category": "AI 治理",
+    "summary": "美国商务部 6 月 30 日正式解除对 Anthropic Claude Fable 5 和 Mythos 5 两款旗舰模型的出口管制,Fable 5 7 月 1 日起在 GitHub Copilot 全面重新上线。",
+    "detail": "此前 6 月 12 日美方以「对网络安全/金融系统/关键基础设施带来现实风险」为由短暂冻结访问,Fable 5 解禁版搭载严格安全分类器、大量编程请求被自动降级到 Opus 4.8 处理,实质可用性较初版缩水;Mythos 5 仍仅向受信任机构开放。这是「行政命令级 AI 模型监管」的首个完整处置周期。",
+    "links": [
+      "https://github.blog/changelog/",
+      "https://www.anthropic.com/news"
+    ]
+  },
+  "Claude Science": {
+    "name": "Claude Science",
+    "category": "产品",
+    "summary": "Anthropic 2026 年 7 月 1 日发布的科研 AI 工作台,整合 60+ 科学数据库与专用工具包,底层调用 Opus 4.8 等模型,提供可审计产物、灵活算力接入与完整复现链条。",
+    "detail": "首批支持 50 个科研项目,每项目最高 3 万美元计算积分;战略意义在于把 Claude 从「生产力工具」转向「科研基础设施」,Anthropic 试图在三条线同时突破:Sonnet 5 横向铺开性价比,Fable 5 树立前沿稀缺性,Claude Science 纵向深挖垂直工作流。",
+    "links": [
+      "https://www.anthropic.com/news"
+    ]
+  },
+  "Claude Code 木马门": {
+    "name": "Claude Code 中国时区标记事件",
+    "category": "AI 治理",
+    "summary": "Reddit 用户 6 月 30 日逆向 Claude Code 2.1.196 版本时发现,从 4 月 2 日的 2.1.91 版起内置「中国时区+147 个域名清单」隐秘检测机制,通过替换日期标点字符向服务端传递命中状态。",
+    "detail": "Anthropic 团队成员 Thariq Shihipar 7 月 1 日承认这是 3 月上线的反转售/反蒸馏「实验」,称已部署更强缓解并将在 7 月 2 日版本完全回滚删除相关代码;事件曝光后引发中国开发者社区对中国云厂商/AI 实验室域名被针对性打标的强烈反弹,Reddit 帖子点赞超 1400。",
+    "links": [
+      "https://www.reddit.com/r/ClaudeAI/",
+      "https://x.com/thariq Shihipar"
+    ]
+  },
+  "Meta Compute": {
+    "name": "Meta Compute",
+    "category": "公司",
+    "summary": "Meta 2026 年 7 月 1 日据彭博披露正在筹建的云基础设施业务,拟将富余 AI 算力和自研模型(Muse Spark 等)对外销售,直接对标 AWS/Azure/Google Cloud。",
+    "detail": "由基础设施主管 Santosh Janardhan、Superintelligence Labs 负责人 Daniel Gross、总裁 Dina Powell McCormick 共同领导;方案分两类:类似 AWS Bedrock 的模型即服务 + 类似 CoreWeave 的裸算力出租。消息公布后 Meta 股价盘中涨超 10%、CoreWeave 跌超 13%、Nebius 跌超 14.5%,市场重新定价「算力稀缺」叙事。",
+    "links": [
+      "https://www.bloomberg.com/news/articles/2026-07-01/meta-ai-cloud"
+    ]
+  },
+  "LoopWM": {
+    "name": "Looped World Models (LoopWM)",
+    "category": "论文",
+    "summary": "中国初创 FaceMind Research Asia(脸谱心智)发表于 arXiv(2606.18208)的循环世界模型架构,登顶 Hugging Face Papers 当日 Top1,通过共享参数的 Transformer 块迭代细化潜在环境状态。",
+    "detail": "论文提出「迭代潜空间深度(iterative latent depth)」作为世界模型独立于模型规模/数据量的新 scaling 轴;参数效率最高 100×,单步推理 FLOPs 简单任务可省 25×,长时程 rollout 整体计算节省最高两个数量级;ScienceWorld 基准上比肩参数量高两个数量级的更大模型。已获星连资本 Pre-A 轮、360 超额跟投、奇绩创坛参投。",
+    "links": [
+      "https://arxiv.org/abs/2606.18208"
+    ]
+  },
+  "Rubin Ultra 双芯片": {
+    "name": "Rubin Ultra 2-Die 方案",
+    "category": "硬件",
+    "summary": "NVIDIA 据 SemiAnalysis 6 月 30 日爆料放弃 GTC 2026 上发布的 4-Die 原版 Rubin Ultra,因台积电 CoWoS-L 封装基板翘曲导致芯片与基板接触失效,转向双芯片设计。",
+    "detail": "新版单封装 HBM 模块从 16 组(HBM4E,合计 1TB)缩减至 8 组,性能据 SemiAnalysis 评估约为原版一半;台积电 CoPoS 面板级封装替代方案量产最快 2028 年底,赶不上原定 2027 发布节点;NVIDIA 截至发稿未官方回应,AMD MI500 系列在 2027 高端 AI 加速器市场获喘息。",
+    "links": [
+      "https://www.semianalysis.com/p/rubin-ultra-packaging",
+      "https://x.com/SemiAnalysis_"
+    ]
+  },
+  "X 托管 MCP": {
+    "name": "X 托管 MCP 服务器",
+    "category": "产品",
+    "summary": "马斯克旗下 X 平台近日推出官方托管的 Model Context Protocol(MCP)服务器,允许 Claude、Cursor、Grok Build 等兼容 MCP 的 AI 助手通过用户账号授权直接接入 X API。",
+    "detail": "开发者无需再自行搭建/托管 MCP、配置 API 鉴权,显著降低 X 实时社交数据接入门槛;X 与 GitHub、Slack、Notion、Stripe、Salesforce 一同进入「官方 MCP 服务」行列;同步更新 API v2 应对 AI 生成垃圾内容,发帖费用提至 0.015 美元/含链接帖 0.20 美元。",
+    "links": [
+      "https://developer.x.com/",
+      "https://x.com/XDevelopers"
+    ]
+  },
+  "Nano Banana 2 Lite": {
+    "name": "Nano Banana 2 Lite",
+    "category": "模型",
+    "summary": "Google DeepMind 7 月 1 日发布的高速轻量图像生成模型,技术名 Gemini 2.5 Flash Image,默认模式从文字提示生成一张图仅需约 4 秒,主打更快更便宜。",
+    "detail": "为 DeepMind 主流 Nano Banana 系列的轻量版;配合 Gemini 新版基于 Google Drive 自动生成 Google Slides 演示文稿的功能(英文版先发,15 天内推完所有符合条件的用户),Google 正在把 Gemini 嵌入 Workspace 全套办公场景,直接对标微软 Copilot。",
+    "links": [
+      "https://deepmind.google/technologies/",
+      "https://blog.google/products/google-cloud/"
+    ]
   }
 }
